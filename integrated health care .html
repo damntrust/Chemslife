@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Integrated Healthcare Solutions — Chemslife Groups</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#2e9e4f;--green-dark:#1e7a3a;--green-light:#e8f7ed;--green-mid:#5fd98a;--white:#fff;--navy:#0d2b4e;--navy-mid:#163e6f;--text-muted:#4a6080;--border:#d4e8dc;--bg:#f4f8f5;--teal:#0d7377;--teal-light:#e6f5f5;--teal-mid:#12a5a5}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;background:var(--bg);color:var(--navy);overflow-x:hidden}
+.scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-dark),var(--green-mid));z-index:9999;width:0%;transition:width .08s linear;pointer-events:none}
+
+/* ═══ TOP BAR ═══ */
+.top-bar{background:var(--navy);color:#fff;padding:8px 0}
+.top-bar-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.top-bar-address{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.top-bar-address span{display:flex;align-items:center;gap:6px;color:#a8c4d8;font-size:12.5px}
+.top-bar-address span i{color:var(--green);font-size:12px}
+.social-links{display:flex;align-items:center;gap:8px}
+.social-links a{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;text-decoration:none;transition:transform .2s;border:1.5px solid rgba(255,255,255,.12)}
+.social-links a:hover{transform:scale(1.18) translateY(-2px)}
+.social-links a.fb{background:#1877f2;color:#fff}.social-links a.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285aeb 90%);color:#fff}
+.social-links a.li{background:#0a66c2;color:#fff}.social-links a.tw{background:#000;color:#fff}
+.social-links a.yt{background:red;color:#fff}.social-links a.wa{background:#25d366;color:#fff}
+.social-links a.tg{background:#0088cc;color:#fff}.social-links a.pt{background:#e60023;color:#fff}
+
+/* MARQUEE */
+.marquee-wrap{background:linear-gradient(90deg,var(--green-dark),var(--green),var(--green-dark));padding:9px 0;overflow:hidden;position:relative}
+.marquee-wrap::before,.marquee-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
+.marquee-wrap::before{left:0;background:linear-gradient(to right,var(--green-dark),transparent)}
+.marquee-wrap::after{right:0;background:linear-gradient(to left,var(--green-dark),transparent)}
+.marquee-track{display:flex;width:max-content;animation:marquee 28s linear infinite}
+.marquee-track:hover{animation-play-state:paused}
+.marquee-content{display:flex;align-items:center;white-space:nowrap}
+.marquee-text{font-family:'Montserrat',sans-serif;font-size:13.5px;font-weight:700;letter-spacing:3.5px;color:rgba(255,255,255,.95);text-transform:uppercase;padding:0 48px}
+.marquee-sep{color:rgba(255,255,255,.5);font-size:16px;padding:0 8px}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* HEADER */
+.main-header{background:#fff;border-bottom:2px solid var(--green-light);box-shadow:0 2px 12px rgba(46,158,79,.08);position:sticky;top:0;z-index:200}
+.main-header-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:80px;gap:24px}
+.logo-wrap{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}
+.logo-img-box{width:58px;height:58px;border-radius:10px;background:#f0faf3;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.logo-img-box img{width:100%;height:100%;object-fit:contain}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-name{font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:#111;letter-spacing:-.5px}
+.logo-name span{color:var(--green)}
+.logo-tagline{font-size:10px;color:var(--text-muted);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;margin-top:2px}
+nav{display:flex;align-items:center;gap:4px}
+nav a{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:600;color:var(--navy);text-decoration:none;padding:8px 18px;border-radius:6px;position:relative;transition:color .2s,background .2s}
+nav a::after{content:'';position:absolute;bottom:4px;left:18px;right:18px;height:2px;background:var(--green);border-radius:2px;transform:scaleX(0);transition:transform .25s ease}
+nav a:hover{color:var(--green-dark);background:var(--green-light)}
+nav a:hover::after,nav a.active::after{transform:scaleX(1)}
+nav a.active{color:var(--green-dark);background:var(--green-light)}
+nav a.btn-contact{background:var(--navy);color:#fff;border-radius:6px;padding:9px 20px;margin-left:8px;transition:background .2s,transform .15s}
+nav a.btn-contact::after{display:none}
+nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(-1px)}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:5px}
+.nav-dropdown>a .dd-arrow{font-size:10px;transition:transform .25s ease}
+.nav-dropdown:hover>a .dd-arrow{transform:rotate(180deg)}
+.dropdown-menu{position:absolute;top:calc(100% + 8px);left:0;background:#fff;border:1.5px solid var(--border);border-radius:12px;box-shadow:0 16px 48px rgba(13,43,78,.14);min-width:300px;padding:8px;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(10px);transition:opacity .22s ease,transform .22s ease,visibility .22s;z-index:200}
+.nav-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;pointer-events:all;transform:translateY(0)}
+.dropdown-menu a{display:flex;align-items:center;gap:12px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--navy);text-decoration:none;padding:11px 14px;border-radius:8px;transition:background .18s,color .18s,padding-left .18s}
+.dropdown-menu a::after{display:none!important}
+.dropdown-menu a:hover{background:var(--green-light);color:var(--green-dark);padding-left:18px}
+.dropdown-menu a .dd-icon{width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,var(--green-light),#c2e8ce);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dropdown-menu a .dd-icon i{color:var(--green-dark);font-size:14px}
+.dropdown-menu a .dd-label strong{display:block;font-size:13px;font-weight:700;color:var(--navy)}
+.dropdown-menu a .dd-label span{display:block;font-size:11px;color:var(--text-muted);font-weight:500;margin-top:1px}
+.dropdown-divider{border:none;border-top:1px solid var(--border);margin:6px 8px}
+.hamburger{display:none;background:none;border:1.5px solid var(--border);border-radius:6px;padding:7px 9px;cursor:pointer;flex-direction:column;gap:4px}
+.hamburger span{display:block;width:20px;height:2px;background:var(--navy);border-radius:2px}
+
+/* ═══ HERO ═══ */
+.hc-hero{position:relative;min-height:520px;display:flex;align-items:center;background:linear-gradient(135deg,#0a2e20 0%,var(--green-dark) 40%,var(--navy) 100%);overflow:hidden}
+.hh-dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(95,217,138,.1) 1.5px,transparent 1.5px);background-size:36px 36px;animation:dotsShift 30s linear infinite;pointer-events:none;z-index:0}
+@keyframes dotsShift{0%{background-position:0 0}100%{background-position:36px 36px}}
+.hh-slash{position:absolute;right:-80px;top:0;bottom:0;width:55%;background:linear-gradient(135deg,transparent 0%,rgba(46,158,79,.15) 30%,rgba(13,43,78,.3) 60%,rgba(46,158,79,.08) 100%);clip-path:polygon(18% 0,100% 0,100% 100%,0% 100%);z-index:0}
+.hh-orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0;animation:orbPulse 6s ease-in-out infinite}
+.hh-orb.o1{width:400px;height:400px;background:rgba(46,158,79,.18);top:-100px;right:10%}
+.hh-orb.o2{width:280px;height:280px;background:rgba(13,43,78,.5);bottom:-80px;left:25%;animation-delay:3s}
+@keyframes orbPulse{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.12)}}
+/* DNA helix effect */
+.hh-helix{position:absolute;right:5%;top:50%;transform:translateY(-50%);z-index:1;pointer-events:none}
+.hh-ring{position:absolute;border-radius:50%;border:1.5px solid rgba(95,217,138,.12);animation:ringRot linear infinite}
+.hh-ring:nth-child(1){width:400px;height:400px;top:-200px;left:-200px;animation-duration:22s}
+.hh-ring:nth-child(2){width:260px;height:260px;top:-130px;left:-130px;animation-duration:14s;animation-direction:reverse;border-color:rgba(95,217,138,.22)}
+.hh-ring:nth-child(3){width:120px;height:120px;top:-60px;left:-60px;animation-duration:9s;border-color:rgba(95,217,138,.4)}
+.hh-dot-el{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--green-mid);box-shadow:0 0 20px var(--green-mid);top:50%;left:0;animation:inherit}
+.hh-ring:nth-child(1) .hh-dot-el{transform-origin:200px 5px}
+.hh-ring:nth-child(2) .hh-dot-el{transform-origin:130px 5px}
+.hh-ring:nth-child(3) .hh-dot-el{transform-origin:60px 5px;width:7px;height:7px}
+@keyframes ringRot{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.hh-particles{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.hh-particle{position:absolute;width:3px;height:3px;border-radius:50%;background:var(--green-mid);animation:particleFloat linear infinite;opacity:0}
+@keyframes particleFloat{0%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:.8}80%{opacity:.3}100%{transform:translateY(-20px) scale(1.5);opacity:0}}
+.hh-inner{max-width:1280px;margin:0 auto;padding:90px 24px 80px;position:relative;z-index:3;display:grid;grid-template-columns:1fr 440px;gap:48px;align-items:center}
+.hh-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(46,158,79,.15);border:1px solid rgba(46,158,79,.35);color:var(--green-mid);font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:7px 18px;border-radius:20px;margin-bottom:22px;backdrop-filter:blur(8px)}
+.hh-title{font-family:'Montserrat',sans-serif;font-size:54px;font-weight:900;color:#fff;line-height:1.05;letter-spacing:-2px;margin-bottom:20px}
+.hh-title em{font-style:normal;color:var(--green-mid);display:block}
+.hh-desc{font-size:16.5px;color:rgba(255,255,255,.68);line-height:1.85;max-width:500px;margin-bottom:36px}
+.hh-badges{display:flex;gap:12px;flex-wrap:wrap}
+.hh-badge{display:flex;align-items:center;gap:9px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:11px 17px;backdrop-filter:blur(6px);transition:border-color .25s,background .25s}
+.hh-badge:hover{border-color:rgba(46,158,79,.5);background:rgba(46,158,79,.1)}
+.hh-badge i{color:var(--green-mid);font-size:16px}
+.hh-badge span{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:rgba(255,255,255,.85)}
+.hh-visual-wrap{position:relative;display:flex;align-items:center;justify-content:center;height:380px}
+.hh-vis-bg{position:absolute;inset:0;border-radius:24px;background:linear-gradient(135deg,rgba(46,158,79,.08),rgba(13,43,78,.3));border:1px solid rgba(46,158,79,.15);backdrop-filter:blur(12px)}
+.hh-vis-ring{position:absolute;border-radius:50%;border:1.5px dashed rgba(95,217,138,.18);animation:visRing linear infinite}
+.hh-vis-ring.vr1{width:320px;height:320px;animation-duration:20s}
+.hh-vis-ring.vr2{width:210px;height:210px;animation-duration:13s;animation-direction:reverse;border-color:rgba(95,217,138,.28)}
+@keyframes visRing{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.hh-vis-center{position:relative;z-index:2;width:140px;height:140px;border-radius:50%;background:linear-gradient(135deg,var(--green-dark),var(--green));display:flex;align-items:center;justify-content:center;box-shadow:0 0 60px rgba(46,158,79,.55),0 20px 50px rgba(0,0,0,.4);border:4px solid rgba(255,255,255,.1);animation:centerPulse 4s ease-in-out infinite}
+.hh-vis-center i{font-size:58px;color:rgba(255,255,255,.85)}
+@keyframes centerPulse{0%,100%{box-shadow:0 0 60px rgba(46,158,79,.55)}50%{box-shadow:0 0 100px rgba(46,158,79,.8),0 0 0 20px rgba(46,158,79,.06)}}
+.hv-float{position:absolute;z-index:3;width:48px;height:48px;border-radius:13px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px);animation:floatBob ease-in-out infinite}
+.hv-float i{color:var(--green-mid);font-size:20px}
+.hv-float:nth-child(1){top:24px;right:48px;animation-duration:3.5s}
+.hv-float:nth-child(2){bottom:48px;right:24px;animation-duration:4.2s;animation-delay:1s}
+.hv-float:nth-child(3){bottom:24px;left:40px;animation-duration:3.8s;animation-delay:2s}
+.hv-float:nth-child(4){top:48px;left:24px;animation-duration:4.5s;animation-delay:.5s}
+@keyframes floatBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hv-stat{position:absolute;bottom:16px;right:16px;background:rgba(46,158,79,.9);border-radius:12px;padding:12px 18px;text-align:center;z-index:4;border:1.5px solid rgba(95,217,138,.3);animation:floatBob 5s ease-in-out infinite}
+.hv-stat strong{display:block;font-family:'Montserrat',sans-serif;font-size:28px;font-weight:900;color:#fff;line-height:1}
+.hv-stat span{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,.8);letter-spacing:1.5px;text-transform:uppercase}
+
+/* BREADCRUMB */
+.breadcrumb{background:#fff;border-bottom:1px solid var(--border);padding:13px 0}
+.breadcrumb-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:8px;font-size:13px;flex-wrap:wrap}
+.breadcrumb-inner a{color:var(--green-dark);text-decoration:none;font-weight:600;display:flex;align-items:center;gap:5px}
+.breadcrumb-inner .sep{color:var(--text-muted);font-size:11px}
+.breadcrumb-inner span{color:var(--text-muted);font-weight:600}
+
+/* STATS */
+.stats-band{background:var(--navy);padding:32px 0;position:relative;overflow:hidden}
+.stats-band::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(95,217,138,.06) 1.5px,transparent 1.5px);background-size:28px 28px;pointer-events:none}
+.stats-band-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(4,1fr);position:relative;z-index:1}
+.sbi{text-align:center;padding:0 20px;position:relative}
+.sbi+.sbi::before{content:'';position:absolute;left:0;top:15%;bottom:15%;width:1px;background:rgba(255,255,255,.1)}
+.sbi-num{font-family:'Montserrat',sans-serif;font-size:44px;font-weight:900;color:var(--green-mid);line-height:1;margin-bottom:6px}
+.sbi-label{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:rgba(255,255,255,.45);letter-spacing:2px;text-transform:uppercase}
+
+/* FILTER */
+.filter-bar{background:#fff;padding:20px 0;border-bottom:2px solid var(--border);position:sticky;top:80px;z-index:100;box-shadow:0 4px 20px rgba(13,43,78,.06)}
+.filter-bar-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.filter-label{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);flex-shrink:0}
+.filter-pills{display:flex;gap:8px;flex-wrap:wrap;flex:1}
+.fp{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;color:var(--text-muted);background:var(--bg);border:1.5px solid var(--border);padding:8px 14px;border-radius:20px;cursor:pointer;transition:all .2s;white-space:nowrap;user-select:none}
+.fp:hover{border-color:rgba(46,158,79,.4);color:var(--green-dark);background:var(--green-light)}
+.fp.active{background:var(--green);color:#fff;border-color:var(--green);box-shadow:0 4px 14px rgba(46,158,79,.35)}
+.search-wrap{position:relative;flex-shrink:0}
+.search-wrap input{font-family:'Open Sans',sans-serif;font-size:14px;color:var(--navy);background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:10px 16px 10px 40px;width:220px;outline:none;transition:border-color .2s,box-shadow .2s}
+.search-wrap input:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(46,158,79,.12)}
+.search-wrap input::placeholder{color:#a0b4c4}
+.search-wrap i{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--text-muted);font-size:14px}
+
+/* PRODUCTS SECTION */
+.products-section{padding:80px 0 60px;position:relative;overflow:hidden}
+.products-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(46,158,79,.055) 1.5px,transparent 1.5px);background-size:34px 34px;pointer-events:none;z-index:0}
+.prod-inner{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.prod-header{text-align:center;margin-bottom:56px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+.eyebrow::before,.eyebrow::after{content:'';display:block;width:28px;height:2.5px;background:var(--green);border-radius:2px}
+.sec-title{font-family:'Montserrat',sans-serif;font-size:44px;font-weight:900;color:var(--navy);line-height:1.08;letter-spacing:-1.5px;margin-bottom:14px}
+.sec-title span{color:var(--green)}
+.sec-sub{font-size:17px;color:var(--text-muted);line-height:1.85;max-width:640px;margin:0 auto}
+.results-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:36px;flex-wrap:wrap;gap:12px}
+.res-count{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:var(--text-muted)}.res-count span{color:var(--green)}
+.sort-wrap select{font-family:'Open Sans',sans-serif;font-size:13px;color:var(--navy);background:#fff;border:1.5px solid var(--border);border-radius:8px;padding:9px 14px;outline:none;cursor:pointer}
+
+/* SECTION GROUP */
+.section-group{margin-bottom:72px}
+.sec-group-header{display:flex;align-items:center;gap:18px;margin-bottom:36px;padding-bottom:18px;border-bottom:2px solid var(--border);flex-wrap:wrap}
+.sec-group-icon{width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,var(--green-dark),var(--green));display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 8px 24px rgba(46,158,79,.3)}
+.sec-group-icon i{color:#fff;font-size:22px}
+.sec-group-title{font-family:'Montserrat',sans-serif;font-size:26px;font-weight:900;color:var(--navy)}.sec-group-title span{color:var(--green)}
+.sec-group-count{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:var(--text-muted);background:var(--bg);border:1.5px solid var(--border);padding:5px 14px;border-radius:20px;margin-left:auto}
+
+/* GRID */
+.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.prod-grid.g3{grid-template-columns:repeat(3,1fr)}
+
+/* CARD */
+.pc{background:#fff;border-radius:18px;overflow:hidden;border:1.5px solid var(--border);box-shadow:0 4px 18px rgba(13,43,78,.06);transition:transform .38s cubic-bezier(.22,1,.36,1),box-shadow .38s ease,border-color .3s;opacity:0;transform:translateY(36px) scale(.97);display:flex;flex-direction:column;position:relative}
+.pc.pc-vis{opacity:1;transform:none}
+.pc:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 28px 60px rgba(13,43,78,.12);border-color:rgba(46,158,79,.38)}
+.pc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green-dark),var(--green),var(--green-mid));border-radius:18px 18px 0 0;transform:scaleX(0);transform-origin:left;transition:transform .3s ease;z-index:3}
+.pc:hover::before{transform:scaleX(1)}
+.pc-img{position:relative;height:170px;overflow:hidden;flex-shrink:0}
+.pc-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.pc:hover .pc-img img{transform:scale(1.1)}
+.pc-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(13,43,78,.55) 0%,transparent 55%);pointer-events:none;z-index:1}
+.pc-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+.pc-cat{position:absolute;top:10px;left:10px;z-index:4;font-family:'Montserrat',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;background:rgba(46,158,79,.88);color:#fff;padding:4px 10px;border-radius:20px}
+.pc-num{position:absolute;top:10px;right:10px;z-index:4;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:800;color:rgba(255,255,255,.7);background:rgba(0,0,0,.28);backdrop-filter:blur(6px);border-radius:6px;padding:3px 8px}
+.pc-body{padding:16px 16px 14px;display:flex;flex-direction:column;flex:1}
+.pc-icon-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.pc-icon{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--green-light),#c2e8ce);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .3s,background .3s}
+.pc:hover .pc-icon{transform:rotate(-8deg) scale(1.12);background:linear-gradient(135deg,#b2f0cb,#7dd4a0)}
+.pc-icon i{color:var(--green-dark);font-size:15px}
+.pc-name{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:800;color:var(--navy);line-height:1.25;transition:color .25s}
+.pc:hover .pc-name{color:var(--green-dark)}
+.pc-desc{font-size:12.5px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;flex:1}
+.pc-cta{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1.5px solid var(--border);margin-top:auto}
+.pc-btn{display:inline-flex;align-items:center;gap:6px;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:#fff;background:var(--navy);padding:8px 14px;border-radius:7px;text-decoration:none;transition:background .22s,transform .18s}
+.pc-btn:hover{background:var(--green);transform:translateY(-1px)}
+.pc-btn i{font-size:10px;transition:transform .2s}.pc-btn:hover i{transform:translateX(3px)}
+.pc-call{display:inline-flex;align-items:center;gap:5px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;color:var(--text-muted);text-decoration:none;transition:color .2s}.pc-call:hover{color:var(--green-dark)}
+.g3 .pc-img{height:200px}.g3 .pc-body{padding:20px 20px 16px}.g3 .pc-name{font-size:16px}.g3 .pc-desc{font-size:13.5px;line-height:1.7}.g3 .pc-icon{width:44px;height:44px}.g3 .pc-icon i{font-size:18px}.g3 .pc-btn{font-size:12.5px;padding:9px 16px}
+.ph-1{background:linear-gradient(160deg,#0d2b4e,#163e6f,#1e4d82)}.ph-2{background:linear-gradient(160deg,#0a2e20,#1e7a3a,#2e9e4f)}.ph-3{background:linear-gradient(160deg,#1a1a3e,#0d2b4e,#163e6f)}.ph-4{background:linear-gradient(160deg,#0d2b4e,#0a2e20,#1e7a3a)}.ph-5{background:linear-gradient(160deg,#162040,#0f3060,#2e4880)}.ph-6{background:linear-gradient(160deg,#0a2820,#145030,#1e7840)}.ph-7{background:linear-gradient(160deg,#1e1e42,#0d2b5e,#1a4080)}.ph-8{background:linear-gradient(160deg,#0d3020,#1a6040,#26885c)}.ph-9{background:linear-gradient(160deg,#16203a,#0d3055,#1a4875)}.ph-10{background:linear-gradient(160deg,#0a2518,#145025,#1e7838)}
+.ph-icon{font-size:42px;color:rgba(255,255,255,.2)}.ph-lbl{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.28)}
+.no-results{display:none;text-align:center;padding:60px 24px;grid-column:1/-1}.no-results i{font-size:48px;color:var(--border);display:block;margin-bottom:14px}.no-results p{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;color:var(--text-muted)}
+
+/* CTA */
+.cta-section{background:linear-gradient(135deg,var(--navy),var(--navy-mid) 45%,#0a3d20);padding:90px 0;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(95,217,138,.07) 1.5px,transparent 1.5px);background-size:36px 36px;pointer-events:none}
+.cta-rings .cr{position:absolute;border-radius:50%;border:1px solid rgba(95,217,138,.07);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.cta-rings .cr:nth-child(1){width:500px;height:500px}.cta-rings .cr:nth-child(2){width:800px;height:800px}
+.cta-inner{max-width:900px;margin:0 auto;padding:0 24px;text-align:center;position:relative;z-index:1}
+.cta-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(46,158,79,.18);border:1px solid rgba(46,158,79,.36);color:var(--green-mid);font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:7px 18px;border-radius:20px;margin-bottom:28px}
+.cta-title{font-family:'Montserrat',sans-serif;font-size:46px;font-weight:900;color:#fff;line-height:1.1;letter-spacing:-1.5px;margin-bottom:18px}.cta-title span{color:var(--green-mid)}
+.cta-sub{font-size:17px;color:rgba(255,255,255,.62);line-height:1.85;max-width:580px;margin:0 auto 40px}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-btn-p{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:#fff;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;padding:16px 34px;border-radius:10px;text-decoration:none;transition:background .22s,transform .18s;box-shadow:0 6px 22px rgba(46,158,79,.4)}.cta-btn-p:hover{background:var(--green-dark);transform:translateY(-3px)}
+.cta-btn-o{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);color:#fff;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;padding:15px 30px;border-radius:10px;text-decoration:none;border:2px solid rgba(255,255,255,.2);transition:background .22s,transform .18s}.cta-btn-o:hover{background:rgba(255,255,255,.15);transform:translateY(-3px)}
+
+/* FOOTER */
+.footer{background:#0a1f38;color:#cdd8e8;font-size:14px;line-height:1.7}
+.footer-top-band{background:linear-gradient(90deg,var(--green-dark),#1ca64b,var(--green-dark));padding:22px 24px;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
+.footer-top-band p{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:#fff}.footer-top-band p span{color:#b8f5cf}
+.footer-cta-btn{background:#fff;color:var(--green-dark);font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;padding:10px 26px;border-radius:6px;text-decoration:none;transition:background .2s,color .2s,transform .15s;white-space:nowrap}.footer-cta-btn:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
+.footer-main{max-width:1200px;margin:0 auto;padding:60px 24px 40px;display:grid;grid-template-columns:280px 1fr 1fr 1fr;gap:40px}
+.footer-logo-wrap{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.footer-logo-icon{width:50px;height:50px;border-radius:10px;background:rgba(46,158,79,.15);border:1.5px solid rgba(46,158,79,.3);display:flex;align-items:center;justify-content:center}
+.footer-logo-icon svg{width:28px;height:28px}
+.footer-logo-name{font-family:'Montserrat',sans-serif;font-size:19px;font-weight:800;color:#fff}.footer-logo-name span{color:var(--green)}
+.footer-logo-sub{font-size:10px;color:#7a9bb5;letter-spacing:1.8px;text-transform:uppercase}
+.footer-about p{color:#8aacca;font-size:13.5px;line-height:1.75;margin-bottom:20px}
+.footer-tagline{display:inline-block;background:rgba(46,158,79,.12);border-left:3px solid var(--green);color:#a8d8b5;font-size:12px;font-style:italic;padding:8px 14px;border-radius:0 6px 6px 0;margin-bottom:22px}
+.footer-socials{display:flex;gap:8px;flex-wrap:wrap}
+.footer-socials a{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;text-decoration:none;transition:transform .2s}.footer-socials a:hover{transform:translateY(-3px) scale(1.1)}
+.footer-socials a.fb{background:#1877f2;color:#fff}.footer-socials a.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285aeb 90%);color:#fff}.footer-socials a.li{background:#0a66c2;color:#fff}.footer-socials a.tw{background:#000;color:#fff}.footer-socials a.yt{background:red;color:#fff}.footer-socials a.wa{background:#25d366;color:#fff}.footer-socials a.tg{background:#0088cc;color:#fff}.footer-socials a.pt{background:#e60023;color:#fff}
+.footer-col h4{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:#fff;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid rgba(46,158,79,.35);display:flex;align-items:center;gap:8px}.footer-col h4 i{color:var(--green);font-size:13px}
+.footer-col h5{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#5fd98a;letter-spacing:1.5px;text-transform:uppercase;margin:16px 0 8px}
+.footer-links{list-style:none}.footer-links li{margin-bottom:2px}.footer-links li a{color:#8aacca;text-decoration:none;font-size:13px;display:flex;align-items:flex-start;gap:7px;padding:3px 0;transition:color .2s,padding-left .2s;line-height:1.5}.footer-links li a::before{content:'›';color:var(--green);font-size:15px;line-height:1.3;flex-shrink:0;font-weight:700}.footer-links li a:hover{color:#5fd98a;padding-left:4px}
+.footer-contact-grid{max-width:1200px;margin:0 auto;padding:0 24px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.contact-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start;transition:border-color .2s,background .2s}.contact-card:hover{border-color:rgba(46,158,79,.35);background:rgba(46,158,79,.06)}
+.contact-icon{width:38px;height:38px;border-radius:8px;background:rgba(46,158,79,.15);border:1px solid rgba(46,158,79,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0}.contact-icon i{color:var(--green);font-size:15px}
+.contact-info strong{display:block;color:#fff;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}.contact-info span,.contact-info a{display:block;color:#8aacca;font-size:12.5px;text-decoration:none}.contact-info a:hover{color:#5fd98a}
+.footer-divider{border:none;border-top:1px solid rgba(255,255,255,.07);margin:0 24px}
+.footer-bottom{max-width:1200px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.footer-bottom p{font-size:12.5px;color:#4a6a88}.footer-bottom p span{color:var(--green)}
+.footer-bottom-links{display:flex;gap:20px}.footer-bottom-links a{font-size:12px;color:#4a6a88;text-decoration:none;transition:color .2s}.footer-bottom-links a:hover{color:#5fd98a}
+.footer-motto{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:rgba(46,158,79,.55);letter-spacing:2px;text-transform:uppercase}
+.back-top{position:fixed;bottom:32px;right:32px;width:50px;height:50px;border-radius:14px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;border:none;box-shadow:0 8px 24px rgba(46,158,79,.4);transition:background .2s,transform .2s,opacity .3s;opacity:0;pointer-events:none;z-index:500}.back-top.show{opacity:1;pointer-events:all}.back-top:hover{background:var(--green-dark);transform:translateY(-3px)}
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .75s ease,transform .75s ease}.reveal.visible{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:1200px){.prod-grid{grid-template-columns:repeat(3,1fr)}.prod-grid.g3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1000px){.prod-grid,.prod-grid.g3{grid-template-columns:repeat(2,1fr)}.stats-band-inner{grid-template-columns:repeat(2,1fr);gap:28px}.sbi:nth-child(3)::before{display:none}.footer-main{grid-template-columns:1fr 1fr}.hh-inner{grid-template-columns:1fr}.hh-visual-wrap{display:none}.hh-title{font-size:44px}}
+@media(max-width:768px){.top-bar-address{display:none}.hamburger{display:flex}nav{display:none}nav.open{display:flex;flex-direction:column;align-items:stretch;position:absolute;top:80px;left:0;right:0;background:#fff;border-bottom:2px solid var(--green-light);padding:12px;box-shadow:0 8px 24px rgba(0,0,0,.1);z-index:200}nav.open a{padding:12px 16px;border-radius:8px}nav a.btn-contact{margin-left:0;margin-top:4px;text-align:center}.main-header{position:relative}.dropdown-menu{position:static;opacity:1;visibility:visible;pointer-events:all;transform:none;box-shadow:none;border:none;background:var(--green-light);padding:4px 8px;display:none;min-width:unset}.nav-dropdown.open .dropdown-menu{display:block}.prod-grid,.prod-grid.g3{grid-template-columns:1fr 1fr}.filter-bar{position:static}.filter-bar-inner{flex-direction:column;align-items:stretch}.search-wrap,.search-wrap input{width:100%}.hh-title{font-size:30px}.hh-inner{padding:56px 24px}.sec-title{font-size:28px}.footer-main{grid-template-columns:1fr;gap:28px}.footer-bottom{flex-direction:column;text-align:center}.footer-top-band{flex-direction:column;gap:14px;text-align:center}.cta-title{font-size:32px}.stats-band-inner{grid-template-columns:1fr 1fr}.back-top{bottom:20px;right:20px}.results-row{flex-direction:column;align-items:flex-start}.sec-group-header{gap:12px}.sec-group-count{margin-left:0}}
+@media(max-width:500px){.prod-grid,.prod-grid.g3{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="scroll-progress" id="scrollProg"></div>
+
+<!-- TOP BAR -->
+<div class="top-bar"><div class="top-bar-inner">
+  <div class="top-bar-address"><span><i class="fas fa-map-marker-alt"></i> Hosur, Tamil Nadu, India</span><span><i class="fas fa-phone"></i> +91 88704 96918</span><span><i class="fas fa-envelope"></i> chemslifegroups@gmail.com</span></div>
+  <div class="social-links"><a href="#" class="fb"><i class="fab fa-facebook-f"></i></a><a href="#" class="ig"><i class="fab fa-instagram"></i></a><a href="#" class="li"><i class="fab fa-linkedin-in"></i></a><a href="#" class="tw"><i class="fab fa-x-twitter"></i></a><a href="#" class="yt"><i class="fab fa-youtube"></i></a><a href="#" class="wa"><i class="fab fa-whatsapp"></i></a><a href="#" class="tg"><i class="fab fa-telegram-plane"></i></a><a href="#" class="pt"><i class="fab fa-pinterest-p"></i></a></div>
+</div></div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap"><div class="marquee-track">
+  <div class="marquee-content"><span class="marquee-text">&#9670;&nbsp; Chemslife Groups</span><span class="marquee-sep">|</span><span class="marquee-text">Everything is Science</span><span class="marquee-sep">|</span><span class="marquee-text">Science for Nation</span><span class="marquee-sep">|</span><span class="marquee-text">&#9670;&nbsp; Integrated Healthcare Solutions</span><span class="marquee-sep">|</span><span class="marquee-text">66 Products | 8 Divisions</span><span class="marquee-sep">|</span><span class="marquee-text">Trusted Since 2018</span><span class="marquee-sep">|</span></div>
+  <div class="marquee-content" aria-hidden="true"><span class="marquee-text">&#9670;&nbsp; Chemslife Groups</span><span class="marquee-sep">|</span><span class="marquee-text">Everything is Science</span><span class="marquee-sep">|</span><span class="marquee-text">Science for Nation</span><span class="marquee-sep">|</span><span class="marquee-text">&#9670;&nbsp; Integrated Healthcare Solutions</span><span class="marquee-sep">|</span><span class="marquee-text">66 Products | 8 Divisions</span><span class="marquee-sep">|</span><span class="marquee-text">Trusted Since 2018</span><span class="marquee-sep">|</span></div>
+</div></div>
+
+<!-- HEADER -->
+<header class="main-header"><div class="main-header-inner">
+  <a href="index.html" class="logo-wrap">
+    <div class="logo-img-box"><img src="YOUR_LOGO_IMAGE_HERE.png" alt="Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg" width="40" height="40" style="display:none"><path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4 Z" fill="#2e9e4f" opacity="0.13" stroke="#2e9e4f" stroke-width="2.5" stroke-linejoin="round"/><path d="M23 38 Q30 32 38 40 L42 52 Q44 57 40 59 L20 59 Q16 57 18 52 Z" fill="#2e9e4f" opacity="0.7"/><rect x="21" y="0" width="18" height="6" rx="3" fill="#111"/><path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4" fill="none" stroke="#111" stroke-width="2.5" stroke-linejoin="round"/></svg></div>
+    <div class="logo-text"><span class="logo-name">CHEMS<span>LIFE</span></span><span class="logo-tagline">Groups</span></div>
+  </a>
+  <nav id="main-nav">
+    <a href="index.html">Home</a><a href="about-us.html">About Us</a>
+    <div class="nav-dropdown" id="productsDropdown">
+      <a href="#" id="productsToggle" class="active">Products <i class="fas fa-chevron-down dd-arrow"></i></a>
+      <div class="dropdown-menu">
+        <a href="scientific-industrial-solutions.html"><div class="dd-icon"><i class="fas fa-flask"></i></div><div class="dd-label"><strong>Scientific &amp; Industrial Solutions</strong><span>Lab, chemical, water treatment &amp; homecare</span></div></a>
+        <div class="dropdown-divider"></div>
+        <a href="integrated-healthcare-solutions.html"><div class="dd-icon"><i class="fas fa-heartbeat"></i></div><div class="dd-label"><strong>Integrated Healthcare Solutions</strong><span>Pharma, surgical, diagnostics &amp; safety</span></div></a>
+      </div>
+    </div>
+    <a href="contact-us.html" class="btn-contact">Contact Us</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</div></header>
+
+<!-- HERO -->
+<section class="hc-hero">
+  <div class="hh-dots"></div><div class="hh-slash"></div><div class="hh-orb o1"></div><div class="hh-orb o2"></div><div class="hh-particles" id="hhParticles"></div>
+  <div class="hh-helix"><div class="hh-ring"><div class="hh-dot-el"></div></div><div class="hh-ring"><div class="hh-dot-el"></div></div><div class="hh-ring"></div></div>
+  <div class="hh-inner">
+    <div>
+      <div class="hh-eyebrow"><i class="fas fa-heartbeat"></i>&nbsp; Healthcare Division</div>
+      <h1 class="hh-title">Integrated<em>Healthcare Solutions</em></h1>
+      <p class="hh-desc">Over 66 products across 8 major divisions — Pharmaceuticals, Surgical Supplies, Hospital Consumables, Medical Devices, Diagnostics, Instruments, Disposables, and Safety Products.</p>
+      <div class="hh-badges">
+        <div class="hh-badge"><i class="fas fa-pills"></i><span>Pharmaceuticals</span></div>
+        <div class="hh-badge"><i class="fas fa-syringe"></i><span>Surgical Supplies</span></div>
+        <div class="hh-badge"><i class="fas fa-stethoscope"></i><span>Diagnostics</span></div>
+        <div class="hh-badge"><i class="fas fa-hard-hat"></i><span>Safety Products</span></div>
+      </div>
+    </div>
+    <div class="hh-visual-wrap">
+      <div class="hh-vis-bg"></div><div class="hh-vis-ring vr1"></div><div class="hh-vis-ring vr2"></div>
+      <div class="hv-float"><i class="fas fa-heartbeat"></i></div><div class="hv-float"><i class="fas fa-pills"></i></div><div class="hv-float"><i class="fas fa-microscope"></i></div><div class="hv-float"><i class="fas fa-shield-virus"></i></div>
+      <div class="hh-vis-center"><i class="fas fa-heartbeat"></i></div>
+      <div class="hv-stat"><strong>66+</strong><span>Products</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb"><div class="breadcrumb-inner"><a href="index.html"><i class="fas fa-home"></i> Home</a><i class="fas fa-chevron-right sep"></i><a href="#">Products</a><i class="fas fa-chevron-right sep"></i><span>Integrated Healthcare Solutions</span></div></div>
+
+<!-- STATS -->
+<div class="stats-band"><div class="stats-band-inner">
+  <div class="sbi"><div class="sbi-num" data-target="66">0</div><div class="sbi-label">Total Products</div></div>
+  <div class="sbi"><div class="sbi-num" data-target="8">0</div><div class="sbi-label">Product Divisions</div></div>
+  <div class="sbi"><div class="sbi-num" data-target="500">0</div><div class="sbi-label">Clients Served</div></div>
+  <div class="sbi"><div class="sbi-num" data-target="7">0</div><div class="sbi-label">Years of Expertise</div></div>
+</div></div>
+
+<!-- FILTER -->
+<div class="filter-bar"><div class="filter-bar-inner">
+  <span class="filter-label">Filter:</span>
+  <div class="filter-pills">
+    <span class="fp active" data-f="all">All Products</span>
+    <span class="fp" data-f="pharma">Pharmaceutical</span>
+    <span class="fp" data-f="surgical">Surgical</span>
+    <span class="fp" data-f="consumables">Hospital Consumables</span>
+    <span class="fp" data-f="devices">Medical Devices</span>
+    <span class="fp" data-f="diagnostic">Diagnostic Products</span>
+    <span class="fp" data-f="instruments">Diagnostic Instruments</span>
+    <span class="fp" data-f="disposables">Disposables</span>
+    <span class="fp" data-f="safety">Safety Products</span>
+  </div>
+  <div class="search-wrap"><i class="fas fa-search"></i><input type="text" id="searchInput" placeholder="Search products…" autocomplete="off"/></div>
+</div></div>
+
+<!-- PRODUCTS -->
+<section class="products-section"><div class="prod-inner">
+  <div class="prod-header reveal">
+    <div class="eyebrow" style="justify-content:center">Our Complete Range</div>
+    <h2 class="sec-title">Integrated Healthcare <span>Product Range</span></h2>
+    <p class="sec-sub">Explore our comprehensive healthcare divisions — from pharmaceuticals and surgical supplies to diagnostics, hospital consumables, and safety products.</p>
+  </div>
+  <div class="results-row">
+    <div class="res-count">Showing <span id="visCount">66</span> of <span>66</span> products</div>
+    <div class="sort-wrap"><select id="sortSel"><option value="default">Sort: Default</option><option value="az">Name: A → Z</option><option value="za">Name: Z → A</option></select></div>
+  </div>
+
+  <div class="section-group" id="sg-pharma"><div class="sec-group-header reveal"><div class="sec-group-icon"><i class="fas fa-pills"></i></div><div><div class="sec-group-title">Pharmaceutical <span>Products</span></div></div><div class="sec-group-count">12 Products</div></div><div class="prod-grid g3" id="grid-pharma"></div></div>
+  <div class="section-group" id="sg-surgical"><div class="sec-group-header reveal"><div class="sec-group-icon"><i class="fas fa-scalpel"></i></div><div><div class="sec-group-title">Surgical <span>Supplies</span></div></div><div class="sec-group-count">8 Products</div></div><div class="prod-grid" id="grid-surgical"></div></div>
+  <div class="section-group" id="sg-consumables"><div class="sec-group-header reveal"><div class="sec-group-icon"><i class="fas fa-box-open"></i></div><div><div class="sec-group-title">Hospital <span>Consumables</span></div></div><div class="sec-group-count">6 Products</div></div><div class="prod-grid g3" id="grid-consumables"></div></div>
+  <div class="section-group" id="sg-devices"><div class="sec-group-header reveal"><div class="sec-group-icon"><i class="fas fa-laptop-medical"></i></div><div><div class="sec-group-title">Medical Devices <span>in Hospitals</span></div></div><div class="sec-group-count">7 Products</div></div><div class="prod-grid g3" id="grid-devices"></div></div>
+  <div class="section-group" id="sg-diagnostic"><div class="sec-group-header reveal"><div class="sec-group-icon"><i class="fas fa-vials"></i></div><div><div class="sec-group-title">Diagnostic <span>Products</span></div></div><div class="sec-group-count">9 Products</div></div><div class="prod-grid g3" id="grid-diagnostic"></div></div>
+  <div class="section-group" id="sg-instruments"><div class="sec-group-header reveal"><div class="sec-group-icon"><i class="fas fa-microscope"></i></div><div><div class="sec-group-title">Diagnostic Instruments <span>&amp; Consumables</span></div></div><div class="sec-group-count">9 Products</div></div><div class="prod-grid g3" id="grid-instruments"></div></div>
+  <div class="section-group" id="sg-disposables"><div class="sec-group-header reveal"><div class="sec-group-icon"><i class="fas fa-recycle"></i></div><div><div class="sec-group-title">Disposables <span>Products</span></div></div><div class="sec-group-count">6 Products</div></div><div class="prod-grid g3" id="grid-disposables"></div></div>
+  <div class="section-group" id="sg-safety"><div class="sec-group-header reveal"><div class="sec-group-icon"><i class="fas fa-hard-hat"></i></div><div><div class="sec-group-title">Safety <span>Products</span></div></div><div class="sec-group-count">9 Products</div></div><div class="prod-grid g3" id="grid-safety"></div></div>
+
+  <div class="no-results" id="noResults"><i class="fas fa-search"></i><p>No products found. Try a different search or filter.</p></div>
+</div></section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-rings"><div class="cr"></div><div class="cr"></div></div>
+  <div class="cta-inner reveal">
+    <div class="cta-tag"><i class="fas fa-phone-alt"></i>&nbsp; Get In Touch</div>
+    <h2 class="cta-title">Need a <span>Custom Quote?</span></h2>
+    <p class="cta-sub">Looking for bulk orders or specific healthcare products? Our expert team will source exactly what your facility requires — with assured quality and fast delivery.</p>
+    <div class="cta-btns"><a href="contact-us.html" class="cta-btn-p"><i class="fas fa-paper-plane"></i> Send Enquiry</a><a href="tel:+918870496918" class="cta-btn-o"><i class="fas fa-phone-alt"></i> +91 88704 96918</a></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top-band"><p>Ready to partner with us? <span>Explore our full range of scientific, industrial &amp; healthcare solutions.</span></p><a href="#" id="footerBackTop" class="footer-cta-btn"><i class="fas fa-arrow-up" style="margin-right:7px"></i>Back to Top</a></div>
+  <div class="footer-main">
+    <div class="footer-about">
+      <div class="footer-logo-wrap"><div class="footer-logo-icon"><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4 Z" fill="#2e9e4f" opacity="0.2" stroke="#2e9e4f" stroke-width="2.5" stroke-linejoin="round"/><path d="M23 38 Q30 32 38 40 L42 52 Q44 57 40 59 L20 59 Q16 57 18 52 Z" fill="#2e9e4f" opacity="0.8"/><rect x="21" y="0" width="18" height="6" rx="3" fill="#cdd8e8"/><path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4" fill="none" stroke="#cdd8e8" stroke-width="2.5" stroke-linejoin="round"/></svg></div><div><div class="footer-logo-name">CHEMS<span>LIFE</span></div><div class="footer-logo-sub">Groups</div></div></div>
+      <p>A multi-sector organization delivering reliable scientific, industrial, and healthcare solutions since 2018.</p>
+      <div class="footer-tagline">"Building Chemistry for a Better Tomorrow"</div>
+      <div class="footer-socials"><a href="#" class="fb"><i class="fab fa-facebook-f"></i></a><a href="#" class="ig"><i class="fab fa-instagram"></i></a><a href="#" class="li"><i class="fab fa-linkedin-in"></i></a><a href="#" class="tw"><i class="fab fa-x-twitter"></i></a><a href="#" class="yt"><i class="fab fa-youtube"></i></a><a href="#" class="wa"><i class="fab fa-whatsapp"></i></a><a href="#" class="tg"><i class="fab fa-telegram-plane"></i></a><a href="#" class="pt"><i class="fab fa-pinterest-p"></i></a></div>
+    </div>
+    <div class="footer-col"><h4><i class="fas fa-heartbeat"></i> Healthcare Solutions</h4><h5>Pharmaceutical</h5><ul class="footer-links"><li><a href="#">Analgesics &amp; Antipyretics</a></li><li><a href="#">Antibiotics</a></li><li><a href="#">Cardiovascular Drugs</a></li><li><a href="#">Vitamins &amp; Supplements</a></li></ul><h5>Surgical &amp; Devices</h5><ul class="footer-links"><li><a href="#">Surgical Instruments</a></li><li><a href="#">Medical Devices</a></li><li><a href="#">Hospital Consumables</a></li></ul></div>
+    <div class="footer-col"><h4><i class="fas fa-flask"></i> Scientific &amp; Industrial</h4><h5>Products</h5><ul class="footer-links"><li><a href="#">Laboratory Products</a></li><li><a href="#">Chemical Products</a></li><li><a href="#">Water Treatment</a></li><li><a href="#">Homecare &amp; Cleaning</a></li></ul><h5>Diagnostics</h5><ul class="footer-links"><li><a href="#">Diagnostic Products</a></li><li><a href="#">Diagnostic Instruments</a></li><li><a href="#">Disposables</a></li><li><a href="#">Safety Products</a></li></ul></div>
+    <div class="footer-col"><h4><i class="fas fa-link"></i> Quick Links</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about-us.html">About Us</a></li><li><a href="scientific-industrial-solutions.html">Scientific Products</a></li><li><a href="integrated-healthcare-solutions.html">Healthcare Solutions</a></li><li><a href="contact-us.html">Contact Us</a></li></ul><h5>Locations</h5><ul class="footer-links"><li><a href="#">Corporate Office – Hosur</a></li><li><a href="#">Healthcare Division – Hosur</a></li><li><a href="#">Registered Office – Thiruvarur</a></li></ul></div>
+  </div>
+  <div class="footer-contact-grid">
+    <div class="contact-card"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><div class="contact-info"><strong>Sales</strong><span>+91 88704 96918</span><a href="mailto:sales@chemslife.in">sales@chemslife.in</a></div></div>
+    <div class="contact-card"><div class="contact-icon"><i class="fas fa-headset"></i></div><div class="contact-info"><strong>Admin</strong><span>+91 88702 44418</span><a href="mailto:admin@chemslife.in">admin@chemslife.in</a></div></div>
+    <div class="contact-card"><div class="contact-icon"><i class="fas fa-shopping-bag"></i></div><div class="contact-info"><strong>Chemscart</strong><span>+91 88702 44418</span><a href="mailto:admin@chemscart.in">admin@chemscart.in</a></div></div>
+    <div class="contact-card"><div class="contact-icon"><i class="fas fa-truck"></i></div><div class="contact-info"><strong>Dispatch</strong><span>+91 88700 36018</span><a href="mailto:dispatch@chemslife.in">dispatch@chemslife.in</a></div></div>
+  </div>
+  <hr class="footer-divider"/>
+  <div class="footer-bottom"><p>&copy; 2025 <span>Chemslife Groups</span>. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div><div class="footer-motto">Everything is Science &#9670; Science for Nation</div></div>
+</footer>
+<button class="back-top" id="backTopBtn" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+// ─── PRODUCT DATA ───
+const SECTIONS = [
+  {id:'pharma',gridId:'grid-pharma',cat:'Pharmaceutical',items:[
+    {name:'Analgesics & Antipyretics',icon:'fas fa-tablets',desc:'Pain relievers and fever reducers including NSAIDs, opioids, and combination formulations for acute and chronic conditions.'},
+    {name:'Antibiotics & Antimicrobials',icon:'fas fa-shield-virus',desc:'Broad and narrow-spectrum antibacterials, antifungals, and antimicrobial agents for infection management.'},
+    {name:'Antivirals & Antifungals',icon:'fas fa-virus',desc:'Antiviral medications and systemic antifungal agents for viral infections and fungal disease treatment.'},
+    {name:'Cardiovascular Drugs',icon:'fas fa-heartbeat',desc:'Antihypertensives, anticoagulants, statins, vasodilators, and cardiac rhythm management drugs.'},
+    {name:'Endocrine & Metabolic Drugs',icon:'fas fa-dna',desc:'Insulin, thyroid medications, corticosteroids, and metabolic disorder treatments.'},
+    {name:'Respiratory Drugs',icon:'fas fa-lungs',desc:'Bronchodilators, corticosteroid inhalers, mucolytics, and respiratory support medications.'},
+    {name:'Gastrointestinal Drugs',icon:'fas fa-stomach',desc:'Antacids, proton pump inhibitors, antiemetics, laxatives, and GI motility agents.'},
+    {name:'Neurological & Psychiatric Drugs',icon:'fas fa-brain',desc:'Antidepressants, anxiolytics, anticonvulsants, antipsychotics, and neuroprotective agents.'},
+    {name:'Oncology Drugs',icon:'fas fa-ribbon',desc:'Chemotherapy agents, targeted therapies, immunotherapies, and supportive oncology medications.'},
+    {name:'Vitamins & Nutritional Supplements',icon:'fas fa-capsules',desc:'Multivitamins, minerals, amino acids, omega fatty acids, and clinical nutrition products.'},
+    {name:'Dermatological Products',icon:'fas fa-hand-holding-medical',desc:'Topical steroids, antifungals, antibiotics, emollients, and dermatological treatment creams.'},
+    {name:'Vaccines',icon:'fas fa-syringe',desc:'Prophylactic and therapeutic vaccines for immunization programs and disease prevention.'}
+  ]},
+  {id:'surgical',gridId:'grid-surgical',cat:'Surgical',items:[
+    {name:'Cutting & Dissecting Instruments',icon:'fas fa-cut',desc:'Scalpels, scissors, osteotomes, bone cutters, and electrosurgical cutting devices.'},
+    {name:'Grasping & Holding Instruments',icon:'fas fa-hand-rock',desc:'Forceps, clamps, needle holders, and tissue grasping instruments for surgical procedures.'},
+    {name:'Retracting Instruments',icon:'fas fa-expand-arrows-alt',desc:'Hand-held and self-retaining retractors for optimal surgical field exposure.'},
+    {name:'Clamping & Occluding Instruments',icon:'fas fa-compress-alt',desc:'Hemostatic clamps, vascular clamps, and bowel clamps for tissue occlusion.'},
+    {name:'Suturing & Stapling Instruments',icon:'fas fa-link',desc:'Needle holders, suture materials, surgical staplers, and wound closure systems.'},
+    {name:'Dilating & Probing Instruments',icon:'fas fa-search-plus',desc:'Probes, dilators, sounds, and bougies for anatomical exploration and dilation.'},
+    {name:'Suction & Aspirating Instruments',icon:'fas fa-wind',desc:'Surgical suction devices, aspirators, and cannulas for fluid removal.'},
+    {name:'Specialty Surgical Sets',icon:'fas fa-briefcase-medical',desc:'Pre-configured instrument sets for ENT, ophthalmic, orthopedic, and general surgery.'}
+  ]},
+  {id:'consumables',gridId:'grid-consumables',cat:'Hospital Consumables',items:[
+    {name:'General Medical Consumables',icon:'fas fa-band-aid',desc:'Bandages, gauze, cotton, adhesive tapes, and everyday medical supply items.'},
+    {name:'Surgical Consumables',icon:'fas fa-procedures',desc:'Surgical drapes, gowns, gloves, sutures, and single-use procedural items.'},
+    {name:'Diagnostic Consumables',icon:'fas fa-vials',desc:'Sample collection tubes, swabs, slides, reagent cartridges, and testing strips.'},
+    {name:'Laboratory Consumables',icon:'fas fa-flask',desc:'Pipette tips, cuvettes, culture media, petri dishes, and lab-grade consumables.'},
+    {name:'Patient Care Consumables',icon:'fas fa-user-nurse',desc:'IV sets, catheters, feeding tubes, ostomy supplies, and patient comfort items.'},
+    {name:'Safety & Hygiene Consumables',icon:'fas fa-hand-sparkles',desc:'Hand sanitizers, disinfectant wipes, face masks, and hygiene maintenance products.'}
+  ]},
+  {id:'devices',gridId:'grid-devices',cat:'Medical Devices',items:[
+    {name:'Diagnostic & Imaging Devices',icon:'fas fa-x-ray',desc:'X-ray systems, ultrasound machines, CT scanners, MRI equipment, and endoscopes.'},
+    {name:'Monitoring Devices',icon:'fas fa-heartbeat',desc:'Patient monitors, pulse oximeters, ECG machines, and blood pressure monitors.'},
+    {name:'Therapeutic & Life Support Devices',icon:'fas fa-lungs',desc:'Ventilators, dialysis machines, infusion pumps, defibrillators, and anesthesia systems.'},
+    {name:'Surgical & Procedural Devices',icon:'fas fa-scalpel',desc:'Electrosurgical units, laparoscopic systems, surgical robots, and laser devices.'},
+    {name:'Laboratory & Diagnostic Equipment',icon:'fas fa-microscope',desc:'Analyzers, centrifuges, incubators, autoclaves, and clinical lab equipment.'},
+    {name:'Rehabilitation & Patient Care Devices',icon:'fas fa-wheelchair',desc:'Wheelchairs, walkers, physiotherapy equipment, and mobility assistance devices.'},
+    {name:'Sterilization & Safety Devices',icon:'fas fa-shield-alt',desc:'Autoclaves, UV sterilizers, fumigation chambers, and hospital safety systems.'}
+  ]},
+  {id:'diagnostic',gridId:'grid-diagnostic',cat:'Diagnostic Products',items:[
+    {name:'Clinical Chemistry Products',icon:'fas fa-flask',desc:'Reagent kits, calibrators, and controls for blood glucose, lipids, liver, and kidney function tests.'},
+    {name:'Hematology Products',icon:'fas fa-tint',desc:'CBC reagents, coagulation testing products, blood typing kits, and hemoglobin analyzers.'},
+    {name:'Immunology & Serology Products',icon:'fas fa-shield-virus',desc:'ELISA kits, rapid test cassettes, autoimmune panels, and allergy testing products.'},
+    {name:'Microbiology Products',icon:'fas fa-bacteria',desc:'Culture media, sensitivity discs, identification systems, and staining reagents.'},
+    {name:'Molecular Diagnostics Products',icon:'fas fa-dna',desc:'PCR kits, extraction reagents, sequencing products, and gene expression assays.'},
+    {name:'Oncology Diagnostic Products',icon:'fas fa-ribbon',desc:'Tumor markers, IHC reagents, FISH probes, and liquid biopsy kits for cancer screening.'},
+    {name:'Cardiac Diagnostic Products',icon:'fas fa-heartbeat',desc:'Troponin assays, BNP kits, lipid panels, and cardiac risk assessment products.'},
+    {name:'Urinalysis & Routine Screening',icon:'fas fa-vial',desc:'Urine test strips, dipsticks, automated analyzers, and drug screening panels.'},
+    {name:'Point-of-Care (POC) Diagnostics',icon:'fas fa-stopwatch',desc:'Rapid glucose meters, lateral flow tests, portable blood gas analyzers, and bedside diagnostics.'}
+  ]},
+  {id:'instruments',gridId:'grid-instruments',cat:'Diagnostic Instruments',items:[
+    {name:'Clinical Chemistry Instruments',icon:'fas fa-cogs',desc:'Fully automated chemistry analyzers, semi-auto analyzers, and electrolyte analyzers.'},
+    {name:'Hematology Instruments',icon:'fas fa-tint',desc:'3-part and 5-part differential analyzers, coagulation analyzers, and ESR systems.'},
+    {name:'Immunology & Serology Instruments',icon:'fas fa-shield-virus',desc:'ELISA readers, chemiluminescence analyzers, and nephelometry systems.'},
+    {name:'Microbiology Instruments',icon:'fas fa-bacteria',desc:'Automated ID/AST systems, blood culture analyzers, and colony counters.'},
+    {name:'Molecular Diagnostics Instruments',icon:'fas fa-dna',desc:'Real-time PCR systems, thermal cyclers, sequencers, and extraction platforms.'},
+    {name:'Oncology Diagnostic Instruments',icon:'fas fa-ribbon',desc:'Flow cytometers, digital pathology scanners, and tissue processing equipment.'},
+    {name:'Cardiac Diagnostic Instruments',icon:'fas fa-heartbeat',desc:'ECG machines, Holter monitors, stress testing systems, and cardiac catheterization labs.'},
+    {name:'Urinalysis Instruments',icon:'fas fa-vial',desc:'Automated urine analyzers, microscopy systems, and urine chemistry readers.'},
+    {name:'Point-of-Care (POC) Instruments',icon:'fas fa-stopwatch',desc:'Handheld glucose meters, portable coagulation analyzers, and bedside blood gas systems.'}
+  ]},
+  {id:'disposables',gridId:'grid-disposables',cat:'Disposables',items:[
+    {name:'Plasticware Disposables',icon:'fas fa-box-open',desc:'Disposable pipettes, petri dishes, centrifuge tubes, sample cups, and plastic labware.'},
+    {name:'Glassware Disposables',icon:'fas fa-wine-glass',desc:'Single-use glass slides, coverslips, capillary tubes, and glass vials.'},
+    {name:'Filtration Disposables',icon:'fas fa-filter',desc:'Syringe filters, membrane filters, filter papers, and single-use filtration units.'},
+    {name:'Safety & Hygiene Disposables',icon:'fas fa-hand-sparkles',desc:'Disposable gloves, face masks, shoe covers, caps, and hygiene barrier products.'},
+    {name:'Medical & Biological Disposables',icon:'fas fa-procedures',desc:'Syringes, blood collection tubes, IV cannulas, catheters, and specimen containers.'},
+    {name:'Waste Management Disposables',icon:'fas fa-trash-alt',desc:'Biohazard bags, sharps containers, autoclave bags, and color-coded waste bins.'}
+  ]},
+  {id:'safety',gridId:'grid-safety',cat:'Safety Products',items:[
+    {name:'Personal Protective Equipment (PPE)',icon:'fas fa-vest-patches',desc:'Safety helmets, protective clothing, gloves, goggles, and full-body protection suits.'},
+    {name:'Respiratory Protection',icon:'fas fa-head-side-mask',desc:'N95 respirators, PAPR systems, gas masks, and dust filtering facepieces.'},
+    {name:'Hearing Protection',icon:'fas fa-deaf',desc:'Earplugs, earmuffs, electronic hearing protectors, and custom-molded devices.'},
+    {name:'Fall Protection',icon:'fas fa-parachute-box',desc:'Safety harnesses, lanyards, anchor points, guardrails, and fall arrest systems.'},
+    {name:'Fire Safety Products',icon:'fas fa-fire-extinguisher',desc:'Fire extinguishers, fire blankets, smoke detectors, sprinkler systems, and alarms.'},
+    {name:'Emergency & First Aid Products',icon:'fas fa-first-aid',desc:'First aid kits, emergency stretchers, AED defibrillators, and trauma supplies.'},
+    {name:'Chemical Safety Products',icon:'fas fa-biohazard',desc:'Spill kits, chemical storage cabinets, safety showers, and eyewash stations.'},
+    {name:'Electrical Safety Products',icon:'fas fa-bolt',desc:'Insulated tools, lockout/tagout kits, voltage detectors, and arc flash protection.'},
+    {name:'Radiation Safety Products',icon:'fas fa-radiation',desc:'Lead aprons, thyroid shields, dosimeters, radiation barriers, and monitoring badges.'}
+  ]}
+];
+
+const PH = ['ph-1','ph-2','ph-3','ph-4','ph-5','ph-6','ph-7','ph-8','ph-9','ph-10'];
+
+function buildCard(item, idx, catLabel, catKey) {
+  const ph = PH[idx % PH.length];
+  const num = String(idx+1).padStart(2,'0');
+  const imgName = item.name.replace(/[^a-zA-Z0-9]/g,'_').toUpperCase() + '.jpg';
+  return `<div class="pc" data-name="${item.name.toLowerCase()}" data-cat="${catKey}">
+    <div class="pc-img"><img src="${imgName}" alt="${item.name}" onerror="this.style.display='none'"/><div class="pc-ph ${ph}"><i class="${item.icon} ph-icon"></i><span class="ph-lbl">Add Image</span></div><div class="pc-cat">${catLabel}</div><span class="pc-num">${num}</span></div>
+    <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="${item.icon}"></i></div><h3 class="pc-name">${item.name}</h3></div><p class="pc-desc">${item.desc}</p><div class="pc-cta"><a href="contact-us.html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
+  </div>`;
+}
+
+// Populate all grids
+SECTIONS.forEach(s => {
+  document.getElementById(s.gridId).innerHTML = s.items.map((p,i) => buildCard(p,i,s.cat,s.id)).join('');
+});
+
+// ─── Hamburger
+const hamburger = document.getElementById('hamburger'), nav = document.getElementById('main-nav');
+hamburger.addEventListener('click', () => nav.classList.toggle('open'));
+document.addEventListener('click', e => { if (!nav.contains(e.target) && !hamburger.contains(e.target)) nav.classList.remove('open'); });
+const dd = document.getElementById('productsDropdown'), pt = document.getElementById('productsToggle');
+if (pt) pt.addEventListener('click', e => { if (window.innerWidth <= 768) { e.preventDefault(); dd.classList.toggle('open'); } });
+
+// ─── Scroll Progress
+window.addEventListener('scroll', () => { document.getElementById('scrollProg').style.width = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100 + '%'; });
+
+// ─── Back to Top
+const btn = document.getElementById('backTopBtn');
+window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 400));
+btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+document.getElementById('footerBackTop').addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+// ─── Reveal
+const revels = document.querySelectorAll('.reveal');
+function checkReveal() { revels.forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight - 80) el.classList.add('visible'); }); }
+let tick = false;
+window.addEventListener('scroll', () => { if (!tick) { requestAnimationFrame(() => { checkReveal(); tick = false; }); tick = true; } });
+checkReveal();
+
+// ─── Stats counter
+let statsRan = false;
+function animCount(el, target) { let n = 0; const step = Math.ceil(target / (1400 / 16)); const t = setInterval(() => { n += step; if (n >= target) { n = target; clearInterval(t); } el.textContent = n + '+'; }, 16); }
+new IntersectionObserver(entries => { if (entries[0].isIntersecting && !statsRan) { statsRan = true; document.querySelectorAll('.sbi-num').forEach(el => animCount(el, +el.dataset.target)); } }, { threshold: 0.4 }).observe(document.querySelector('.stats-band'));
+
+// ─── Card reveal
+const cards = document.querySelectorAll('.pc');
+const co = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('pc-vis'); co.unobserve(e.target); } }); }, { threshold: 0.04 });
+cards.forEach((c, i) => { c.style.transitionDelay = (i % 4) * 0.06 + 's'; co.observe(c); });
+
+// ─── Filter + Search
+const allCards = [...document.querySelectorAll('.pc')];
+const pills = document.querySelectorAll('.fp');
+const searchEl = document.getElementById('searchInput');
+const vcEl = document.getElementById('visCount');
+const noRes = document.getElementById('noResults');
+const sgMap = {};
+SECTIONS.forEach(s => { sgMap[s.id] = document.getElementById('sg-' + s.id); });
+let activeCat = 'all', query = '';
+
+function applyFilters() {
+  let vis = 0;
+  Object.entries(sgMap).forEach(([key, el]) => { el.style.display = (activeCat === 'all' || activeCat === key) ? '' : 'none'; });
+  allCards.forEach(c => {
+    const mc = activeCat === 'all' || c.dataset.cat === activeCat;
+    const mq = c.dataset.name.includes(query.toLowerCase());
+    const show = mc && mq;
+    c.style.display = show ? 'flex' : 'none';
+    if (show) vis++;
+  });
+  vcEl.textContent = vis;
+  noRes.style.display = vis === 0 ? 'block' : 'none';
+}
+pills.forEach(p => { p.addEventListener('click', () => { pills.forEach(x => x.classList.remove('active')); p.classList.add('active'); activeCat = p.dataset.f; applyFilters(); }); });
+searchEl.addEventListener('input', () => { query = searchEl.value; applyFilters(); });
+
+// ─── Sort
+const sortSel = document.getElementById('sortSel');
+SECTIONS.forEach(s => {
+  const g = document.getElementById(s.gridId);
+  sortSel.addEventListener('change', () => {
+    const items = [...g.querySelectorAll('.pc')];
+    if (sortSel.value === 'az') items.sort((a,b) => a.dataset.name.localeCompare(b.dataset.name));
+    else if (sortSel.value === 'za') items.sort((a,b) => b.dataset.name.localeCompare(a.dataset.name));
+    items.forEach(c => g.appendChild(c));
+  });
+});
+
+// ─── Particles
+(function() {
+  const c = document.getElementById('hhParticles'); if (!c) return;
+  for (let i = 0; i < 22; i++) {
+    const p = document.createElement('div'); p.className = 'hh-particle';
+    const sz = Math.random() * 3 + 2;
+    p.style.cssText = `left:${Math.random()*100}%;width:${sz}px;height:${sz}px;animation-duration:${Math.random()*14+8}s;animation-delay:${Math.random()*8}s;background:rgba(95,217,138,${Math.random()*.4+.1})`;
+    c.appendChild(p);
+  }
+})();
+</script>
+</body>
+</html>

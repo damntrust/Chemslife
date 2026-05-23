@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About Us — Chemslife Groups</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#2e9e4f;--green-dark:#1e7a3a;--green-light:#e8f7ed;--green-mid:#5fd98a;
+  --white:#fff;--navy:#0d2b4e;--navy-mid:#163e6f;--text-muted:#4a6080;
+  --border:#d4e8dc;--bg:#f4f8f5;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;background:var(--bg);color:var(--navy);overflow-x:hidden}
+
+/* ═══ TOP BAR ═══ */
+.top-bar{background:var(--navy);color:#fff;padding:8px 0}
+.top-bar-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.top-bar-address{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.top-bar-address span{display:flex;align-items:center;gap:6px;color:#a8c4d8;font-size:12.5px}
+.top-bar-address span i{color:var(--green);font-size:12px}
+.social-links{display:flex;align-items:center;gap:8px}
+.social-links a{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;text-decoration:none;transition:transform .2s,filter .2s;border:1.5px solid rgba(255,255,255,.12)}
+.social-links a:hover{transform:scale(1.18) translateY(-2px)}
+.social-links a.fb{background:#1877f2;color:#fff}.social-links a.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285aeb 90%);color:#fff}
+.social-links a.li{background:#0a66c2;color:#fff}.social-links a.tw{background:#000;color:#fff}
+.social-links a.yt{background:red;color:#fff}.social-links a.wa{background:#25d366;color:#fff}
+.social-links a.tg{background:#0088cc;color:#fff}.social-links a.pt{background:#e60023;color:#fff}
+
+/* ═══ MARQUEE ═══ */
+.marquee-wrap{background:linear-gradient(90deg,var(--green-dark),var(--green),var(--green-dark));padding:9px 0;overflow:hidden;position:relative}
+.marquee-wrap::before,.marquee-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
+.marquee-wrap::before{left:0;background:linear-gradient(to right,var(--green-dark),transparent)}
+.marquee-wrap::after{right:0;background:linear-gradient(to left,var(--green-dark),transparent)}
+.marquee-track{display:flex;width:max-content;animation:marquee 28s linear infinite}
+.marquee-track:hover{animation-play-state:paused}
+.marquee-content{display:flex;align-items:center;white-space:nowrap}
+.marquee-text{font-family:'Montserrat',sans-serif;font-size:13.5px;font-weight:700;letter-spacing:3.5px;color:rgba(255,255,255,.95);text-transform:uppercase;padding:0 48px}
+.marquee-sep{color:rgba(255,255,255,.5);font-size:16px;padding:0 8px}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ═══ HEADER ═══ */
+.main-header{background:#fff;border-bottom:2px solid var(--green-light);box-shadow:0 2px 12px rgba(46,158,79,.08);position:sticky;top:0;z-index:200}
+.main-header-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:80px;gap:24px}
+.logo-wrap{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}
+.logo-img-box{width:58px;height:58px;border-radius:10px;background:#f0faf3;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.logo-img-box img{width:100%;height:100%;object-fit:contain}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-name{font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:#111;letter-spacing:-.5px}
+.logo-name span{color:var(--green)}
+.logo-tagline{font-size:10px;color:var(--text-muted);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;margin-top:2px}
+nav{display:flex;align-items:center;gap:4px}
+nav a{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:600;color:var(--navy);text-decoration:none;padding:8px 18px;border-radius:6px;letter-spacing:.3px;position:relative;transition:color .2s,background .2s}
+nav a::after{content:'';position:absolute;bottom:4px;left:18px;right:18px;height:2px;background:var(--green);border-radius:2px;transform:scaleX(0);transition:transform .25s ease}
+nav a:hover{color:var(--green-dark);background:var(--green-light)}
+nav a:hover::after,nav a.active::after{transform:scaleX(1)}
+nav a.active{color:var(--green-dark);background:var(--green-light)}
+nav a.btn-contact{background:var(--navy);color:#fff;border-radius:6px;padding:9px 20px;margin-left:8px;transition:background .2s,transform .15s}
+nav a.btn-contact::after{display:none}
+nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(-1px)}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:5px}
+.nav-dropdown>a .dd-arrow{font-size:10px;transition:transform .25s ease}
+.nav-dropdown:hover>a .dd-arrow{transform:rotate(180deg)}
+.dropdown-menu{position:absolute;top:calc(100% + 8px);left:0;background:#fff;border:1.5px solid var(--border);border-radius:12px;box-shadow:0 16px 48px rgba(13,43,78,.14);min-width:300px;padding:8px;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(10px);transition:opacity .22s ease,transform .22s ease,visibility .22s;z-index:200}
+.nav-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;pointer-events:all;transform:translateY(0)}
+.dropdown-menu a{display:flex;align-items:center;gap:12px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--navy);text-decoration:none;padding:11px 14px;border-radius:8px;transition:background .18s,color .18s,padding-left .18s}
+.dropdown-menu a::after{display:none!important}
+.dropdown-menu a:hover{background:var(--green-light);color:var(--green-dark);padding-left:18px}
+.dropdown-menu a .dd-icon{width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,var(--green-light),#c2e8ce);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s}
+.dropdown-menu a:hover .dd-icon{background:linear-gradient(135deg,#b2f0cb,#7dd4a0)}
+.dropdown-menu a .dd-icon i{color:var(--green-dark);font-size:14px}
+.dropdown-menu a .dd-label{flex:1}
+.dropdown-menu a .dd-label strong{display:block;font-size:13px;font-weight:700;color:var(--navy)}
+.dropdown-menu a .dd-label span{display:block;font-size:11px;color:var(--text-muted);font-weight:500;margin-top:1px}
+.dropdown-divider{border:none;border-top:1px solid var(--border);margin:6px 8px}
+.hamburger{display:none;background:none;border:1.5px solid var(--border);border-radius:6px;padding:7px 9px;cursor:pointer;flex-direction:column;gap:4px}
+.hamburger span{display:block;width:20px;height:2px;background:var(--navy);border-radius:2px}
+
+/* ═══ HERO ═══ */
+.about-hero{position:relative;min-height:480px;display:flex;align-items:center;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 55%,#0a3d20 100%);overflow:hidden}
+.ah-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,43,78,.88) 0%,rgba(13,43,78,.5) 55%,rgba(10,61,32,.72) 100%);z-index:1}
+.ah-deco{position:absolute;inset:0;z-index:2;pointer-events:none}
+.ah-hex{position:absolute;opacity:.07;animation:hexFloat 9s ease-in-out infinite}
+.ah-hex svg{fill:var(--green-mid)}
+.ah-hex:nth-child(1){top:-30px;right:6%;width:220px;animation-delay:0s}
+.ah-hex:nth-child(2){bottom:-50px;right:20%;width:160px;animation-delay:2.5s}
+.ah-hex:nth-child(3){top:35%;left:3%;width:80px;opacity:.04;animation-delay:4s}
+.ah-hex:nth-child(4){top:8%;right:40%;width:55px;opacity:.1;animation-delay:1.2s}
+@keyframes hexFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-20px) rotate(12deg)}}
+.ah-particles{position:absolute;inset:0;overflow:hidden}
+.ah-particles span{position:absolute;width:3px;height:3px;border-radius:50%;background:rgba(95,217,138,.35);animation:particleDrift linear infinite}
+@keyframes particleDrift{0%{opacity:0;transform:translateY(100px)}10%{opacity:1}90%{opacity:.6}100%{opacity:0;transform:translateY(-100vh)}}
+.ah-atom{position:absolute;right:-80px;top:-80px;z-index:2}
+.ah-ring{position:absolute;border-radius:50%;border:1px solid rgba(95,217,138,.12);animation:atomOrbit linear infinite}
+.ah-ring:nth-child(1){width:380px;height:380px;top:0;left:0;animation-duration:18s}
+.ah-ring:nth-child(2){width:240px;height:240px;top:70px;left:70px;animation-duration:11s;animation-direction:reverse}
+.ah-ring:nth-child(3){width:120px;height:120px;top:130px;left:130px;border-color:rgba(95,217,138,.25)}
+.ah-dot{position:absolute;width:8px;height:8px;border-radius:50%;background:var(--green-mid);top:50%;left:-4px;transform-origin:190px 4px;animation:inherit;box-shadow:0 0 12px var(--green-mid)}
+@keyframes atomOrbit{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.ah-inner{max-width:1280px;margin:0 auto;padding:90px 24px;position:relative;z-index:3;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(46,158,79,.18);border:1px solid rgba(46,158,79,.38);color:#5fd98a;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:7px 18px;border-radius:20px;margin-bottom:22px;backdrop-filter:blur(8px)}
+.hero-title{font-family:'Montserrat',sans-serif;font-size:58px;font-weight:900;color:#fff;line-height:1.0;letter-spacing:-2px;margin-bottom:18px}
+.hero-title span{color:var(--green-mid)}
+.hero-subtitle{font-size:17px;color:rgba(255,255,255,.7);line-height:1.85;max-width:460px;margin-bottom:36px}
+.hero-pills{display:flex;gap:12px;flex-wrap:wrap}
+.hero-pill{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:12px 18px;backdrop-filter:blur(6px);transition:background .25s}
+.hero-pill:hover{background:rgba(46,158,79,.18)}
+.hero-pill i{color:var(--green-mid);font-size:16px}
+.hero-pill span{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:rgba(255,255,255,.88)}
+.hero-right-vis{position:relative;height:380px;display:flex;align-items:center;justify-content:center}
+.hv-center{width:160px;height:160px;border-radius:50%;background:linear-gradient(135deg,var(--green-dark),var(--green));display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 0 60px rgba(46,158,79,.4),0 20px 60px rgba(13,43,78,.5);border:4px solid rgba(255,255,255,.15);animation:centerPulse 4s ease-in-out infinite;z-index:5;position:relative}
+.hv-center span{font-family:'Montserrat',sans-serif;font-size:32px;font-weight:900;color:#fff;line-height:1}
+.hv-center small{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.7);text-transform:uppercase;margin-top:4px}
+@keyframes centerPulse{0%,100%{box-shadow:0 0 60px rgba(46,158,79,.4)}50%{box-shadow:0 0 90px rgba(46,158,79,.6)}}
+.hv-float-card{position:absolute;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(12px);border-radius:14px;padding:12px 16px;display:flex;align-items:center;gap:10px;white-space:nowrap;animation:floatCard 6s ease-in-out infinite}
+.hv-float-card i{color:var(--green-mid);font-size:18px}
+.hv-float-card span{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:#fff}
+.hv-float-card:nth-child(1){top:20px;left:0}
+.hv-float-card:nth-child(2){top:50%;right:-20px;transform:translateY(-50%);animation-delay:1.5s}
+.hv-float-card:nth-child(3){bottom:20px;left:20px;animation-delay:3s}
+.hv-float-card:nth-child(4){top:50%;left:-30px;transform:translateY(-80%);animation-delay:.8s}
+@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* BREADCRUMB */
+.breadcrumb{background:#fff;border-bottom:1px solid var(--border);padding:14px 0}
+.breadcrumb-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:8px;font-size:13.5px}
+.breadcrumb-inner a{color:var(--green-dark);text-decoration:none;font-weight:600}
+.breadcrumb-inner a:hover{color:var(--green)}
+.breadcrumb-inner i{color:var(--text-muted);font-size:11px}
+.breadcrumb-inner span{color:var(--text-muted)}
+
+/* ═══ SHARED ═══ */
+.section-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+.section-eyebrow::before,.section-eyebrow::after{content:'';display:block;width:28px;height:2.5px;background:var(--green);border-radius:2px}
+.section-title{font-family:'Montserrat',sans-serif;font-size:46px;font-weight:900;color:var(--navy);line-height:1.1;letter-spacing:-1.5px;margin-bottom:14px}
+.section-title span{color:var(--green)}
+.section-sub{font-size:17px;color:var(--text-muted);line-height:1.85}
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .75s ease,transform .75s ease}
+.reveal.from-left{transform:translateX(-44px)}
+.reveal.from-right{transform:translateX(44px)}
+.reveal.from-scale{transform:scale(.92)}
+.reveal.visible{opacity:1;transform:none}
+
+/* ═══ WELCOME ═══ */
+.welcome-section{background:#fff;padding:100px 0;position:relative;overflow:hidden}
+.welcome-section::before{content:'CHEMSLIFE';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Montserrat',sans-serif;font-size:clamp(60px,11vw,150px);font-weight:900;letter-spacing:16px;color:rgba(46,158,79,.04);white-space:nowrap;pointer-events:none;user-select:none;z-index:0}
+.welcome-wrap{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:1;display:grid;grid-template-columns:1.05fr 1fr;gap:80px;align-items:center}
+.wl-img-side{position:relative;padding-bottom:60px}
+.wl-img-main{position:relative;border-radius:24px 24px 0 24px;overflow:hidden;box-shadow:0 40px 90px rgba(13,43,78,.2);aspect-ratio:4/5;max-height:540px}
+.wl-img-main img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease}
+.wl-img-main:hover img{transform:scale(1.04)}
+.wl-img-main .img-ph{position:absolute;inset:0;background:linear-gradient(160deg,#ddf2e5 0%,#b8e8c8 45%,#0d2b4e 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px}
+.wl-img-main .img-ph i{font-size:88px;color:var(--green);opacity:.35}
+.wl-img-main .img-ph span{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:var(--green-dark);letter-spacing:2px;text-transform:uppercase;opacity:.6}
+.wl-img-main::after{content:'';position:absolute;left:0;right:0;bottom:0;height:45%;background:linear-gradient(to top,rgba(13,43,78,.75) 0%,transparent 100%);pointer-events:none;z-index:2}
+.wl-img-caption{position:absolute;bottom:0;left:0;right:0;z-index:3;padding:28px 28px 24px}
+.wl-img-caption h3{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:4px}
+.wl-img-caption p{font-size:13px;color:rgba(255,255,255,.65);line-height:1.5}
+.wl-est-badge{position:absolute;bottom:-28px;right:-20px;z-index:5;width:104px;height:104px;border-radius:50%;background:linear-gradient(135deg,var(--green-dark),var(--green));border:5px solid #fff;box-shadow:0 12px 36px rgba(46,158,79,.45);display:flex;flex-direction:column;align-items:center;justify-content:center;animation:badgePulse 3s ease-in-out infinite}
+.wl-est-badge .eb-year{font-family:'Montserrat',sans-serif;font-size:26px;font-weight:900;color:#fff;line-height:1}
+.wl-est-badge .eb-label{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;color:rgba(255,255,255,.75);letter-spacing:2px;text-transform:uppercase}
+@keyframes badgePulse{0%,100%{box-shadow:0 12px 36px rgba(46,158,79,.45)}50%{box-shadow:0 12px 52px rgba(46,158,79,.7),0 0 0 10px rgba(46,158,79,.08)}}
+.wl-stat-a{position:absolute;top:48px;right:-48px;z-index:6;background:#fff;border-radius:16px;padding:18px 22px;border:1.5px solid var(--border);box-shadow:0 12px 36px rgba(13,43,78,.14);text-align:center;min-width:118px;animation:floatStat 5s ease-in-out infinite}
+.wl-stat-b{position:absolute;top:190px;right:-36px;z-index:6;background:var(--navy);border-radius:16px;padding:16px 20px;border:2px solid rgba(95,217,138,.2);box-shadow:0 12px 36px rgba(13,43,78,.3);text-align:center;min-width:110px;animation:floatStat 5s ease-in-out infinite;animation-delay:1.5s}
+@keyframes floatStat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.wl-stat-a .sn{font-family:'Montserrat',sans-serif;font-size:34px;font-weight:900;color:var(--green);line-height:1}
+.wl-stat-a .sl{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--text-muted);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px}
+.wl-stat-b .sn{font-family:'Montserrat',sans-serif;font-size:34px;font-weight:900;color:var(--green-mid);line-height:1}
+.wl-stat-b .sl{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px}
+.wl-left-bar{position:absolute;top:40px;left:-16px;width:5px;height:70%;background:linear-gradient(to bottom,var(--green),var(--green-dark));border-radius:4px;opacity:.35}
+.wl-text-side{display:flex;flex-direction:column}
+.wl-intro{font-size:17.5px;color:#3a5070;line-height:1.9;margin-bottom:28px}
+.wl-intro strong{color:var(--navy);font-weight:700}
+.wl-divider{display:flex;align-items:center;gap:14px;margin:4px 0 26px}
+.wl-divider::before,.wl-divider::after{content:'';flex:1;height:1.5px;background:var(--border);border-radius:2px}
+.wl-divider i{color:var(--green);font-size:18px}
+.wl-mission-box{background:linear-gradient(135deg,var(--navy),var(--navy-mid));border-radius:16px;padding:24px 28px;margin-bottom:28px;position:relative;overflow:hidden}
+.wl-mission-box::before{content:'';position:absolute;right:-30px;top:-30px;width:160px;height:160px;border-radius:50%;border:1px solid rgba(95,217,138,.1)}
+.wl-mission-box p{font-size:16px;font-style:italic;color:rgba(255,255,255,.8);line-height:1.7;position:relative;z-index:1;padding-left:18px;border-left:3px solid var(--green-mid)}
+.wl-mission-box cite{display:block;margin-top:12px;font-style:normal;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:var(--green-mid);letter-spacing:1px;position:relative;z-index:1}
+.wl-stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:28px}
+.wl-stat-box{background:var(--bg);border:1.5px solid var(--border);border-radius:14px;padding:20px 14px 16px;text-align:center;position:relative;overflow:hidden;transition:transform .28s,box-shadow .28s,border-color .28s;cursor:default}
+.wl-stat-box::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--green-dark));transform:scaleX(0);transition:transform .35s;transform-origin:left}
+.wl-stat-box:hover{transform:translateY(-5px);box-shadow:0 12px 32px rgba(46,158,79,.14);border-color:var(--green)}
+.wl-stat-box:hover::after{transform:scaleX(1)}
+.wl-stat-box .sn{font-family:'Montserrat',sans-serif;font-size:38px;font-weight:900;color:var(--green);line-height:1;margin-bottom:5px}
+.wl-stat-box .sl{font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:1.2px}
+.wl-divs-label{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px}
+.wl-divs{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:32px}
+.wl-div-pill{display:inline-flex;align-items:center;gap:7px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--green-dark);background:var(--green-light);border:1.5px solid rgba(46,158,79,.2);padding:8px 16px;border-radius:20px;transition:background .2s,color .2s,transform .2s}
+.wl-div-pill i{font-size:13px}
+.wl-div-pill:hover{background:var(--green);color:#fff;transform:translateY(-2px)}
+.wl-ctas{display:flex;gap:16px;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:#fff;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;padding:16px 32px;border-radius:10px;text-decoration:none;transition:background .22s,transform .18s,box-shadow .22s;box-shadow:0 6px 18px rgba(46,158,79,.35)}
+.btn-primary:hover{background:var(--green-dark);transform:translateY(-3px);box-shadow:0 12px 30px rgba(46,158,79,.45)}
+.btn-outline{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--navy);font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;padding:15px 28px;border-radius:10px;text-decoration:none;border:2px solid var(--navy);transition:background .22s,color .22s,transform .18s}
+.btn-outline:hover{background:var(--navy);color:#fff;transform:translateY(-3px)}
+
+/* ═══ STORY ═══ */
+.story-section{background:var(--bg);padding:96px 0;position:relative;overflow:hidden}
+.story-section::before{content:'STORY';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Montserrat',sans-serif;font-size:clamp(80px,16vw,200px);font-weight:900;letter-spacing:20px;color:rgba(46,158,79,.04);white-space:nowrap;pointer-events:none;user-select:none}
+.story-inner{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.story-header{text-align:center;margin-bottom:72px}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.story-img-col{position:relative;padding:0 0 20px}
+.story-img-stack{position:relative;height:480px}
+.story-img-a{position:absolute;width:75%;aspect-ratio:4/3;border-radius:20px;overflow:hidden;box-shadow:0 28px 72px rgba(13,43,78,.2);top:0;left:0;z-index:3;transition:transform .5s ease}
+.story-img-a:hover{transform:scale(1.02) rotate(-1deg)}
+.story-img-a .img-ph{width:100%;height:100%;background:linear-gradient(135deg,#0d2b4e,#163e6f);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-height:260px}
+.story-img-a .img-ph i{font-size:60px;color:rgba(95,217,138,.3)}
+.story-img-a .img-ph span{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(95,217,138,.4)}
+.story-img-a img{width:100%;height:100%;object-fit:cover;display:block}
+.story-img-b{position:absolute;width:58%;aspect-ratio:1;border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(13,43,78,.22);bottom:0;right:0;z-index:4;border:5px solid #fff;transition:transform .5s ease}
+.story-img-b:hover{transform:scale(1.03) rotate(1deg)}
+.story-img-b .img-ph{width:100%;height:100%;background:linear-gradient(135deg,#1e7a3a,#2e9e4f);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:200px}
+.story-img-b .img-ph i{font-size:50px;color:rgba(255,255,255,.3)}
+.story-img-b .img-ph span{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4)}
+.story-img-b img{width:100%;height:100%;object-fit:cover;display:block}
+.story-quote{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);z-index:6;background:#fff;border-radius:14px;padding:16px 22px;box-shadow:0 12px 36px rgba(13,43,78,.18);border-left:4px solid var(--green);width:270px;text-align:left}
+.story-quote p{font-size:13px;font-style:italic;color:var(--text-muted);line-height:1.6;margin-bottom:8px}
+.story-quote cite{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:var(--green-dark)}
+.story-text-col{padding-top:8px}
+.story-body{font-size:17px;color:#3a5070;line-height:1.9;margin-bottom:28px}
+.story-body strong{color:var(--navy);font-weight:700}
+.story-div-group{margin-bottom:22px}
+.story-div-title{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:800;color:var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.story-div-title i{color:var(--green);font-size:15px}
+.story-pills{display:flex;flex-wrap:wrap;gap:8px}
+.story-pill{font-family:'Montserrat',sans-serif;font-size:12.5px;font-weight:600;color:var(--green-dark);background:var(--green-light);border:1.5px solid rgba(46,158,79,.2);padding:7px 14px;border-radius:20px;transition:background .2s,color .2s,transform .2s}
+.story-pill:hover{background:var(--green);color:#fff;transform:translateY(-2px)}
+
+/* ═══ VISION / MISSION ═══ */
+.vm-section{background:#fff;padding:96px 0;position:relative;overflow:hidden}
+.vm-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(46,158,79,.07) 1.5px,transparent 1.5px);background-size:32px 32px;pointer-events:none}
+.vm-inner{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.vm-header{text-align:center;margin-bottom:64px}
+.vm-cards{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.vm-card{border-radius:24px;overflow:hidden;position:relative;transition:transform .35s ease,box-shadow .35s ease}
+.vm-card:hover{transform:translateY(-8px)}
+.vm-card-inner{padding:52px 44px;height:100%}
+.vm-card.vision{background:linear-gradient(135deg,var(--navy),var(--navy-mid))}
+.vm-card.mission{background:linear-gradient(135deg,var(--green-dark),var(--green))}
+.vm-card::before{content:'';position:absolute;top:-80px;right:-80px;width:360px;height:360px;border-radius:50%;border:1.5px solid rgba(255,255,255,.07);pointer-events:none}
+.vm-icon-wrap{width:72px;height:72px;border-radius:18px;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;margin-bottom:28px;transition:transform .3s,background .3s}
+.vm-card:hover .vm-icon-wrap{transform:rotate(-8deg) scale(1.12);background:rgba(255,255,255,.2)}
+.vm-icon-wrap i{font-size:30px;color:#fff}
+.vm-label{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:10px}
+.vm-title{font-family:'Montserrat',sans-serif;font-size:34px;font-weight:900;color:#fff;margin-bottom:22px;line-height:1.15}
+.vm-text{font-size:16px;color:rgba(255,255,255,.75);line-height:1.85}
+.vm-deco-word{position:absolute;bottom:20px;right:20px;font-family:'Montserrat',sans-serif;font-size:80px;font-weight:900;color:rgba(255,255,255,.04);letter-spacing:4px;user-select:none;pointer-events:none;line-height:1}
+
+/* ═══ CORE VALUES ═══ */
+.values-section{background:var(--bg);padding:96px 0;position:relative;overflow:hidden}
+.values-inner{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.values-header{text-align:center;margin-bottom:64px}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.val-card{background:#fff;border:1.5px solid var(--border);border-radius:22px;padding:36px 28px;position:relative;overflow:hidden;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s ease,border-color .3s ease;opacity:0;transform:translateY(44px) scale(.96)}
+.val-card.vc{opacity:1;transform:none}
+.val-card:hover{transform:translateY(-7px) scale(1.01);box-shadow:0 24px 56px rgba(13,43,78,.11);border-color:rgba(46,158,79,.38)}
+.val-card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;border-radius:22px 22px 0 0;transition:height .3s ease}
+.val-card:nth-child(1)::before{background:linear-gradient(90deg,#2e9e4f,#5fd98a)}
+.val-card:nth-child(2)::before{background:linear-gradient(90deg,#163e6f,#2e9e4f)}
+.val-card:nth-child(3)::before{background:linear-gradient(90deg,#5fd98a,#2e9e4f)}
+.val-card:nth-child(4)::before{background:linear-gradient(90deg,#1e7a3a,#163e6f)}
+.val-card:nth-child(5)::before{background:linear-gradient(90deg,#2e9e4f,#163e6f)}
+.val-card:nth-child(6)::before{background:linear-gradient(90deg,#5fd98a,#1e7a3a)}
+.val-card:hover::before{height:7px}
+.val-icon{width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,var(--green-light),#c2e8ce);display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:transform .3s,background .3s}
+.val-card:hover .val-icon{transform:rotate(-8deg) scale(1.1);background:linear-gradient(135deg,#b2f0cb,#7dd4a0)}
+.val-icon i{color:var(--green-dark);font-size:24px}
+.val-name{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;color:var(--navy);margin-bottom:12px;transition:color .25s}
+.val-card:hover .val-name{color:var(--green-dark)}
+.val-desc{font-size:15px;color:var(--text-muted);line-height:1.75}
+
+/* ═══ WHY CHOOSE US ═══ */
+.why-section{background:#fff;padding:96px 0;position:relative;overflow:hidden}
+.why-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.why-img-side{position:relative}
+.why-img-main{border-radius:24px;overflow:hidden;box-shadow:0 32px 80px rgba(13,43,78,.18);aspect-ratio:4/3}
+.why-img-main .img-ph{width:100%;height:100%;background:linear-gradient(135deg,#ddf2e5,#8fd4a8);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;min-height:320px}
+.why-img-main .img-ph i{font-size:72px;color:var(--green);opacity:.4}
+.why-img-main .img-ph span{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green-dark);opacity:.6}
+.why-img-main img{width:100%;height:100%;object-fit:cover;display:block}
+.why-float-stat{position:absolute;bottom:-22px;left:-22px;background:var(--navy);border-radius:16px;padding:18px 24px;border:4px solid #fff;box-shadow:0 12px 36px rgba(13,43,78,.3);z-index:5}
+.why-float-stat .fs-num{font-family:'Montserrat',sans-serif;font-size:36px;font-weight:900;color:var(--green-mid);line-height:1}
+.why-float-stat .fs-label{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:4px}
+.why-float-stat2{position:absolute;top:-18px;right:-18px;background:#fff;border-radius:16px;padding:16px 20px;border:2px solid var(--border);box-shadow:0 10px 30px rgba(13,43,78,.15);z-index:5;display:flex;align-items:center;gap:12px}
+.why-float-stat2 .fs2-icon{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--green-light),#b8ecc8);display:flex;align-items:center;justify-content:center}
+.why-float-stat2 .fs2-icon i{color:var(--green-dark);font-size:18px}
+.why-float-stat2 .fs2-text strong{display:block;font-family:'Montserrat',sans-serif;font-size:18px;font-weight:800;color:var(--navy)}
+.why-float-stat2 .fs2-text span{font-size:12px;color:var(--text-muted);font-weight:500}
+.why-points{display:flex;flex-direction:column;gap:14px}
+.why-point{display:flex;align-items:flex-start;gap:16px;background:var(--bg);border:1.5px solid var(--border);border-radius:14px;padding:18px 20px;transition:background .22s,border-color .22s,transform .22s,box-shadow .22s;cursor:default}
+.why-point:hover{background:var(--green-light);border-color:rgba(46,158,79,.38);transform:translateX(6px);box-shadow:0 6px 20px rgba(46,158,79,.1)}
+.why-point-icon{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--green-light),#c2e8ce);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .22s,transform .22s}
+.why-point:hover .why-point-icon{background:linear-gradient(135deg,#b2f0cb,#7dd4a0);transform:rotate(-5deg) scale(1.08)}
+.why-point-icon i{color:var(--green-dark);font-size:18px}
+.why-point-text strong{display:block;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:3px}
+.why-point-text span{font-size:14px;color:var(--text-muted);line-height:1.55}
+
+/* ═══ QUALITY & SAFETY ═══ */
+.qs-section{background:var(--bg);padding:96px 0;position:relative;overflow:hidden}
+.qs-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(46,158,79,.07) 1.5px,transparent 1.5px);background-size:36px 36px;pointer-events:none}
+.qs-inner{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.qs-header{text-align:center;margin-bottom:64px}
+.qs-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.qs-card{background:#fff;border-radius:24px;overflow:hidden;border:1.5px solid var(--border);box-shadow:0 8px 32px rgba(13,43,78,.07);transition:transform .35s ease,box-shadow .35s ease;position:relative}
+.qs-card:hover{transform:translateY(-6px);box-shadow:0 24px 56px rgba(13,43,78,.12)}
+.qs-card-head{padding:36px 36px 28px;background:linear-gradient(135deg,var(--navy),var(--navy-mid));position:relative;overflow:hidden}
+.qs-card.safety .qs-card-head{background:linear-gradient(135deg,var(--green-dark),var(--green))}
+.qs-card-head::after{content:'';position:absolute;right:-40px;top:-40px;width:220px;height:220px;border-radius:50%;border:2px solid rgba(255,255,255,.07)}
+.qs-head-icon{width:64px;height:64px;border-radius:16px;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:transform .3s,background .3s}
+.qs-card:hover .qs-head-icon{transform:rotate(-8deg) scale(1.1);background:rgba(255,255,255,.2)}
+.qs-head-icon i{font-size:28px;color:#fff}
+.qs-head-title{font-family:'Montserrat',sans-serif;font-size:26px;font-weight:900;color:#fff;margin-bottom:8px}
+.qs-head-sub{font-size:14px;color:rgba(255,255,255,.55);line-height:1.65}
+.qs-body{padding:32px 36px}
+.qs-section-title{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:8px}
+.qs-section-title i{color:var(--green);font-size:13px}
+.qs-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:26px}
+.qs-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:#3a5070;line-height:1.6}
+.qs-list li::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:6px}
+
+/* ═══ TIMELINE ═══ */
+.timeline-section{background:#fff;padding:96px 0;position:relative;overflow:hidden}
+.timeline-section::before{content:'GROWTH';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Montserrat',sans-serif;font-size:clamp(60px,12vw,160px);font-weight:900;letter-spacing:16px;color:rgba(46,158,79,.04);white-space:nowrap;pointer-events:none;user-select:none}
+.timeline-inner{max-width:1200px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.timeline-header{text-align:center;margin-bottom:72px}
+.tl-track{position:relative;padding:0 0 0 60px}
+.tl-track::before{content:'';position:absolute;left:22px;top:12px;bottom:12px;width:3px;background:linear-gradient(to bottom,var(--green),var(--green-dark),var(--navy));border-radius:3px}
+.tl-item{position:relative;margin-bottom:36px;opacity:0;transform:translateX(40px);transition:opacity .6s ease,transform .6s ease}
+.tl-item.ti{opacity:1;transform:none}
+.tl-dot{position:absolute;left:-49px;top:12px;width:18px;height:18px;border-radius:50%;background:var(--green);border:4px solid #fff;box-shadow:0 0 0 3px rgba(46,158,79,.25),0 4px 12px rgba(46,158,79,.3);z-index:2;transition:transform .3s}
+.tl-item:hover .tl-dot{transform:scale(1.3)}
+.tl-card{background:var(--bg);border:1.5px solid var(--border);border-radius:16px;padding:20px 24px 18px;display:flex;align-items:flex-start;gap:20px;transition:background .25s,border-color .25s,transform .25s,box-shadow .25s}
+.tl-item:hover .tl-card{background:var(--green-light);border-color:rgba(46,158,79,.35);transform:translateX(6px);box-shadow:0 8px 24px rgba(46,158,79,.1)}
+.tl-year{font-family:'Montserrat',sans-serif;font-size:28px;font-weight:900;color:var(--green);line-height:1;flex-shrink:0;min-width:64px}
+.tl-content{flex:1}
+.tl-title{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:800;color:var(--navy);margin-bottom:5px}
+.tl-desc{font-size:14px;color:var(--text-muted);line-height:1.6}
+
+/* ═══ PORTFOLIO / DIVISIONS ═══ */
+.divisions-section{background:#fff;padding:100px 0;position:relative;overflow:hidden}
+.divisions-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(46,158,79,.065) 1.5px,transparent 1.5px);background-size:34px 34px;pointer-events:none;z-index:0}
+.divisions-inner{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.div-header{text-align:center;margin-bottom:72px}
+.div-header-quote{font-family:'Open Sans',sans-serif;font-size:19px;color:var(--text-muted);line-height:1.85;max-width:760px;margin:16px auto 0}
+.div-header-quote strong{color:var(--navy);font-weight:700}
+.div-top-row{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:32px}
+.div-bottom-row{display:grid;grid-template-columns:1fr;gap:32px}
+.div-card{border-radius:26px;overflow:hidden;border:1.5px solid var(--border);box-shadow:0 10px 40px rgba(13,43,78,.09);transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s ease;opacity:0;transform:translateY(48px)}
+.div-card.dc{opacity:1;transform:none}
+.div-card:hover{transform:translateY(-8px);box-shadow:0 30px 70px rgba(13,43,78,.14)}
+.div-img{position:relative;height:260px;overflow:hidden}
+.div-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s ease}
+.div-card:hover .div-img img{transform:scale(1.06)}
+.div-img .dip{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px}
+.sci-dip{background:linear-gradient(160deg,#0d2b4e 0%,#163e6f 55%,#1e7a3a 100%)}
+.health-dip{background:linear-gradient(160deg,#0a2e20 0%,#1e7a3a 55%,#2e9e4f 100%)}
+.svc-dip{background:linear-gradient(160deg,#0d2b4e 0%,#0a2e20 55%,#163e6f 100%)}
+.dip i{font-size:64px;color:rgba(255,255,255,.22)}
+.dip span{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35)}
+.div-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(13,43,78,.65) 0%,rgba(13,43,78,.08) 50%,transparent 100%);pointer-events:none}
+.div-img-tab{position:absolute;bottom:20px;left:24px;z-index:3;display:flex;align-items:center;gap:10px}
+.div-img-tab .tab-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.sci-tab .tab-icon{background:rgba(46,158,79,.9);color:#fff}
+.health-tab .tab-icon{background:rgba(46,158,79,.9);color:#fff}
+.svc-tab .tab-icon{background:rgba(22,62,111,.9);color:#fff}
+.div-img-tab .tab-label{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:800;color:#fff;line-height:1.25;text-shadow:0 1px 6px rgba(0,0,0,.4)}
+.div-img-tab .tab-sub{font-size:11.5px;color:rgba(255,255,255,.7);margin-top:1px}
+.div-body{padding:30px 32px 32px;background:#fff}
+.div-items{display:flex;flex-direction:column;gap:0}
+.div-item{display:flex;align-items:center;gap:14px;padding:13px 0;border-bottom:1px solid var(--border);transition:padding-left .22s,background .22s}
+.div-item:last-child{border-bottom:none}
+.div-item:hover{padding-left:8px}
+.div-item-icon{width:40px;height:40px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:transform .25s,background .25s}
+.sci-item .div-item-icon{background:linear-gradient(135deg,var(--green-light),#c2e8ce)}
+.health-item .div-item-icon{background:linear-gradient(135deg,#e8f7ed,#b8ecc8)}
+.svc-item .div-item-icon{background:linear-gradient(135deg,#e8f0f8,#c8d8ec)}
+.div-item:hover .div-item-icon{transform:rotate(-8deg) scale(1.1)}
+.sci-item .div-item-icon i{color:var(--green-dark);font-size:16px}
+.health-item .div-item-icon i{color:var(--green-dark);font-size:16px}
+.svc-item .div-item-icon i{color:var(--navy-mid);font-size:16px}
+.div-item-text strong{display:block;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:2px}
+.div-item-text span{font-size:13px;color:var(--text-muted);line-height:1.5}
+.div-card.svc-card .div-body{padding:32px 40px}
+.svc-items-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px}
+.svc-items-grid .div-item{border-bottom:1px solid var(--border)}
+.div-count-badge{position:absolute;top:18px;right:18px;z-index:3;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:5px 14px;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:#fff;letter-spacing:.5px}
+
+/* ═══ CTA ═══ */
+.cta-section{background:linear-gradient(135deg,var(--navy),var(--navy-mid) 50%,#0a3d20 100%);padding:96px 0;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(95,217,138,.07) 1.5px,transparent 1.5px);background-size:36px 36px;pointer-events:none}
+.cta-inner{max-width:1000px;margin:0 auto;padding:0 24px;text-align:center;position:relative;z-index:1}
+.cta-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(46,158,79,.2);border:1px solid rgba(46,158,79,.38);color:#5fd98a;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:7px 18px;border-radius:20px;margin-bottom:28px}
+.cta-title{font-family:'Montserrat',sans-serif;font-size:52px;font-weight:900;color:#fff;line-height:1.1;letter-spacing:-1.5px;margin-bottom:20px}
+.cta-title span{color:var(--green-mid)}
+.cta-sub{font-size:17px;color:rgba(255,255,255,.65);line-height:1.85;max-width:640px;margin:0 auto 40px}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:#fff;font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;padding:17px 36px;border-radius:10px;text-decoration:none;transition:background .22s,transform .18s,box-shadow .22s;box-shadow:0 6px 22px rgba(46,158,79,.4)}
+.cta-btn-primary:hover{background:var(--green-dark);transform:translateY(-3px)}
+.cta-btn-outline{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);color:#fff;font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;padding:16px 32px;border-radius:10px;text-decoration:none;border:2px solid rgba(255,255,255,.2);transition:background .22s,border-color .22s,transform .18s}
+.cta-btn-outline:hover{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.4);transform:translateY(-3px)}
+.cta-deco-ring{position:absolute;border-radius:50%;border:1px solid rgba(95,217,138,.08);pointer-events:none}
+.cta-deco-ring:nth-child(1){width:600px;height:600px;top:50%;left:50%;transform:translate(-50%,-50%)}
+.cta-deco-ring:nth-child(2){width:900px;height:900px;top:50%;left:50%;transform:translate(-50%,-50%)}
+
+/* ═══ FOOTER ═══ */
+.footer{background:#0a1f38;color:#cdd8e8;font-size:14px;line-height:1.7}
+.footer-top-band{background:linear-gradient(90deg,var(--green-dark),#1ca64b,var(--green-dark));padding:22px 24px;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
+.footer-top-band p{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:#fff}
+.footer-top-band p span{color:#b8f5cf}
+.footer-cta-btn{background:#fff;color:var(--green-dark);font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;padding:10px 26px;border-radius:6px;text-decoration:none;transition:background .2s,color .2s,transform .15s;white-space:nowrap}
+.footer-cta-btn:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
+.footer-main{max-width:1200px;margin:0 auto;padding:60px 24px 40px;display:grid;grid-template-columns:280px 1fr 1fr 1fr;gap:40px}
+.footer-logo-wrap{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.footer-logo-icon{width:50px;height:50px;border-radius:10px;background:rgba(46,158,79,.15);border:1.5px solid rgba(46,158,79,.3);display:flex;align-items:center;justify-content:center}
+.footer-logo-icon svg{width:28px;height:28px}
+.footer-logo-name{font-family:'Montserrat',sans-serif;font-size:19px;font-weight:800;color:#fff}
+.footer-logo-name span{color:var(--green)}
+.footer-logo-sub{font-size:10px;color:#7a9bb5;letter-spacing:1.8px;text-transform:uppercase}
+.footer-about p{color:#8aacca;font-size:13.5px;line-height:1.75;margin-bottom:20px}
+.footer-tagline{display:inline-block;background:rgba(46,158,79,.12);border-left:3px solid var(--green);color:#a8d8b5;font-size:12px;font-style:italic;padding:8px 14px;border-radius:0 6px 6px 0;margin-bottom:22px}
+.footer-socials{display:flex;gap:8px;flex-wrap:wrap}
+.footer-socials a{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;text-decoration:none;transition:transform .2s,filter .2s}
+.footer-socials a:hover{transform:translateY(-3px) scale(1.1);filter:brightness(1.2)}
+.footer-socials a.fb{background:#1877f2;color:#fff}.footer-socials a.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285aeb 90%);color:#fff}
+.footer-socials a.li{background:#0a66c2;color:#fff}.footer-socials a.tw{background:#000;color:#fff}
+.footer-socials a.yt{background:red;color:#fff}.footer-socials a.wa{background:#25d366;color:#fff}
+.footer-socials a.tg{background:#0088cc;color:#fff}.footer-socials a.pt{background:#e60023;color:#fff}
+.footer-col h4{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:#fff;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid rgba(46,158,79,.35);display:flex;align-items:center;gap:8px}
+.footer-col h4 i{color:var(--green);font-size:13px}
+.footer-col h5{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#5fd98a;letter-spacing:1.5px;text-transform:uppercase;margin:16px 0 8px}
+.footer-links{list-style:none}
+.footer-links li a{color:#8aacca;text-decoration:none;font-size:13px;display:flex;align-items:flex-start;gap:7px;padding:3px 0;transition:color .2s,padding-left .2s;line-height:1.5}
+.footer-links li a::before{content:'›';color:var(--green);font-size:15px;line-height:1.3;flex-shrink:0;font-weight:700}
+.footer-links li a:hover{color:#5fd98a;padding-left:4px}
+.footer-contact-grid{max-width:1200px;margin:0 auto;padding:0 24px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.contact-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start;transition:border-color .2s,background .2s}
+.contact-card:hover{border-color:rgba(46,158,79,.35);background:rgba(46,158,79,.06)}
+.contact-icon{width:38px;height:38px;border-radius:8px;background:rgba(46,158,79,.15);border:1px solid rgba(46,158,79,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-icon i{color:var(--green);font-size:15px}
+.contact-info strong{display:block;color:#fff;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.contact-info span,.contact-info a{display:block;color:#8aacca;font-size:12.5px;text-decoration:none;word-break:break-word}
+.contact-info a:hover{color:#5fd98a}
+.footer-divider{border:none;border-top:1px solid rgba(255,255,255,.07);margin:0 24px}
+.footer-bottom{max-width:1200px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-bottom p{font-size:12.5px;color:#4a6a88}
+.footer-bottom p span{color:var(--green)}
+.footer-bottom-links{display:flex;gap:20px}
+.footer-bottom-links a{font-size:12px;color:#4a6a88;text-decoration:none;transition:color .2s}
+.footer-bottom-links a:hover{color:#5fd98a}
+.footer-motto{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:rgba(46,158,79,.55);letter-spacing:2px;text-transform:uppercase}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:1100px){
+  .div-top-row{grid-template-columns:1fr}
+  .svc-items-grid{grid-template-columns:1fr 1fr}
+  .ah-inner,.why-inner{grid-template-columns:1fr;gap:48px}
+  .hero-right-vis{display:none}
+  .story-grid,.vm-cards,.qs-grid{grid-template-columns:1fr}
+  .values-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-main{grid-template-columns:1fr 1fr}
+  .hero-title,.section-title{font-size:38px}
+  .welcome-wrap{grid-template-columns:1fr;gap:48px}
+  .wl-stat-a,.wl-stat-b{display:none}
+  .wl-img-main{max-height:400px}
+}
+@media(max-width:768px){
+  .svc-items-grid{grid-template-columns:1fr}
+  .div-img{height:200px}
+  .top-bar-address{display:none}
+  .hamburger{display:flex}
+  nav{display:none}
+  nav.open{display:flex;flex-direction:column;align-items:stretch;position:absolute;top:80px;left:0;right:0;background:#fff;border-bottom:2px solid var(--green-light);padding:12px;box-shadow:0 8px 24px rgba(0,0,0,.1);z-index:200}
+  nav.open a{padding:12px 16px;border-radius:8px}
+  nav a.btn-contact{margin-left:0;margin-top:4px;text-align:center}
+  .main-header{position:relative}
+  .dropdown-menu{position:static;opacity:1;visibility:visible;pointer-events:all;transform:none;box-shadow:none;border:none;background:var(--green-light);padding:4px 8px;display:none;min-width:unset}
+  .nav-dropdown.open .dropdown-menu{display:block}
+  .hero-title{font-size:30px;letter-spacing:-1px}
+  .ah-inner{padding:52px 24px}
+  .section-title{font-size:28px}
+  .values-grid{grid-template-columns:1fr}
+  .vm-cards{grid-template-columns:1fr}
+  .cta-title{font-size:30px}
+  .footer-main{grid-template-columns:1fr;gap:28px}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .footer-top-band{flex-direction:column;text-align:center;gap:14px}
+  .wl-stats-row{grid-template-columns:repeat(3,1fr)}
+  .wl-divs-label,.wl-left-bar{display:none}
+}
+@media(max-width:480px){
+  .hero-title{font-size:26px}
+  .cta-btns{flex-direction:column;align-items:center}
+  .vm-card-inner{padding:36px 28px}
+  .wl-stats-row{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-address">
+      <span><i class="fas fa-map-marker-alt"></i> Hosur, Tamil Nadu, India</span>
+      <span><i class="fas fa-phone"></i> +91 88704 96918</span>
+      <span><i class="fas fa-envelope"></i> chemslifegroups@gmail.com</span>
+    </div>
+    <div class="social-links">
+      <a href="https://www.facebook.com/Chemslifegroups" class="fb" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/chemslife_groups/" class="ig" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/chemslifegroups278a10213/" class="li" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://twitter.com/ChemslifeGroups" class="tw" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.youtube.com/c/ChemslifeGroupss" class="yt" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+      <a href="https://wa.me/918870496918" class="wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://t.me/ChemslifeGroups" class="tg" target="_blank" rel="noopener"><i class="fab fa-telegram-plane"></i></a>
+      <a href="#" class="pt"><i class="fab fa-pinterest-p"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-content">
+      <span class="marquee-text">&#9670;&nbsp; Chemslife Groups</span><span class="marquee-sep">|</span>
+      <span class="marquee-text">Everything is Science</span><span class="marquee-sep">|</span>
+      <span class="marquee-text">Science for Nation</span><span class="marquee-sep">|</span>
+      <span class="marquee-text">&#9670;&nbsp; Scientific &amp; Industrial Solutions</span><span class="marquee-sep">|</span>
+      <span class="marquee-text">Integrated Healthcare Solutions</span><span class="marquee-sep">|</span>
+      <span class="marquee-text">Trusted Since 2018</span><span class="marquee-sep">|</span>
+    </div>
+    <div class="marquee-content" aria-hidden="true">
+      <span class="marquee-text">&#9670;&nbsp; Chemslife Groups</span><span class="marquee-sep">|</span>
+      <span class="marquee-text">Everything is Science</span><span class="marquee-sep">|</span>
+      <span class="marquee-text">Science for Nation</span><span class="marquee-sep">|</span>
+      <span class="marquee-text">&#9670;&nbsp; Scientific &amp; Industrial Solutions</span><span class="marquee-sep">|</span>
+      <span class="marquee-text">Integrated Healthcare Solutions</span><span class="marquee-sep">|</span>
+      <span class="marquee-text">Trusted Since 2018</span><span class="marquee-sep">|</span>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER — nav dropdown CORRECTED to match scientific-industrial-solutions page -->
+<header class="main-header">
+  <div class="main-header-inner">
+    <a href="index.html" class="logo-wrap">
+      <div class="logo-img-box">
+        <img src="all dummy images/logo1.jpeg" alt="Chemslife Groups Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg" width="40" height="40" style="display:none">
+          <path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4 Z" fill="#2e9e4f" opacity="0.13" stroke="#2e9e4f" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M23 38 Q30 32 38 40 L42 52 Q44 57 40 59 L20 59 Q16 57 18 52 Z" fill="#2e9e4f" opacity="0.7"/>
+          <rect x="21" y="0" width="18" height="6" rx="3" fill="#111"/>
+          <path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4" fill="none" stroke="#111" stroke-width="2.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">CHEMS<span>LIFE</span></span>
+        <span class="logo-tagline">Groups</span>
+      </div>
+    </a>
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about-us.html" class="active">About Us</a>
+      <div class="nav-dropdown" id="productsDropdown">
+        <a href="#" id="productsToggle">Products <i class="fas fa-chevron-down dd-arrow"></i></a>
+        <div class="dropdown-menu">
+          <a href="Scientific .html">
+            <div class="dd-icon"><i class="fas fa-flask"></i></div>
+            <div class="dd-label">
+              <strong>Scientific &amp; Industrial Solutions</strong>
+              <span>Lab, chemical, water treatment &amp; homecare</span>
+            </div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#">
+            <div class="dd-icon"><i class="fas fa-heartbeat"></i></div>
+            <div class="dd-label">
+              <strong>Integrated Healthcare Solutions</strong>
+              <span>Pharma, surgical, diagnostics &amp; safety</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <a href="contact us .html" class="btn-contact">Contact Us</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="about-hero">
+  <div class="ah-overlay"></div>
+  <div class="ah-deco">
+    <div class="ah-hex"><svg viewBox="0 0 100 115" xmlns="http://www.w3.org/2000/svg"><polygon points="50,2 96,27 96,88 50,113 4,88 4,27"/></svg></div>
+    <div class="ah-hex"><svg viewBox="0 0 100 115" xmlns="http://www.w3.org/2000/svg"><polygon points="50,2 96,27 96,88 50,113 4,88 4,27"/></svg></div>
+    <div class="ah-hex"><svg viewBox="0 0 100 115" xmlns="http://www.w3.org/2000/svg"><polygon points="50,2 96,27 96,88 50,113 4,88 4,27"/></svg></div>
+    <div class="ah-hex"><svg viewBox="0 0 100 115" xmlns="http://www.w3.org/2000/svg"><polygon points="50,2 96,27 96,88 50,113 4,88 4,27"/></svg></div>
+    <div class="ah-particles" id="ahParticles"></div>
+    <div class="ah-atom">
+      <div class="ah-ring"><div class="ah-dot"></div></div>
+      <div class="ah-ring"><div class="ah-dot"></div></div>
+      <div class="ah-ring"></div>
+    </div>
+  </div>
+  <div class="ah-inner">
+    <div class="hero-text-col">
+      <div class="hero-tag"><i class="fas fa-leaf"></i> About Us</div>
+      <h1 class="hero-title">Building Chemistry<br>for a <span>Better Tomorrow</span></h1>
+      <p class="hero-subtitle">Since 2018, Chemslife Groups has been advancing industries and improving lives through a diversified portfolio of scientific, industrial, and healthcare solutions.</p>
+      <div class="hero-pills">
+        <div class="hero-pill"><i class="fas fa-flask"></i><span>Scientific Solutions</span></div>
+        <div class="hero-pill"><i class="fas fa-heartbeat"></i><span>Healthcare</span></div>
+        <div class="hero-pill"><i class="fas fa-industry"></i><span>Industrial</span></div>
+        <div class="hero-pill"><i class="fas fa-calendar-check"></i><span>Est. 2018</span></div>
+      </div>
+    </div>
+    <div class="hero-right-vis">
+      <div class="hv-float-card"><i class="fas fa-flask"></i><span>Scientific Division</span></div>
+      <div class="hv-float-card"><i class="fas fa-heartbeat"></i><span>Healthcare Solutions</span></div>
+      <div class="hv-float-card"><i class="fas fa-shopping-bag"></i><span>Chemscart Store</span></div>
+      <div class="hv-float-card"><i class="fas fa-truck"></i><span>Logistics &amp; Transport</span></div>
+      <div class="hv-center"><span>2018</span><small>Founded</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html"><i class="fas fa-home"></i></a>
+    <i class="fas fa-chevron-right"></i>
+    <span>About Us</span>
+  </div>
+</div>
+
+<!-- WELCOME -->
+<section class="welcome-section" id="welcome">
+  <div class="welcome-wrap">
+    <div class="wl-img-side reveal from-left">
+      <div class="wl-left-bar"></div>
+      <div class="wl-img-main">
+        <img src="all dummy images/image7.jpeg" alt="Chemslife Groups — Who We Are" onerror="this.style.display='none'"/>
+        <div class="img-ph"><i class="fas fa-building"></i><span>Company Photo</span></div>
+        <div class="wl-img-caption"><h3>Chemslife Groups</h3><p>Hosur, Tamil Nadu &nbsp;·&nbsp; Est. 2018</p></div>
+      </div>
+      <div class="wl-est-badge"><span class="eb-year">7+</span><span class="eb-label">Years</span></div>
+      <div class="wl-stat-a"><div class="sn" data-target="6">0+</div><div class="sl">Divisions</div></div>
+      <div class="wl-stat-b"><div class="sn" data-target="4">0+</div><div class="sl">Locations</div></div>
+    </div>
+    <div class="wl-text-side reveal from-right">
+      <div class="section-eyebrow">Who We Are</div>
+      <h2 class="section-title">Welcome to<br><span>Chemslife Groups</span></h2>
+      <p class="wl-intro">At <strong>Chemslife Groups</strong>, we are committed to advancing industries and improving lives through a diversified portfolio of products and services. Since our establishment in <strong>2018</strong>, we have evolved into a dynamic, multi-sector organization driven by innovation, quality, and customer-centricity.</p>
+      <p class="wl-intro" style="margin-top:-14px;margin-bottom:22px">Our approach combines <strong>deep industry expertise</strong> with agile execution, enabling us to deliver reliable solutions across scientific, industrial, and healthcare domains. We strive to create long-term value for our customers, partners, and communities.</p>
+      <div class="wl-divider"><i class="fas fa-flask"></i></div>
+      <div class="wl-mission-box">
+        <p>"Building Chemistry for a Better Tomorrow — Everything is Science, Science for Nation."</p>
+        <cite>— Mr. Sivasankar Karthikeyan, Founder &amp; CEO</cite>
+      </div>
+      <div class="wl-stats-row">
+        <div class="wl-stat-box"><div class="sn" data-ws-target="7">0+</div><div class="sl">Years Active</div></div>
+        <div class="wl-stat-box"><div class="sn" data-ws-target="6">0+</div><div class="sl">Divisions</div></div>
+        <div class="wl-stat-box"><div class="sn" data-ws-target="4">0+</div><div class="sl">Locations</div></div>
+      </div>
+      <div class="wl-divs-label">Our Business Divisions</div>
+      <div class="wl-divs">
+        <span class="wl-div-pill"><i class="fas fa-flask"></i> Scientific &amp; Industrial</span>
+        <span class="wl-div-pill"><i class="fas fa-heartbeat"></i> Healthcare Solutions</span>
+        <span class="wl-div-pill"><i class="fas fa-shopping-bag"></i> Chemscart E-Commerce</span>
+        <span class="wl-div-pill"><i class="fas fa-truck"></i> Transport &amp; Logistics</span>
+        <span class="wl-div-pill"><i class="fas fa-broom"></i> Facility Services</span>
+        <span class="wl-div-pill"><i class="fas fa-calculator"></i> Tax &amp; Financial</span>
+      </div>
+      <div class="wl-ctas">
+        <a href="contact-us.html" class="btn-primary"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+        <a href="#story" class="btn-outline">Our Story <i class="fas fa-arrow-down"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="story-section" id="story">
+  <div class="story-inner">
+    <div class="story-header reveal">
+      <div class="section-eyebrow" style="justify-content:center">Our Journey</div>
+      <h2 class="section-title">Our <span>Story</span></h2>
+      <p class="section-sub" style="max-width:560px;margin:0 auto;text-align:center">Founded with a vision, built with purpose — the Chemslife Groups journey is one of consistent growth, diversification, and impact.</p>
+    </div>
+    <div class="story-grid">
+      <div class="story-img-col reveal from-left">
+        <div class="story-img-stack">
+          <div class="story-img-a">
+            <img src="all dummy images/image7.jpeg" alt="Our Story" onerror="this.style.display='none'"/>
+            <div class="img-ph"><i class="fas fa-history"></i><span>Our Story</span></div>
+          </div>
+          <div class="story-img-b">
+            <img src="all dummy images/image4.png" alt="Founder" onerror="this.style.display='none'"/>
+            <div class="img-ph"><i class="fas fa-user-tie"></i><span>Founder</span></div>
+          </div>
+          <div class="story-quote">
+            <p>"We began with a vision to build an integrated business ecosystem that bridges science, healthcare, and essential services."</p>
+            <cite>— Mr. Sivasankar Karthikeyan, Founder</cite>
+          </div>
+        </div>
+      </div>
+      <div class="story-text-col reveal from-right">
+        <div class="section-eyebrow">Our Origins</div>
+        <h3 class="section-title" style="font-size:34px">Founded by<br><span>Mr. Sivasankar Karthikeyan</span></h3>
+        <p class="story-body">Chemslife Groups began with a bold vision — to build an integrated business ecosystem that bridges science, healthcare, and essential services. Over the years, we have expanded into a <strong>multi-portfolio enterprise</strong>, delivering comprehensive solutions across diverse sectors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVISIONS / PORTFOLIO -->
+<section class="divisions-section" id="portfolio">
+  <div class="divisions-inner">
+    <div class="div-header reveal">
+      <div class="section-eyebrow" style="justify-content:center">Our Portfolio</div>
+      <h2 class="section-title">Our <span>Comprehensive Solutions</span></h2>
+      <p class="div-header-quote">Over the years, we have expanded into a <strong>multi-portfolio enterprise</strong>, delivering comprehensive solutions across:</p>
+    </div>
+    <div class="div-top-row">
+      <div class="div-card">
+        <div class="div-img">
+          <img src="Real photos/Scientific.jpg.jpeg" alt="Scientific &amp; Industrial Solutions" onerror="this.style.display='none'"/>
+          <div class="dip sci-dip"><i class="fas fa-flask"></i><span>Add Your Image</span></div>
+          <div class="div-count-badge">4 Product Lines</div>
+          <div class="div-img-tab sci-tab">
+            <div class="tab-icon"><i class="fas fa-flask"></i></div>
+            <div><div class="tab-label">Scientific &amp; Industrial Solutions</div><div class="tab-sub">Laboratory · Chemical · Industrial</div></div>
+          </div>
+        </div>
+        <div class="div-body">
+          <div class="div-items">
+            <div class="div-item sci-item"><div class="div-item-icon"><i class="fas fa-vial"></i></div><div class="div-item-text"><strong>Laboratory Products</strong><span>Chemicals, instruments, equipment, glassware &amp; safety kits</span></div></div>
+            <div class="div-item sci-item"><div class="div-item-icon"><i class="fas fa-atom"></i></div><div class="div-item-text"><strong>Chemical Products</strong><span>Acids, solvents, agro, industrial &amp; specialty grade chemicals</span></div></div>
+            <div class="div-item sci-item"><div class="div-item-icon"><i class="fas fa-water"></i></div><div class="div-item-text"><strong>Water Treatment Solutions</strong><span>Filtration, membrane systems, ion exchange &amp; wastewater treatment</span></div></div>
+            <div class="div-item sci-item"><div class="div-item-icon"><i class="fas fa-broom"></i></div><div class="div-item-text"><strong>Housekeeping &amp; Facility Products</strong><span>Cleaning agents, disinfectants, pest control &amp; laundry solutions</span></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="div-card">
+        <div class="div-img">
+          <img src="Real photos/Healthcare.png" alt="Integrated Healthcare Solutions" onerror="this.style.display='none'"/>
+          <div class="dip health-dip"><i class="fas fa-heartbeat"></i><span>Add Your Image</span></div>
+          <div class="div-count-badge">4 Product Lines</div>
+          <div class="div-img-tab health-tab">
+            <div class="tab-icon"><i class="fas fa-heartbeat"></i></div>
+            <div><div class="tab-label">Integrated Healthcare Solutions</div><div class="tab-sub">Pharma · Surgical · Diagnostics</div></div>
+          </div>
+        </div>
+        <div class="div-body">
+          <div class="div-items">
+            <div class="div-item health-item"><div class="div-item-icon"><i class="fas fa-pills"></i></div><div class="div-item-text"><strong>Pharmaceutical Products</strong><span>Analgesics, antibiotics, cardiovascular, vitamins &amp; vaccines</span></div></div>
+            <div class="div-item health-item"><div class="div-item-icon"><i class="fas fa-scalpel"></i></div><div class="div-item-text"><strong>Surgical Supplies</strong><span>Instruments, suturing, specialty sets &amp; surgical accessories</span></div></div>
+            <div class="div-item health-item"><div class="div-item-icon"><i class="fas fa-microscope"></i></div><div class="div-item-text"><strong>Diagnostic Products</strong><span>Hematology, immunology, molecular &amp; POC diagnostics</span></div></div>
+            <div class="div-item health-item"><div class="div-item-icon"><i class="fas fa-shield-virus"></i></div><div class="div-item-text"><strong>Safety &amp; Disposable Products</strong><span>PPE, respiratory safety, medical &amp; biological disposables</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="div-bottom-row">
+      <div class="div-card svc-card">
+        <div class="div-img" style="height:220px">
+          <img src="Real photos/Industry.jpg.jpeg" alt="Service Verticals" onerror="this.style.display='none'"/>
+          <div class="dip svc-dip"><i class="fas fa-cogs"></i><span>Add Your Image</span></div>
+          <div class="div-count-badge">3 Service Verticals</div>
+          <div class="div-img-tab svc-tab">
+            <div class="tab-icon"><i class="fas fa-cogs"></i></div>
+            <div><div class="tab-label">Service Verticals</div><div class="tab-sub">Healthcare · Transport · Financial</div></div>
+          </div>
+        </div>
+        <div class="div-body">
+          <div class="svc-items-grid">
+            <div class="div-item svc-item"><div class="div-item-icon"><i class="fas fa-hospital"></i></div><div class="div-item-text"><strong>Healthcare Services</strong><span>End-to-end healthcare support, distribution &amp; clinical services</span></div></div>
+            <div class="div-item svc-item"><div class="div-item-icon"><i class="fas fa-truck"></i></div><div class="div-item-text"><strong>Transport &amp; Logistics Services</strong><span>Dedicated transport, courier &amp; supply chain management</span></div></div>
+            <div class="div-item svc-item"><div class="div-item-icon"><i class="fas fa-calculator"></i></div><div class="div-item-text"><strong>Tax &amp; Financial Services</strong><span>GST, tax filing, insurance &amp; business financial advisory</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION & MISSION -->
+<section class="vm-section" id="vision-mission">
+  <div class="vm-inner">
+    <div class="vm-header reveal">
+      <div class="section-eyebrow" style="justify-content:center">Purpose &amp; Direction</div>
+      <h2 class="section-title">Our Vision &amp; <span>Mission</span></h2>
+      <p class="section-sub" style="max-width:540px;margin:0 auto;text-align:center">Guided by a clear purpose and a defined direction, every action we take is aligned with long-term value creation.</p>
+    </div>
+    <div class="vm-cards">
+      <div class="vm-card vision reveal from-left">
+        <div class="vm-card-inner">
+          <div class="vm-icon-wrap"><i class="fas fa-eye"></i></div>
+          <div class="vm-label">Our Vision</div>
+          <h3 class="vm-title">Global Partner in Science &amp; Healthcare</h3>
+          <p class="vm-text">To be a trusted global partner in chemical, healthcare, and industrial solutions — recognized for quality, innovation, and sustainable growth.</p>
+        </div>
+        <div class="vm-deco-word">VISION</div>
+      </div>
+      <div class="vm-card mission reveal from-right">
+        <div class="vm-card-inner">
+          <div class="vm-icon-wrap"><i class="fas fa-bullseye"></i></div>
+          <div class="vm-label">Our Mission</div>
+          <h3 class="vm-title">Excellence Through Innovation</h3>
+          <p class="vm-text">To deliver high-quality, reliable, and innovative products and services that exceed customer expectations while fostering sustainability, operational excellence, and continuous improvement.</p>
+        </div>
+        <div class="vm-deco-word">MISSION</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE VALUES -->
+<section class="values-section" id="values">
+  <div class="values-inner">
+    <div class="values-header reveal">
+      <div class="section-eyebrow" style="justify-content:center">What We Stand For</div>
+      <h2 class="section-title">Our Core <span>Values</span></h2>
+      <p class="section-sub" style="max-width:540px;margin:0 auto;text-align:center">Six principles that define who we are, how we operate, and the commitments we uphold every single day.</p>
+    </div>
+    <div class="values-grid">
+      <div class="val-card"><div class="val-icon"><i class="fas fa-shield-alt"></i></div><h3 class="val-name">Integrity</h3><p class="val-desc">We uphold the highest standards of ethics, transparency, and accountability in all our operations — no exceptions.</p></div>
+      <div class="val-card"><div class="val-icon"><i class="fas fa-users"></i></div><h3 class="val-name">Customer Centricity</h3><p class="val-desc">Our customers are at the core of everything we do. We deliver tailored solutions that create measurable, lasting value.</p></div>
+      <div class="val-card"><div class="val-icon"><i class="fas fa-lightbulb"></i></div><h3 class="val-name">Innovation</h3><p class="val-desc">We continuously evolve by embracing new ideas, technologies, and process improvements that push boundaries.</p></div>
+      <div class="val-card"><div class="val-icon"><i class="fas fa-medal"></i></div><h3 class="val-name">Quality Excellence</h3><p class="val-desc">We are committed to delivering products and services that meet international standards and build enduring trust.</p></div>
+      <div class="val-card"><div class="val-icon"><i class="fas fa-leaf"></i></div><h3 class="val-name">Sustainability</h3><p class="val-desc">We operate responsibly, minimizing environmental impact and actively promoting long-term sustainable practices.</p></div>
+      <div class="val-card"><div class="val-icon"><i class="fas fa-handshake"></i></div><h3 class="val-name">Collaboration</h3><p class="val-desc">We believe in strong partnerships with employees, customers, and stakeholders to achieve meaningful shared success.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-section" id="why-us">
+  <div class="why-inner">
+    <div class="why-img-side reveal from-left">
+      <div class="why-img-main">
+        <img src="all dummy images/image8.jpeg" alt="Why Chemslife" onerror="this.style.display='none'"/>
+        <div class="img-ph"><i class="fas fa-award"></i><span>Excellence Photo</span></div>
+      </div>
+      <div class="why-float-stat"><div class="fs-num">500+</div><div class="fs-label">Clients Served</div></div>
+      <div class="why-float-stat2"><div class="fs2-icon"><i class="fas fa-star"></i></div><div class="fs2-text"><strong>Trusted</strong><span>Since 2018</span></div></div>
+    </div>
+    <div class="why-text-side reveal from-right">
+      <div class="section-eyebrow">Why Chemslife</div>
+      <h2 class="section-title">Why Choose <span>Chemslife Groups</span></h2>
+      <p style="font-size:17px;color:var(--text-muted);line-height:1.85;margin-bottom:32px">We are more than a supplier — we are a reliable long-term partner committed to your success through every stage of your operations.</p>
+      <div class="why-points">
+        <div class="why-point"><div class="why-point-icon"><i class="fas fa-layer-group"></i></div><div class="why-point-text"><strong>Diversified Multi-Portfolio Organization</strong><span>One trusted partner for scientific, healthcare, industrial, and service needs.</span></div></div>
+        <div class="why-point"><div class="why-point-icon"><i class="fas fa-brain"></i></div><div class="why-point-text"><strong>Strong Domain Expertise Across Industries</strong><span>Deep knowledge built over years of working across 9+ industry verticals.</span></div></div>
+        <div class="why-point"><div class="why-point-icon"><i class="fas fa-warehouse"></i></div><div class="why-point-text"><strong>Customer-Centric Warehousing &amp; Supply Chain</strong><span>Efficient fulfillment processes designed around your unique requirements.</span></div></div>
+        <div class="why-point"><div class="why-point-icon"><i class="fas fa-truck"></i></div><div class="why-point-text"><strong>Reliable Logistics Through Dedicated Partners</strong><span>Consistent, timely delivery through a robust transport network.</span></div></div>
+        <div class="why-point"><div class="why-point-icon"><i class="fas fa-headset"></i></div><div class="why-point-text"><strong>Responsive Support with Real-Time Assistance</strong><span>Prompt, knowledgeable support that keeps your operations running smoothly.</span></div></div>
+        <div class="why-point"><div class="why-point-icon"><i class="fas fa-certificate"></i></div><div class="why-point-text"><strong>Commitment to International Quality Standards</strong><span>Products and services benchmarked to global quality and compliance norms.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUALITY & SAFETY -->
+<section class="qs-section" id="quality-safety">
+  <div class="qs-inner">
+    <div class="qs-header reveal">
+      <div class="section-eyebrow" style="justify-content:center">Our Commitment</div>
+      <h2 class="section-title">Quality &amp; <span>Safety Policy</span></h2>
+      <p class="section-sub" style="max-width:540px;margin:0 auto;text-align:center">Quality and safety are not just policies at Chemslife Groups — they are the foundation of every decision we make.</p>
+    </div>
+    <div class="qs-grid">
+      <div class="qs-card reveal from-left">
+        <div class="qs-card-head">
+          <div class="qs-head-icon"><i class="fas fa-medal"></i></div>
+          <h3 class="qs-head-title">Quality Policy</h3>
+          <p class="qs-head-sub">Quality is the foundation of our operations. We are dedicated to delivering products and services that consistently meet or exceed customer expectations.</p>
+        </div>
+        <div class="qs-body">
+          <div class="qs-section-title"><i class="fas fa-bullseye"></i> Our Quality Objectives</div>
+          <ul class="qs-list"><li>Ensure customer satisfaction through timely and reliable delivery</li><li>Maintain strict compliance with industry standards and regulations</li><li>Continuously improve processes for operational excellence</li><li>Invest in employee training and capability development</li></ul>
+          <div class="qs-section-title"><i class="fas fa-check-circle"></i> Our Commitment</div>
+          <ul class="qs-list"><li>Implement robust quality management systems</li><li>Drive continuous improvement across all functions</li><li>Actively incorporate customer feedback</li><li>Foster a culture of quality ownership among employees</li></ul>
+        </div>
+      </div>
+      <div class="qs-card safety reveal from-right">
+        <div class="qs-card-head">
+          <div class="qs-head-icon"><i class="fas fa-hard-hat"></i></div>
+          <h3 class="qs-head-title">Safety Policy</h3>
+          <p class="qs-head-sub">Safety is a core priority at Chemslife Groups. We are committed to maintaining a safe and healthy environment for our employees, customers, and stakeholders.</p>
+        </div>
+        <div class="qs-body">
+          <div class="qs-section-title"><i class="fas fa-bullseye"></i> Our Safety Objectives</div>
+          <ul class="qs-list"><li>Achieve zero workplace incidents through proactive culture</li><li>Ensure full compliance with all applicable safety regulations</li><li>Promote awareness through regular training and drills</li><li>Continuously improve safety practices and standards</li></ul>
+          <div class="qs-section-title"><i class="fas fa-check-circle"></i> Our Approach</div>
+          <ul class="qs-list"><li>Proactive risk identification and mitigation strategies</li><li>Strong safety leadership and clear accountability</li><li>Transparent incident reporting and corrective action</li><li>Active employee participation in safety initiatives</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline-section" id="journey">
+  <div class="timeline-inner">
+    <div class="timeline-header reveal">
+      <div class="section-eyebrow" style="justify-content:center">Our Evolution</div>
+      <h2 class="section-title">Our Growth <span>Journey</span></h2>
+      <p class="section-sub" style="max-width:540px;margin:0 auto;text-align:center">A decade-long path of consistent diversification, strategic expansion, and meaningful milestones.</p>
+    </div>
+    <div class="tl-track" id="tlTrack">
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><div class="tl-year">2017</div><div class="tl-content"><div class="tl-title">Educational Services</div><div class="tl-desc">Laid the founding groundwork through educational and knowledge-sharing initiatives that shaped the company's early direction.</div></div></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><div class="tl-year">2018</div><div class="tl-content"><div class="tl-title">Digital Initiatives &amp; YouTube</div><div class="tl-desc">Formally established Chemslife Groups. Launched digital presence and content-driven outreach through YouTube and online platforms.</div></div></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><div class="tl-year">2019</div><div class="tl-content"><div class="tl-title">Distribution &amp; Social Initiatives</div><div class="tl-desc">Expanded into product distribution networks and launched community-focused social impact initiatives.</div></div></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><div class="tl-year">2020</div><div class="tl-content"><div class="tl-title">Marketing &amp; Insurance</div><div class="tl-desc">Strengthened brand marketing capabilities and entered the insurance services space to broaden the service portfolio.</div></div></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><div class="tl-year">2021</div><div class="tl-content"><div class="tl-title">Business &amp; Financial Services</div><div class="tl-desc">Launched dedicated business consulting and financial services verticals, empowering SMEs and growing enterprises.</div></div></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><div class="tl-year">2022</div><div class="tl-content"><div class="tl-title">Tax &amp; Insurance Services Expansion</div><div class="tl-desc">Scaled tax and insurance service offerings, building deeper capabilities to serve a wider client base.</div></div></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><div class="tl-year">2023</div><div class="tl-content"><div class="tl-title">Logistics &amp; Courier Services</div><div class="tl-desc">Entered logistics and courier services, building the supply chain infrastructure needed for the growing product business.</div></div></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><div class="tl-year">2024</div><div class="tl-content"><div class="tl-title">Transport Services</div><div class="tl-desc">Established a dedicated transport arm to ensure reliable, timely, and cost-effective product delivery across regions.</div></div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="background:var(--navy);box-shadow:0 0 0 3px rgba(22,62,111,.25)"></div><div class="tl-card" style="border-color:rgba(46,158,79,.3);background:var(--green-light)"><div class="tl-year" style="color:var(--navy)">2025</div><div class="tl-content"><div class="tl-title" style="color:var(--green-dark)">Healthcare Services &amp; Distribution Expansion 🚀</div><div class="tl-desc">Launched integrated healthcare services division and massively expanded product distribution reach across Tamil Nadu and beyond.</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="join-us">
+  <div class="cta-deco-ring"></div>
+  <div class="cta-deco-ring"></div>
+  <div class="cta-inner reveal from-scale">
+    <div class="cta-tag"><i class="fas fa-handshake"></i> Partner With Us</div>
+    <h2 class="cta-title">Join Our <span>Journey</span></h2>
+    <p class="cta-sub">We invite you to partner with us as we continue to grow and innovate. Explore our offerings and discover how Chemslife Groups can support your business with reliable, high-quality solutions.</p>
+    <div class="cta-btns">
+      <a href="contact-us.html" class="cta-btn-primary"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+      <a href="index.html" class="cta-btn-outline"><i class="fas fa-flask"></i> Explore Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top-band">
+    <p>Ready to partner with us? <span>Explore our full range of scientific, industrial &amp; healthcare solutions.</span></p>
+    <a href="#" class="footer-cta-btn" id="backToTop"><i class="fas fa-arrow-up" style="margin-right:7px"></i>Back to Top</a>
+  </div>
+  <div class="footer-main">
+    <div class="footer-about">
+      <div class="footer-logo-wrap">
+        <div class="footer-logo-icon">
+          <svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4 Z" fill="#2e9e4f" opacity="0.2" stroke="#2e9e4f" stroke-width="2.5" stroke-linejoin="round"/><path d="M23 38 Q30 32 38 40 L42 52 Q44 57 40 59 L20 59 Q16 57 18 52 Z" fill="#2e9e4f" opacity="0.8"/><rect x="21" y="0" width="18" height="6" rx="3" fill="#cdd8e8"/><path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4" fill="none" stroke="#cdd8e8" stroke-width="2.5" stroke-linejoin="round"/></svg>
+        </div>
+        <div><div class="footer-logo-name">CHEMS<span>LIFE</span></div><div class="footer-logo-sub">Groups</div></div>
+      </div>
+      <p>A multi-sector organization delivering reliable scientific, industrial, and healthcare solutions since 2018. Founded by Mr. Sivasankar Karthikeyan.</p>
+      <div class="footer-tagline">"Building Chemistry for a Better Tomorrow"</div>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/Chemslifegroups" class="fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/chemslife_groups/" class="ig" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/chemslifegroups278a10213/" class="li" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/ChemslifeGroups" class="tw" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.youtube.com/c/ChemslifeGroupss" class="yt" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/918870496918" class="wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://t.me/ChemslifeGroups" class="tg" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+        <a href="#" class="pt"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4><i class="fas fa-flask"></i> Scientific &amp; Industrial</h4>
+      <h5>Laboratory Products</h5>
+      <ul class="footer-links"><li><a href="#">Laboratory Chemicals</a></li><li><a href="#">Laboratory Instruments</a></li><li><a href="#">Laboratory Equipment</a></li><li><a href="#">Glassware &amp; Plasticware</a></li><li><a href="#">Lab Furniture &amp; Safety Kits</a></li></ul>
+      <h5>Chemical Products</h5>
+      <ul class="footer-links"><li><a href="#">Acids &amp; Solvents</a></li><li><a href="#">Agro &amp; Bio Chemicals</a></li><li><a href="#">Boiler &amp; Cooling Tower Chemicals</a></li><li><a href="#">Speciality &amp; USP Grade</a></li></ul>
+      <h5>Water Treatment</h5>
+      <ul class="footer-links"><li><a href="#">Filtration &amp; Membrane Systems</a></li><li><a href="#">Ion Exchange Resins</a></li><li><a href="#">Wastewater Treatment</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4><i class="fas fa-heartbeat"></i> Healthcare Solutions</h4>
+      <h5>Pharmaceutical</h5>
+      <ul class="footer-links"><li><a href="#">Analgesics &amp; Antipyretics</a></li><li><a href="#">Antibiotics &amp; Antimicrobials</a></li><li><a href="#">Cardiovascular Drugs</a></li><li><a href="#">Vitamins &amp; Supplements</a></li></ul>
+      <h5>Surgical &amp; Diagnostic</h5>
+      <ul class="footer-links"><li><a href="#">Surgical Instruments</a></li><li><a href="#">Specialty Surgical Sets</a></li><li><a href="#">Hematology Products</a></li><li><a href="#">Molecular Diagnostics</a></li></ul>
+      <h5>Safety &amp; Disposables</h5>
+      <ul class="footer-links"><li><a href="#">PPE</a></li><li><a href="#">Medical Disposables</a></li><li><a href="#">Waste Management</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4><i class="fas fa-link"></i> Quick Links</h4>
+      <ul class="footer-links"><li><a href="#">Home</a></li><li><a href="#">About Us</a></li><li><a href="#">Products</a></li><li><a href="#">Contact Us</a></li><li><a href="#">E-Commerce Store (Chemscart)</a></li></ul>
+      <h5>About</h5>
+      <ul class="footer-links"><li><a href="#welcome">Welcome</a></li><li><a href="#story">Our Story</a></li><li><a href="#vision-mission">Vision &amp; Mission</a></li><li><a href="#values">Core Values</a></li><li><a href="#quality-safety">Quality &amp; Safety</a></li><li><a href="#journey">Growth Journey</a></li><li><a href="#portfolio">Our Portfolio</a></li></ul>
+      <h5>Our Locations</h5>
+      <ul class="footer-links"><li><a href="#">Corporate Office – Hosur, TN</a></li><li><a href="#">Healthcare Division – Hosur, TN</a></li><li><a href="#">Scientific Division – Krishnagiri, TN</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-contact-grid">
+    <div class="contact-card"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><div class="contact-info"><strong>Sales</strong><span>+91 88704 96918</span><a href="mailto:sales@chemslife.in">sales@chemslife.in</a></div></div>
+    <div class="contact-card"><div class="contact-icon"><i class="fas fa-headset"></i></div><div class="contact-info"><strong>Admin</strong><span>+91 88702 44418 / 88702 66618</span><a href="mailto:admin@chemslife.in">admin@chemslife.in</a></div></div>
+    <div class="contact-card"><div class="contact-icon"><i class="fas fa-shopping-bag"></i></div><div class="contact-info"><strong>Chemscart</strong><span>+91 88702 44418</span><a href="mailto:admin@chemscart.in">admin@chemscart.in</a></div></div>
+    <div class="contact-card"><div class="contact-icon"><i class="fas fa-truck"></i></div><div class="contact-info"><strong>Dispatch</strong><span>+91 88700 36018</span><a href="mailto:dispatch@chemslife.in">dispatch@chemslife.in</a></div></div>
+  </div>
+  <hr class="footer-divider"/>
+  <div class="footer-bottom">
+    <p>&copy; 2025 <span>Chemslife Groups</span>. All rights reserved. | Founded by Mr. Sivasankar Karthikeyan.</p>
+    <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Sitemap</a></div>
+    <div class="footer-motto">Everything is Science &nbsp;&#9670;&nbsp; Science for Nation</div>
+  </div>
+</footer>
+
+<script>
+// ─── Hamburger
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('main-nav');
+hamburger.addEventListener('click', () => nav.classList.toggle('open'));
+document.addEventListener('click', e => { if (!nav.contains(e.target) && !hamburger.contains(e.target)) nav.classList.remove('open'); });
+
+// ─── Mobile dropdown
+const productsDropdown = document.getElementById('productsDropdown');
+const productsToggle = document.getElementById('productsToggle');
+if (productsToggle) productsToggle.addEventListener('click', e => { if (window.innerWidth <= 768) { e.preventDefault(); productsDropdown.classList.toggle('open'); } });
+
+// ─── Scroll Reveal
+const revealEls = document.querySelectorAll('.reveal');
+function checkReveal() { const wh = window.innerHeight; revealEls.forEach(el => { if (el.getBoundingClientRect().top < wh - 80) el.classList.add('visible'); }); }
+let ticking = false;
+window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(() => { checkReveal(); ticking = false; }); ticking = true; } });
+checkReveal();
+
+// ─── Value Cards
+const valCards = document.querySelectorAll('.val-card');
+const valObs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vc'); valObs.unobserve(e.target); } }); }, { threshold: 0.1 });
+valCards.forEach((c, i) => { c.style.transition = `opacity .6s ease ${i * 0.08}s, transform .65s cubic-bezier(.22,1,.36,1) ${i * 0.08}s, box-shadow .35s ease, border-color .35s ease`; valObs.observe(c); });
+
+// ─── Timeline
+const tlItems = document.querySelectorAll('.tl-item');
+const tlObs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('ti'); tlObs.unobserve(e.target); } }); }, { threshold: 0.15 });
+tlItems.forEach((item, i) => { item.style.transition = `opacity .55s ease ${i * 0.07}s, transform .55s cubic-bezier(.22,1,.36,1) ${i * 0.07}s`; tlObs.observe(item); });
+
+// ─── Counters
+function animCounter(el, target) {
+  let s = 0; const step = Math.ceil(target / (1400 / 16));
+  const t = setInterval(() => { s += step; if (s >= target) { s = target; clearInterval(t); } el.textContent = s + '+'; }, 16);
+}
+let fcRun = false;
+const fcSection = document.querySelector('.wl-img-side');
+if (fcSection) {
+  new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !fcRun) {
+      fcRun = true;
+      document.querySelectorAll('.wl-stat-a .sn, .wl-stat-b .sn').forEach(el => animCounter(el, parseInt(el.dataset.target)));
+    }
+  }, { threshold: 0.4 }).observe(fcSection);
+}
+let wsRun = false;
+const wsSection = document.querySelector('.wl-stats-row');
+if (wsSection) {
+  new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !wsRun) {
+      wsRun = true;
+      document.querySelectorAll('.wl-stat-box .sn').forEach(el => {
+        const target = parseInt(el.dataset['wsTarget'] || el.getAttribute('data-ws-target') || 0);
+        animCounter(el, target);
+      });
+    }
+  }, { threshold: 0.4 }).observe(wsSection);
+}
+
+// ─── Particles
+(function() {
+  const c = document.getElementById('ahParticles'); if (!c) return;
+  for (let i = 0; i < 25; i++) {
+    const s = document.createElement('span'); const sz = Math.random() * 3 + 1.5;
+    s.style.cssText = `left:${Math.random()*100}%;bottom:${Math.random()*-50}px;width:${sz}px;height:${sz}px;animation-duration:${Math.random()*12+8}s;animation-delay:${Math.random()*10}s;opacity:${Math.random()*.4+.1}`;
+    c.appendChild(s);
+  }
+})();
+
+// ─── Division Cards
+const divCards = document.querySelectorAll('.div-card');
+const divObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('dc'); divObs.unobserve(e.target); } });
+}, { threshold: 0.08 });
+divCards.forEach((c, i) => { c.style.transition = `opacity .65s ease ${i * 0.18}s, transform .7s cubic-bezier(.22,1,.36,1) ${i * 0.18}s, box-shadow .4s ease`; divObs.observe(c); });
+
+// ─── Back to Top
+document.getElementById('backToTop').addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+</script>
+</body>
+</html>

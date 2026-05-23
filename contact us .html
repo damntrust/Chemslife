@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contact Us — Chemslife Groups</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#2e9e4f;--green-dark:#1e7a3a;--green-light:#e8f7ed;--green-mid:#5fd98a;
+  --white:#ffffff;--navy:#0d2b4e;--navy-mid:#163e6f;--navy-light:#1e4d82;
+  --text-muted:#4a6080;--border:#d4e8dc;--bg:#f4f8f5;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;background:var(--bg);color:var(--navy);overflow-x:hidden}
+
+/* ═══ TOP BAR ═══ */
+.top-bar{background:var(--navy);color:#fff;padding:8px 0;font-size:13px}
+.top-bar-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.top-bar-address{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.top-bar-address span{display:flex;align-items:center;gap:6px;color:#a8c4d8;font-size:12.5px}
+.top-bar-address span i{color:var(--green);font-size:12px}
+.social-links{display:flex;align-items:center;gap:8px}
+.social-links a{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;text-decoration:none;transition:transform .2s,filter .2s;border:1.5px solid rgba(255,255,255,.12)}
+.social-links a:hover{transform:scale(1.18) translateY(-2px);filter:brightness(1.15)}
+.social-links a.fb{background:#1877f2;color:#fff}
+.social-links a.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%);color:#fff}
+.social-links a.li{background:#0a66c2;color:#fff}
+.social-links a.tw{background:#000;color:#fff}
+.social-links a.yt{background:#ff0000;color:#fff}
+.social-links a.wa{background:#25d366;color:#fff}
+.social-links a.tg{background:#0088cc;color:#fff}
+.social-links a.pt{background:#e60023;color:#fff}
+
+/* ═══ MARQUEE ═══ */
+.marquee-wrap{background:linear-gradient(90deg,var(--green-dark) 0%,var(--green) 50%,var(--green-dark) 100%);padding:9px 0;overflow:hidden;position:relative}
+.marquee-wrap::before,.marquee-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
+.marquee-wrap::before{left:0;background:linear-gradient(to right,var(--green-dark),transparent)}
+.marquee-wrap::after{right:0;background:linear-gradient(to left,var(--green-dark),transparent)}
+.marquee-track{display:flex;width:max-content;animation:marquee 28s linear infinite}
+.marquee-track:hover{animation-play-state:paused}
+.marquee-content{display:flex;align-items:center;white-space:nowrap}
+.marquee-text{font-family:'Montserrat',sans-serif;font-size:13.5px;font-weight:700;letter-spacing:3.5px;color:rgba(255,255,255,.95);text-transform:uppercase;padding:0 48px}
+.marquee-sep{color:rgba(255,255,255,.5);font-size:16px;padding:0 8px}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ═══ MAIN HEADER ═══ */
+.main-header{background:#fff;border-bottom:2px solid var(--green-light);box-shadow:0 2px 12px rgba(46,158,79,.08);position:sticky;top:0;z-index:200}
+.main-header-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:80px;gap:24px}
+.logo-wrap{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}
+.logo-img-box{width:58px;height:58px;border-radius:10px;background:#f0faf3;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.logo-img-box img{width:100%;height:100%;object-fit:contain}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-name{font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:#111;letter-spacing:-0.5px}
+.logo-name span{color:var(--green)}
+.logo-tagline{font-size:10px;color:var(--text-muted);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;margin-top:2px}
+nav{display:flex;align-items:center;gap:4px}
+nav a{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:600;color:var(--navy);text-decoration:none;padding:8px 18px;border-radius:6px;letter-spacing:.3px;position:relative;transition:color .2s,background .2s}
+nav a::after{content:'';position:absolute;bottom:4px;left:18px;right:18px;height:2px;background:var(--green);border-radius:2px;transform:scaleX(0);transition:transform .25s ease}
+nav a:hover{color:var(--green-dark);background:var(--green-light)}
+nav a:hover::after,nav a.active::after{transform:scaleX(1)}
+nav a.active{color:var(--green-dark);background:var(--green-light)}
+nav a.btn-contact{background:var(--navy);color:#fff;border-radius:6px;padding:9px 20px;margin-left:8px;transition:background .2s,transform .15s}
+nav a.btn-contact::after{display:none}
+nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(-1px)}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:5px}
+.nav-dropdown>a .dd-arrow{font-size:10px;transition:transform .25s ease}
+.nav-dropdown:hover>a .dd-arrow{transform:rotate(180deg)}
+.dropdown-menu{position:absolute;top:calc(100% + 8px);left:0;background:#fff;border:1.5px solid var(--border);border-radius:12px;box-shadow:0 16px 48px rgba(13,43,78,.14);min-width:260px;padding:8px;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(10px);transition:opacity .22s ease,transform .22s ease,visibility .22s;z-index:200}
+.nav-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;pointer-events:all;transform:translateY(0)}
+.dropdown-menu a{display:flex;align-items:center;gap:12px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--navy);text-decoration:none;padding:11px 14px;border-radius:8px;transition:background .18s,color .18s,padding-left .18s}
+.dropdown-menu a::after{display:none!important}
+.dropdown-menu a:hover{background:var(--green-light);color:var(--green-dark);padding-left:18px}
+.dropdown-menu a .dd-icon{width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,var(--green-light),#c2e8ce);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s}
+.dropdown-menu a:hover .dd-icon{background:linear-gradient(135deg,#b2f0cb,#7dd4a0)}
+.dropdown-menu a .dd-icon i{color:var(--green-dark);font-size:14px}
+.dropdown-menu a .dd-label{flex:1}
+.dropdown-menu a .dd-label strong{display:block;font-size:13px;font-weight:700;color:var(--navy)}
+.dropdown-menu a .dd-label span{display:block;font-size:11px;color:var(--text-muted);font-weight:500;margin-top:1px}
+.dropdown-divider{border:none;border-top:1px solid var(--border);margin:6px 8px}
+.hamburger{display:none;background:none;border:1.5px solid var(--border);border-radius:6px;padding:7px 9px;cursor:pointer;flex-direction:column;gap:4px}
+.hamburger span{display:block;width:20px;height:2px;background:var(--navy);border-radius:2px}
+
+/* ═══ HERO ═══ */
+.contact-hero{position:relative;overflow:hidden;min-height:400px;display:flex;align-items:center;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 55%,#0a3d20 100%)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,43,78,.9) 0%,rgba(13,43,78,.55) 60%,rgba(10,61,32,.7) 100%);z-index:1}
+.hero-deco{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+.hex{position:absolute;opacity:.07;animation:hexFloat 8s ease-in-out infinite}
+.hex svg{fill:var(--green-mid)}
+.hex:nth-child(1){top:-40px;right:7%;animation-delay:0s;width:200px}
+.hex:nth-child(2){bottom:-60px;right:22%;animation-delay:2s;width:150px}
+.hex:nth-child(3){top:30%;right:3%;animation-delay:4s;width:100px;opacity:.04}
+.hex:nth-child(4){top:12%;right:38%;animation-delay:1s;width:65px;opacity:.09}
+@keyframes hexFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-18px) rotate(10deg)}}
+.atom-circle{position:absolute;border-radius:50%;border:1px solid rgba(95,217,138,.15);animation:atomOrbit 12s linear infinite}
+.atom-circle:nth-child(5){width:320px;height:320px;right:-90px;top:-90px;animation-duration:16s}
+.atom-circle:nth-child(6){width:190px;height:190px;right:65px;top:35px;animation-duration:10s;animation-direction:reverse}
+.atom-circle:nth-child(7){width:95px;height:95px;right:130px;top:100px;border-color:rgba(95,217,138,.28)}
+.atom-dot{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--green-mid);top:50%;left:-3.5px;transform-origin:160px 3.5px;animation:inherit;box-shadow:0 0 10px var(--green-mid)}
+@keyframes atomOrbit{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.hero-inner{max-width:1280px;margin:0 auto;padding:80px 24px;position:relative;z-index:3;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(46,158,79,.2);border:1px solid rgba(46,158,79,.4);color:#5fd98a;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:20px;backdrop-filter:blur(8px)}
+.hero-title{font-family:'Montserrat',sans-serif;font-size:58px;font-weight:900;color:#fff;line-height:1.0;letter-spacing:-2px;margin-bottom:16px}
+.hero-title span{color:var(--green-mid)}
+.hero-subtitle{font-size:17px;color:rgba(255,255,255,.72);line-height:1.8;max-width:440px;margin-bottom:32px}
+.hero-badges{display:flex;gap:14px;flex-wrap:wrap}
+.hero-badge{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:12px 18px;backdrop-filter:blur(6px)}
+.hero-badge i{color:var(--green-mid);font-size:16px}
+.hero-badge span{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:rgba(255,255,255,.88)}
+.hero-right{position:relative;display:flex;justify-content:center;align-items:center}
+.hero-img-frame{width:340px;height:340px;border-radius:50%;overflow:hidden;border:3px solid rgba(46,158,79,.3);box-shadow:0 0 60px rgba(46,158,79,.2),0 30px 80px rgba(13,43,78,.5);animation:framePulse 4s ease-in-out infinite;background:radial-gradient(circle at 40% 40%,rgba(46,158,79,.2),rgba(13,43,78,.6));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
+.hero-img-frame i{font-size:72px;color:rgba(95,217,138,.3)}
+.hero-img-frame span{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:rgba(95,217,138,.45);letter-spacing:2px;text-transform:uppercase}
+@keyframes framePulse{0%,100%{box-shadow:0 0 60px rgba(46,158,79,.2),0 30px 80px rgba(13,43,78,.5)}50%{box-shadow:0 0 90px rgba(46,158,79,.35),0 30px 80px rgba(13,43,78,.5)}}
+.hero-img-ring{position:absolute;width:390px;height:390px;border-radius:50%;border:1.5px dashed rgba(95,217,138,.2);animation:ringRotate 20s linear infinite}
+.hero-img-ring2{position:absolute;width:440px;height:440px;border-radius:50%;border:1px solid rgba(95,217,138,.1);animation:ringRotate 30s linear infinite reverse}
+@keyframes ringRotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+
+/* ═══ QUICK BAR ═══ */
+.quick-bar{background:#fff;border-bottom:2px solid var(--green-light);box-shadow:0 6px 30px rgba(13,43,78,.08)}
+.quick-bar-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.qb-item{display:flex;align-items:center;gap:14px;padding:24px 28px;border-right:1px solid var(--border);cursor:pointer;transition:background .2s;text-decoration:none}
+.qb-item:last-child{border-right:none}
+.qb-item:hover{background:var(--green-light)}
+.qb-icon-wrap{width:50px;height:50px;border-radius:13px;background:linear-gradient(135deg,var(--green-light),#c8edd4);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s,transform .2s}
+.qb-item:hover .qb-icon-wrap{background:linear-gradient(135deg,#b2f0cb,#7dd4a0);transform:scale(1.08) rotate(-5deg)}
+.qb-icon-wrap i{color:var(--green-dark);font-size:19px}
+.qb-label{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.qb-value{font-family:'Montserrat',sans-serif;font-size:14.5px;font-weight:700;color:var(--navy)}
+
+/* ═══ SECTION COMMONS ═══ */
+.section-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+.section-eyebrow::before,.section-eyebrow::after{content:'';display:block;width:28px;height:2.5px;background:var(--green);border-radius:2px}
+.section-title{font-family:'Montserrat',sans-serif;font-size:44px;font-weight:900;color:var(--navy);line-height:1.1;letter-spacing:-1.5px;margin-bottom:12px}
+.section-title span{color:var(--green)}
+.section-sub{font-size:17px;color:var(--text-muted);line-height:1.8}
+
+/* ═══ MAIN CONTACT SECTION ═══ */
+.contact-main{max-width:1280px;margin:0 auto;padding:88px 24px}
+.contact-grid{display:grid;grid-template-columns:1fr 1.45fr;gap:44px;align-items:start}
+
+/* ─── Dept Cards ─── */
+.contacts-col{display:flex;flex-direction:column;gap:20px}
+.dept-card{background:#fff;border:1.5px solid var(--border);border-radius:22px;overflow:hidden;position:relative;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;opacity:0;transform:translateX(-30px)}
+.dept-card.cv{opacity:1;transform:none}
+.dept-card:hover{transform:translateY(-5px);box-shadow:0 22px 55px rgba(13,43,78,.11);border-color:rgba(46,158,79,.38)}
+.dept-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(to bottom,var(--green),var(--green-dark));border-radius:22px 0 0 22px}
+.dept-header{display:flex;align-items:center;gap:16px;padding:20px 24px 16px}
+.dept-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--green-light),#b8ecc8);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .25s ease,background .25s}
+.dept-card:hover .dept-icon{transform:rotate(-8deg) scale(1.1);background:linear-gradient(135deg,#b2f0cb,#7dd4a0)}
+.dept-icon i{color:var(--green-dark);font-size:21px}
+.dept-name{font-family:'Montserrat',sans-serif;font-size:17px;font-weight:800;color:var(--navy);margin-bottom:3px}
+.dept-role{font-size:14px;color:var(--text-muted);line-height:1.4}
+.dept-body{padding:0 24px 20px 92px;display:flex;flex-direction:column;gap:10px}
+.dept-row{display:flex;align-items:center;gap:10px}
+.dept-row i{width:18px;color:var(--green);font-size:14px;flex-shrink:0}
+.dept-row a,.dept-row span{font-size:14.5px;color:var(--text-muted);text-decoration:none;transition:color .2s;line-height:1.5}
+.dept-row a:hover{color:var(--green-dark)}
+
+/* ─── Form ─── */
+.form-col{background:#fff;border-radius:24px;overflow:hidden;border:1.5px solid var(--border);box-shadow:0 16px 60px rgba(13,43,78,.1);position:relative}
+.form-col::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--green-dark),var(--green),var(--green-mid),var(--green),var(--green-dark));z-index:1}
+.form-header{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);padding:28px 32px;position:relative;overflow:hidden}
+.form-header::after{content:'';position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;border:1.5px solid rgba(95,217,138,.12)}
+.form-header-icon{width:54px;height:54px;border-radius:14px;background:rgba(46,158,79,.2);border:1.5px solid rgba(46,158,79,.35);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.form-header-icon i{color:#5fd98a;font-size:22px}
+.form-header-title{font-family:'Montserrat',sans-serif;font-size:23px;font-weight:800;color:#fff;margin-bottom:5px}
+.form-header-sub{font-size:14px;color:rgba(255,255,255,.5)}
+.zoho-frame-wrap{padding:0;background:#fff}
+.zoho-frame-wrap iframe{display:block;width:100%;height:660px;border:none}
+
+/* ═══ LOCATIONS SECTION ═══ */
+.locations-section{background:#fff;padding:88px 0;position:relative;overflow:hidden}
+.locations-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(46,158,79,.07) 1.5px,transparent 1.5px);background-size:32px 32px;pointer-events:none}
+.locations-inner{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.loc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.loc-card{border-radius:22px;overflow:hidden;position:relative;box-shadow:0 8px 30px rgba(13,43,78,.1);transition:transform .35s ease,box-shadow .35s ease;opacity:0;transform:translateY(40px);border:1.5px solid var(--border);background:#fff}
+.loc-card.cv{opacity:1;transform:none}
+.loc-card:hover{transform:translateY(-8px);box-shadow:0 28px 60px rgba(13,43,78,.15)}
+.loc-img-ph{height:200px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;position:relative}
+.loc-badge{position:absolute;bottom:16px;left:20px;z-index:3;background:var(--green);color:#fff;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;padding:7px 16px;border-radius:20px}
+.loc-body{padding:26px 28px}
+.loc-name{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;color:var(--navy);margin-bottom:14px}
+.loc-rows{display:flex;flex-direction:column;gap:10px}
+.loc-row{display:flex;align-items:flex-start;gap:12px}
+.loc-row i{color:var(--green);font-size:15px;margin-top:3px;flex-shrink:0;width:18px}
+.loc-row span,.loc-row a{font-size:15px;color:var(--text-muted);line-height:1.6;text-decoration:none}
+.loc-row a:hover{color:var(--green-dark)}
+
+/* ═══ MAP SECTION ═══ */
+.map-section{background:var(--bg);padding:0 0 88px}
+.map-inner{max-width:1280px;margin:0 auto;padding:0 24px}
+.map-header{text-align:center;padding:60px 0 40px}
+.map-wrap{border-radius:24px;overflow:hidden;border:2px solid var(--border);box-shadow:0 16px 50px rgba(13,43,78,.12);position:relative}
+.map-wrap iframe{display:block;width:100%;height:420px;border:none}
+.map-overlay-label{position:absolute;top:20px;left:20px;background:var(--navy);color:#fff;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;padding:9px 20px;border-radius:8px;display:flex;align-items:center;gap:8px;z-index:2}
+.map-overlay-label i{color:var(--green)}
+
+/* ═══ CHANNELS ═══ */
+.channels-section{background:#fff;padding:88px 0;position:relative;overflow:hidden}
+.channels-inner{max-width:1280px;margin:0 auto;padding:0 24px}
+.channels-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.channel-card{background:var(--bg);border:1.5px solid var(--border);border-radius:20px;padding:30px 22px;text-align:center;text-decoration:none;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease,background .3s ease;display:flex;flex-direction:column;align-items:center;gap:14px;position:relative;overflow:hidden;opacity:0;transform:translateY(30px)}
+.channel-card.cv{opacity:1;transform:none}
+.channel-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--green-light),transparent);opacity:0;transition:opacity .3s ease}
+.channel-card:hover::before{opacity:1}
+.channel-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(13,43,78,.1);border-color:rgba(46,158,79,.4)}
+.ch-icon{width:68px;height:68px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:28px;transition:transform .3s ease,box-shadow .3s ease;position:relative;z-index:1}
+.channel-card:hover .ch-icon{transform:scale(1.12) rotate(-6deg)}
+.ch-icon.fb{background:#1877f2;color:#fff;box-shadow:0 6px 20px rgba(24,119,242,.35)}
+.ch-icon.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285aeb 90%);color:#fff;box-shadow:0 6px 20px rgba(214,36,159,.35)}
+.ch-icon.li{background:#0a66c2;color:#fff;box-shadow:0 6px 20px rgba(10,102,194,.35)}
+.ch-icon.tw{background:#000;color:#fff;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.ch-icon.yt{background:#ff0000;color:#fff;box-shadow:0 6px 20px rgba(255,0,0,.35)}
+.ch-icon.wa{background:#25d366;color:#fff;box-shadow:0 6px 20px rgba(37,211,102,.35)}
+.ch-icon.tg{background:#0088cc;color:#fff;box-shadow:0 6px 20px rgba(0,136,204,.35)}
+.ch-icon.pt{background:#e60023;color:#fff;box-shadow:0 6px 20px rgba(230,0,35,.35)}
+.ch-name{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;color:var(--navy);position:relative;z-index:1}
+.ch-handle{font-size:13.5px;color:var(--text-muted);position:relative;z-index:1}
+.ch-arrow{font-size:14px;color:var(--green);opacity:0;transform:translateX(-6px);transition:opacity .25s,transform .25s;position:relative;z-index:1}
+.channel-card:hover .ch-arrow{opacity:1;transform:translateX(0)}
+
+/* ═══ FOOTER ═══ */
+.footer{background:#0a1f38;color:#cdd8e8;font-size:14px;line-height:1.7}
+.footer-top-band{background:linear-gradient(90deg,var(--green-dark),#1ca64b,var(--green-dark));padding:22px 24px;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
+.footer-top-band p{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:#fff;letter-spacing:.5px}
+.footer-top-band p span{color:#b8f5cf}
+.footer-cta-btn{background:#fff;color:var(--green-dark);font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;padding:10px 26px;border-radius:6px;text-decoration:none;transition:background .2s,color .2s,transform .15s;white-space:nowrap}
+.footer-cta-btn:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
+.footer-main{max-width:1200px;margin:0 auto;padding:60px 24px 40px;display:grid;grid-template-columns:280px 1fr 1fr 1fr;gap:40px}
+.footer-logo-wrap{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.footer-logo-icon{width:50px;height:50px;border-radius:10px;background:rgba(46,158,79,.15);border:1.5px solid rgba(46,158,79,.3);display:flex;align-items:center;justify-content:center}
+.footer-logo-icon svg{width:28px;height:28px}
+.footer-logo-name{font-family:'Montserrat',sans-serif;font-size:19px;font-weight:800;color:#fff}
+.footer-logo-name span{color:var(--green)}
+.footer-logo-sub{font-size:10px;color:#7a9bb5;letter-spacing:1.8px;text-transform:uppercase}
+.footer-about p{color:#8aacca;font-size:13.5px;line-height:1.75;margin-bottom:20px}
+.footer-tagline{display:inline-block;background:rgba(46,158,79,.12);border-left:3px solid var(--green);color:#a8d8b5;font-size:12px;font-style:italic;padding:8px 14px;border-radius:0 6px 6px 0;margin-bottom:22px}
+.footer-socials{display:flex;gap:8px;flex-wrap:wrap}
+.footer-socials a{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;text-decoration:none;transition:transform .2s,filter .2s}
+.footer-socials a:hover{transform:translateY(-3px) scale(1.1);filter:brightness(1.2)}
+.footer-socials a.fb{background:#1877f2;color:#fff}
+.footer-socials a.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%);color:#fff}
+.footer-socials a.li{background:#0a66c2;color:#fff}
+.footer-socials a.tw{background:#000;color:#fff}
+.footer-socials a.yt{background:#ff0000;color:#fff}
+.footer-socials a.wa{background:#25d366;color:#fff}
+.footer-socials a.tg{background:#0088cc;color:#fff}
+.footer-socials a.pt{background:#e60023;color:#fff}
+.footer-col h4{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:#fff;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid rgba(46,158,79,.35);display:flex;align-items:center;gap:8px}
+.footer-col h4 i{color:var(--green);font-size:13px}
+.footer-col h5{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#5fd98a;letter-spacing:1.5px;text-transform:uppercase;margin:16px 0 8px}
+.footer-col h5:first-of-type{margin-top:0}
+.footer-links{list-style:none}
+.footer-links li{margin-bottom:2px}
+.footer-links li a{color:#8aacca;text-decoration:none;font-size:13px;display:flex;align-items:flex-start;gap:7px;padding:3px 0;transition:color .2s,padding-left .2s;line-height:1.5}
+.footer-links li a::before{content:'›';color:var(--green);font-size:15px;line-height:1.3;flex-shrink:0;font-weight:700}
+.footer-links li a:hover{color:#5fd98a;padding-left:4px}
+.footer-contact-grid{max-width:1200px;margin:0 auto;padding:0 24px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.contact-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start;transition:border-color .2s,background .2s}
+.contact-card:hover{border-color:rgba(46,158,79,.35);background:rgba(46,158,79,.06)}
+.contact-icon{width:38px;height:38px;border-radius:8px;background:rgba(46,158,79,.15);border:1px solid rgba(46,158,79,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-icon i{color:var(--green);font-size:15px}
+.contact-info{flex:1;min-width:0}
+.contact-info strong{display:block;color:#fff;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.contact-info span,.contact-info a{display:block;color:#8aacca;font-size:12.5px;text-decoration:none;word-break:break-word}
+.contact-info a:hover{color:#5fd98a}
+.footer-divider{border:none;border-top:1px solid rgba(255,255,255,.07);margin:0 24px}
+.footer-bottom{max-width:1200px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-bottom p{font-size:12.5px;color:#4a6a88}
+.footer-bottom p span{color:var(--green)}
+.footer-bottom-links{display:flex;gap:20px}
+.footer-bottom-links a{font-size:12px;color:#4a6a88;text-decoration:none;transition:color .2s}
+.footer-bottom-links a:hover{color:#5fd98a}
+.footer-motto{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:rgba(46,158,79,.55);letter-spacing:2px;text-transform:uppercase}
+
+/* ═══ REVEAL ═══ */
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .7s ease,transform .7s ease}
+.reveal.from-left{transform:translateX(-40px)}
+.reveal.from-right{transform:translateX(40px)}
+.reveal.visible{opacity:1;transform:none}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:1100px){
+  .contact-grid{grid-template-columns:1fr}
+  .hero-inner{grid-template-columns:1fr;gap:36px}
+  .hero-right{display:none}
+  .hero-title{font-size:44px}
+  .loc-grid{grid-template-columns:repeat(2,1fr)}
+  .channels-grid{grid-template-columns:repeat(4,1fr)}
+  .quick-bar-inner{grid-template-columns:repeat(2,1fr)}
+  .qb-item:nth-child(2){border-right:none}
+  .qb-item:nth-child(3){border-top:1px solid var(--border);border-right:1px solid var(--border)}
+  .qb-item:nth-child(4){border-top:1px solid var(--border)}
+  .footer-main{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .top-bar-address{display:none}
+  .hamburger{display:flex}
+  nav{display:none}
+  nav.open{display:flex;flex-direction:column;align-items:stretch;position:absolute;top:80px;left:0;right:0;background:#fff;border-bottom:2px solid var(--green-light);padding:12px;box-shadow:0 8px 24px rgba(0,0,0,.1);z-index:200}
+  nav.open a{padding:12px 16px;border-radius:8px}
+  nav a.btn-contact{margin-left:0;margin-top:4px;text-align:center}
+  .main-header{position:relative}
+  .dropdown-menu{position:static;opacity:1;visibility:visible;pointer-events:all;transform:none;box-shadow:none;border:none;border-radius:0;background:var(--green-light);padding:4px 8px;display:none;min-width:unset}
+  .nav-dropdown.open .dropdown-menu{display:block}
+  .hero-title{font-size:32px;letter-spacing:-1px}
+  .hero-inner{padding:52px 24px}
+  .section-title{font-size:32px}
+  .quick-bar-inner{grid-template-columns:1fr 1fr}
+  .qb-item{padding:16px}
+  .loc-grid{grid-template-columns:1fr}
+  .channels-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-main{padding:52px 24px}
+  .footer-main{grid-template-columns:1fr;gap:32px}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .footer-top-band{flex-direction:column;text-align:center;gap:14px}
+}
+@media(max-width:480px){
+  .hero-title{font-size:26px}
+  .hero-badges{flex-direction:column}
+  .channels-grid{grid-template-columns:repeat(2,1fr)}
+  .quick-bar-inner{grid-template-columns:1fr}
+  .qb-item{border-right:none;border-bottom:1px solid var(--border)}
+  .qb-item:last-child{border-bottom:none}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-address">
+      <span><i class="fas fa-map-marker-alt"></i> Hosur, Tamil Nadu, India</span>
+      <span><i class="fas fa-phone"></i> +91 88704 96918</span>
+      <span><i class="fas fa-envelope"></i> chemslifegroups@gmail.com</span>
+    </div>
+    <div class="social-links">
+      <a href="https://www.facebook.com/Chemslifegroups" class="fb" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/chemslife_groups/" class="ig" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/chemslifegroups278a10213/" class="li" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://twitter.com/ChemslifeGroups" class="tw" target="_blank" rel="noopener" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.youtube.com/c/ChemslifeGroupss" class="yt" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://wa.me/918870496918" class="wa" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://t.me/ChemslifeGroups" class="tg" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+      <a href="#" class="pt" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" aria-label="Company ticker">
+  <div class="marquee-track">
+    <div class="marquee-content">
+      <span class="marquee-text">&#9670;&nbsp; Chemslife Groups</span><span class="marquee-sep">|</span>
+      <span class="marquee-text">Everything is Science</span><span class="marquee-sep">|</span>
+      <span class="marquee-text">Science for Nation</span><span class="marquee-sep">|</span>
+      <span class="marquee-text">&#9670;&nbsp; Scientific &amp; Industrial Solutions</span><span class="marquee-sep">|</span>
+      <span class="marquee-text">Integrated Healthcare Solutions</span><span class="marquee-sep">|</span>
+      <span class="marquee-text">Trusted Since 2018</span><span class="marquee-sep">|</span>
+    </div>
+    <div class="marquee-content" aria-hidden="true">
+      <span class="marquee-text">&#9670;&nbsp; Chemslife Groups</span><span class="marquee-sep">|</span>
+      <span class="marquee-text">Everything is Science</span><span class="marquee-sep">|</span>
+      <span class="marquee-text">Science for Nation</span><span class="marquee-sep">|</span>
+      <span class="marquee-text">&#9670;&nbsp; Scientific &amp; Industrial Solutions</span><span class="marquee-sep">|</span>
+      <span class="marquee-text">Integrated Healthcare Solutions</span><span class="marquee-sep">|</span>
+      <span class="marquee-text">Trusted Since 2018</span><span class="marquee-sep">|</span>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="main-header">
+  <div class="main-header-inner">
+    <a href="index.html" class="logo-wrap">
+      <div class="logo-img-box">
+        <img src="YOUR_LOGO_IMAGE_HERE.png" alt="Chemslife Groups Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg" width="40" height="40" style="display:none">
+          <path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4 Z" fill="#2e9e4f" opacity="0.13" stroke="#2e9e4f" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M23 38 Q30 32 38 40 L42 52 Q44 57 40 59 L20 59 Q16 57 18 52 Z" fill="#2e9e4f" opacity="0.7"/>
+          <rect x="21" y="0" width="18" height="6" rx="3" fill="#111"/>
+          <path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4" fill="none" stroke="#111" stroke-width="2.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">CHEMS<span>LIFE</span></span>
+        <span class="logo-tagline">Groups</span>
+      </div>
+    </a>
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="#">About Us</a>
+      <div class="nav-dropdown" id="productsDropdown">
+        <a href="#" id="productsToggle">Products <i class="fas fa-chevron-down dd-arrow"></i></a>
+        <div class="dropdown-menu">
+          <a href="#">
+            <div class="dd-icon"><i class="fas fa-flask"></i></div>
+            <div class="dd-label"><strong>Scientific Products</strong><span>Chemicals, instruments &amp; lab supplies</span></div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#">
+            <div class="dd-icon"><i class="fas fa-microscope"></i></div>
+            <div class="dd-label"><strong>Lab Products</strong><span>Equipment, glassware &amp; safety kits</span></div>
+          </a>
+        </div>
+      </div>
+      <a href="contact-us.html" class="active btn-contact">Contact Us</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="contact-hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-deco">
+    <div class="hex"><svg viewBox="0 0 100 115" xmlns="http://www.w3.org/2000/svg"><polygon points="50,2 96,27 96,88 50,113 4,88 4,27"/></svg></div>
+    <div class="hex"><svg viewBox="0 0 100 115" xmlns="http://www.w3.org/2000/svg"><polygon points="50,2 96,27 96,88 50,113 4,88 4,27"/></svg></div>
+    <div class="hex"><svg viewBox="0 0 100 115" xmlns="http://www.w3.org/2000/svg"><polygon points="50,2 96,27 96,88 50,113 4,88 4,27"/></svg></div>
+    <div class="hex"><svg viewBox="0 0 100 115" xmlns="http://www.w3.org/2000/svg"><polygon points="50,2 96,27 96,88 50,113 4,88 4,27"/></svg></div>
+    <div class="atom-circle"><div class="atom-dot"></div></div>
+    <div class="atom-circle"><div class="atom-dot"></div></div>
+    <div class="atom-circle"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-tag"><i class="fas fa-flask"></i> Get In Touch</div>
+      <h1 class="hero-title">Contact<br><span>Chemslife</span><br>Groups</h1>
+      <p class="hero-subtitle">We're here for all your scientific, industrial, and healthcare needs. Reach out and let's build something great together.</p>
+      <div class="hero-badges">
+        <div class="hero-badge"><i class="fas fa-phone-alt"></i><span>24h Response</span></div>
+        <div class="hero-badge"><i class="fas fa-map-marker-alt"></i><span>4 Locations</span></div>
+        <div class="hero-badge"><i class="fas fa-headset"></i><span>Expert Support</span></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-img-ring"></div>
+      <div class="hero-img-ring2"></div>
+      <div class="hero-img-frame">
+        <i class="fas fa-microscope"></i>
+        <span>Facility Photo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK CONTACT BAR -->
+<div class="quick-bar">
+  <div class="quick-bar-inner">
+    <a href="tel:+918870496918" class="qb-item">
+      <div class="qb-icon-wrap"><i class="fas fa-phone-alt"></i></div>
+      <div>
+        <div class="qb-label">Sales Enquiry</div>
+        <div class="qb-value">+91 88704 96918</div>
+      </div>
+    </a>
+    <a href="mailto:sales@chemslife.in" class="qb-item">
+      <div class="qb-icon-wrap"><i class="fas fa-envelope"></i></div>
+      <div>
+        <div class="qb-label">Email Us</div>
+        <div class="qb-value">sales@chemslife.in</div>
+      </div>
+    </a>
+    <a href="https://wa.me/918870496918" target="_blank" rel="noopener" class="qb-item">
+      <div class="qb-icon-wrap"><i class="fab fa-whatsapp"></i></div>
+      <div>
+        <div class="qb-label">WhatsApp</div>
+        <div class="qb-value">+91 88704 96918</div>
+      </div>
+    </a>
+    <div class="qb-item">
+      <div class="qb-icon-wrap"><i class="fas fa-clock"></i></div>
+      <div>
+        <div class="qb-label">Business Hours</div>
+        <div class="qb-value">Mon–Sat: 9 AM – 6 PM</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTACT SECTION -->
+<div class="contact-main">
+  <div style="text-align:center;margin-bottom:56px" class="reveal">
+    <div class="section-eyebrow" style="justify-content:center">Departments</div>
+    <h2 class="section-title">Reach the <span>Right Team</span></h2>
+    <p class="section-sub" style="margin:0 auto;max-width:580px">Each department has a dedicated point of contact. Connect directly for faster, more precise assistance.</p>
+  </div>
+  <div class="contact-grid">
+
+    <!-- Dept Cards -->
+    <div class="contacts-col">
+
+      <div class="dept-card reveal from-left" style="transition-delay:.05s">
+        <div class="dept-header">
+          <div class="dept-icon"><i class="fas fa-chart-line"></i></div>
+          <div>
+            <div class="dept-name">Sales &amp; Enquiries</div>
+            <div class="dept-role">Product orders, quotations &amp; commercial queries</div>
+          </div>
+        </div>
+        <div class="dept-body">
+          <div class="dept-row"><i class="fas fa-phone-alt"></i><a href="tel:+918870496918">+91 88704 96918</a></div>
+          <div class="dept-row"><i class="fas fa-envelope"></i><a href="mailto:sales@chemslife.in">sales@chemslife.in</a></div>
+          <div class="dept-row"><i class="fas fa-envelope"></i><a href="mailto:chemslifegroups@gmail.com">chemslifegroups@gmail.com</a></div>
+        </div>
+      </div>
+
+      <div class="dept-card reveal from-left" style="transition-delay:.1s">
+        <div class="dept-header">
+          <div class="dept-icon"><i class="fas fa-cogs"></i></div>
+          <div>
+            <div class="dept-name">Admin &amp; Operations</div>
+            <div class="dept-role">Administration, partnerships &amp; general operations</div>
+          </div>
+        </div>
+        <div class="dept-body">
+          <div class="dept-row"><i class="fas fa-phone-alt"></i><a href="tel:+918870244418">+91 88702 44418</a></div>
+          <div class="dept-row"><i class="fas fa-phone-alt"></i><a href="tel:+918870266618">+91 88702 66618</a></div>
+          <div class="dept-row"><i class="fas fa-envelope"></i><a href="mailto:admin@chemslife.in">admin@chemslife.in</a></div>
+          <div class="dept-row"><i class="fas fa-envelope"></i><a href="mailto:chemslifegroups@gmail.com">chemslifegroups@gmail.com</a></div>
+        </div>
+      </div>
+
+      <div class="dept-card reveal from-left" style="transition-delay:.15s">
+        <div class="dept-header">
+          <div class="dept-icon"><i class="fas fa-shopping-bag"></i></div>
+          <div>
+            <div class="dept-name">Chemscart — E-Commerce</div>
+            <div class="dept-role">Online orders, delivery &amp; platform support</div>
+          </div>
+        </div>
+        <div class="dept-body">
+          <div class="dept-row"><i class="fas fa-phone-alt"></i><a href="tel:+918870244418">+91 88702 44418</a></div>
+          <div class="dept-row"><i class="fas fa-envelope"></i><a href="mailto:admin@chemscart.in">admin@chemscart.in</a></div>
+          <div class="dept-row"><i class="fas fa-envelope"></i><a href="mailto:chemscart@gmail.com">chemscart@gmail.com</a></div>
+        </div>
+      </div>
+
+      <div class="dept-card reveal from-left" style="transition-delay:.2s">
+        <div class="dept-header">
+          <div class="dept-icon"><i class="fas fa-broom"></i></div>
+          <div>
+            <div class="dept-name">Chemsclean — Facility Services</div>
+            <div class="dept-role">Cleaning, hygiene &amp; facility management</div>
+          </div>
+        </div>
+        <div class="dept-body">
+          <div class="dept-row"><i class="fas fa-phone-alt"></i><a href="tel:+918870266618">+91 88702 66618</a></div>
+          <div class="dept-row"><i class="fas fa-envelope"></i><a href="mailto:chemsclean@gmail.com">chemsclean@gmail.com</a></div>
+        </div>
+      </div>
+
+      <div class="dept-card reveal from-left" style="transition-delay:.25s">
+        <div class="dept-header">
+          <div class="dept-icon"><i class="fas fa-truck"></i></div>
+          <div>
+            <div class="dept-name">Dispatch &amp; Logistics</div>
+            <div class="dept-role">Shipment tracking, delivery &amp; supply chain</div>
+          </div>
+        </div>
+        <div class="dept-body">
+          <div class="dept-row"><i class="fas fa-phone-alt"></i><a href="tel:+918870036018">+91 88700 36018</a></div>
+          <div class="dept-row"><i class="fas fa-envelope"></i><a href="mailto:dispatch@chemslife.in">dispatch@chemslife.in</a></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Zoho Form -->
+    <div class="form-col reveal from-right">
+      <div class="form-header">
+        <div class="form-header-icon"><i class="fas fa-paper-plane"></i></div>
+        <div class="form-header-title">Send Us a Message</div>
+        <div class="form-header-sub">Our team responds within 24 business hours</div>
+      </div>
+      <div class="zoho-frame-wrap">
+        <iframe
+          aria-label="Connect with us"
+          frameborder="0"
+          src="https://forms.zohopublic.in/chemslife1/form/Connectwithus/formperma/JIFTljA_O143RfI4LldNJaodQeftye1drTMj5MGexi4"
+          title="Connect with Chemslife Groups"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- LOCATIONS SECTION -->
+<section class="locations-section" id="locations">
+  <div class="locations-inner">
+    <div style="text-align:center;margin-bottom:56px" class="reveal">
+      <div class="section-eyebrow" style="justify-content:center">Our Presence</div>
+      <h2 class="section-title">Find <span>Our Offices</span></h2>
+      <p class="section-sub" style="margin:0 auto;max-width:560px;text-align:center">We operate from multiple locations across Tamil Nadu, bringing science closer to your doorstep.</p>
+    </div>
+    <div class="loc-grid">
+
+      <div class="loc-card">
+        <div class="loc-img-ph" style="background:linear-gradient(135deg,#1a3a5c,#0d2b4e)">
+          <i class="fas fa-building" style="font-size:52px;color:rgba(95,217,138,.35)"></i>
+          <span style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:rgba(95,217,138,.4);letter-spacing:2px;text-transform:uppercase">Corporate Office</span>
+          <div class="loc-badge">Corporate Office</div>
+        </div>
+        <div class="loc-body">
+          <h3 class="loc-name">Corporate Office — Hosur</h3>
+          <div class="loc-rows">
+            <div class="loc-row"><i class="fas fa-map-marker-alt"></i><span>No. 808/2G, Indiragandhi Nagar, Avalappalli Road, Hosur, Tamil Nadu – 635109</span></div>
+            <div class="loc-row"><i class="fas fa-phone-alt"></i><a href="tel:+918870496918">+91 88704 96918</a></div>
+            <div class="loc-row"><i class="fas fa-envelope"></i><a href="mailto:admin@chemslife.in">admin@chemslife.in</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-img-ph" style="background:linear-gradient(135deg,#0a2e20,#1e7a3a)">
+          <i class="fas fa-heartbeat" style="font-size:52px;color:rgba(95,217,138,.35)"></i>
+          <span style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:rgba(95,217,138,.4);letter-spacing:2px;text-transform:uppercase">Healthcare Division</span>
+          <div class="loc-badge">Healthcare Division</div>
+        </div>
+        <div class="loc-body">
+          <h3 class="loc-name">Healthcare Division — Hosur</h3>
+          <div class="loc-rows">
+            <div class="loc-row"><i class="fas fa-map-marker-alt"></i><span>No. 2/687, Indiragandhi Nagar, Avalappalli Road, Hosur, Tamil Nadu – 635109</span></div>
+            <div class="loc-row"><i class="fas fa-phone-alt"></i><a href="tel:+918870244418">+91 88702 44418</a></div>
+            <div class="loc-row"><i class="fas fa-envelope"></i><a href="mailto:sales@chemslife.in">sales@chemslife.in</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-img-ph" style="background:linear-gradient(135deg,#1a1a2e,#0d2b4e)">
+          <i class="fas fa-flask" style="font-size:52px;color:rgba(95,217,138,.35)"></i>
+          <span style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:rgba(95,217,138,.4);letter-spacing:2px;text-transform:uppercase">Scientific Division</span>
+          <div class="loc-badge">Scientific Division</div>
+        </div>
+        <div class="loc-body">
+          <h3 class="loc-name">Scientific &amp; Industrial — Krishnagiri</h3>
+          <div class="loc-rows">
+            <div class="loc-row"><i class="fas fa-map-marker-alt"></i><span>No 631/1, Kamaraj Nagar, Bedarapalli, Hosur, Krishnagiri, Tamil Nadu – 635126</span></div>
+            <div class="loc-row"><i class="fas fa-phone-alt"></i><a href="tel:+918870496918">+91 88704 96918</a></div>
+            <div class="loc-row"><i class="fas fa-envelope"></i><a href="mailto:sales@chemslife.in">sales@chemslife.in</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-img-ph" style="background:linear-gradient(135deg,#2a1a0e,#5a3010)">
+          <i class="fas fa-landmark" style="font-size:52px;color:rgba(255,200,100,.35)"></i>
+          <span style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:rgba(255,200,100,.4);letter-spacing:2px;text-transform:uppercase">Registered Office</span>
+          <div class="loc-badge" style="background:#163e6f">Registered Office</div>
+        </div>
+        <div class="loc-body">
+          <h3 class="loc-name">Registered Office — Thiruvarur</h3>
+          <div class="loc-rows">
+            <div class="loc-row"><i class="fas fa-map-marker-alt"></i><span>No. 1/137, Main Road East Street, Velukkudi, Thiruvarur, Tamil Nadu – 610102</span></div>
+            <div class="loc-row"><i class="fas fa-phone-alt"></i><a href="tel:+918870244418">+91 88702 44418</a></div>
+            <div class="loc-row"><i class="fas fa-envelope"></i><a href="mailto:admin@chemslife.in">admin@chemslife.in</a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MAP SECTION -->
+<section class="map-section">
+  <div class="map-inner">
+    <div class="map-header reveal">
+      <div class="section-eyebrow" style="justify-content:center">Find Us</div>
+      <h2 class="section-title" style="text-align:center;margin-bottom:0">Our <span>Location</span> on Map</h2>
+    </div>
+    <div class="map-wrap reveal">
+      <div class="map-overlay-label"><i class="fas fa-map-marker-alt"></i> Chemslife Groups — Hosur, Tamil Nadu</div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.8276741826636!2d77.82698551482288!3d12.737228890957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae70a88769f461%3A0x5c97e44d13c9e9df!2sHosur%2C%20Tamil%20Nadu%20635109!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Chemslife Groups Location Map">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL CHANNELS -->
+<section class="channels-section">
+  <div class="channels-inner">
+    <div style="text-align:center;margin-bottom:52px" class="reveal">
+      <div class="section-eyebrow" style="justify-content:center">Social Media</div>
+      <h2 class="section-title">Connect <span>With Us</span></h2>
+      <p class="section-sub" style="margin:0 auto;max-width:560px;text-align:center">Follow us across platforms to stay updated on new products, announcements, and innovations.</p>
+    </div>
+    <div class="channels-grid">
+      <a href="https://www.facebook.com/Chemslifegroups" target="_blank" rel="noopener" class="channel-card">
+        <div class="ch-icon fb"><i class="fab fa-facebook-f"></i></div>
+        <div class="ch-name">Facebook</div>
+        <div class="ch-handle">Chemslifegroups</div>
+        <div class="ch-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+      <a href="https://www.instagram.com/chemslife_groups/" target="_blank" rel="noopener" class="channel-card">
+        <div class="ch-icon ig"><i class="fab fa-instagram"></i></div>
+        <div class="ch-name">Instagram</div>
+        <div class="ch-handle">chemslife_groups</div>
+        <div class="ch-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+      <a href="https://www.linkedin.com/in/chemslifegroups278a10213/" target="_blank" rel="noopener" class="channel-card">
+        <div class="ch-icon li"><i class="fab fa-linkedin-in"></i></div>
+        <div class="ch-name">LinkedIn</div>
+        <div class="ch-handle">Chemslife Groups</div>
+        <div class="ch-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+      <a href="https://twitter.com/ChemslifeGroups" target="_blank" rel="noopener" class="channel-card">
+        <div class="ch-icon tw"><i class="fab fa-x-twitter"></i></div>
+        <div class="ch-name">X / Twitter</div>
+        <div class="ch-handle">ChemslifeGroups</div>
+        <div class="ch-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+      <a href="https://www.youtube.com/c/ChemslifeGroupss" target="_blank" rel="noopener" class="channel-card">
+        <div class="ch-icon yt"><i class="fab fa-youtube"></i></div>
+        <div class="ch-name">YouTube</div>
+        <div class="ch-handle">ChemslifeGroupss</div>
+        <div class="ch-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+      <a href="https://wa.me/918870496918" target="_blank" rel="noopener" class="channel-card">
+        <div class="ch-icon wa"><i class="fab fa-whatsapp"></i></div>
+        <div class="ch-name">WhatsApp</div>
+        <div class="ch-handle">+91 88704 96918</div>
+        <div class="ch-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+      <a href="https://t.me/ChemslifeGroups" target="_blank" rel="noopener" class="channel-card">
+        <div class="ch-icon tg"><i class="fab fa-telegram-plane"></i></div>
+        <div class="ch-name">Telegram</div>
+        <div class="ch-handle">ChemslifeGroups</div>
+        <div class="ch-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+      <a href="#" class="channel-card">
+        <div class="ch-icon pt"><i class="fab fa-pinterest-p"></i></div>
+        <div class="ch-name">Pinterest</div>
+        <div class="ch-handle">Chemslife Groups</div>
+        <div class="ch-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top-band">
+    <p>Ready to partner with us? <span>Explore our full range of scientific, industrial &amp; healthcare solutions.</span></p>
+    <a href="#" class="footer-cta-btn" id="backToTop"><i class="fas fa-arrow-up" style="margin-right:7px"></i>Back to Top</a>
+  </div>
+  <div class="footer-main">
+    <div class="footer-about">
+      <div class="footer-logo-wrap">
+        <div class="footer-logo-icon">
+          <svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4 Z" fill="#2e9e4f" opacity="0.2" stroke="#2e9e4f" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M23 38 Q30 32 38 40 L42 52 Q44 57 40 59 L20 59 Q16 57 18 52 Z" fill="#2e9e4f" opacity="0.8"/>
+            <rect x="21" y="0" width="18" height="6" rx="3" fill="#cdd8e8"/>
+            <path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4" fill="none" stroke="#cdd8e8" stroke-width="2.5" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="footer-logo-name">CHEMS<span>LIFE</span></div>
+          <div class="footer-logo-sub">Groups</div>
+        </div>
+      </div>
+      <p>A multi-sector organization delivering reliable scientific, industrial, and healthcare solutions since 2018. Founded by Mr. Sivasankar Karthikeyan.</p>
+      <div class="footer-tagline">"Building Chemistry for a Better Tomorrow"</div>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/Chemslifegroups" class="fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/chemslife_groups/" class="ig" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/chemslifegroups278a10213/" class="li" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/ChemslifeGroups" class="tw" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.youtube.com/c/ChemslifeGroupss" class="yt" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/918870496918" class="wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://t.me/ChemslifeGroups" class="tg" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+        <a href="#" class="pt"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4><i class="fas fa-flask"></i> Scientific &amp; Industrial</h4>
+      <h5>Laboratory Products</h5>
+      <ul class="footer-links">
+        <li><a href="#">Laboratory Chemicals</a></li><li><a href="#">Laboratory Instruments</a></li>
+        <li><a href="#">Laboratory Equipment</a></li><li><a href="#">Glassware &amp; Plasticware</a></li>
+        <li><a href="#">Lab Furniture &amp; Safety Kits</a></li><li><a href="#">Lab Test Kits &amp; Filtration</a></li>
+      </ul>
+      <h5>Chemical Products</h5>
+      <ul class="footer-links">
+        <li><a href="#">Acids &amp; Solvents</a></li><li><a href="#">Agro &amp; Bio Chemicals</a></li>
+        <li><a href="#">Boiler &amp; Cooling Tower Chemicals</a></li><li><a href="#">Construction &amp; Polymer Chemicals</a></li>
+      </ul>
+      <h5>Water Treatment</h5>
+      <ul class="footer-links">
+        <li><a href="#">Filtration &amp; Membrane Systems</a></li><li><a href="#">Ion Exchange Resins</a></li>
+        <li><a href="#">Monitoring &amp; Testing Products</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4><i class="fas fa-heartbeat"></i> Healthcare Solutions</h4>
+      <h5>Pharmaceutical</h5>
+      <ul class="footer-links">
+        <li><a href="#">Analgesics &amp; Antipyretics</a></li><li><a href="#">Antibiotics &amp; Antimicrobials</a></li>
+        <li><a href="#">Cardiovascular Drugs</a></li><li><a href="#">Respiratory &amp; GI Drugs</a></li>
+        <li><a href="#">Vitamins &amp; Nutritional Supplements</a></li>
+      </ul>
+      <h5>Surgical Supplies</h5>
+      <ul class="footer-links">
+        <li><a href="#">Cutting &amp; Dissecting Instruments</a></li><li><a href="#">Suturing &amp; Stapling Instruments</a></li>
+        <li><a href="#">Specialty Surgical Sets</a></li>
+      </ul>
+      <h5>Safety &amp; Disposables</h5>
+      <ul class="footer-links">
+        <li><a href="#">Personal Protective Equipment (PPE)</a></li><li><a href="#">Respiratory &amp; Fire Safety</a></li>
+        <li><a href="#">Medical &amp; Biological Disposables</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4><i class="fas fa-link"></i> Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="#">Home</a></li><li><a href="#">About Us</a></li>
+        <li><a href="#">Products</a></li><li><a href="#">Contact Us</a></li>
+        <li><a href="#">E-Commerce Store (Chemscart)</a></li>
+      </ul>
+      <h5>Our Divisions</h5>
+      <ul class="footer-links">
+        <li><a href="#">Scientific &amp; Industrial Division</a></li><li><a href="#">Healthcare Division</a></li>
+        <li><a href="#">Chemscart – E-Commerce</a></li><li><a href="#">Chemsclean – Facility Services</a></li>
+        <li><a href="#">Transport &amp; Logistics</a></li><li><a href="#">Tax &amp; Financial Services</a></li>
+      </ul>
+      <h5>Our Locations</h5>
+      <ul class="footer-links">
+        <li><a href="#">Corporate Office – Hosur, TN</a></li>
+        <li><a href="#">Healthcare Division – Hosur, TN</a></li>
+        <li><a href="#">Scientific Division – Krishnagiri, TN</a></li>
+        <li><a href="#">Registered Office – Thiruvarur, TN</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-contact-grid">
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+      <div class="contact-info"><strong>Sales</strong><span>+91 88704 96918</span><a href="mailto:sales@chemslife.in">sales@chemslife.in</a></div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-headset"></i></div>
+      <div class="contact-info"><strong>Admin</strong><span>+91 88702 44418 / 88702 66618</span><a href="mailto:admin@chemslife.in">admin@chemslife.in</a></div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-shopping-bag"></i></div>
+      <div class="contact-info"><strong>Chemscart (E-Commerce)</strong><span>+91 88702 44418</span><a href="mailto:admin@chemscart.in">admin@chemscart.in</a></div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-truck"></i></div>
+      <div class="contact-info"><strong>Dispatch</strong><span>+91 88700 36018</span><a href="mailto:dispatch@chemslife.in">dispatch@chemslife.in</a></div>
+    </div>
+  </div>
+  <hr class="footer-divider"/>
+  <div class="footer-bottom">
+    <p>&copy; 2025 <span>Chemslife Groups</span>. All rights reserved. | Founded by Mr. Sivasankar Karthikeyan.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Sitemap</a>
+    </div>
+    <div class="footer-motto">Everything is Science &nbsp;&#9670;&nbsp; Science for Nation</div>
+  </div>
+</footer>
+
+<script>
+// ─── Hamburger ───
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('main-nav');
+hamburger.addEventListener('click', () => nav.classList.toggle('open'));
+document.addEventListener('click', e => {
+  if (!nav.contains(e.target) && !hamburger.contains(e.target)) nav.classList.remove('open');
+});
+
+// ─── Mobile products dropdown ───
+const productsDropdown = document.getElementById('productsDropdown');
+const productsToggle = document.getElementById('productsToggle');
+if (productsToggle) {
+  productsToggle.addEventListener('click', e => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      productsDropdown.classList.toggle('open');
+    }
+  });
+}
+
+// ─── Scroll Reveal ───
+const revealEls = document.querySelectorAll('.reveal');
+function checkReveal() {
+  const wh = window.innerHeight;
+  revealEls.forEach(el => {
+    if (el.getBoundingClientRect().top < wh - 80) el.classList.add('visible');
+  });
+}
+let ticking = false;
+window.addEventListener('scroll', () => {
+  if (!ticking) { requestAnimationFrame(() => { checkReveal(); ticking = false; }); ticking = true; }
+});
+checkReveal();
+
+// ─── Card observer (dept, loc, channel) ───
+const animCards = document.querySelectorAll('.loc-card, .channel-card, .dept-card');
+const cardObserver = new IntersectionObserver(entries => {
+  entries.forEach((entry, idx) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('cv');
+      cardObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+animCards.forEach((card, i) => {
+  card.style.transition = `opacity 0.6s ease ${i * 0.07}s, transform 0.65s cubic-bezier(0.22,1,0.36,1) ${i * 0.07}s, box-shadow 0.35s ease, border-color 0.35s ease`;
+  cardObserver.observe(card);
+});
+
+// ─── Back to Top ───
+document.getElementById('backToTop').addEventListener('click', e => {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ─── Dept card ripple on hover ───
+document.querySelectorAll('.dept-card').forEach(card => {
+  card.addEventListener('mouseenter', function(e) {
+    const rect = this.getBoundingClientRect();
+    const ripple = document.createElement('span');
+    ripple.style.cssText = `position:absolute;width:6px;height:6px;border-radius:50%;background:rgba(46,158,79,0.12);top:${e.clientY - rect.top}px;left:${e.clientX - rect.left}px;transform:scale(0);animation:rippleAnim 0.65s ease-out forwards;pointer-events:none;z-index:0`;
+    this.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 700);
+  });
+});
+const rippleStyle = document.createElement('style');
+rippleStyle.textContent = `@keyframes rippleAnim{to{transform:scale(80);opacity:0}}`;
+document.head.appendChild(rippleStyle);
+</script>
+</body>
+</html>

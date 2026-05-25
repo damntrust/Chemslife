@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--green:#2e9e4f;--green-dark:#1e7a3a;--green-light:#e8f7ed;--green-mid:#5fd98a;--white:#fff;--navy:#0d2b4e;--navy-mid:#163e6f;--text-muted:#4a6080;--border:#d4e8dc;--bg:#f4f8f5;--teal:#0d7377;--teal-light:#e6f5f5;--teal-mid:#12a5a5}
+:root{--green:#2e9e4f;--green-dark:#1e7a3a;--green-light:#e8f7ed;--green-mid:#5fd98a;--white:#fff;--navy:#0d2b4e;--navy-mid:#163e6f;--text-muted:#4a6080;--border:#d4e8dc;--bg:#f4f8f5}
 html{scroll-behavior:smooth}
 body{font-family:'Open Sans',sans-serif;background:var(--bg);color:var(--navy);overflow-x:hidden}
 .scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-dark),var(--green-mid));z-index:9999;width:0%;transition:width .08s linear;pointer-events:none}
@@ -20,15 +20,15 @@ body{font-family:'Open Sans',sans-serif;background:var(--bg);color:var(--navy);o
 .top-bar-address span{display:flex;align-items:center;gap:6px;color:#a8c4d8;font-size:12.5px}
 .top-bar-address span i{color:var(--green);font-size:12px}
 .social-links{display:flex;align-items:center;gap:8px}
-.social-links a{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;text-decoration:none;transition:transform .2s;border:1.5px solid rgba(255,255,255,.12)}
-.social-links a:hover{transform:scale(1.18) translateY(-2px)}
-.social-links a.fb{background:#1877f2;color:#fff}.social-links a.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285aeb 90%);color:#fff}
+.social-links a{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;text-decoration:none;transition:transform .2s,filter .2s;border:1.5px solid rgba(255,255,255,.12)}
+.social-links a:hover{transform:scale(1.18) translateY(-2px);filter:brightness(1.15)}
+.social-links a.fb{background:#1877f2;color:#fff}.social-links a.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%);color:#fff}
 .social-links a.li{background:#0a66c2;color:#fff}.social-links a.tw{background:#000;color:#fff}
-.social-links a.yt{background:red;color:#fff}.social-links a.wa{background:#25d366;color:#fff}
+.social-links a.yt{background:#ff0000;color:#fff}.social-links a.wa{background:#25d366;color:#fff}
 .social-links a.tg{background:#0088cc;color:#fff}.social-links a.pt{background:#e60023;color:#fff}
 
 /* MARQUEE */
-.marquee-wrap{background:linear-gradient(90deg,var(--green-dark),var(--green),var(--green-dark));padding:9px 0;overflow:hidden;position:relative}
+.marquee-wrap{background:linear-gradient(90deg,var(--green-dark) 0%,var(--green) 50%,var(--green-dark) 100%);padding:9px 0;overflow:hidden;position:relative}
 .marquee-wrap::before,.marquee-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
 .marquee-wrap::before{left:0;background:linear-gradient(to right,var(--green-dark),transparent)}
 .marquee-wrap::after{right:0;background:linear-gradient(to left,var(--green-dark),transparent)}
@@ -49,8 +49,9 @@ body{font-family:'Open Sans',sans-serif;background:var(--bg);color:var(--navy);o
 .logo-name{font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:#111;letter-spacing:-.5px}
 .logo-name span{color:var(--green)}
 .logo-tagline{font-size:10px;color:var(--text-muted);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;margin-top:2px}
+
 nav{display:flex;align-items:center;gap:4px}
-nav a{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:600;color:var(--navy);text-decoration:none;padding:8px 18px;border-radius:6px;position:relative;transition:color .2s,background .2s}
+nav a{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:600;color:var(--navy);text-decoration:none;padding:8px 18px;border-radius:6px;letter-spacing:.3px;position:relative;transition:color .2s,background .2s}
 nav a::after{content:'';position:absolute;bottom:4px;left:18px;right:18px;height:2px;background:var(--green);border-radius:2px;transform:scaleX(0);transition:transform .25s ease}
 nav a:hover{color:var(--green-dark);background:var(--green-light)}
 nav a:hover::after,nav a.active::after{transform:scaleX(1)}
@@ -58,16 +59,21 @@ nav a.active{color:var(--green-dark);background:var(--green-light)}
 nav a.btn-contact{background:var(--navy);color:#fff;border-radius:6px;padding:9px 20px;margin-left:8px;transition:background .2s,transform .15s}
 nav a.btn-contact::after{display:none}
 nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(-1px)}
+
+/* DROPDOWN — fixed with padding bridge so hover doesn't break */
 .nav-dropdown{position:relative}
 .nav-dropdown>a{display:flex;align-items:center;gap:5px}
 .nav-dropdown>a .dd-arrow{font-size:10px;transition:transform .25s ease}
 .nav-dropdown:hover>a .dd-arrow{transform:rotate(180deg)}
-.dropdown-menu{position:absolute;top:calc(100% + 8px);left:0;background:#fff;border:1.5px solid var(--border);border-radius:12px;box-shadow:0 16px 48px rgba(13,43,78,.14);min-width:300px;padding:8px;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(10px);transition:opacity .22s ease,transform .22s ease,visibility .22s;z-index:200}
+/* invisible bridge fills the gap between nav link and menu */
+.nav-dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:12px;z-index:199}
+.dropdown-menu{position:absolute;top:calc(100% + 12px);left:0;background:#fff;border:1.5px solid var(--border);border-radius:12px;box-shadow:0 16px 48px rgba(13,43,78,.14);min-width:300px;padding:8px;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(6px);transition:opacity .22s ease,transform .22s ease,visibility .22s;z-index:200}
 .nav-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;pointer-events:all;transform:translateY(0)}
 .dropdown-menu a{display:flex;align-items:center;gap:12px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--navy);text-decoration:none;padding:11px 14px;border-radius:8px;transition:background .18s,color .18s,padding-left .18s}
 .dropdown-menu a::after{display:none!important}
 .dropdown-menu a:hover{background:var(--green-light);color:var(--green-dark);padding-left:18px}
-.dropdown-menu a .dd-icon{width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,var(--green-light),#c2e8ce);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dropdown-menu a .dd-icon{width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,var(--green-light),#c2e8ce);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s}
+.dropdown-menu a:hover .dd-icon{background:linear-gradient(135deg,#b2f0cb,#7dd4a0)}
 .dropdown-menu a .dd-icon i{color:var(--green-dark);font-size:14px}
 .dropdown-menu a .dd-label strong{display:block;font-size:13px;font-weight:700;color:var(--navy)}
 .dropdown-menu a .dd-label span{display:block;font-size:11px;color:var(--text-muted);font-weight:500;margin-top:1px}
@@ -84,7 +90,6 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .hh-orb.o1{width:400px;height:400px;background:rgba(46,158,79,.18);top:-100px;right:10%}
 .hh-orb.o2{width:280px;height:280px;background:rgba(13,43,78,.5);bottom:-80px;left:25%;animation-delay:3s}
 @keyframes orbPulse{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.12)}}
-/* DNA helix effect */
 .hh-helix{position:absolute;right:5%;top:50%;transform:translateY(-50%);z-index:1;pointer-events:none}
 .hh-ring{position:absolute;border-radius:50%;border:1.5px solid rgba(95,217,138,.12);animation:ringRot linear infinite}
 .hh-ring:nth-child(1){width:400px;height:400px;top:-200px;left:-200px;animation-duration:22s}
@@ -228,40 +233,84 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .cta-btn-p{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:#fff;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;padding:16px 34px;border-radius:10px;text-decoration:none;transition:background .22s,transform .18s;box-shadow:0 6px 22px rgba(46,158,79,.4)}.cta-btn-p:hover{background:var(--green-dark);transform:translateY(-3px)}
 .cta-btn-o{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);color:#fff;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;padding:15px 30px;border-radius:10px;text-decoration:none;border:2px solid rgba(255,255,255,.2);transition:background .22s,transform .18s}.cta-btn-o:hover{background:rgba(255,255,255,.15);transform:translateY(-3px)}
 
-/* FOOTER */
-.footer{background:#0a1f38;color:#cdd8e8;font-size:14px;line-height:1.7}
+/* ═══════════════ FOOTER (matching page 1 exactly) ═══════════════ */
+.footer{background:#07192d;color:#cdd8e8;font-size:14px;line-height:1.7}
+
 .footer-top-band{background:linear-gradient(90deg,var(--green-dark),#1ca64b,var(--green-dark));padding:22px 24px;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
 .footer-top-band p{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:#fff}.footer-top-band p span{color:#b8f5cf}
 .footer-cta-btn{background:#fff;color:var(--green-dark);font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;padding:10px 26px;border-radius:6px;text-decoration:none;transition:background .2s,color .2s,transform .15s;white-space:nowrap}.footer-cta-btn:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
-.footer-main{max-width:1200px;margin:0 auto;padding:60px 24px 40px;display:grid;grid-template-columns:280px 1fr 1fr 1fr;gap:40px}
-.footer-logo-wrap{display:flex;align-items:center;gap:10px;margin-bottom:18px}
-.footer-logo-icon{width:50px;height:50px;border-radius:10px;background:rgba(46,158,79,.15);border:1.5px solid rgba(46,158,79,.3);display:flex;align-items:center;justify-content:center}
-.footer-logo-icon svg{width:28px;height:28px}
-.footer-logo-name{font-family:'Montserrat',sans-serif;font-size:19px;font-weight:800;color:#fff}.footer-logo-name span{color:var(--green)}
-.footer-logo-sub{font-size:10px;color:#7a9bb5;letter-spacing:1.8px;text-transform:uppercase}
-.footer-about p{color:#8aacca;font-size:13.5px;line-height:1.75;margin-bottom:20px}
-.footer-tagline{display:inline-block;background:rgba(46,158,79,.12);border-left:3px solid var(--green);color:#a8d8b5;font-size:12px;font-style:italic;padding:8px 14px;border-radius:0 6px 6px 0;margin-bottom:22px}
+
+/* Main footer grid: logo | scientific | healthcare | quick links */
+.footer-main{max-width:1200px;margin:0 auto;padding:60px 24px 40px;display:grid;grid-template-columns:260px 1fr 1fr 180px;gap:40px}
+
+/* Logo column */
+.footer-logo-col{}
+.footer-logo-wrap{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.footer-logo-icon{width:54px;height:54px;border-radius:10px;background:rgba(46,158,79,.15);border:1.5px solid rgba(46,158,79,.3);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+.footer-logo-icon img{width:100%;height:100%;object-fit:contain}
+.footer-logo-icon svg{width:30px;height:30px}
+.footer-logo-name{font-family:'Montserrat',sans-serif;font-size:21px;font-weight:800;color:#fff;line-height:1.1}
+.footer-logo-name span{color:var(--green)}
+.footer-logo-sub{font-size:11px;color:#7a9bb5;letter-spacing:1.8px;text-transform:uppercase}
+.footer-about-text{color:#8aacca;font-size:14px;line-height:1.8;margin-bottom:18px}
+.footer-tagline{display:inline-block;background:rgba(46,158,79,.12);border-left:3px solid var(--green);color:#a8d8b5;font-size:13px;font-style:italic;padding:9px 14px;border-radius:0 6px 6px 0;margin-bottom:22px}
 .footer-socials{display:flex;gap:8px;flex-wrap:wrap}
-.footer-socials a{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;text-decoration:none;transition:transform .2s}.footer-socials a:hover{transform:translateY(-3px) scale(1.1)}
-.footer-socials a.fb{background:#1877f2;color:#fff}.footer-socials a.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285aeb 90%);color:#fff}.footer-socials a.li{background:#0a66c2;color:#fff}.footer-socials a.tw{background:#000;color:#fff}.footer-socials a.yt{background:red;color:#fff}.footer-socials a.wa{background:#25d366;color:#fff}.footer-socials a.tg{background:#0088cc;color:#fff}.footer-socials a.pt{background:#e60023;color:#fff}
-.footer-col h4{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:#fff;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid rgba(46,158,79,.35);display:flex;align-items:center;gap:8px}.footer-col h4 i{color:var(--green);font-size:13px}
-.footer-col h5{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#5fd98a;letter-spacing:1.5px;text-transform:uppercase;margin:16px 0 8px}
-.footer-links{list-style:none}.footer-links li{margin-bottom:2px}.footer-links li a{color:#8aacca;text-decoration:none;font-size:13px;display:flex;align-items:flex-start;gap:7px;padding:3px 0;transition:color .2s,padding-left .2s;line-height:1.5}.footer-links li a::before{content:'›';color:var(--green);font-size:15px;line-height:1.3;flex-shrink:0;font-weight:700}.footer-links li a:hover{color:#5fd98a;padding-left:4px}
-.footer-contact-grid{max-width:1200px;margin:0 auto;padding:0 24px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.contact-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start;transition:border-color .2s,background .2s}.contact-card:hover{border-color:rgba(46,158,79,.35);background:rgba(46,158,79,.06)}
-.contact-icon{width:38px;height:38px;border-radius:8px;background:rgba(46,158,79,.15);border:1px solid rgba(46,158,79,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0}.contact-icon i{color:var(--green);font-size:15px}
-.contact-info strong{display:block;color:#fff;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}.contact-info span,.contact-info a{display:block;color:#8aacca;font-size:12.5px;text-decoration:none}.contact-info a:hover{color:#5fd98a}
+.footer-socials a{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;text-decoration:none;transition:transform .2s,filter .2s}
+.footer-socials a:hover{transform:translateY(-3px) scale(1.1);filter:brightness(1.2)}
+.footer-socials a.fb{background:#1877f2;color:#fff}.footer-socials a.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%);color:#fff}
+.footer-socials a.li{background:#0a66c2;color:#fff}.footer-socials a.tw{background:#000;color:#fff}
+.footer-socials a.yt{background:#ff0000;color:#fff}.footer-socials a.wa{background:#25d366;color:#fff}
+.footer-socials a.tg{background:#0088cc;color:#fff}.footer-socials a.pt{background:#e60023;color:#fff}
+
+/* Footer columns */
+.footer-col h4{font-family:'Montserrat',sans-serif;font-size:13.5px;font-weight:700;color:#fff;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid rgba(46,158,79,.35);display:flex;align-items:center;gap:8px}
+.footer-col h4 i{color:var(--green);font-size:14px}
+.footer-col h5{font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;color:#5fd98a;letter-spacing:1.5px;text-transform:uppercase;margin:18px 0 8px;padding-bottom:5px;border-bottom:1px solid rgba(46,158,79,.15)}
+.footer-links{list-style:none}
+.footer-links li a{color:#8aacca;text-decoration:none;font-size:14px;display:flex;align-items:flex-start;gap:7px;padding:3.5px 0;transition:color .2s,padding-left .2s;line-height:1.5}
+.footer-links li a::before{content:'›';color:var(--green);font-size:16px;line-height:1.3;flex-shrink:0;font-weight:700}
+.footer-links li a:hover{color:#5fd98a;padding-left:5px}
+
+/* Contact cards grid */
+.footer-contact-grid{max-width:1200px;margin:0 auto;padding:0 24px 44px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.contact-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px 22px;display:flex;gap:14px;align-items:flex-start;position:relative;overflow:hidden;cursor:default;transition:border-color .3s,box-shadow .3s,transform .3s}
+.contact-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(46,158,79,.18),rgba(30,122,58,.12));opacity:0;transition:opacity .35s ease;z-index:0}
+.contact-card:hover{border-color:rgba(46,158,79,.45);box-shadow:0 10px 30px rgba(46,158,79,.15);transform:translateY(-4px)}
+.contact-card:hover::before{opacity:1}
+.contact-icon{width:42px;height:42px;border-radius:10px;background:rgba(46,158,79,.15);border:1px solid rgba(46,158,79,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;z-index:1;transition:background .3s}
+.contact-card:hover .contact-icon{background:rgba(46,158,79,.3)}
+.contact-icon i{color:var(--green);font-size:16px}
+.contact-info{flex:1;min-width:0;position:relative;z-index:1}
+.contact-info strong{display:block;color:#fff;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:5px}
+.contact-info span,.contact-info a{display:block;color:#8aacca;font-size:13px;text-decoration:none;word-break:break-word;line-height:1.6}
+.contact-info a:hover{color:#5fd98a}
+
 .footer-divider{border:none;border-top:1px solid rgba(255,255,255,.07);margin:0 24px}
-.footer-bottom{max-width:1200px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.footer-bottom p{font-size:12.5px;color:#4a6a88}.footer-bottom p span{color:var(--green)}
-.footer-bottom-links{display:flex;gap:20px}.footer-bottom-links a{font-size:12px;color:#4a6a88;text-decoration:none;transition:color .2s}.footer-bottom-links a:hover{color:#5fd98a}
+.footer-bottom{max-width:1200px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-bottom p{font-size:13px;color:#4a6a88}.footer-bottom p span{color:var(--green)}
+.footer-bottom-links{display:flex;gap:20px}
+.footer-bottom-links a{font-size:13px;color:#4a6a88;text-decoration:none;transition:color .2s}
+.footer-bottom-links a:hover{color:#5fd98a}
 .footer-motto{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:rgba(46,158,79,.55);letter-spacing:2px;text-transform:uppercase}
-.back-top{position:fixed;bottom:32px;right:32px;width:50px;height:50px;border-radius:14px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;border:none;box-shadow:0 8px 24px rgba(46,158,79,.4);transition:background .2s,transform .2s,opacity .3s;opacity:0;pointer-events:none;z-index:500}.back-top.show{opacity:1;pointer-events:all}.back-top:hover{background:var(--green-dark);transform:translateY(-3px)}
+
+.back-top{position:fixed;bottom:32px;right:32px;width:50px;height:50px;border-radius:14px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;border:none;box-shadow:0 8px 24px rgba(46,158,79,.4);transition:background .2s,transform .2s,opacity .3s;opacity:0;pointer-events:none;z-index:500}
+.back-top.show{opacity:1;pointer-events:all}.back-top:hover{background:var(--green-dark);transform:translateY(-3px)}
 .reveal{opacity:0;transform:translateY(36px);transition:opacity .75s ease,transform .75s ease}.reveal.visible{opacity:1;transform:none}
 
 /* RESPONSIVE */
-@media(max-width:1200px){.prod-grid{grid-template-columns:repeat(3,1fr)}.prod-grid.g3{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:1000px){.prod-grid,.prod-grid.g3{grid-template-columns:repeat(2,1fr)}.stats-band-inner{grid-template-columns:repeat(2,1fr);gap:28px}.sbi:nth-child(3)::before{display:none}.footer-main{grid-template-columns:1fr 1fr}.hh-inner{grid-template-columns:1fr}.hh-visual-wrap{display:none}.hh-title{font-size:44px}}
-@media(max-width:768px){.top-bar-address{display:none}.hamburger{display:flex}nav{display:none}nav.open{display:flex;flex-direction:column;align-items:stretch;position:absolute;top:80px;left:0;right:0;background:#fff;border-bottom:2px solid var(--green-light);padding:12px;box-shadow:0 8px 24px rgba(0,0,0,.1);z-index:200}nav.open a{padding:12px 16px;border-radius:8px}nav a.btn-contact{margin-left:0;margin-top:4px;text-align:center}.main-header{position:relative}.dropdown-menu{position:static;opacity:1;visibility:visible;pointer-events:all;transform:none;box-shadow:none;border:none;background:var(--green-light);padding:4px 8px;display:none;min-width:unset}.nav-dropdown.open .dropdown-menu{display:block}.prod-grid,.prod-grid.g3{grid-template-columns:1fr 1fr}.filter-bar{position:static}.filter-bar-inner{flex-direction:column;align-items:stretch}.search-wrap,.search-wrap input{width:100%}.hh-title{font-size:30px}.hh-inner{padding:56px 24px}.sec-title{font-size:28px}.footer-main{grid-template-columns:1fr;gap:28px}.footer-bottom{flex-direction:column;text-align:center}.footer-top-band{flex-direction:column;gap:14px;text-align:center}.cta-title{font-size:32px}.stats-band-inner{grid-template-columns:1fr 1fr}.back-top{bottom:20px;right:20px}.results-row{flex-direction:column;align-items:flex-start}.sec-group-header{gap:12px}.sec-group-count{margin-left:0}}
+@media(max-width:1200px){.prod-grid{grid-template-columns:repeat(3,1fr)}.prod-grid.g3{grid-template-columns:repeat(2,1fr)}.footer-main{grid-template-columns:1fr 1fr;gap:36px}.footer-contact-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1000px){.prod-grid,.prod-grid.g3{grid-template-columns:repeat(2,1fr)}.stats-band-inner{grid-template-columns:repeat(2,1fr);gap:28px}.sbi:nth-child(3)::before{display:none}.hh-inner{grid-template-columns:1fr}.hh-visual-wrap{display:none}.hh-title{font-size:44px}}
+@media(max-width:768px){
+  .top-bar-address{display:none}.hamburger{display:flex}nav{display:none}
+  nav.open{display:flex;flex-direction:column;align-items:stretch;position:absolute;top:80px;left:0;right:0;background:#fff;border-bottom:2px solid var(--green-light);padding:12px;box-shadow:0 8px 24px rgba(0,0,0,.1);z-index:200}
+  nav.open a{padding:12px 16px;border-radius:8px}nav a.btn-contact{margin-left:0;margin-top:4px;text-align:center}
+  .main-header{position:relative}
+  .dropdown-menu{position:static;opacity:1;visibility:visible;pointer-events:all;transform:none;box-shadow:none;border:none;background:var(--green-light);padding:4px 8px;display:none;min-width:unset}
+  .nav-dropdown.open .dropdown-menu{display:block}
+  .prod-grid,.prod-grid.g3{grid-template-columns:1fr 1fr}.filter-bar{position:static}.filter-bar-inner{flex-direction:column;align-items:stretch}.search-wrap,.search-wrap input{width:100%}.hh-title{font-size:30px}.hh-inner{padding:56px 24px}.sec-title{font-size:28px}
+  .footer-main{grid-template-columns:1fr;gap:28px}.footer-contact-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;text-align:center}.footer-top-band{flex-direction:column;gap:14px;text-align:center}
+  .cta-title{font-size:32px}.stats-band-inner{grid-template-columns:1fr 1fr}.back-top{bottom:20px;right:20px}.results-row{flex-direction:column;align-items:flex-start}.sec-group-header{gap:12px}.sec-group-count{margin-left:0}
+}
 @media(max-width:500px){.prod-grid,.prod-grid.g3{grid-template-columns:1fr}}
 </style>
 </head>
@@ -270,33 +319,56 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 
 <!-- TOP BAR -->
 <div class="top-bar"><div class="top-bar-inner">
-  <div class="top-bar-address"><span><i class="fas fa-map-marker-alt"></i> Hosur, Tamil Nadu, India</span><span><i class="fas fa-phone"></i> +91 88704 96918</span><span><i class="fas fa-envelope"></i> chemslifegroups@gmail.com</span></div>
-  <div class="social-links"><a href="#" class="fb"><i class="fab fa-facebook-f"></i></a><a href="#" class="ig"><i class="fab fa-instagram"></i></a><a href="#" class="li"><i class="fab fa-linkedin-in"></i></a><a href="#" class="tw"><i class="fab fa-x-twitter"></i></a><a href="#" class="yt"><i class="fab fa-youtube"></i></a><a href="#" class="wa"><i class="fab fa-whatsapp"></i></a><a href="#" class="tg"><i class="fab fa-telegram-plane"></i></a><a href="#" class="pt"><i class="fab fa-pinterest-p"></i></a></div>
+  <div class="top-bar-address">
+    <span><i class="fas fa-map-marker-alt"></i> Hosur, Tamil Nadu, India</span>
+    <span><i class="fas fa-phone"></i> +91 88704 96918</span>
+    <span><i class="fas fa-envelope"></i> chemslifegroups@gmail.com</span>
+  </div>
+  <div class="social-links">
+    <a href="#" class="fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="li" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#" class="tw" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+    <a href="#" class="yt" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="#" class="wa" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="#" class="tg" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+    <a href="#" class="pt" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+  </div>
 </div></div>
 
 <!-- MARQUEE -->
-<div class="marquee-wrap"><div class="marquee-track">
+<div class="marquee-wrap" aria-label="Company announcement ticker"><div class="marquee-track">
   <div class="marquee-content"><span class="marquee-text">&#9670;&nbsp; Chemslife Groups</span><span class="marquee-sep">|</span><span class="marquee-text">Everything is Science</span><span class="marquee-sep">|</span><span class="marquee-text">Science for Nation</span><span class="marquee-sep">|</span><span class="marquee-text">&#9670;&nbsp; Integrated Healthcare Solutions</span><span class="marquee-sep">|</span><span class="marquee-text">66 Products | 8 Divisions</span><span class="marquee-sep">|</span><span class="marquee-text">Trusted Since 2018</span><span class="marquee-sep">|</span></div>
   <div class="marquee-content" aria-hidden="true"><span class="marquee-text">&#9670;&nbsp; Chemslife Groups</span><span class="marquee-sep">|</span><span class="marquee-text">Everything is Science</span><span class="marquee-sep">|</span><span class="marquee-text">Science for Nation</span><span class="marquee-sep">|</span><span class="marquee-text">&#9670;&nbsp; Integrated Healthcare Solutions</span><span class="marquee-sep">|</span><span class="marquee-text">66 Products | 8 Divisions</span><span class="marquee-sep">|</span><span class="marquee-text">Trusted Since 2018</span><span class="marquee-sep">|</span></div>
 </div></div>
 
-<!-- HEADER -->
+<!-- MAIN HEADER -->
 <header class="main-header"><div class="main-header-inner">
   <a href="index.html" class="logo-wrap">
-    <div class="logo-img-box"><img src="YOUR_LOGO_IMAGE_HERE.png" alt="Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg" width="40" height="40" style="display:none"><path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4 Z" fill="#2e9e4f" opacity="0.13" stroke="#2e9e4f" stroke-width="2.5" stroke-linejoin="round"/><path d="M23 38 Q30 32 38 40 L42 52 Q44 57 40 59 L20 59 Q16 57 18 52 Z" fill="#2e9e4f" opacity="0.7"/><rect x="21" y="0" width="18" height="6" rx="3" fill="#111"/><path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4" fill="none" stroke="#111" stroke-width="2.5" stroke-linejoin="round"/></svg></div>
+    <div class="logo-img-box">
+      <img src="all dummy images/logo1.jpeg" alt="Chemslife Groups Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg" width="40" height="40" style="display:none"><path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4 Z" fill="#2e9e4f" opacity="0.13" stroke="#2e9e4f" stroke-width="2.5" stroke-linejoin="round"/><path d="M23 38 Q30 32 38 40 L42 52 Q44 57 40 59 L20 59 Q16 57 18 52 Z" fill="#2e9e4f" opacity="0.7"/><rect x="21" y="0" width="18" height="6" rx="3" fill="#111"/><path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4" fill="none" stroke="#111" stroke-width="2.5" stroke-linejoin="round"/></svg>
+    </div>
     <div class="logo-text"><span class="logo-name">CHEMS<span>LIFE</span></span><span class="logo-tagline">Groups</span></div>
   </a>
   <nav id="main-nav">
-    <a href="index.html">Home</a><a href="about-us.html">About Us</a>
+    <a href="index.html">Home</a>
+    <a href="About us.html">About Us</a>
     <div class="nav-dropdown" id="productsDropdown">
       <a href="#" id="productsToggle" class="active">Products <i class="fas fa-chevron-down dd-arrow"></i></a>
       <div class="dropdown-menu">
-        <a href="scientific-industrial-solutions.html"><div class="dd-icon"><i class="fas fa-flask"></i></div><div class="dd-label"><strong>Scientific &amp; Industrial Solutions</strong><span>Lab, chemical, water treatment &amp; homecare</span></div></a>
+        <a href="scientific-industrial-solutions.html">
+          <div class="dd-icon"><i class="fas fa-flask"></i></div>
+          <div class="dd-label"><strong>Scientific &amp; Industrial Solutions</strong><span>Lab, chemical, water treatment &amp; homecare</span></div>
+        </a>
         <div class="dropdown-divider"></div>
-        <a href="integrated-healthcare-solutions.html"><div class="dd-icon"><i class="fas fa-heartbeat"></i></div><div class="dd-label"><strong>Integrated Healthcare Solutions</strong><span>Pharma, surgical, diagnostics &amp; safety</span></div></a>
+        <a href="integrated-healthcare-solutions.html">
+          <div class="dd-icon"><i class="fas fa-heartbeat"></i></div>
+          <div class="dd-label"><strong>Integrated Healthcare Solutions</strong><span>Pharma, surgical, diagnostics &amp; safety</span></div>
+        </a>
       </div>
     </div>
-    <a href="contact-us.html" class="btn-contact">Contact Us</a>
+    <a href="contact us .html" class="btn-contact">Contact Us</a>
   </nav>
   <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
 </div></header>
@@ -385,33 +457,162 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     <div class="cta-tag"><i class="fas fa-phone-alt"></i>&nbsp; Get In Touch</div>
     <h2 class="cta-title">Need a <span>Custom Quote?</span></h2>
     <p class="cta-sub">Looking for bulk orders or specific healthcare products? Our expert team will source exactly what your facility requires — with assured quality and fast delivery.</p>
-    <div class="cta-btns"><a href="contact-us.html" class="cta-btn-p"><i class="fas fa-paper-plane"></i> Send Enquiry</a><a href="tel:+918870496918" class="cta-btn-o"><i class="fas fa-phone-alt"></i> +91 88704 96918</a></div>
+    <div class="cta-btns"><a href="contact us .html" class="cta-btn-p"><i class="fas fa-paper-plane"></i> Send Enquiry</a><a href="tel:+918870496918" class="cta-btn-o"><i class="fas fa-phone-alt"></i> +91 88704 96918</a></div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ═══════════════ FOOTER ═══════════════ -->
 <footer class="footer">
-  <div class="footer-top-band"><p>Ready to partner with us? <span>Explore our full range of scientific, industrial &amp; healthcare solutions.</span></p><a href="#" id="footerBackTop" class="footer-cta-btn"><i class="fas fa-arrow-up" style="margin-right:7px"></i>Back to Top</a></div>
+  <div class="footer-top-band">
+    <p>Ready to partner with us? <span>Explore our full range of scientific, industrial &amp; healthcare solutions.</span></p>
+    <a href="#" class="footer-cta-btn"><i class="fas fa-paper-plane" style="margin-right:7px"></i>Get in Touch</a>
+  </div>
+
   <div class="footer-main">
-    <div class="footer-about">
-      <div class="footer-logo-wrap"><div class="footer-logo-icon"><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4 Z" fill="#2e9e4f" opacity="0.2" stroke="#2e9e4f" stroke-width="2.5" stroke-linejoin="round"/><path d="M23 38 Q30 32 38 40 L42 52 Q44 57 40 59 L20 59 Q16 57 18 52 Z" fill="#2e9e4f" opacity="0.8"/><rect x="21" y="0" width="18" height="6" rx="3" fill="#cdd8e8"/><path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4" fill="none" stroke="#cdd8e8" stroke-width="2.5" stroke-linejoin="round"/></svg></div><div><div class="footer-logo-name">CHEMS<span>LIFE</span></div><div class="footer-logo-sub">Groups</div></div></div>
-      <p>A multi-sector organization delivering reliable scientific, industrial, and healthcare solutions since 2018.</p>
+
+    <!-- Logo & About -->
+    <div class="footer-logo-col">
+      <div class="footer-logo-wrap">
+        <div class="footer-logo-icon">
+          <img src="all dummy images/logo1.jpeg" alt="Chemslife Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+          <svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg" style="display:none"><path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4 Z" fill="#2e9e4f" opacity="0.2" stroke="#2e9e4f" stroke-width="2.5" stroke-linejoin="round"/><path d="M23 38 Q30 32 38 40 L42 52 Q44 57 40 59 L20 59 Q16 57 18 52 Z" fill="#2e9e4f" opacity="0.8"/><rect x="21" y="0" width="18" height="6" rx="3" fill="#cdd8e8"/><path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4" fill="none" stroke="#cdd8e8" stroke-width="2.5" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <div class="footer-logo-name">CHEMS<span>LIFE</span></div>
+          <div class="footer-logo-sub">Groups</div>
+        </div>
+      </div>
+      <p class="footer-about-text">A multi-sector organization delivering reliable scientific, industrial, and healthcare solutions since 2018. Founded by Mr. Sivasankar Karthikeyan.</p>
       <div class="footer-tagline">"Building Chemistry for a Better Tomorrow"</div>
-      <div class="footer-socials"><a href="#" class="fb"><i class="fab fa-facebook-f"></i></a><a href="#" class="ig"><i class="fab fa-instagram"></i></a><a href="#" class="li"><i class="fab fa-linkedin-in"></i></a><a href="#" class="tw"><i class="fab fa-x-twitter"></i></a><a href="#" class="yt"><i class="fab fa-youtube"></i></a><a href="#" class="wa"><i class="fab fa-whatsapp"></i></a><a href="#" class="tg"><i class="fab fa-telegram-plane"></i></a><a href="#" class="pt"><i class="fab fa-pinterest-p"></i></a></div>
+      <div class="footer-socials">
+        <a href="#" class="fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="ig" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="li" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="tw" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" class="yt" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="wa" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="tg" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+        <a href="#" class="pt" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+      </div>
     </div>
-    <div class="footer-col"><h4><i class="fas fa-heartbeat"></i> Healthcare Solutions</h4><h5>Pharmaceutical</h5><ul class="footer-links"><li><a href="#">Analgesics &amp; Antipyretics</a></li><li><a href="#">Antibiotics</a></li><li><a href="#">Cardiovascular Drugs</a></li><li><a href="#">Vitamins &amp; Supplements</a></li></ul><h5>Surgical &amp; Devices</h5><ul class="footer-links"><li><a href="#">Surgical Instruments</a></li><li><a href="#">Medical Devices</a></li><li><a href="#">Hospital Consumables</a></li></ul></div>
-    <div class="footer-col"><h4><i class="fas fa-flask"></i> Scientific &amp; Industrial</h4><h5>Products</h5><ul class="footer-links"><li><a href="#">Laboratory Products</a></li><li><a href="#">Chemical Products</a></li><li><a href="#">Water Treatment</a></li><li><a href="#">Homecare &amp; Cleaning</a></li></ul><h5>Diagnostics</h5><ul class="footer-links"><li><a href="#">Diagnostic Products</a></li><li><a href="#">Diagnostic Instruments</a></li><li><a href="#">Disposables</a></li><li><a href="#">Safety Products</a></li></ul></div>
-    <div class="footer-col"><h4><i class="fas fa-link"></i> Quick Links</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about-us.html">About Us</a></li><li><a href="scientific-industrial-solutions.html">Scientific Products</a></li><li><a href="integrated-healthcare-solutions.html">Healthcare Solutions</a></li><li><a href="contact-us.html">Contact Us</a></li></ul><h5>Locations</h5><ul class="footer-links"><li><a href="#">Corporate Office – Hosur</a></li><li><a href="#">Healthcare Division – Hosur</a></li><li><a href="#">Registered Office – Thiruvarur</a></li></ul></div>
+
+    <!-- Scientific & Industrial Solutions -->
+    <div class="footer-col">
+      <h4><i class="fas fa-flask"></i> Scientific &amp; Industrial Solutions</h4>
+
+      <h5>Laboratory Products</h5>
+      <ul class="footer-links">
+        <li><a href="#">Laboratory Chemicals</a></li>
+        <li><a href="#">Laboratory Instruments</a></li>
+        <li><a href="#">Laboratory Equipment</a></li>
+        <li><a href="#">Glassware &amp; Plasticware</a></li>
+        <li><a href="#">Lab Furniture &amp; Safety Kits</a></li>
+        <li><a href="#">Lab Test Kits &amp; Filtration</a></li>
+      </ul>
+
+      <h5>Water Treatment Products</h5>
+      <ul class="footer-links">
+        <li><a href="#">Filtration &amp; Membrane Systems</a></li>
+        <li><a href="#">Ion Exchange Resins</a></li>
+        <li><a href="#">Monitoring &amp; Testing Products</a></li>
+        <li><a href="#">Wastewater Treatment</a></li>
+      </ul>
+
+      <h5>Homecare &amp; Cleaning Products</h5>
+      <ul class="footer-links">
+        <li><a href="#">Cleaning &amp; Disinfection Agents</a></li>
+        <li><a href="#">Detergents &amp; Laundry</a></li>
+        <li><a href="#">Pest Control Products</a></li>
+        <li><a href="#">Housekeeping Tools</a></li>
+      </ul>
+    </div>
+
+    <!-- Integrated Healthcare Solutions -->
+    <div class="footer-col">
+      <h4><i class="fas fa-heartbeat"></i> Integrated Healthcare Solutions</h4>
+
+      <h5>Pharmaceutical Products</h5>
+      <ul class="footer-links">
+        <li><a href="#">Analgesics &amp; Antipyretics</a></li>
+        <li><a href="#">Antibiotics &amp; Antimicrobials</a></li>
+        <li><a href="#">Cardiovascular Drugs</a></li>
+        <li><a href="#">Vitamins &amp; Supplements</a></li>
+      </ul>
+
+      <h5>Surgical Supplies</h5>
+      <ul class="footer-links">
+        <li><a href="#">Surgical Instruments</a></li>
+        <li><a href="#">Specialty Surgical Sets</a></li>
+        <li><a href="#">Suturing &amp; Stapling</a></li>
+      </ul>
+
+      <h5>Hospital Consumables &amp; Medical Devices</h5>
+      <ul class="footer-links">
+        <li><a href="#">Hospital Consumables</a></li>
+        <li><a href="#">Medical Devices in Hospitals</a></li>
+      </ul>
+
+      <h5>Diagnostic Products &amp; Instruments</h5>
+      <ul class="footer-links">
+        <li><a href="#">Diagnostic Instruments &amp; Consumables</a></li>
+        <li><a href="#">Hematology &amp; Immunology</a></li>
+        <li><a href="#">Molecular &amp; POC Diagnostics</a></li>
+      </ul>
+
+      <h5>Disposables &amp; Safety Products</h5>
+      <ul class="footer-links">
+        <li><a href="#">Disposables Products</a></li>
+        <li><a href="#">Safety Products &amp; PPE</a></li>
+        <li><a href="#">Waste Management Disposables</a></li>
+      </ul>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4><i class="fas fa-link"></i> Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About us.html">About Us</a></li>
+        <li><a href="scientific-industrial-solutions.html">Scientific &amp; Industrial</a></li>
+        <li><a href="integrated-healthcare-solutions.html">Healthcare Solutions</a></li>
+        <li><a href="contact us .html">Contact Us</a></li>
+      </ul>
+    </div>
+
   </div>
+
+  <!-- Contact Cards -->
   <div class="footer-contact-grid">
-    <div class="contact-card"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><div class="contact-info"><strong>Sales</strong><span>+91 88704 96918</span><a href="mailto:sales@chemslife.in">sales@chemslife.in</a></div></div>
-    <div class="contact-card"><div class="contact-icon"><i class="fas fa-headset"></i></div><div class="contact-info"><strong>Admin</strong><span>+91 88702 44418</span><a href="mailto:admin@chemslife.in">admin@chemslife.in</a></div></div>
-    <div class="contact-card"><div class="contact-icon"><i class="fas fa-shopping-bag"></i></div><div class="contact-info"><strong>Chemscart</strong><span>+91 88702 44418</span><a href="mailto:admin@chemscart.in">admin@chemscart.in</a></div></div>
-    <div class="contact-card"><div class="contact-icon"><i class="fas fa-truck"></i></div><div class="contact-info"><strong>Dispatch</strong><span>+91 88700 36018</span><a href="mailto:dispatch@chemslife.in">dispatch@chemslife.in</a></div></div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+      <div class="contact-info"><strong>Sales</strong><span>+91 88704 96918</span><a href="mailto:sales@chemslife.in">sales@chemslife.in</a></div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-headset"></i></div>
+      <div class="contact-info"><strong>Admin</strong><span>+91 88702 44418</span><a href="mailto:admin@chemslife.in">admin@chemslife.in</a></div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-shopping-bag"></i></div>
+      <div class="contact-info"><strong>Chemscart</strong><span>+91 88702 44418</span><a href="mailto:admin@chemscart.in">admin@chemscart.in</a></div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-truck"></i></div>
+      <div class="contact-info"><strong>Dispatch</strong><span>+91 88700 36018</span><a href="mailto:dispatch@chemslife.in">dispatch@chemslife.in</a></div>
+    </div>
   </div>
+
   <hr class="footer-divider"/>
-  <div class="footer-bottom"><p>&copy; 2025 <span>Chemslife Groups</span>. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div><div class="footer-motto">Everything is Science &#9670; Science for Nation</div></div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 <span>Chemslife Groups</span>. All rights reserved. | Founded by Mr. Sivasankar Karthikeyan.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Sitemap</a>
+    </div>
+    <div class="footer-motto">Everything is Science &nbsp;&#9670;&nbsp; Science for Nation</div>
+  </div>
 </footer>
+
 <button class="back-top" id="backTopBtn" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
 <script>
@@ -506,14 +707,12 @@ const PH = ['ph-1','ph-2','ph-3','ph-4','ph-5','ph-6','ph-7','ph-8','ph-9','ph-1
 function buildCard(item, idx, catLabel, catKey) {
   const ph = PH[idx % PH.length];
   const num = String(idx+1).padStart(2,'0');
-  const imgName = item.name.replace(/[^a-zA-Z0-9]/g,'_').toUpperCase() + '.jpg';
   return `<div class="pc" data-name="${item.name.toLowerCase()}" data-cat="${catKey}">
-    <div class="pc-img"><img src="${imgName}" alt="${item.name}" onerror="this.style.display='none'"/><div class="pc-ph ${ph}"><i class="${item.icon} ph-icon"></i><span class="ph-lbl">Add Image</span></div><div class="pc-cat">${catLabel}</div><span class="pc-num">${num}</span></div>
-    <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="${item.icon}"></i></div><h3 class="pc-name">${item.name}</h3></div><p class="pc-desc">${item.desc}</p><div class="pc-cta"><a href="contact-us.html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
+    <div class="pc-img"><div class="pc-ph ${ph}"><i class="${item.icon} ph-icon"></i><span class="ph-lbl">Add Image</span></div><div class="pc-cat">${catLabel}</div><span class="pc-num">${num}</span></div>
+    <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="${item.icon}"></i></div><h3 class="pc-name">${item.name}</h3></div><p class="pc-desc">${item.desc}</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
   </div>`;
 }
 
-// Populate all grids
 SECTIONS.forEach(s => {
   document.getElementById(s.gridId).innerHTML = s.items.map((p,i) => buildCard(p,i,s.cat,s.id)).join('');
 });
@@ -532,7 +731,6 @@ window.addEventListener('scroll', () => { document.getElementById('scrollProg').
 const btn = document.getElementById('backTopBtn');
 window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 400));
 btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-document.getElementById('footerBackTop').addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
 // ─── Reveal
 const revels = document.querySelectorAll('.reveal');

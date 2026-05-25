@@ -37,10 +37,10 @@
   .marquee-wrap { background: linear-gradient(90deg, var(--green-dark) 0%, var(--green) 50%, var(--green-dark) 100%); padding: 9px 0; overflow: hidden; position: relative; }
   .marquee-wrap::before, .marquee-wrap::after { content: ''; position: absolute; top: 0; bottom: 0; width: 80px; z-index: 2; pointer-events: none; }
   .marquee-wrap::before { left: 0; background: linear-gradient(to right, var(--green-dark), transparent); }
-  .marquee-wrap::after  { right: 0; background: linear-gradient(to left,  var(--green-dark), transparent); }
+  .marquee-wrap::after  { right: 0; background: linear-gradient(to left, var(--green-dark), transparent); }
   .marquee-track { display: flex; width: max-content; animation: marquee 28s linear infinite; }
   .marquee-track:hover { animation-play-state: paused; }
-  .marquee-content { display: flex; align-items: center; gap: 0; white-space: nowrap; }
+  .marquee-content { display: flex; align-items: center; white-space: nowrap; }
   .marquee-text { font-family: 'Montserrat', sans-serif; font-size: 13.5px; font-weight: 700; letter-spacing: 3.5px; color: rgba(255,255,255,0.95); text-transform: uppercase; padding: 0 48px; }
   .marquee-sep { color: rgba(255,255,255,0.5); font-size: 16px; padding: 0 8px; }
   @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
@@ -56,7 +56,7 @@
   .logo-name span { color: var(--green); }
   .logo-tagline { font-size: 10px; color: var(--text-muted); letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500; margin-top: 2px; }
 
-  /* NAV with Dropdown */
+  /* NAV */
   nav { display: flex; align-items: center; gap: 4px; }
   nav a { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600; color: var(--navy); text-decoration: none; padding: 8px 18px; border-radius: 6px; letter-spacing: 0.3px; position: relative; transition: color 0.2s, background 0.2s; }
   nav a::after { content: ''; position: absolute; bottom: 4px; left: 18px; right: 18px; height: 2px; background: var(--green); border-radius: 2px; transform: scaleX(0); transition: transform 0.25s ease; }
@@ -67,47 +67,23 @@
   nav a.btn-contact::after { display: none; }
   nav a.btn-contact:hover { background: var(--green); color: var(--white); transform: translateY(-1px); }
 
-  /* PRODUCTS DROPDOWN */
+  /* DROPDOWN */
   .nav-dropdown { position: relative; }
   .nav-dropdown > a { display: flex; align-items: center; gap: 5px; }
   .nav-dropdown > a .dd-arrow { font-size: 10px; transition: transform 0.25s ease; }
   .nav-dropdown:hover > a .dd-arrow { transform: rotate(180deg); }
-  .dropdown-menu {
-    position: absolute; top: calc(100% + 8px); left: 0;
-    background: #fff;
-    border: 1.5px solid var(--border);
-    border-radius: 12px;
-    box-shadow: 0 16px 48px rgba(13,43,78,0.14);
-    min-width: 300px;
-    padding: 8px;
-    opacity: 0; visibility: hidden; pointer-events: none;
-    transform: translateY(10px);
-    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
-    z-index: 200;
-  }
+  .dropdown-menu { position: absolute; top: calc(100% + 8px); left: 0; background: #fff; border: 1.5px solid var(--border); border-radius: 12px; box-shadow: 0 16px 48px rgba(13,43,78,0.14); min-width: 300px; padding: 8px; opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(10px); transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s; z-index: 200; }
   .nav-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; pointer-events: all; transform: translateY(0); }
-  .dropdown-menu a {
-    display: flex; align-items: center; gap: 12px;
-    font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600;
-    color: var(--navy); text-decoration: none;
-    padding: 11px 14px; border-radius: 8px;
-    transition: background 0.18s, color 0.18s, padding-left 0.18s;
-  }
+  .dropdown-menu a { display: flex; align-items: center; gap: 12px; font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; color: var(--navy); text-decoration: none; padding: 11px 14px; border-radius: 8px; transition: background 0.18s, color 0.18s, padding-left 0.18s; }
   .dropdown-menu a::after { display: none !important; }
   .dropdown-menu a:hover { background: var(--green-light); color: var(--green-dark); padding-left: 18px; }
-  .dropdown-menu a .dd-icon {
-    width: 34px; height: 34px; border-radius: 8px;
-    background: linear-gradient(135deg, var(--green-light), #c2e8ce);
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0; transition: background 0.2s;
-  }
+  .dropdown-menu a .dd-icon { width: 34px; height: 34px; border-radius: 8px; background: linear-gradient(135deg, var(--green-light), #c2e8ce); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s; }
   .dropdown-menu a:hover .dd-icon { background: linear-gradient(135deg, #b2f0cb, #7dd4a0); }
   .dropdown-menu a .dd-icon i { color: var(--green-dark); font-size: 14px; }
   .dropdown-menu a .dd-label { flex: 1; }
   .dropdown-menu a .dd-label strong { display: block; font-size: 13px; font-weight: 700; color: var(--navy); }
   .dropdown-menu a .dd-label span { display: block; font-size: 11px; color: var(--text-muted); font-weight: 500; margin-top: 1px; }
   .dropdown-divider { border: none; border-top: 1px solid var(--border); margin: 6px 8px; }
-
   .hamburger { display: none; background: none; border: 1.5px solid var(--border); border-radius: 6px; padding: 7px 9px; cursor: pointer; flex-direction: column; gap: 4px; }
   .hamburger span { display: block; width: 20px; height: 2px; background: var(--navy); border-radius: 2px; }
 
@@ -115,7 +91,6 @@
   .hero-slider { position: relative; width: 100%; height: 520px; overflow: hidden; background: #0d2b4e; }
   .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease; display: flex; align-items: center; justify-content: center; }
   .slide.active { opacity: 1; z-index: 2; }
-  /* slide-img: always fills, placeholder behind it */
   .slide-img-wrap { position: absolute; inset: 0; }
   .slide-img-wrap .slide-ph { position: absolute; inset: 0; z-index: 0; }
   .slide-img-wrap img.slide-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 1; display: block; }
@@ -134,7 +109,7 @@
   .slider-arrow.prev { left: 24px; }
   .slider-arrow.next { right: 24px; }
   .slider-dots { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 10; display: flex; gap: 10px; align-items: center; }
-  .dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.35); border: 1.5px solid rgba(255,255,255,0.5); cursor: pointer; transition: background 0.25s, transform 0.25s, width 0.25s; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.35); border: 1.5px solid rgba(255,255,255,0.5); cursor: pointer; transition: background 0.25s, width 0.25s; }
   .dot.active { background: var(--green); border-color: var(--green); width: 28px; border-radius: 6px; }
   .slide-counter { position: absolute; bottom: 24px; right: 32px; z-index: 10; font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.6); }
   .slide-counter strong { color: #fff; }
@@ -148,59 +123,24 @@
   .about-img-side { position: relative; padding: 20px 20px 240px 20px; }
   .about-img-ring { position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 22px; border: 2px dashed rgba(46,158,79,0.18); transform: rotate(-2deg) scale(1.03); pointer-events: none; transition: transform 0.6s ease; }
   .about-img-side:hover .about-img-ring { transform: rotate(0deg) scale(1.05); }
-
-  /* Image containers: position relative, img fills absolutely, placeholder behind */
-  .about-img-main {
-    width: 100%; aspect-ratio: 16 / 11; border-radius: 20px; overflow: hidden;
-    position: relative; box-shadow: 0 28px 72px rgba(13,43,78,0.18);
-    opacity: 0; transform: translateY(50px) scale(0.97);
-    transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease;
-  }
+  .about-img-main { width: 100%; aspect-ratio: 16/11; border-radius: 20px; overflow: hidden; position: relative; box-shadow: 0 28px 72px rgba(13,43,78,0.18); opacity: 0; transform: translateY(50px) scale(0.97); transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease; }
   .about-img-main.img-visible { opacity: 1; transform: translateY(0) scale(1); }
   .about-img-main:hover { box-shadow: 0 36px 88px rgba(13,43,78,0.24); }
   .about-img-main::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(46,158,79,0.18) 0%, transparent 60%); opacity: 0; transition: opacity 0.4s ease; pointer-events: none; border-radius: 20px; z-index: 2; }
   .about-img-main:hover::after { opacity: 1; }
-
-  /* Placeholder always sits at z-index 0 (behind img) */
-  .img-placeholder {
-    position: absolute; inset: 0; z-index: 0;
-    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;
-    animation: placeholderPulse 3s ease-in-out infinite;
-    background: linear-gradient(135deg, #ddf2e5 0%, #b8e8c8 50%, #8fd4a8 100%);
-  }
+  .img-placeholder { position: absolute; inset: 0; z-index: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; animation: placeholderPulse 3s ease-in-out infinite; background: linear-gradient(135deg, #ddf2e5 0%, #b8e8c8 50%, #8fd4a8 100%); }
   @keyframes placeholderPulse { 0%,100% { background: linear-gradient(135deg, #ddf2e5 0%, #b8e8c8 50%, #8fd4a8 100%); } 50% { background: linear-gradient(135deg, #c8ecda 0%, #a2ddb8 50%, #76c993 100%); } }
   .img-placeholder i { font-size: 72px; color: var(--green); opacity: 0.45; }
   .img-placeholder span { font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 700; color: var(--green-dark); letter-spacing: 1.5px; opacity: 0.75; text-transform: uppercase; }
-  .img-placeholder small { font-size: 13px; color: var(--green-dark); opacity: 0.55; }
-
-  /* The actual image sits at z-index 1, above placeholder */
-  .about-img-main img,
-  .about-img-accent img {
-    position: absolute; inset: 0;
-    width: 100%; height: 100%; object-fit: cover;
-    display: block; z-index: 1;
-    transition: transform 0.7s ease;
-  }
+  .about-img-main img, .about-img-accent img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; z-index: 1; transition: transform 0.7s ease; }
   .about-img-main:hover img { transform: scale(1.06); }
-
-  .about-img-accent {
-    position: absolute; bottom: 0; right: 0; width: 260px; aspect-ratio: 1;
-    border-radius: 18px; overflow: hidden;
-    box-shadow: 0 16px 40px rgba(13,43,78,0.22); border: 5px solid #fff; z-index: 3;
-    opacity: 0; transform: translateY(30px) scale(0.88);
-    transition: opacity 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.3s, transform 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.3s, box-shadow 0.3s ease;
-  }
+  .about-img-accent { position: absolute; bottom: 0; right: 0; width: 260px; aspect-ratio: 1; border-radius: 18px; overflow: hidden; box-shadow: 0 16px 40px rgba(13,43,78,0.22); border: 5px solid #fff; z-index: 3; opacity: 0; transform: translateY(30px) scale(0.88); transition: opacity 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.3s, transform 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.3s, box-shadow 0.3s ease; }
   .about-img-accent.img-visible { opacity: 1; transform: translateY(0) scale(1); }
   .about-img-accent:hover { box-shadow: 0 22px 52px rgba(13,43,78,0.3); transform: translateY(-4px) scale(1.03); }
   .about-img-accent:hover img { transform: scale(1.07); }
-  /* Accent placeholder dark style */
-  .about-img-accent .img-placeholder {
-    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
-    gap: 10px;
-  }
+  .about-img-accent .img-placeholder { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); gap: 10px; }
   .about-img-accent .img-placeholder i { font-size: 40px; color: rgba(255,255,255,0.45); }
   .about-img-accent .img-placeholder span { font-size: 12px; color: rgba(255,255,255,0.4); }
-
   .about-badge { position: absolute; top: 8px; left: 8px; width: 118px; height: 118px; background: linear-gradient(135deg, var(--green-dark), var(--green)); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 8px 28px rgba(46,158,79,0.45); z-index: 4; border: 4px solid #fff; animation: badgePulse 3s ease-in-out infinite; opacity: 0; transform: rotate(-20deg) scale(0.5); transition: opacity 0.6s cubic-bezier(0.34,1.56,0.64,1) 0.5s, transform 0.6s cubic-bezier(0.34,1.56,0.64,1) 0.5s; }
   .about-badge.img-visible { opacity: 1; transform: rotate(0deg) scale(1); }
   .about-badge .badge-year { font-family: 'Montserrat', sans-serif; font-size: 30px; font-weight: 800; color: #fff; line-height: 1; }
@@ -214,7 +154,7 @@
   .about-heading span { color: var(--green); }
   .about-tagline-block { border-left: 4px solid var(--green); padding: 14px 20px; background: var(--green-light); border-radius: 0 10px 10px 0; margin-bottom: 22px; }
   .about-tagline-block p { font-style: italic; color: var(--green-dark); font-size: 19px; line-height: 1.65; font-weight: 500; }
-  .about-desc { color: #3a5070; font-size: 19px; line-height: 1.85; margin-bottom: 26px; font-weight: 400; }
+  .about-desc { color: #3a5070; font-size: 19px; line-height: 1.85; margin-bottom: 26px; }
   .about-desc strong { color: var(--navy); font-weight: 700; }
   .about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 26px; }
   .stat-box { background: #f4f8f5; border: 1.5px solid var(--border); border-radius: 14px; padding: 24px 16px 20px; text-align: center; transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease; position: relative; overflow: hidden; cursor: default; }
@@ -229,29 +169,24 @@
   .pillar-icon { width: 52px; height: 52px; border-radius: 10px; background: linear-gradient(135deg, var(--green-light), #c2e8ce); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.22s, transform 0.22s; }
   .pillar-row:hover .pillar-icon { background: linear-gradient(135deg, #b2f0cb, #7dd4a0); transform: rotate(-4deg) scale(1.08); }
   .pillar-icon i { color: var(--green-dark); font-size: 20px; }
-  .pillar-text { flex: 1; }
   .pillar-text strong { display: block; font-family: 'Montserrat', sans-serif; font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
   .pillar-text span { font-size: 15px; color: var(--text-muted); line-height: 1.55; }
   .about-ctas { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-  .about-btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--green); color: #fff; font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 700; padding: 17px 36px; border-radius: 10px; text-decoration: none; letter-spacing: 0.3px; transition: background 0.22s, transform 0.18s, box-shadow 0.22s; box-shadow: 0 6px 18px rgba(46,158,79,0.35); }
+  .about-btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--green); color: #fff; font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 700; padding: 17px 36px; border-radius: 10px; text-decoration: none; transition: background 0.22s, transform 0.18s, box-shadow 0.22s; box-shadow: 0 6px 18px rgba(46,158,79,0.35); }
   .about-btn-primary:hover { background: var(--green-dark); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(46,158,79,0.45); }
-  .about-btn-primary i { font-size: 17px; }
-  .about-btn-outline { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: var(--navy); font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 700; padding: 16px 32px; border-radius: 10px; text-decoration: none; border: 2px solid var(--navy); letter-spacing: 0.3px; transition: background 0.22s, color 0.22s, border-color 0.22s, transform 0.18s, box-shadow 0.22s; }
-  .about-btn-outline:hover { background: var(--navy); color: #fff; transform: translateY(-3px); box-shadow: 0 10px 26px rgba(13,43,78,0.2); }
-  .about-btn-outline i { font-size: 17px; transition: transform 0.2s; }
-  .about-btn-outline:hover i { transform: translateX(4px); }
+  .about-btn-outline { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: var(--navy); font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 700; padding: 16px 32px; border-radius: 10px; text-decoration: none; border: 2px solid var(--navy); transition: background 0.22s, color 0.22s, transform 0.18s, box-shadow 0.22s; }
+  .about-btn-outline:hover { background: var(--navy); color: #fff; transform: translateY(-3px); }
 
-  /* Scroll reveal */
+  /* REVEAL */
   .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .reveal.from-left  { transform: translateX(-44px); }
+  .reveal.from-left { transform: translateX(-44px); }
   .reveal.from-right { transform: translateX(44px); }
-  .reveal.visible    { opacity: 1; transform: translate(0); }
+  .reveal.visible { opacity: 1; transform: translate(0); }
   .reveal-stagger > * { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
   .reveal-stagger.visible > *:nth-child(1) { opacity:1; transform:none; transition-delay:0.05s; }
   .reveal-stagger.visible > *:nth-child(2) { opacity:1; transform:none; transition-delay:0.15s; }
   .reveal-stagger.visible > *:nth-child(3) { opacity:1; transform:none; transition-delay:0.25s; }
   .reveal-stagger.visible > *:nth-child(4) { opacity:1; transform:none; transition-delay:0.35s; }
-  .reveal-stagger.visible > *:nth-child(5) { opacity:1; transform:none; transition-delay:0.45s; }
 
   /* INDUSTRIES */
   .industries-section { background: #f4f8f5; padding: 80px 0 88px; position: relative; overflow: hidden; }
@@ -270,16 +205,13 @@
   .ind-card:hover { transform: translateY(-7px) scale(1.01); box-shadow: 0 22px 50px rgba(13,43,78,0.12); border-color: rgba(46,158,79,0.35); }
   .ind-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(to bottom, var(--green), var(--green-dark)); border-radius: 18px 0 0 18px; transform: scaleY(0); transform-origin: top; transition: transform 0.35s cubic-bezier(0.22,1,0.36,1); z-index: 2; }
   .ind-card:hover::before { transform: scaleY(1); }
-
-  /* Industry card image wrap: relative container, placeholder behind, img on top */
   .ind-img-wrap { position: relative; width: 100%; aspect-ratio: 16/10; overflow: hidden; flex-shrink: 0; }
   .ind-img-wrap img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; z-index: 1; transition: transform 0.55s ease; }
   .ind-card:hover .ind-img-wrap img { transform: scale(1.08); }
-  .ind-img-wrap::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,43,78,0.65) 0%, rgba(13,43,78,0.1) 55%, transparent 100%); z-index: 2; transition: opacity 0.35s ease; }
+  .ind-img-wrap::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,43,78,0.65) 0%, rgba(13,43,78,0.1) 55%, transparent 100%); z-index: 2; }
   .ind-icon-badge { position: absolute; bottom: 14px; left: 18px; z-index: 4; width: 50px; height: 50px; border-radius: 13px; background: var(--green); display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 18px rgba(46,158,79,0.5); font-size: 20px; transition: transform 0.3s ease, background 0.3s ease; }
   .ind-card:hover .ind-icon-badge { transform: scale(1.12) rotate(-5deg); background: var(--green-dark); }
   .ind-num { position: absolute; top: 12px; right: 12px; z-index: 4; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 800; color: #fff; letter-spacing: 1.5px; background: rgba(255,255,255,0.15); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.3); padding: 4px 10px; border-radius: 20px; }
-  /* Industry placeholder behind image */
   .ind-img-placeholder { position: absolute; inset: 0; z-index: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; animation: indPlaceholder 4s ease-in-out infinite; }
   @keyframes indPlaceholder { 0%,100% { background: linear-gradient(135deg, #ddf2e5, #b8e8c8); } 50% { background: linear-gradient(135deg, #c8ecda, #8fd4a8); } }
   .ind-img-placeholder i { font-size: 44px; color: var(--green); opacity: 0.4; }
@@ -289,21 +221,19 @@
   .ind-card:hover .ind-name { color: var(--green-dark); }
   .ind-desc { font-size: 13.5px; color: var(--text-muted); line-height: 1.7; margin-bottom: 12px; }
   .ind-pills { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px; }
-  .ind-pill { font-family: 'Montserrat', sans-serif; font-size: 10.5px; font-weight: 700; color: var(--green-dark); letter-spacing: 0.3px; background: var(--green-light); border: 1px solid rgba(46,158,79,0.2); padding: 3px 9px; border-radius: 20px; transition: background 0.2s, color 0.2s, transform 0.2s; }
-  .ind-card:hover .ind-pill { background: rgba(46,158,79,0.13); border-color: rgba(46,158,79,0.32); }
-  .ind-pill:hover { background: var(--green) !important; color: #fff !important; transform: translateY(-2px); }
-  .ind-cta { display: flex; align-items: center; justify-content: flex-end; padding-top: 12px; border-top: 1.5px solid var(--border); transition: border-color 0.25s; margin-top: auto; }
-  .ind-card:hover .ind-cta { border-color: rgba(46,158,79,0.25); }
+  .ind-pill { font-family: 'Montserrat', sans-serif; font-size: 10.5px; font-weight: 700; color: var(--green-dark); background: var(--green-light); border: 1px solid rgba(46,158,79,0.2); padding: 3px 9px; border-radius: 20px; transition: background 0.2s, color 0.2s, transform 0.2s; }
+  .ind-pill:hover { background: var(--green); color: #fff; transform: translateY(-2px); }
+  .ind-cta { display: flex; align-items: center; justify-content: flex-end; padding-top: 12px; border-top: 1.5px solid var(--border); margin-top: auto; }
   .ind-cta-contact { display: inline-flex; align-items: center; gap: 6px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: #fff; background: var(--navy); padding: 8px 16px; border-radius: 7px; text-decoration: none; transition: background 0.22s, transform 0.18s; }
   .ind-cta-contact:hover { background: var(--green); transform: translateY(-1px); }
-  .ind-stats-strip { margin-top: 60px; background: var(--navy); border-radius: 18px; padding: 36px 48px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; overflow: hidden; }
+  .ind-stats-strip { margin-top: 60px; background: var(--navy); border-radius: 18px; padding: 36px 48px; display: grid; grid-template-columns: repeat(4, 1fr); position: relative; overflow: hidden; }
   .ind-stats-strip::before { content: ''; position: absolute; top: -60px; left: 50%; transform: translateX(-50%); width: 500px; height: 200px; background: radial-gradient(ellipse, rgba(46,158,79,0.25) 0%, transparent 70%); pointer-events: none; }
   .ind-stat-item { text-align: center; padding: 0 24px; position: relative; z-index: 1; }
   .ind-stat-item + .ind-stat-item { border-left: 1px solid rgba(255,255,255,0.1); }
   .ind-stat-num { font-family: 'Montserrat', sans-serif; font-size: 44px; font-weight: 800; color: var(--green); line-height: 1; margin-bottom: 8px; }
   .ind-stat-label { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.55); letter-spacing: 2px; text-transform: uppercase; }
 
-  /* CONTACT FORM SECTION */
+  /* CONTACT FORM */
   .form-section { background: #fff; padding: 80px 0 88px; position: relative; overflow: hidden; }
   .form-section::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(46,158,79,0.07) 1.5px, transparent 1.5px); background-size: 36px 36px; pointer-events: none; z-index: 0; }
   .form-section-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1.6fr; gap: 64px; align-items: start; }
@@ -314,14 +244,42 @@
   .form-heading span { color: var(--green); }
   .form-subtext { font-size: 16px; color: var(--text-muted); line-height: 1.8; margin-bottom: 36px; }
   .form-info-cards { display: flex; flex-direction: column; gap: 14px; }
-  .form-info-card { display: flex; align-items: flex-start; gap: 14px; background: #f4f8f5; border: 1.5px solid var(--border); border-radius: 14px; padding: 18px 20px; transition: border-color 0.22s, background 0.22s, transform 0.22s; }
-  .form-info-card:hover { border-color: rgba(46,158,79,0.4); background: var(--green-light); transform: translateX(5px); }
-  .form-info-icon { width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0; background: linear-gradient(135deg, var(--green-light), #c2e8ce); display: flex; align-items: center; justify-content: center; transition: background 0.22s; }
-  .form-info-card:hover .form-info-icon { background: linear-gradient(135deg, #b2f0cb, #7dd4a0); }
-  .form-info-icon i { color: var(--green-dark); font-size: 17px; }
-  .form-info-text strong { display: block; font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 3px; text-transform: uppercase; letter-spacing: 0.5px; }
-  .form-info-text span, .form-info-text a { font-size: 13.5px; color: var(--text-muted); text-decoration: none; line-height: 1.6; display: block; }
-  .form-info-text a:hover { color: var(--green-dark); }
+
+  /* Interactive overlayed contact cards */
+  .form-info-card {
+    display: flex; align-items: flex-start; gap: 14px;
+    background: #f4f8f5; border: 1.5px solid var(--border);
+    border-radius: 14px; padding: 20px 22px;
+    position: relative; overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  }
+  .form-info-card::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, var(--green-dark), var(--green));
+    opacity: 0; transition: opacity 0.35s ease; z-index: 0;
+  }
+  .form-info-card:hover { border-color: var(--green); box-shadow: 0 12px 32px rgba(46,158,79,0.22); transform: translateY(-3px); }
+  .form-info-card:hover::before { opacity: 1; }
+  .form-info-card:hover .form-info-icon { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.35); }
+  .form-info-card:hover .form-info-icon i { color: #fff; }
+  .form-info-card:hover .form-info-text strong { color: #fff; }
+  .form-info-card:hover .form-info-text span,
+  .form-info-card:hover .form-info-text a { color: rgba(255,255,255,0.85); }
+  .form-info-icon {
+    width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
+    background: linear-gradient(135deg, var(--green-light), #c2e8ce);
+    border: 1.5px solid rgba(46,158,79,0.2);
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.3s, border-color 0.3s;
+    position: relative; z-index: 1;
+  }
+  .form-info-icon i { color: var(--green-dark); font-size: 18px; transition: color 0.3s; }
+  .form-info-text { position: relative; z-index: 1; }
+  .form-info-text strong { display: block; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s; }
+  .form-info-text span, .form-info-text a { font-size: 14px; color: var(--text-muted); text-decoration: none; line-height: 1.7; display: block; transition: color 0.3s; }
+  .form-info-text a:hover { text-decoration: underline; }
+
   .form-right { background: #fff; border: 1.5px solid var(--border); border-radius: 22px; box-shadow: 0 12px 48px rgba(13,43,78,0.1); overflow: hidden; position: relative; }
   .form-right::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--green-dark), var(--green), var(--green-dark)); z-index: 1; }
   .form-frame-header { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); padding: 22px 28px; display: flex; align-items: center; gap: 14px; }
@@ -330,52 +288,82 @@
   .form-frame-title { font-family: 'Montserrat', sans-serif; font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 3px; }
   .form-frame-sub { font-size: 12.5px; color: rgba(255,255,255,0.55); }
   .form-iframe-wrap { padding: 0; background: #fff; }
-  .form-iframe-wrap iframe { display: block; width: 100%; height: 620px; border: none; border-radius: 0; }
+  .form-iframe-wrap iframe { display: block; width: 100%; height: 620px; border: none; }
 
-  /* FOOTER */
-  .footer { background: #0a1f38; color: #cdd8e8; font-size: 14px; line-height: 1.7; padding-top: 0; }
+  /* ═══════════════ FOOTER ═══════════════ */
+  .footer { background: #07192d; color: #cdd8e8; font-size: 14px; line-height: 1.7; }
+
   .footer-top-band { background: linear-gradient(90deg, var(--green-dark), #1ca64b, var(--green-dark)); padding: 22px 24px; display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; }
-  .footer-top-band p { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 700; color: #fff; letter-spacing: 0.5px; }
+  .footer-top-band p { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 700; color: #fff; }
   .footer-top-band p span { color: #b8f5cf; }
-  .footer-cta-btn { background: #fff; color: var(--green-dark); font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; padding: 10px 26px; border-radius: 6px; text-decoration: none; letter-spacing: 0.4px; transition: background 0.2s, color 0.2s, transform 0.15s; white-space: nowrap; }
+  .footer-cta-btn { background: #fff; color: var(--green-dark); font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; padding: 10px 26px; border-radius: 6px; text-decoration: none; transition: background 0.2s, color 0.2s, transform 0.15s; white-space: nowrap; }
   .footer-cta-btn:hover { background: var(--navy); color: #fff; transform: translateY(-2px); }
-  .footer-main { max-width: 1200px; margin: 0 auto; padding: 60px 24px 40px; display: grid; grid-template-columns: 280px 1fr 1fr 1fr; gap: 40px; }
-  .footer-logo-wrap { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
-  .footer-logo-icon { width: 50px; height: 50px; border-radius: 10px; background: rgba(46,158,79,0.15); border: 1.5px solid rgba(46,158,79,0.3); display: flex; align-items: center; justify-content: center; }
-  .footer-logo-icon svg { width: 28px; height: 28px; }
-  .footer-logo-name { font-family: 'Montserrat', sans-serif; font-size: 19px; font-weight: 800; color: #fff; }
+
+  /* Main footer grid: logo | scientific | healthcare | quick links */
+  .footer-main { max-width: 1200px; margin: 0 auto; padding: 60px 24px 40px; display: grid; grid-template-columns: 260px 1fr 1fr 180px; gap: 40px; }
+
+  /* Logo column */
+  .footer-logo-col {}
+  .footer-logo-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+  .footer-logo-icon { width: 54px; height: 54px; border-radius: 10px; background: rgba(46,158,79,0.15); border: 1.5px solid rgba(46,158,79,0.3); display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
+  .footer-logo-icon img { width: 100%; height: 100%; object-fit: contain; }
+  .footer-logo-icon svg { width: 30px; height: 30px; }
+  .footer-logo-name { font-family: 'Montserrat', sans-serif; font-size: 21px; font-weight: 800; color: #fff; line-height: 1.1; }
   .footer-logo-name span { color: var(--green); }
-  .footer-logo-sub { font-size: 10px; color: #7a9bb5; letter-spacing: 1.8px; text-transform: uppercase; }
-  .footer-about p { color: #8aacca; font-size: 13.5px; line-height: 1.75; margin-bottom: 20px; }
-  .footer-tagline { display: inline-block; background: rgba(46,158,79,0.12); border-left: 3px solid var(--green); color: #a8d8b5; font-size: 12px; font-style: italic; padding: 8px 14px; border-radius: 0 6px 6px 0; margin-bottom: 22px; }
+  .footer-logo-sub { font-size: 11px; color: #7a9bb5; letter-spacing: 1.8px; text-transform: uppercase; }
+  .footer-about-text { color: #8aacca; font-size: 14px; line-height: 1.8; margin-bottom: 18px; }
+  .footer-tagline { display: inline-block; background: rgba(46,158,79,0.12); border-left: 3px solid var(--green); color: #a8d8b5; font-size: 13px; font-style: italic; padding: 9px 14px; border-radius: 0 6px 6px 0; margin-bottom: 22px; }
   .footer-socials { display: flex; gap: 8px; flex-wrap: wrap; }
-  .footer-socials a { width: 34px; height: 34px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; text-decoration: none; transition: transform 0.2s, filter 0.2s; }
+  .footer-socials a { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; text-decoration: none; transition: transform 0.2s, filter 0.2s; }
   .footer-socials a:hover { transform: translateY(-3px) scale(1.1); filter: brightness(1.2); }
-  .footer-socials a.fb { background: #1877f2; color: #fff; } .footer-socials a.ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%); color: #fff; } .footer-socials a.li { background: #0a66c2; color: #fff; } .footer-socials a.tw { background: #000; color: #fff; } .footer-socials a.yt { background: #ff0000; color: #fff; } .footer-socials a.wa { background: #25d366; color: #fff; } .footer-socials a.tg { background: #0088cc; color: #fff; } .footer-socials a.pt { background: #e60023; color: #fff; }
-  .footer-col h4 { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; color: #fff; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid rgba(46,158,79,0.35); display: flex; align-items: center; gap: 8px; }
-  .footer-col h4 i { color: var(--green); font-size: 13px; }
-  .footer-col h5 { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; color: #5fd98a; letter-spacing: 1.5px; text-transform: uppercase; margin: 16px 0 8px; }
-  .footer-col h5:first-of-type { margin-top: 0; }
+  .footer-socials a.fb { background: #1877f2; color: #fff; }
+  .footer-socials a.ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%); color: #fff; }
+  .footer-socials a.li { background: #0a66c2; color: #fff; }
+  .footer-socials a.tw { background: #000; color: #fff; }
+  .footer-socials a.yt { background: #ff0000; color: #fff; }
+  .footer-socials a.wa { background: #25d366; color: #fff; }
+  .footer-socials a.tg { background: #0088cc; color: #fff; }
+  .footer-socials a.pt { background: #e60023; color: #fff; }
+
+  /* Footer columns */
+  .footer-col h4 { font-family: 'Montserrat', sans-serif; font-size: 13.5px; font-weight: 700; color: #fff; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid rgba(46,158,79,0.35); display: flex; align-items: center; gap: 8px; }
+  .footer-col h4 i { color: var(--green); font-size: 14px; }
+  .footer-col h5 { font-family: 'Montserrat', sans-serif; font-size: 11.5px; font-weight: 700; color: #5fd98a; letter-spacing: 1.5px; text-transform: uppercase; margin: 18px 0 8px; padding-bottom: 5px; border-bottom: 1px solid rgba(46,158,79,0.15); }
   .footer-links { list-style: none; }
-  .footer-links li { margin-bottom: 2px; }
-  .footer-links li a { color: #8aacca; text-decoration: none; font-size: 13px; display: flex; align-items: flex-start; gap: 7px; padding: 3px 0; transition: color 0.2s, padding-left 0.2s; line-height: 1.5; }
-  .footer-links li a::before { content: '›'; color: var(--green); font-size: 15px; line-height: 1.3; flex-shrink: 0; font-weight: 700; }
-  .footer-links li a:hover { color: #5fd98a; padding-left: 4px; }
-  .footer-contact-grid { max-width: 1200px; margin: 0 auto; padding: 0 24px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-  .contact-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 18px 20px; display: flex; gap: 14px; align-items: flex-start; transition: border-color 0.2s, background 0.2s; }
-  .contact-card:hover { border-color: rgba(46,158,79,0.35); background: rgba(46,158,79,0.06); }
-  .contact-icon { width: 38px; height: 38px; border-radius: 8px; background: rgba(46,158,79,0.15); border: 1px solid rgba(46,158,79,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .contact-icon i { color: var(--green); font-size: 15px; }
-  .contact-info { flex: 1; min-width: 0; }
-  .contact-info strong { display: block; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
-  .contact-info span, .contact-info a { display: block; color: #8aacca; font-size: 12.5px; text-decoration: none; word-break: break-word; }
+  .footer-links li a { color: #8aacca; text-decoration: none; font-size: 14px; display: flex; align-items: flex-start; gap: 7px; padding: 3.5px 0; transition: color 0.2s, padding-left 0.2s; line-height: 1.5; }
+  .footer-links li a::before { content: '›'; color: var(--green); font-size: 16px; line-height: 1.3; flex-shrink: 0; font-weight: 700; }
+  .footer-links li a:hover { color: #5fd98a; padding-left: 5px; }
+
+  /* Contact cards grid */
+  .footer-contact-grid { max-width: 1200px; margin: 0 auto; padding: 0 24px 44px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .contact-card {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px; padding: 20px 22px; display: flex; gap: 14px; align-items: flex-start;
+    position: relative; overflow: hidden;
+    cursor: default;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  }
+  .contact-card::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(46,158,79,0.18), rgba(30,122,58,0.12));
+    opacity: 0; transition: opacity 0.35s ease; z-index: 0;
+  }
+  .contact-card:hover { border-color: rgba(46,158,79,0.45); box-shadow: 0 10px 30px rgba(46,158,79,0.15); transform: translateY(-4px); }
+  .contact-card:hover::before { opacity: 1; }
+  .contact-icon { width: 42px; height: 42px; border-radius: 10px; background: rgba(46,158,79,0.15); border: 1px solid rgba(46,158,79,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; z-index: 1; transition: background 0.3s; }
+  .contact-card:hover .contact-icon { background: rgba(46,158,79,0.3); }
+  .contact-icon i { color: var(--green); font-size: 16px; }
+  .contact-info { flex: 1; min-width: 0; position: relative; z-index: 1; }
+  .contact-info strong { display: block; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px; }
+  .contact-info span, .contact-info a { display: block; color: #8aacca; font-size: 13px; text-decoration: none; word-break: break-word; line-height: 1.6; }
   .contact-info a:hover { color: #5fd98a; }
+
   .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.07); margin: 0 24px; }
   .footer-bottom { max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-  .footer-bottom p { font-size: 12.5px; color: #4a6a88; }
+  .footer-bottom p { font-size: 13px; color: #4a6a88; }
   .footer-bottom p span { color: var(--green); }
   .footer-bottom-links { display: flex; gap: 20px; }
-  .footer-bottom-links a { font-size: 12px; color: #4a6a88; text-decoration: none; transition: color 0.2s; }
+  .footer-bottom-links a { font-size: 13px; color: #4a6a88; text-decoration: none; transition: color 0.2s; }
   .footer-bottom-links a:hover { color: #5fd98a; }
   .footer-motto { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; color: rgba(46,158,79,0.55); letter-spacing: 2px; text-transform: uppercase; }
 
@@ -384,7 +372,8 @@
     .about-inner { grid-template-columns: 1fr; gap: 40px; }
     .about-img-side { max-width: 600px; margin: 0 auto; padding-bottom: 210px; }
     .about-heading { font-size: 44px; }
-    .footer-main { grid-template-columns: 1fr 1fr; }
+    .footer-main { grid-template-columns: 1fr 1fr; gap: 36px; }
+    .footer-contact-grid { grid-template-columns: repeat(2, 1fr); }
     .ind-grid { grid-template-columns: repeat(2, 1fr); }
     .ind-stats-strip { grid-template-columns: repeat(2, 1fr); gap: 32px; }
     .ind-stat-item + .ind-stat-item { border-left: none; }
@@ -403,7 +392,6 @@
     .main-header { position: relative; }
     .dropdown-menu { position: static; opacity: 1; visibility: visible; pointer-events: all; transform: none; box-shadow: none; border: none; border-radius: 0; background: var(--green-light); padding: 4px 8px; display: none; min-width: unset; }
     .nav-dropdown.open .dropdown-menu { display: block; }
-    .dropdown-menu a { font-size: 13px; padding: 10px 12px; }
     .hero-slider { height: 340px; }
     .slide-title { font-size: 26px; }
     .slide-content { padding: 0 24px; }
@@ -414,24 +402,17 @@
     .about-heading { font-size: 32px; }
     .about-tagline-block p { font-size: 16px; }
     .about-desc { font-size: 16px; }
-    .about-stats { gap: 10px; }
-    .stat-num { font-size: 30px; }
-    .stat-label { font-size: 11px; }
     .about-img-accent { width: 160px; }
     .about-badge { width: 90px; height: 90px; }
     .about-badge .badge-year { font-size: 22px; }
-    .pillar-text strong { font-size: 15px; }
-    .pillar-text span { font-size: 14px; }
-    .about-btn-primary, .about-btn-outline { font-size: 15px; }
-    .footer-main { grid-template-columns: 1fr; gap: 32px; }
+    .footer-main { grid-template-columns: 1fr; gap: 28px; }
+    .footer-contact-grid { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; text-align: center; }
     .footer-top-band { flex-direction: column; text-align: center; gap: 14px; }
     .ind-grid { grid-template-columns: 1fr; }
     .ind-title { font-size: 30px; }
-    .ind-subtitle { font-size: 15px; }
     .ind-stats-strip { grid-template-columns: repeat(2, 1fr); padding: 28px 20px; }
     .industries-section { padding: 60px 0 68px; }
-    .ind-header { margin-bottom: 36px; }
     .form-section { padding: 52px 0 60px; }
     .form-heading { font-size: 28px; }
     .form-iframe-wrap iframe { height: 700px; }
@@ -488,7 +469,7 @@
   <div class="main-header-inner">
     <a href="#" class="logo-wrap">
       <div class="logo-img-box">
-        <img src="all dummy images/logo1.jpeg" alt="Chemslife Groups Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+        <img src="all dummy images/logo1.jpeg" alt="Chemslife Groups Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
         <svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg" width="40" height="40" style="display:none">
           <path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4 Z" fill="#2e9e4f" opacity="0.13" stroke="#2e9e4f" stroke-width="2.5" stroke-linejoin="round"/>
           <path d="M23 38 Q30 32 38 40 L42 52 Q44 57 40 59 L20 59 Q16 57 18 52 Z" fill="#2e9e4f" opacity="0.7"/>
@@ -501,16 +482,11 @@
         <span class="logo-tagline">Groups</span>
       </div>
     </a>
-
     <nav id="main-nav">
       <a href="#" class="active">Home</a>
       <a href="About us.html">About Us</a>
-
-      <!-- PRODUCTS DROPDOWN -->
       <div class="nav-dropdown" id="productsDropdown">
-        <a href="#" id="productsToggle">
-          Products <i class="fas fa-chevron-down dd-arrow"></i>
-        </a>
+        <a href="#" id="productsToggle">Products <i class="fas fa-chevron-down dd-arrow"></i></a>
         <div class="dropdown-menu">
           <a href="scientific-industrial-solutions.html">
             <div class="dd-icon"><i class="fas fa-flask"></i></div>
@@ -529,12 +505,9 @@
           </a>
         </div>
       </div>
-
       <a href="contact us .html" class="btn-contact">Contact Us</a>
     </nav>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -586,12 +559,12 @@
     <div class="dot" data-index="1"></div>
     <div class="dot" data-index="2"></div>
   </div>
-  <div class="slider-counter"><strong id="currentSlide">1</strong> / 3</div>
+  <div class="slide-counter"><strong id="currentSlide">1</strong> / 3</div>
   <div class="slider-progress" id="sliderProgress"></div>
 </section>
 
 <!-- ABOUT US SECTION -->
-<section class="about-section" id="about-us" aria-label="About Chemslife Groups">
+<section class="about-section" id="about-us">
   <div class="about-inner">
     <div class="about-img-side reveal from-left">
       <div class="about-img-ring"></div>
@@ -615,11 +588,7 @@
       <div class="about-tagline-block reveal">
         <p>"Building Chemistry for a Better Tomorrow — Everything is Science, Science for Nation."</p>
       </div>
-      <p class="about-desc reveal">
-        Founded in 2018 by <strong>Mr. Sivasankar Karthikeyan</strong>, Chemslife Groups is a dynamic, multi-sector organization
-        committed to advancing industries and improving lives. We deliver reliable scientific,
-        industrial, and healthcare solutions through deep domain expertise, agile execution, and an unwavering focus on quality.
-      </p>
+      <p class="about-desc reveal">Founded in 2018 by <strong>Mr. Sivasankar Karthikeyan</strong>, Chemslife Groups is a dynamic, multi-sector organization committed to advancing industries and improving lives. We deliver reliable scientific, industrial, and healthcare solutions through deep domain expertise, agile execution, and an unwavering focus on quality.</p>
       <div class="about-stats reveal-stagger">
         <div class="stat-box"><div class="stat-num" data-target="7">0+</div><div class="stat-label">Years of Service</div></div>
         <div class="stat-box"><div class="stat-num" data-target="6">0+</div><div class="stat-label">Business Divisions</div></div>
@@ -652,7 +621,7 @@
 </section>
 
 <!-- INDUSTRIES WE SERVE -->
-<section class="industries-section" id="industries" aria-label="Industries We Serve">
+<section class="industries-section" id="industries">
   <div class="ind-inner">
     <div class="ind-header reveal">
       <div class="ind-eyebrow">Our Expertise</div>
@@ -664,8 +633,7 @@
         <div class="ind-img-wrap">
           <div class="ind-img-placeholder"><i class="fas fa-seedling"></i><span>Industry Image</span></div>
           <img src="Real photos/Agriculture.png" alt="Agriculture & Horticulture"/>
-          <div class="ind-icon-badge">🌱</div>
-          <span class="ind-num">01</span>
+          <div class="ind-icon-badge">🌱</div><span class="ind-num">01</span>
         </div>
         <div class="ind-body">
           <h3 class="ind-name">Agriculture &amp; Horticulture</h3>
@@ -678,8 +646,7 @@
         <div class="ind-img-wrap">
           <div class="ind-img-placeholder"><i class="fas fa-plane"></i><span>Industry Image</span></div>
           <img src="Real photos/Aerospace.png" alt="Aerospace & Aeronautics"/>
-          <div class="ind-icon-badge">✈️</div>
-          <span class="ind-num">02</span>
+          <div class="ind-icon-badge">✈️</div><span class="ind-num">02</span>
         </div>
         <div class="ind-body">
           <h3 class="ind-name">Aerospace &amp; Aeronautics</h3>
@@ -692,8 +659,7 @@
         <div class="ind-img-wrap">
           <div class="ind-img-placeholder"><i class="fas fa-dna"></i><span>Industry Image</span></div>
           <img src="Real photos/Healthcare.png" alt="Healthcare & Life Sciences"/>
-          <div class="ind-icon-badge">🧬</div>
-          <span class="ind-num">03</span>
+          <div class="ind-icon-badge">🧬</div><span class="ind-num">03</span>
         </div>
         <div class="ind-body">
           <h3 class="ind-name">Healthcare &amp; Life Sciences</h3>
@@ -706,8 +672,7 @@
         <div class="ind-img-wrap">
           <div class="ind-img-placeholder"><i class="fas fa-flask"></i><span>Industry Image</span></div>
           <img src="all dummy images/image7.jpeg" alt="Chemical & Process Industries"/>
-          <div class="ind-icon-badge">⚗️</div>
-          <span class="ind-num">04</span>
+          <div class="ind-icon-badge">⚗️</div><span class="ind-num">04</span>
         </div>
         <div class="ind-body">
           <h3 class="ind-name">Chemical &amp; Process Industries</h3>
@@ -720,8 +685,7 @@
         <div class="ind-img-wrap">
           <div class="ind-img-placeholder"><i class="fas fa-hard-hat"></i><span>Industry Image</span></div>
           <img src="all dummy images/image8.jpeg" alt="Construction & Heavy Engineering"/>
-          <div class="ind-icon-badge">🏗️</div>
-          <span class="ind-num">05</span>
+          <div class="ind-icon-badge">🏗️</div><span class="ind-num">05</span>
         </div>
         <div class="ind-body">
           <h3 class="ind-name">Construction &amp; Heavy Engineering</h3>
@@ -734,8 +698,7 @@
         <div class="ind-img-wrap">
           <div class="ind-img-placeholder"><i class="fas fa-industry"></i><span>Industry Image</span></div>
           <img src="all dummy images/image7.jpeg" alt="Manufacturing & Industrial Processing"/>
-          <div class="ind-icon-badge">🏭</div>
-          <span class="ind-num">06</span>
+          <div class="ind-icon-badge">🏭</div><span class="ind-num">06</span>
         </div>
         <div class="ind-body">
           <h3 class="ind-name">Manufacturing &amp; Processing</h3>
@@ -748,8 +711,7 @@
         <div class="ind-img-wrap">
           <div class="ind-img-placeholder"><i class="fas fa-oil-well"></i><span>Industry Image</span></div>
           <img src="all dummy images/image9.jpeg" alt="Energy & Refinery"/>
-          <div class="ind-icon-badge">🛢️</div>
-          <span class="ind-num">07</span>
+          <div class="ind-icon-badge">🛢️</div><span class="ind-num">07</span>
         </div>
         <div class="ind-body">
           <h3 class="ind-name">Energy &amp; Refinery</h3>
@@ -762,8 +724,7 @@
         <div class="ind-img-wrap">
           <div class="ind-img-placeholder"><i class="fas fa-utensils"></i><span>Industry Image</span></div>
           <img src="all dummy images/image 10.jpeg" alt="Food & Consumer Industries"/>
-          <div class="ind-icon-badge">🍽️</div>
-          <span class="ind-num">08</span>
+          <div class="ind-icon-badge">🍽️</div><span class="ind-num">08</span>
         </div>
         <div class="ind-body">
           <h3 class="ind-name">Food &amp; Consumer Industries</h3>
@@ -776,8 +737,7 @@
         <div class="ind-img-wrap">
           <div class="ind-img-placeholder"><i class="fas fa-microscope"></i><span>Industry Image</span></div>
           <img src="all dummy images/image8.jpeg" alt="Research & Education"/>
-          <div class="ind-icon-badge">🔬</div>
-          <span class="ind-num">09</span>
+          <div class="ind-icon-badge">🔬</div><span class="ind-num">09</span>
         </div>
         <div class="ind-body">
           <h3 class="ind-name">Research &amp; Education</h3>
@@ -787,7 +747,6 @@
         </div>
       </div>
     </div>
-
     <div class="ind-stats-strip reveal">
       <div class="ind-stat-item"><div class="ind-stat-num" data-target-ind="9">0+</div><div class="ind-stat-label">Industry Verticals</div></div>
       <div class="ind-stat-item"><div class="ind-stat-num" data-target-ind="500">0+</div><div class="ind-stat-label">Clients Served</div></div>
@@ -798,7 +757,7 @@
 </section>
 
 <!-- CONTACT FORM SECTION -->
-<section class="form-section" id="contact-form" aria-label="Connect With Us">
+<section class="form-section" id="contact-form">
   <div class="form-section-inner">
     <div class="form-left reveal from-left">
       <div class="form-eyebrow">Get In Touch</div>
@@ -806,20 +765,36 @@
       <p class="form-subtext">Have a requirement, a query, or just want to explore what we can offer? Fill in the form and our team will get back to you promptly.</p>
       <div class="form-info-cards">
         <div class="form-info-card">
-          <div class="form-info-icon"><i class="fas fa-map-marker-alt"></i></div>
-          <div class="form-info-text"><strong>Corporate Office</strong><span>Hosur, Tamil Nadu, India</span></div>
-        </div>
-        <div class="form-info-card">
           <div class="form-info-icon"><i class="fas fa-phone-alt"></i></div>
-          <div class="form-info-text"><strong>Sales &amp; Enquiries</strong><a href="tel:+918870496918">+91 88704 96918</a><a href="tel:+918870244418">+91 88702 44418</a></div>
+          <div class="form-info-text">
+            <strong>Sales</strong>
+            <span>+91 88704 96918</span>
+            <a href="mailto:sales@chemslife.in">sales@chemslife.in</a>
+          </div>
         </div>
         <div class="form-info-card">
-          <div class="form-info-icon"><i class="fas fa-envelope"></i></div>
-          <div class="form-info-text"><strong>Email Us</strong><a href="mailto:sales@chemslife.in">sales@chemslife.in</a><a href="mailto:admin@chemslife.in">admin@chemslife.in</a></div>
+          <div class="form-info-icon"><i class="fas fa-headset"></i></div>
+          <div class="form-info-text">
+            <strong>Admin</strong>
+            <span>+91 88702 44418</span>
+            <a href="mailto:admin@chemslife.in">admin@chemslife.in</a>
+          </div>
         </div>
         <div class="form-info-card">
-          <div class="form-info-icon"><i class="fas fa-clock"></i></div>
-          <div class="form-info-text"><strong>Business Hours</strong><span>Mon – Sat: 9:00 AM – 6:00 PM</span></div>
+          <div class="form-info-icon"><i class="fas fa-shopping-bag"></i></div>
+          <div class="form-info-text">
+            <strong>Chemscart</strong>
+            <span>+91 88702 44418</span>
+            <a href="mailto:admin@chemscart.in">admin@chemscart.in</a>
+          </div>
+        </div>
+        <div class="form-info-card">
+          <div class="form-info-icon"><i class="fas fa-truck"></i></div>
+          <div class="form-info-text">
+            <strong>Dispatch</strong>
+            <span>+91 88700 36018</span>
+            <a href="mailto:dispatch@chemslife.in">dispatch@chemslife.in</a>
+          </div>
         </div>
       </div>
     </div>
@@ -832,32 +807,39 @@
         </div>
       </div>
       <div class="form-iframe-wrap">
-        <iframe aria-label='Connect with us' frameborder="0" src='https://forms.zohopublic.in/chemslife1/form/Connectwithus/formperma/JIFTljA_O143RfI4LldNJaodQeftye1drTMj5MGexi4' title="Connect with Chemslife Groups" loading="lazy"></iframe>
+        <iframe aria-label="Connect with us" frameborder="0" src="https://forms.zohopublic.in/chemslife1/form/Connectwithus/formperma/JIFTljA_O143RfI4LldNJaodQeftye1drTMj5MGexi4" title="Connect with Chemslife Groups" loading="lazy"></iframe>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ═══════════════ FOOTER ═══════════════ -->
 <footer class="footer">
   <div class="footer-top-band">
     <p>Ready to partner with us? <span>Explore our full range of scientific, industrial &amp; healthcare solutions.</span></p>
     <a href="#contact-form" class="footer-cta-btn"><i class="fas fa-paper-plane" style="margin-right:7px"></i>Get in Touch</a>
   </div>
+
   <div class="footer-main">
-    <div class="footer-about">
+
+    <!-- Logo & About -->
+    <div class="footer-logo-col">
       <div class="footer-logo-wrap">
         <div class="footer-logo-icon">
-          <svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg">
+          <img src="all dummy images/logo1.jpeg" alt="Chemslife Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+          <svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg" style="display:none">
             <path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4 Z" fill="#2e9e4f" opacity="0.2" stroke="#2e9e4f" stroke-width="2.5" stroke-linejoin="round"/>
             <path d="M23 38 Q30 32 38 40 L42 52 Q44 57 40 59 L20 59 Q16 57 18 52 Z" fill="#2e9e4f" opacity="0.8"/>
             <rect x="21" y="0" width="18" height="6" rx="3" fill="#cdd8e8"/>
             <path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4" fill="none" stroke="#cdd8e8" stroke-width="2.5" stroke-linejoin="round"/>
           </svg>
         </div>
-        <div><div class="footer-logo-name">CHEMS<span>LIFE</span></div><div class="footer-logo-sub">Groups</div></div>
+        <div>
+          <div class="footer-logo-name">CHEMS<span>LIFE</span></div>
+          <div class="footer-logo-sub">Groups</div>
+        </div>
       </div>
-      <p>A multi-sector organization delivering reliable scientific, industrial, and healthcare solutions since 2018. Founded by Mr. Sivasankar Karthikeyan.</p>
+      <p class="footer-about-text">A multi-sector organization delivering reliable scientific, industrial, and healthcare solutions since 2018. Founded by Mr. Sivasankar Karthikeyan.</p>
       <div class="footer-tagline">"Building Chemistry for a Better Tomorrow"</div>
       <div class="footer-socials">
         <a href="#" class="fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -870,87 +852,136 @@
         <a href="#" class="pt" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
       </div>
     </div>
+
+    <!-- Scientific & Industrial Solutions -->
     <div class="footer-col">
-      <h4><i class="fas fa-flask"></i> Scientific &amp; Industrial</h4>
+      <h4><i class="fas fa-flask"></i> Scientific &amp; Industrial Solutions</h4>
+
       <h5>Laboratory Products</h5>
       <ul class="footer-links">
-        <li><a href="#">Laboratory Chemicals</a></li><li><a href="#">Laboratory Instruments</a></li>
-        <li><a href="#">Laboratory Equipment</a></li><li><a href="#">Glassware &amp; Plasticware</a></li>
-        <li><a href="#">Lab Furniture &amp; Safety Kits</a></li><li><a href="#">Lab Test Kits &amp; Filtration</a></li>
+        <li><a href="#">Laboratory Chemicals</a></li>
+        <li><a href="#">Laboratory Instruments</a></li>
+        <li><a href="#">Laboratory Equipment</a></li>
+        <li><a href="#">Glassware &amp; Plasticware</a></li>
+        <li><a href="#">Lab Furniture &amp; Safety Kits</a></li>
+        <li><a href="#">Lab Test Kits &amp; Filtration</a></li>
       </ul>
-      <h5>Chemical Products</h5>
+
+      <h5>Water Treatment Products</h5>
       <ul class="footer-links">
-        <li><a href="#">Acids &amp; Solvents</a></li><li><a href="#">Agro &amp; Bio Chemicals</a></li>
-        <li><a href="#">Boiler &amp; Cooling Tower Chemicals</a></li><li><a href="#">Construction &amp; Polymer Chemicals</a></li>
-        <li><a href="#">Dyes, Pigments &amp; Fragrances</a></li><li><a href="#">Speciality &amp; USP Grade Chemicals</a></li>
+        <li><a href="#">Filtration &amp; Membrane Systems</a></li>
+        <li><a href="#">Ion Exchange Resins</a></li>
+        <li><a href="#">Monitoring &amp; Testing Products</a></li>
+        <li><a href="#">Wastewater Treatment</a></li>
       </ul>
-      <h5>Water Treatment</h5>
+
+      <h5>Homecare &amp; Cleaning Products</h5>
       <ul class="footer-links">
-        <li><a href="#">Filtration &amp; Membrane Systems</a></li><li><a href="#">Ion Exchange Resins</a></li>
-        <li><a href="#">Monitoring &amp; Testing Products</a></li><li><a href="#">Wastewater Treatment</a></li>
-      </ul>
-      <h5>Homecare &amp; Facility</h5>
-      <ul class="footer-links">
-        <li><a href="#">Cleaning &amp; Disinfection Agents</a></li><li><a href="#">Detergents &amp; Laundry</a></li>
-        <li><a href="#">Pest Control Products</a></li><li><a href="#">Housekeeping Tools</a></li>
+        <li><a href="#">Cleaning &amp; Disinfection Agents</a></li>
+        <li><a href="#">Detergents &amp; Laundry</a></li>
+        <li><a href="#">Pest Control Products</a></li>
+        <li><a href="#">Housekeeping Tools</a></li>
       </ul>
     </div>
+
+    <!-- Integrated Healthcare Solutions -->
     <div class="footer-col">
-      <h4><i class="fas fa-heartbeat"></i> Healthcare Solutions</h4>
-      <h5>Pharmaceutical</h5>
+      <h4><i class="fas fa-heartbeat"></i> Integrated Healthcare Solutions</h4>
+
+      <h5>Pharmaceutical Products</h5>
       <ul class="footer-links">
-        <li><a href="#">Analgesics &amp; Antipyretics</a></li><li><a href="#">Antibiotics &amp; Antimicrobials</a></li>
-        <li><a href="#">Cardiovascular Drugs</a></li><li><a href="#">Respiratory &amp; GI Drugs</a></li>
-        <li><a href="#">Vitamins &amp; Nutritional Supplements</a></li><li><a href="#">Oncology &amp; Vaccines</a></li>
+        <li><a href="#">Analgesics &amp; Antipyretics</a></li>
+        <li><a href="#">Antibiotics &amp; Antimicrobials</a></li>
+        <li><a href="#">Cardiovascular Drugs</a></li>
+        <li><a href="#">Vitamins &amp; Supplements</a></li>
       </ul>
+
       <h5>Surgical Supplies</h5>
       <ul class="footer-links">
-        <li><a href="#">Cutting &amp; Dissecting Instruments</a></li><li><a href="#">Grasping &amp; Retracting Instruments</a></li>
-        <li><a href="#">Suturing &amp; Stapling Instruments</a></li><li><a href="#">Specialty Surgical Sets</a></li>
+        <li><a href="#">Surgical Instruments</a></li>
+        <li><a href="#">Specialty Surgical Sets</a></li>
+        <li><a href="#">Suturing &amp; Stapling</a></li>
       </ul>
-      <h5>Diagnostic Products</h5>
+
+      <h5>Hospital Consumables &amp; Medical Devices</h5>
       <ul class="footer-links">
-        <li><a href="#">Hematology Products</a></li><li><a href="#">Immunology &amp; Serology</a></li>
-        <li><a href="#">Molecular Diagnostics</a></li><li><a href="#">Point-of-Care (POC) Diagnostics</a></li>
-        <li><a href="#">Clinical Chemistry Instruments</a></li>
+        <li><a href="#">Hospital Consumables</a></li>
+        <li><a href="#">Medical Devices in Hospitals</a></li>
       </ul>
-      <h5>Safety &amp; Disposables</h5>
+
+      <h5>Diagnostic Products &amp; Instruments</h5>
       <ul class="footer-links">
-        <li><a href="#">Personal Protective Equipment (PPE)</a></li><li><a href="#">Respiratory &amp; Fire Safety</a></li>
-        <li><a href="#">Medical &amp; Biological Disposables</a></li><li><a href="#">Waste Management Disposables</a></li>
+        <li><a href="#">Diagnostic Instruments &amp; Consumables</a></li>
+        <li><a href="#">Hematology &amp; Immunology</a></li>
+        <li><a href="#">Molecular &amp; POC Diagnostics</a></li>
+      </ul>
+
+      <h5>Disposables &amp; Safety Products</h5>
+      <ul class="footer-links">
+        <li><a href="#">Disposables Products</a></li>
+        <li><a href="#">Safety Products &amp; PPE</a></li>
+        <li><a href="#">Waste Management Disposables</a></li>
       </ul>
     </div>
+
+    <!-- Quick Links -->
     <div class="footer-col">
       <h4><i class="fas fa-link"></i> Quick Links</h4>
       <ul class="footer-links">
-        <li><a href="#">Home</a></li><li><a href="#">About Us</a></li><li><a href="#">Our Story</a></li>
-        <li><a href="#">Products</a></li><li><a href="#">Applications</a></li>
-        <li><a href="#">E-Commerce Store (Chemscart)</a></li><li><a href="#">Quality Policy</a></li>
-        <li><a href="#">Safety Policy</a></li><li><a href="#">Contact Us</a></li><li><a href="#">Enquiry Form</a></li>
-      </ul>
-      <h5>Our Divisions</h5>
-      <ul class="footer-links">
-        <li><a href="#">Scientific &amp; Industrial Division</a></li><li><a href="#">Healthcare Division</a></li>
-        <li><a href="#">Chemscart – E-Commerce</a></li><li><a href="#">Chemsclean – Facility Services</a></li>
-        <li><a href="#">Transport &amp; Logistics</a></li><li><a href="#">Tax &amp; Financial Services</a></li>
-      </ul>
-      <h5>Our Locations</h5>
-      <ul class="footer-links">
-        <li><a href="#">Corporate Office – Hosur, TN</a></li><li><a href="#">Healthcare Division – Hosur, TN</a></li>
-        <li><a href="#">Scientific Division – Krishnagiri, TN</a></li><li><a href="#">Registered Office – Thiruvarur, TN</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="About us.html">About Us</a></li>
+        <li><a href="scientific-industrial-solutions.html">Scientific &amp; Industrial</a></li>
+        <li><a href="#">Healthcare Solutions</a></li>
+        <li><a href="contact us .html">Contact Us</a></li>
       </ul>
     </div>
+
   </div>
+
+  <!-- Contact Cards -->
   <div class="footer-contact-grid">
-    <div class="contact-card"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><div class="contact-info"><strong>Sales</strong><span>+91 88704 96918</span><a href="mailto:sales@chemslife.in">sales@chemslife.in</a></div></div>
-    <div class="contact-card"><div class="contact-icon"><i class="fas fa-headset"></i></div><div class="contact-info"><strong>Admin</strong><span>+91 88702 44418 / 88702 66618</span><a href="mailto:admin@chemslife.in">admin@chemslife.in</a></div></div>
-    <div class="contact-card"><div class="contact-icon"><i class="fas fa-shopping-bag"></i></div><div class="contact-info"><strong>Chemscart (E-Commerce)</strong><span>+91 88702 44418</span><a href="mailto:admin@chemscart.in">admin@chemscart.in</a></div></div>
-    <div class="contact-card"><div class="contact-icon"><i class="fas fa-truck"></i></div><div class="contact-info"><strong>Dispatch</strong><span>+91 88700 36018</span><a href="mailto:dispatch@chemslife.in">dispatch@chemslife.in</a></div></div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+      <div class="contact-info">
+        <strong>Sales</strong>
+        <span>+91 88704 96918</span>
+        <a href="mailto:sales@chemslife.in">sales@chemslife.in</a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-headset"></i></div>
+      <div class="contact-info">
+        <strong>Admin</strong>
+        <span>+91 88702 44418</span>
+        <a href="mailto:admin@chemslife.in">admin@chemslife.in</a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-shopping-bag"></i></div>
+      <div class="contact-info">
+        <strong>Chemscart</strong>
+        <span>+91 88702 44418</span>
+        <a href="mailto:admin@chemscart.in">admin@chemscart.in</a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-truck"></i></div>
+      <div class="contact-info">
+        <strong>Dispatch</strong>
+        <span>+91 88700 36018</span>
+        <a href="mailto:dispatch@chemslife.in">dispatch@chemslife.in</a>
+      </div>
+    </div>
   </div>
+
   <hr class="footer-divider"/>
   <div class="footer-bottom">
     <p>&copy; 2025 <span>Chemslife Groups</span>. All rights reserved. | Founded by Mr. Sivasankar Karthikeyan.</p>
-    <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Sitemap</a></div>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Sitemap</a>
+    </div>
     <div class="footer-motto">Everything is Science &nbsp;&#9670;&nbsp; Science for Nation</div>
   </div>
 </footer>
@@ -961,46 +992,28 @@
   const nav = document.getElementById('main-nav');
   hamburger.addEventListener('click', () => nav.classList.toggle('open'));
 
-  // ── Mobile products dropdown toggle
+  // ── Mobile dropdown
   const productsDropdown = document.getElementById('productsDropdown');
   const productsToggle = document.getElementById('productsToggle');
   productsToggle.addEventListener('click', (e) => {
     if (window.innerWidth <= 768) { e.preventDefault(); productsDropdown.classList.toggle('open'); }
   });
 
-  // ── Nav active state
-  document.querySelectorAll('nav > a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.querySelectorAll('nav > a').forEach(l => l.classList.remove('active'));
-      if (!link.classList.contains('btn-contact')) link.classList.add('active');
-      nav.classList.remove('open');
-    });
-  });
-
-  // ── Close nav on outside click
+  // ── Close nav outside click
   document.addEventListener('click', (e) => {
     if (!nav.contains(e.target) && !hamburger.contains(e.target)) nav.classList.remove('open');
   });
 
-  // ── IMAGE LOAD HANDLER
-  // When an image loads successfully, hide its sibling placeholder.
-  // When it errors, keep placeholder visible (img stays hidden by z-index).
-  document.querySelectorAll(
-    '.about-img-main img, .about-img-accent img, .ind-img-wrap img, .slide-img-wrap img'
-  ).forEach(img => {
+  // ── IMAGE LOAD HANDLER: hide placeholder when real image loads
+  document.querySelectorAll('.about-img-main img, .about-img-accent img, .ind-img-wrap img, .slide-img-wrap img').forEach(img => {
     function onLoad() {
-      // Find sibling placeholder in same parent and hide it
       const ph = img.previousElementSibling;
       if (ph && (ph.classList.contains('img-placeholder') || ph.classList.contains('ind-img-placeholder') || ph.classList.contains('slide-ph'))) {
         ph.style.display = 'none';
       }
     }
-    if (img.complete && img.naturalWidth > 0) {
-      onLoad();
-    } else {
-      img.addEventListener('load', onLoad);
-      // On error: image stays invisible via z-index; placeholder stays visible — no action needed
-    }
+    if (img.complete && img.naturalWidth > 0) { onLoad(); }
+    else { img.addEventListener('load', onLoad); }
   });
 
   // ── Slider
@@ -1038,73 +1051,63 @@
   // ── Scroll reveals
   const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
   function checkReveal() {
-    const windowH = window.innerHeight;
-    revealEls.forEach(el => { if (el.getBoundingClientRect().top < windowH - 80) el.classList.add('visible'); });
+    const wh = window.innerHeight;
+    revealEls.forEach(el => { if (el.getBoundingClientRect().top < wh - 80) el.classList.add('visible'); });
   }
   let ticking = false;
-  window.addEventListener('scroll', () => { if (!ticking) { window.requestAnimationFrame(() => { checkReveal(); ticking = false; }); ticking = true; } });
+  window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(() => { checkReveal(); ticking = false; }); ticking = true; } });
   checkReveal();
 
   // ── About images animation
   const imgMain = document.getElementById('aboutImgMain');
   const imgAccent = document.getElementById('aboutImgAccent');
   const imgBadge = document.getElementById('aboutBadge');
-  const imgObserver = new IntersectionObserver(entries => {
+  new IntersectionObserver(entries => {
     if (entries[0].isIntersecting) {
-      setTimeout(() => { if (imgMain) imgMain.classList.add('img-visible'); }, 100);
-      setTimeout(() => { if (imgAccent) imgAccent.classList.add('img-visible'); }, 380);
-      setTimeout(() => { if (imgBadge) imgBadge.classList.add('img-visible'); }, 620);
-      imgObserver.disconnect();
+      setTimeout(() => { imgMain && imgMain.classList.add('img-visible'); }, 100);
+      setTimeout(() => { imgAccent && imgAccent.classList.add('img-visible'); }, 380);
+      setTimeout(() => { imgBadge && imgBadge.classList.add('img-visible'); }, 620);
     }
-  }, { threshold: 0.2 });
-  if (imgMain) imgObserver.observe(imgMain.closest('.about-img-side') || imgMain);
+  }, { threshold: 0.2 }).observe(imgMain ? (imgMain.closest('.about-img-side') || imgMain) : document.body);
 
   // ── About counters
   function animateCounter(el, target, suffix) {
-    let start = 0; const duration = 1400; const step = Math.ceil(target / (duration / 16));
-    const timer = setInterval(() => { start += step; if (start >= target) { start = target; clearInterval(timer); } el.textContent = start + suffix; }, 16);
+    let s = 0; const step = Math.ceil(target / (1400 / 16));
+    const t = setInterval(() => { s += step; if (s >= target) { s = target; clearInterval(t); } el.textContent = s + suffix; }, 16);
   }
-  const statsSection = document.querySelector('.about-stats');
   let countersRun = false;
-  const statsObserver = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting && !countersRun) {
-      countersRun = true;
-      document.querySelectorAll('.stat-num').forEach(el => animateCounter(el, parseInt(el.dataset.target), '+'));
-    }
-  }, { threshold: 0.4 });
-  if (statsSection) statsObserver.observe(statsSection);
+  const statsSection = document.querySelector('.about-stats');
+  if (statsSection) {
+    new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !countersRun) {
+        countersRun = true;
+        document.querySelectorAll('.stat-num').forEach(el => animateCounter(el, parseInt(el.dataset.target), '+'));
+      }
+    }, { threshold: 0.4 }).observe(statsSection);
+  }
 
   // ── Industry cards
   const indCards = document.querySelectorAll('.ind-card');
-  const indCardObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) { entry.target.classList.add('ic-visible'); indCardObserver.unobserve(entry.target); }
-    });
+  const indCardObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('ic-visible'); indCardObs.unobserve(e.target); } });
   }, { threshold: 0.1 });
-  indCards.forEach((card, i) => {
-    card.style.transitionDelay = (i % 3) * 0.1 + 's';
-    indCardObserver.observe(card);
-  });
+  indCards.forEach((c, i) => { c.style.transitionDelay = (i % 3) * 0.1 + 's'; indCardObs.observe(c); });
 
   // ── Industry stats counter
-  const indStrip = document.querySelector('.ind-stats-strip');
   let indCountersRun = false;
-  function animateIndCounter(el, target) {
-    let start = 0; const duration = target >= 100 ? 1800 : 1200;
-    const step = Math.ceil(target / (duration / 16));
-    const timer = setInterval(() => {
-      start += step;
-      if (start >= target) { start = target; clearInterval(timer); }
-      el.textContent = start + '+';
-    }, 16);
+  const indStrip = document.querySelector('.ind-stats-strip');
+  if (indStrip) {
+    new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !indCountersRun) {
+        indCountersRun = true;
+        document.querySelectorAll('[data-target-ind]').forEach(el => {
+          const target = parseInt(el.dataset.targetInd);
+          let s = 0; const dur = target >= 100 ? 1800 : 1200; const step = Math.ceil(target / (dur / 16));
+          const t = setInterval(() => { s += step; if (s >= target) { s = target; clearInterval(t); } el.textContent = s + '+'; }, 16);
+        });
+      }
+    }, { threshold: 0.4 }).observe(indStrip);
   }
-  const indStatsObserver = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting && !indCountersRun) {
-      indCountersRun = true;
-      document.querySelectorAll('[data-target-ind]').forEach(el => animateIndCounter(el, parseInt(el.dataset.targetInd)));
-    }
-  }, { threshold: 0.4 });
-  if (indStrip) indStatsObserver.observe(indStrip);
 </script>
 </body>
 </html>

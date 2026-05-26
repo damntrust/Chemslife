@@ -113,7 +113,6 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .sh-badge:hover{border-color:rgba(46,158,79,.5);background:rgba(46,158,79,.1)}
 .sh-badge i{color:var(--green-mid);font-size:16px}
 .sh-badge span{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:rgba(255,255,255,.85)}
-/* Right visual */
 .sh-visual-wrap{position:relative;display:flex;align-items:center;justify-content:center;height:380px}
 .sh-vis-bg{position:absolute;inset:0;border-radius:24px;background:linear-gradient(135deg,rgba(46,158,79,.08),rgba(13,43,78,.3));border:1px solid rgba(46,158,79,.15);backdrop-filter:blur(12px)}
 .sh-vis-ring{position:absolute;border-radius:50%;border:1.5px dashed rgba(95,217,138,.18);animation:visRing linear infinite}
@@ -188,7 +187,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .sec-group-title span{color:var(--green)}
 .sec-group-count{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:var(--text-muted);background:var(--bg);border:1.5px solid var(--border);padding:5px 14px;border-radius:20px;margin-left:auto;white-space:nowrap}
 
-/* CARD GRID — 4 col for chemicals, 3 col for lab/water/homecare */
+/* CARD GRID */
 .prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 .prod-grid.g3{grid-template-columns:repeat(3,1fr)}
 
@@ -220,8 +219,6 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .pc-btn:hover i{transform:translateX(3px)}
 .pc-call{display:inline-flex;align-items:center;gap:5px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;color:var(--text-muted);text-decoration:none;transition:color .2s}
 .pc-call:hover{color:var(--green-dark)}
-
-/* Larger card variant for 3-col grids */
 .g3 .pc-img{height:200px}
 .g3 .pc-body{padding:20px 20px 16px}
 .g3 .pc-name{font-size:16px}
@@ -266,53 +263,77 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .cta-btn-o{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);color:#fff;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;padding:15px 30px;border-radius:10px;text-decoration:none;border:2px solid rgba(255,255,255,.2);transition:background .22s,transform .18s}
 .cta-btn-o:hover{background:rgba(255,255,255,.15);transform:translateY(-3px)}
 
-/* FOOTER */
-.footer{background:#0a1f38;color:#cdd8e8;font-size:14px;line-height:1.7}
-.footer-top-band{background:linear-gradient(90deg,var(--green-dark),#1ca64b,var(--green-dark));padding:22px 24px;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
-.footer-top-band p{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:#fff}
-.footer-top-band p span{color:#b8f5cf}
-.footer-cta-btn{background:#fff;color:var(--green-dark);font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;padding:10px 26px;border-radius:6px;text-decoration:none;transition:background .2s,color .2s,transform .15s;white-space:nowrap}
-.footer-cta-btn:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
-.footer-main{max-width:1200px;margin:0 auto;padding:60px 24px 40px;display:grid;grid-template-columns:280px 1fr 1fr 1fr;gap:40px}
-.footer-logo-wrap{display:flex;align-items:center;gap:10px;margin-bottom:18px}
-.footer-logo-icon{width:50px;height:50px;border-radius:10px;background:rgba(46,158,79,.15);border:1.5px solid rgba(46,158,79,.3);display:flex;align-items:center;justify-content:center}
-.footer-logo-icon svg{width:28px;height:28px}
-.footer-logo-name{font-family:'Montserrat',sans-serif;font-size:19px;font-weight:800;color:#fff}
-.footer-logo-name span{color:var(--green)}
-.footer-logo-sub{font-size:10px;color:#7a9bb5;letter-spacing:1.8px;text-transform:uppercase}
-.footer-about p{color:#8aacca;font-size:13.5px;line-height:1.75;margin-bottom:20px}
-.footer-tagline{display:inline-block;background:rgba(46,158,79,.12);border-left:3px solid var(--green);color:#a8d8b5;font-size:12px;font-style:italic;padding:8px 14px;border-radius:0 6px 6px 0;margin-bottom:22px}
-.footer-socials{display:flex;gap:8px;flex-wrap:wrap}
-.footer-socials a{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;text-decoration:none;transition:transform .2s}
-.footer-socials a:hover{transform:translateY(-3px) scale(1.1)}
-.footer-socials a.fb{background:#1877f2;color:#fff}.footer-socials a.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285aeb 90%);color:#fff}
-.footer-socials a.li{background:#0a66c2;color:#fff}.footer-socials a.tw{background:#000;color:#fff}
-.footer-socials a.yt{background:red;color:#fff}.footer-socials a.wa{background:#25d366;color:#fff}
-.footer-socials a.tg{background:#0088cc;color:#fff}.footer-socials a.pt{background:#e60023;color:#fff}
-.footer-col h4{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:#fff;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid rgba(46,158,79,.35);display:flex;align-items:center;gap:8px}
-.footer-col h4 i{color:var(--green);font-size:13px}
-.footer-col h5{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#5fd98a;letter-spacing:1.5px;text-transform:uppercase;margin:16px 0 8px}
-.footer-links{list-style:none}
-.footer-links li{margin-bottom:2px}
-.footer-links li a{color:#8aacca;text-decoration:none;font-size:13px;display:flex;align-items:flex-start;gap:7px;padding:3px 0;transition:color .2s,padding-left .2s;line-height:1.5}
-.footer-links li a::before{content:'›';color:var(--green);font-size:15px;line-height:1.3;flex-shrink:0;font-weight:700}
-.footer-links li a:hover{color:#5fd98a;padding-left:4px}
-.footer-contact-grid{max-width:1200px;margin:0 auto;padding:0 24px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.contact-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start;transition:border-color .2s,background .2s}
-.contact-card:hover{border-color:rgba(46,158,79,.35);background:rgba(46,158,79,.06)}
-.contact-icon{width:38px;height:38px;border-radius:8px;background:rgba(46,158,79,.15);border:1px solid rgba(46,158,79,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.contact-icon i{color:var(--green);font-size:15px}
-.contact-info strong{display:block;color:#fff;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
-.contact-info span,.contact-info a{display:block;color:#8aacca;font-size:12.5px;text-decoration:none}
-.contact-info a:hover{color:#5fd98a}
-.footer-divider{border:none;border-top:1px solid rgba(255,255,255,.07);margin:0 24px}
-.footer-bottom{max-width:1200px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.footer-bottom p{font-size:12.5px;color:#4a6a88}
-.footer-bottom p span{color:var(--green)}
-.footer-bottom-links{display:flex;gap:20px}
-.footer-bottom-links a{font-size:12px;color:#4a6a88;text-decoration:none;transition:color .2s}
-.footer-bottom-links a:hover{color:#5fd98a}
-.footer-motto{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:rgba(46,158,79,.55);letter-spacing:2px;text-transform:uppercase}
+/* ═══════════════ FOOTER (from index) ═══════════════ */
+.footer { background: #07192d; color: #cdd8e8; font-size: 14px; line-height: 1.7; }
+
+.footer-top-band { background: linear-gradient(90deg, var(--green-dark), #1ca64b, var(--green-dark)); padding: 22px 24px; display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; }
+.footer-top-band p { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 700; color: #fff; }
+.footer-top-band p span { color: #b8f5cf; }
+.footer-cta-btn { background: #fff; color: var(--green-dark); font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; padding: 10px 26px; border-radius: 6px; text-decoration: none; transition: background 0.2s, color 0.2s, transform 0.15s; white-space: nowrap; }
+.footer-cta-btn:hover { background: var(--navy); color: #fff; transform: translateY(-2px); }
+
+.footer-main { max-width: 1200px; margin: 0 auto; padding: 60px 24px 40px; display: grid; grid-template-columns: 260px 1fr 1fr 180px; gap: 40px; }
+
+/*.footer-logo-col {} */
+.footer-logo-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.footer-logo-icon { width: 54px; height: 54px; border-radius: 10px; background: rgba(46,158,79,0.15); border: 1.5px solid rgba(46,158,79,0.3); display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
+.footer-logo-icon img { width: 100%; height: 100%; object-fit: contain; }
+.footer-logo-icon svg { width: 30px; height: 30px; }
+.footer-logo-name { font-family: 'Montserrat', sans-serif; font-size: 21px; font-weight: 800; color: #fff; line-height: 1.1; }
+.footer-logo-name span { color: var(--green); }
+.footer-logo-sub { font-size: 11px; color: #7a9bb5; letter-spacing: 1.8px; text-transform: uppercase; }
+.footer-about-text { color: #8aacca; font-size: 14px; line-height: 1.8; margin-bottom: 18px; }
+.footer-tagline { display: inline-block; background: rgba(46,158,79,0.12); border-left: 3px solid var(--green); color: #a8d8b5; font-size: 13px; font-style: italic; padding: 9px 14px; border-radius: 0 6px 6px 0; margin-bottom: 22px; }
+.footer-socials { display: flex; gap: 8px; flex-wrap: wrap; }
+.footer-socials a { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; text-decoration: none; transition: transform 0.2s, filter 0.2s; }
+.footer-socials a:hover { transform: translateY(-3px) scale(1.1); filter: brightness(1.2); }
+.footer-socials a.fb { background: #1877f2; color: #fff; }
+.footer-socials a.ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%); color: #fff; }
+.footer-socials a.li { background: #0a66c2; color: #fff; }
+.footer-socials a.tw { background: #000; color: #fff; }
+.footer-socials a.yt { background: #ff0000; color: #fff; }
+.footer-socials a.wa { background: #25d366; color: #fff; }
+.footer-socials a.tg { background: #0088cc; color: #fff; }
+.footer-socials a.pt { background: #e60023; color: #fff; }
+
+.footer-col h4 { font-family: 'Montserrat', sans-serif; font-size: 13.5px; font-weight: 700; color: #fff; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid rgba(46,158,79,0.35); display: flex; align-items: center; gap: 8px; }
+.footer-col h4 i { color: var(--green); font-size: 14px; }
+.footer-col h5 { font-family: 'Montserrat', sans-serif; font-size: 11.5px; font-weight: 700; color: #5fd98a; letter-spacing: 1.5px; text-transform: uppercase; margin: 18px 0 8px; padding-bottom: 5px; border-bottom: 1px solid rgba(46,158,79,0.15); }
+.footer-links { list-style: none; }
+.footer-links li a { color: #8aacca; text-decoration: none; font-size: 14px; display: flex; align-items: flex-start; gap: 7px; padding: 3.5px 0; transition: color 0.2s, padding-left 0.2s; line-height: 1.5; }
+.footer-links li a::before { content: '›'; color: var(--green); font-size: 16px; line-height: 1.3; flex-shrink: 0; font-weight: 700; }
+.footer-links li a:hover { color: #5fd98a; padding-left: 5px; }
+
+.footer-contact-grid { max-width: 1200px; margin: 0 auto; padding: 0 24px 44px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.contact-card {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px; padding: 20px 22px; display: flex; gap: 14px; align-items: flex-start;
+  position: relative; overflow: hidden; cursor: default;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+.contact-card::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(46,158,79,0.18), rgba(30,122,58,0.12));
+  opacity: 0; transition: opacity 0.35s ease; z-index: 0;
+}
+.contact-card:hover { border-color: rgba(46,158,79,0.45); box-shadow: 0 10px 30px rgba(46,158,79,0.15); transform: translateY(-4px); }
+.contact-card:hover::before { opacity: 1; }
+.contact-icon { width: 42px; height: 42px; border-radius: 10px; background: rgba(46,158,79,0.15); border: 1px solid rgba(46,158,79,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; z-index: 1; transition: background 0.3s; }
+.contact-card:hover .contact-icon { background: rgba(46,158,79,0.3); }
+.contact-icon i { color: var(--green); font-size: 16px; }
+.contact-info { flex: 1; min-width: 0; position: relative; z-index: 1; }
+.contact-info strong { display: block; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px; }
+.contact-info span, .contact-info a { display: block; color: #8aacca; font-size: 13px; text-decoration: none; word-break: break-word; line-height: 1.6; }
+.contact-info a:hover { color: #5fd98a; }
+
+.footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.07); margin: 0 24px; }
+.footer-bottom { max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.footer-bottom p { font-size: 13px; color: #4a6a88; }
+.footer-bottom p span { color: var(--green); }
+.footer-bottom-links { display: flex; gap: 20px; }
+.footer-bottom-links a { font-size: 13px; color: #4a6a88; text-decoration: none; transition: color 0.2s; }
+.footer-bottom-links a:hover { color: #5fd98a; }
+.footer-motto { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; color: rgba(46,158,79,0.55); letter-spacing: 2px; text-transform: uppercase; }
 
 /* BACK TO TOP */
 .back-top{position:fixed;bottom:32px;right:32px;width:50px;height:50px;border-radius:14px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;border:none;box-shadow:0 8px 24px rgba(46,158,79,.4);transition:background .2s,transform .2s,opacity .3s;opacity:0;pointer-events:none;z-index:500}
@@ -323,11 +344,14 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 
 /* RESPONSIVE */
 @media(max-width:1200px){.prod-grid{grid-template-columns:repeat(3,1fr)}.prod-grid.g3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1100px){
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .footer-contact-grid { grid-template-columns: repeat(2, 1fr); }
+}
 @media(max-width:1000px){
   .prod-grid,.prod-grid.g3{grid-template-columns:repeat(2,1fr)}
   .stats-band-inner{grid-template-columns:repeat(2,1fr);gap:28px}
   .sbi:nth-child(3)::before{display:none}
-  .footer-main{grid-template-columns:1fr 1fr}
   .sh-inner{grid-template-columns:1fr}
   .sh-visual-wrap{display:none}
   .sh-title{font-size:44px}
@@ -349,9 +373,10 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
   .sh-title{font-size:30px;letter-spacing:-1px}
   .sh-inner{padding:56px 24px}
   .sec-title{font-size:28px}
-  .footer-main{grid-template-columns:1fr;gap:28px}
-  .footer-bottom{flex-direction:column;text-align:center}
-  .footer-top-band{flex-direction:column;gap:14px;text-align:center}
+  .footer-main { grid-template-columns: 1fr; gap: 28px; }
+  .footer-contact-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .footer-top-band { flex-direction: column; text-align: center; gap: 14px; }
   .cta-title{font-size:32px}
   .stats-band-inner{grid-template-columns:1fr 1fr}
   .back-top{bottom:20px;right:20px}
@@ -359,6 +384,47 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
   .sec-group-header{gap:12px}.sec-group-count{margin-left:0}
 }
 @media(max-width:500px){.prod-grid,.prod-grid.g3{grid-template-columns:1fr}}
+/*chat bot */
+ .wa-chat-widget { position: fixed; bottom: 28px; right: 28px; z-index: 9999; font-family: 'Open Sans', sans-serif; }
+  .wa-chat-fab { width: 60px; height: 60px; border-radius: 50%; background: #25d366; box-shadow: 0 6px 24px rgba(37,211,102,0.5); display: flex; align-items: center; justify-content: center; cursor: pointer; border: none; transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.25s ease; position: relative; z-index: 2; }
+  .wa-chat-fab:hover { transform: scale(1.12); box-shadow: 0 10px 32px rgba(37,211,102,0.65); }
+  .wa-chat-fab svg { width: 32px; height: 32px; transition: opacity 0.2s, transform 0.2s; }
+  .wa-chat-fab .icon-close { position: absolute; opacity: 0; transform: rotate(-90deg) scale(0.6); }
+  .wa-chat-widget.open .wa-chat-fab .icon-wa { opacity: 0; transform: rotate(90deg) scale(0.6); }
+  .wa-chat-widget.open .wa-chat-fab .icon-close { opacity: 1; transform: rotate(0deg) scale(1); }
+  .wa-notif-dot { position: absolute; top: 4px; right: 4px; width: 14px; height: 14px; background: #ff3b3b; border-radius: 50%; border: 2px solid #fff; animation: wa-pulse 2s infinite; }
+  @keyframes wa-pulse { 0%,100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,59,59,0.5); } 60% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(255,59,59,0); } }
+  .wa-chat-widget.open .wa-notif-dot { display: none; }
+  .wa-chat-box { position: absolute; bottom: 74px; right: 0; width: 320px; background: #fff; border-radius: 18px; box-shadow: 0 20px 60px rgba(0,0,0,0.18); overflow: hidden; opacity: 0; transform: scale(0.85) translateY(20px); transform-origin: bottom right; transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.34,1.56,0.64,1); pointer-events: none; }
+  .wa-chat-widget.open .wa-chat-box { opacity: 1; transform: scale(1) translateY(0); pointer-events: all; }
+  .wa-box-header { background: #075e54; padding: 18px 18px 16px; display: flex; align-items: center; gap: 12px; }
+  .wa-avatar { width: 46px; height: 46px; border-radius: 50%; background: #25d366; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 2px solid rgba(255,255,255,0.25); }
+  .wa-avatar svg { width: 26px; height: 26px; }
+  .wa-header-text { flex: 1; }
+  .wa-header-text strong { display: block; color: #fff; font-size: 14px; font-weight: 700; font-family: 'Montserrat', sans-serif; }
+  .wa-header-text span { font-size: 12px; color: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 5px; margin-top: 2px; }
+  .wa-online-dot { width: 7px; height: 7px; background: #25d366; border-radius: 50%; display: inline-block; animation: wa-blink 2.5s infinite; }
+  @keyframes wa-blink { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+  .wa-chat-body { padding: 16px 14px 12px; background: #e5ddd5; min-height: 110px; }
+  .wa-bubble-wrap { display: flex; align-items: flex-start; gap: 8px; }
+  .wa-bubble-avatar { width: 30px; height: 30px; border-radius: 50%; background: #25d366; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .wa-bubble-avatar svg { width: 16px; height: 16px; }
+  .wa-bubble { background: #fff; border-radius: 0 10px 10px 10px; padding: 10px 13px; box-shadow: 0 1px 3px rgba(0,0,0,0.12); max-width: 220px; font-size: 13.5px; color: #333; line-height: 1.55; position: relative; }
+  .wa-bubble::before { content: ''; position: absolute; left: -7px; top: 0; border-width: 0 8px 8px 0; border-style: solid; border-color: transparent #fff transparent transparent; }
+  .wa-bubble-time { font-size: 10.5px; color: #999; text-align: right; margin-top: 5px; }
+  .wa-bubble-second { background: #dcf8c6; border-radius: 10px 10px 10px 0; padding: 10px 13px; box-shadow: 0 1px 3px rgba(0,0,0,0.12); max-width: 220px; font-size: 12.5px; color: #555; line-height: 1.55; margin-top: 8px; }
+  .wa-chat-footer { padding: 10px 12px; background: #f0f0f0; border-top: 1px solid #e0e0e0; }
+  .wa-input-row { display: flex; align-items: center; gap: 8px; background: #fff; border-radius: 24px; padding: 8px 8px 8px 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+  .wa-input { flex: 1; border: none; outline: none; font-size: 13.5px; color: #333; font-family: 'Open Sans', sans-serif; background: transparent; }
+  .wa-input::placeholder { color: #aaa; }
+  .wa-send-btn { width: 36px; height: 36px; border-radius: 50%; background: #25d366; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s, transform 0.15s; }
+  .wa-send-btn:hover { background: #128c7e; transform: scale(1.08); }
+  .wa-send-btn svg { width: 18px; height: 18px; }
+  .wa-footer-note { text-align: center; font-size: 11px; color: #aaa; margin-top: 8px; }
+  @media (max-width: 400px) {
+    .wa-chat-box { width: 290px; right: -4px; }
+    .wa-chat-widget { bottom: 20px; right: 16px; }
+  }
 </style>
 </head>
 <body>
@@ -371,9 +437,18 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     <span><i class="fas fa-phone"></i> +91 88704 96918</span>
     <span><i class="fas fa-envelope"></i> chemslifegroups@gmail.com</span>
   </div>
-  <div class="social-links">
-    <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a><a href="#" class="ig"><i class="fab fa-instagram"></i></a><a href="#" class="li"><i class="fab fa-linkedin-in"></i></a><a href="#" class="tw"><i class="fab fa-x-twitter"></i></a><a href="#" class="yt"><i class="fab fa-youtube"></i></a><a href="#" class="wa"><i class="fab fa-whatsapp"></i></a><a href="#" class="tg"><i class="fab fa-telegram-plane"></i></a><a href="#" class="pt"><i class="fab fa-pinterest-p"></i></a>
+      <div class="social-links">
+      <a href="https://www.facebook.com/Chemslifegroups" class="fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/chemslifegroups" class="ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/chemslife-groups-278a10213/" class="li" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://twitter.com/Chemslifegroups" class="tw" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.youtube.com/c/ChemslifeGroupss" class="yt" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://wa.me/1234567890" class="wa" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://t.me/ChemslifeGroups" class="tg" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+      <a href="https://www.pinterest.com/chemslifegroups" class="pt" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+    </div>
   </div>
+</div>
 </div></div>
 
 <!-- MARQUEE -->
@@ -393,7 +468,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
   </a>
   <nav id="main-nav">
     <a href="index.html">Home</a>
-    <a href="about-us.html">About Us</a>
+    <a href="About us.html">About Us</a>
     <div class="nav-dropdown" id="productsDropdown">
       <a href="#" id="productsToggle" class="active">Products <i class="fas fa-chevron-down dd-arrow"></i></a>
       <div class="dropdown-menu">
@@ -402,13 +477,13 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
           <div class="dd-label"><strong>Scientific &amp; Industrial Solutions</strong><span>Lab, chemical, water treatment &amp; homecare</span></div>
         </a>
         <div class="dropdown-divider"></div>
-        <a href="#">
+        <a href="integrated health care .html">
           <div class="dd-icon"><i class="fas fa-heartbeat"></i></div>
           <div class="dd-label"><strong>Integrated Healthcare Solutions</strong><span>Pharma, surgical, diagnostics &amp; safety</span></div>
         </a>
       </div>
     </div>
-    <a href="contact-us.html" class="btn-contact">Contact Us</a>
+    <a href="contact us .html" class="btn-contact">Contact Us</a>
   </nav>
   <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
 </div></header>
@@ -476,25 +551,21 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     <div class="sort-wrap"><select id="sortSel"><option value="default">Sort: Default</option><option value="az">Name: A → Z</option><option value="za">Name: Z → A</option></select></div>
   </div>
 
-  <!-- ═══ SECTION 1: LAB PRODUCTS (3-col) ═══ -->
   <div class="section-group" id="sg-lab">
     <div class="sec-group-header reveal"><div class="sec-group-icon"><i class="fas fa-microscope"></i></div><div><div class="sec-group-title">Laboratory <span>Products</span></div></div><div class="sec-group-count">18 Products</div></div>
     <div class="prod-grid g3" id="grid-lab"></div>
   </div>
 
-  <!-- ═══ SECTION 2: CHEMICAL PRODUCTS (4-col) ═══ -->
   <div class="section-group" id="sg-chemicals">
     <div class="sec-group-header reveal"><div class="sec-group-icon"><i class="fas fa-flask"></i></div><div><div class="sec-group-title">Chemical <span>Products</span></div></div><div class="sec-group-count">34 Products</div></div>
     <div class="prod-grid" id="grid-chemicals"></div>
   </div>
 
-  <!-- ═══ SECTION 3: WATER TREATMENT (3-col) ═══ -->
   <div class="section-group" id="sg-water">
     <div class="sec-group-header reveal"><div class="sec-group-icon"><i class="fas fa-tint"></i></div><div><div class="sec-group-title">Water Treatment <span>Products</span></div></div><div class="sec-group-count">8 Products</div></div>
     <div class="prod-grid g3" id="grid-water"></div>
   </div>
 
-  <!-- ═══ SECTION 4: HOMECARE (3-col) ═══ -->
   <div class="section-group" id="sg-homecare">
     <div class="sec-group-header reveal"><div class="sec-group-icon"><i class="fas fa-spray-can"></i></div><div><div class="sec-group-title">Homecare &amp; Cleaning <span>Products</span></div></div><div class="sec-group-count">9 Products</div></div>
     <div class="prod-grid g3" id="grid-homecare"></div>
@@ -510,34 +581,248 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     <div class="cta-tag"><i class="fas fa-phone-alt"></i>&nbsp; Get In Touch</div>
     <h2 class="cta-title">Need a <span>Custom Quote?</span></h2>
     <p class="cta-sub">Looking for bulk orders, specific grades, or something not listed? Our expert team will source exactly what your facility requires — with fast delivery and quality assurance.</p>
-    <div class="cta-btns"><a href="contact-us.html" class="cta-btn-p"><i class="fas fa-paper-plane"></i> Send Enquiry</a><a href="tel:+918870496918" class="cta-btn-o"><i class="fas fa-phone-alt"></i> +91 88704 96918</a></div>
+    <div class="cta-btns"><a href="contact us .html" class="cta-btn-p"><i class="fas fa-paper-plane"></i> Send Enquiry</a><a href="tel:+918870496918" class="cta-btn-o"><i class="fas fa-phone-alt"></i> +91 88704 96918</a></div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ═══════════════ FOOTER (exact from index) ═══════════════ -->
 <footer class="footer">
-  <div class="footer-top-band"><p>Ready to partner with us? <span>Explore our full range of scientific, industrial &amp; healthcare solutions.</span></p><a href="#" id="footerBackTop" class="footer-cta-btn"><i class="fas fa-arrow-up" style="margin-right:7px"></i>Back to Top</a></div>
+  <div class="footer-top-band">
+    <p>Ready to partner with us? <span>Explore our full range of scientific, industrial &amp; healthcare solutions.</span></p>
+    <a href="#" class="footer-cta-btn"><i class="fas fa-paper-plane" style="margin-right:7px"></i>Get in Touch</a>
+  </div>
+
   <div class="footer-main">
-    <div class="footer-about">
-      <div class="footer-logo-wrap"><div class="footer-logo-icon"><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4 Z" fill="#2e9e4f" opacity="0.2" stroke="#2e9e4f" stroke-width="2.5" stroke-linejoin="round"/><path d="M23 38 Q30 32 38 40 L42 52 Q44 57 40 59 L20 59 Q16 57 18 52 Z" fill="#2e9e4f" opacity="0.8"/><rect x="21" y="0" width="18" height="6" rx="3" fill="#cdd8e8"/><path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4" fill="none" stroke="#cdd8e8" stroke-width="2.5" stroke-linejoin="round"/></svg></div><div><div class="footer-logo-name">CHEMS<span>LIFE</span></div><div class="footer-logo-sub">Groups</div></div></div>
-      <p>A multi-sector organization delivering reliable scientific, industrial, and healthcare solutions since 2018.</p>
+
+    <!-- Logo & About -->
+    <div class="footer-logo-col">
+      <div class="footer-logo-wrap">
+        <div class="footer-logo-icon">
+          <img src="all dummy images/logo1.jpeg" alt="Chemslife Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+          <svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg" style="display:none">
+            <path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4 Z" fill="#2e9e4f" opacity="0.2" stroke="#2e9e4f" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M23 38 Q30 32 38 40 L42 52 Q44 57 40 59 L20 59 Q16 57 18 52 Z" fill="#2e9e4f" opacity="0.8"/>
+            <rect x="21" y="0" width="18" height="6" rx="3" fill="#cdd8e8"/>
+            <path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4" fill="none" stroke="#cdd8e8" stroke-width="2.5" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="footer-logo-name">CHEMS<span>LIFE</span></div>
+          <div class="footer-logo-sub">Groups</div>
+        </div>
+      </div>
+      <p class="footer-about-text">A multi-sector organization delivering reliable scientific, industrial, and healthcare solutions since 2018. Founded by Mr. Sivasankar Karthikeyan.</p>
       <div class="footer-tagline">"Building Chemistry for a Better Tomorrow"</div>
-      <div class="footer-socials"><a href="#" class="fb"><i class="fab fa-facebook-f"></i></a><a href="#" class="ig"><i class="fab fa-instagram"></i></a><a href="#" class="li"><i class="fab fa-linkedin-in"></i></a><a href="#" class="tw"><i class="fab fa-x-twitter"></i></a><a href="#" class="yt"><i class="fab fa-youtube"></i></a><a href="#" class="wa"><i class="fab fa-whatsapp"></i></a><a href="#" class="tg"><i class="fab fa-telegram-plane"></i></a><a href="#" class="pt"><i class="fab fa-pinterest-p"></i></a></div>
+         <div class="footer-socials">
+        <a href="https://www.facebook.com/Chemslifegroups" class="fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/chemslifegroups" class="ig" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/chemslife-groups-278a10213/" class="li" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/Chemslifegroups" class="tw" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.youtube.com/c/ChemslifeGroupss" class="yt" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/1234567890" class="wa" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://t.me/Chemslifegroups" class="tg" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+        <a href="https://www.pinterest.com/chemslifegroups" class="pt" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+      </div>
     </div>
-    <div class="footer-col"><h4><i class="fas fa-flask"></i> Scientific &amp; Industrial</h4><h5>Laboratory Products</h5><ul class="footer-links"><li><a href="#">Laboratory Chemicals</a></li><li><a href="#">Laboratory Instruments</a></li><li><a href="#">Laboratory Glassware</a></li><li><a href="#">Lab Furniture &amp; Safety</a></li></ul><h5>Chemical Products</h5><ul class="footer-links"><li><a href="#">Acids &amp; Solvents</a></li><li><a href="#">Agro &amp; Bio Chemicals</a></li><li><a href="#">Boiler &amp; Cooling Tower</a></li><li><a href="#">Speciality &amp; USP Grade</a></li></ul></div>
-    <div class="footer-col"><h4><i class="fas fa-heartbeat"></i> Healthcare Solutions</h4><h5>Pharmaceutical</h5><ul class="footer-links"><li><a href="#">Analgesics &amp; Antipyretics</a></li><li><a href="#">Antibiotics</a></li><li><a href="#">Cardiovascular Drugs</a></li><li><a href="#">Vitamins &amp; Supplements</a></li></ul><h5>Surgical &amp; Diagnostic</h5><ul class="footer-links"><li><a href="#">Surgical Instruments</a></li><li><a href="#">Hematology Products</a></li><li><a href="#">PPE &amp; Safety</a></li></ul></div>
-    <div class="footer-col"><h4><i class="fas fa-link"></i> Quick Links</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about-us.html">About Us</a></li><li><a href="#">Lab Products</a></li><li><a href="#">Scientific Products</a></li><li><a href="contact-us.html">Contact Us</a></li></ul><h5>Locations</h5><ul class="footer-links"><li><a href="#">Corporate Office – Hosur</a></li><li><a href="#">Scientific Division – Krishnagiri</a></li><li><a href="#">Registered Office – Thiruvarur</a></li></ul></div>
+
+    <!-- Scientific & Industrial Solutions -->
+    <div class="footer-col">
+      <h4><i class="fas fa-flask"></i> Scientific &amp; Industrial Solutions</h4>
+
+      <h5>Laboratory Products</h5>
+      <ul class="footer-links">
+        <li><a href="Scientific .html">Laboratory Chemicals</a></li>
+        <li><a href="Scientific .html">Laboratory Instruments</a></li>
+        <li><a href="Scientific .html">Laboratory Equipment</a></li>
+        <li><a href="Scientific .html">Glassware &amp; Plasticware</a></li>
+        <li><a href="Scientific .html">Lab Furniture &amp; Safety Kits</a></li>
+        <li><a href="Scientific .html">Lab Test Kits &amp; Filtration</a></li>
+      </ul>
+
+      <h5>Water Treatment Products</h5>
+      <ul class="footer-links">
+        <li><a href="Scientific .html">Filtration &amp; Membrane Systems</a></li>
+        <li><a href="Scientific .html">Ion Exchange Resins</a></li>
+        <li><a href="Scientific .html">Monitoring &amp; Testing Products</a></li>
+        <li><a href="Scientific .html">Wastewater Treatment</a></li>
+      </ul>
+
+      <h5>Homecare &amp; Cleaning Products</h5>
+      <ul class="footer-links">
+        <li><a href="Scientific .html">Cleaning &amp; Disinfection Agents</a></li>
+        <li><a href="Scientific .html">Detergents &amp; Laundry</a></li>
+        <li><a href="Scientific .html">Pest Control Products</a></li>
+        <li><a href="Scientific .html">Housekeeping Tools</a></li>
+      </ul>
+    </div>
+
+    <!-- Integrated Healthcare Solutions -->
+    <div class="footer-col">
+      <h4><i class="fas fa-heartbeat"></i> Integrated Healthcare Solutions</h4>
+
+      <h5>Pharmaceutical Products</h5>
+      <ul class="footer-links">
+        <li><a href="integrated health care .html">Analgesics &amp; Antipyretics</a></li>
+        <li><a href="integrated health care .html">Antibiotics &amp; Antimicrobials</a></li>
+        <li><a href="integrated health care .html">Cardiovascular Drugs</a></li>
+        <li><a href="integrated health care .html">Vitamins &amp; Supplements</a></li>
+      </ul>
+
+      <h5>Surgical Supplies</h5>
+      <ul class="footer-links">
+        <li><a href="integrated health care .html">Surgical Instruments</a></li>
+        <li><a href="integrated health care .html">Specialty Surgical Sets</a></li>
+        <li><a href="integrated health care .html">Suturing &amp; Stapling</a></li>
+      </ul>
+
+      <h5>Hospital Consumables &amp; Medical Devices</h5>
+      <ul class="footer-links">
+        <li><a href="integrated health care .html">Hospital Consumables</a></li>
+        <li><a href="integrated health care .html">Medical Devices in Hospitals</a></li>
+      </ul>
+
+      <h5>Diagnostic Products &amp; Instruments</h5>
+      <ul class="footer-links">
+        <li><a href="integrated health care .html">Diagnostic Instruments &amp; Consumables</a></li>
+        <li><a href="integrated health care .html">Hematology &amp; Immunology</a></li>
+        <li><a href="integrated health care .html">Molecular &amp; POC Diagnostics</a></li>
+      </ul>
+
+      <h5>Disposables &amp; Safety Products</h5>
+      <ul class="footer-links">
+        <li><a href="integrated health care .html">Disposables Products</a></li>
+        <li><a href="integrated health care .html">Safety Products &amp; PPE</a></li>
+        <li><a href="integrated health care .html">Waste Management Disposables</a></li>
+      </ul>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4><i class="fas fa-link"></i> Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About us.html">About Us</a></li>
+        <li><a href="Scientific .html">Scientific &amp; Industrial</a></li>
+        <li><a href="integrated health care .html">Healthcare Solutions</a></li>
+        <li><a href="contact us .html">Contact Us</a></li>
+      </ul>
+    </div>
+
   </div>
+
+  <!-- Contact Cards -->
   <div class="footer-contact-grid">
-    <div class="contact-card"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><div class="contact-info"><strong>Sales</strong><span>+91 88704 96918</span><a href="mailto:sales@chemslife.in">sales@chemslife.in</a></div></div>
-    <div class="contact-card"><div class="contact-icon"><i class="fas fa-headset"></i></div><div class="contact-info"><strong>Admin</strong><span>+91 88702 44418</span><a href="mailto:admin@chemslife.in">admin@chemslife.in</a></div></div>
-    <div class="contact-card"><div class="contact-icon"><i class="fas fa-shopping-bag"></i></div><div class="contact-info"><strong>Chemscart</strong><span>+91 88702 44418</span><a href="mailto:admin@chemscart.in">admin@chemscart.in</a></div></div>
-    <div class="contact-card"><div class="contact-icon"><i class="fas fa-truck"></i></div><div class="contact-info"><strong>Dispatch</strong><span>+91 88700 36018</span><a href="mailto:dispatch@chemslife.in">dispatch@chemslife.in</a></div></div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+      <div class="contact-info">
+        <strong>Sales</strong>
+        <span>+91 88704 96918</span>
+        <a href="mailto:sales@chemslife.in">sales@chemslife.in</a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-headset"></i></div>
+      <div class="contact-info">
+        <strong>Admin</strong>
+        <span>+91 88702 44418</span>
+        <a href="mailto:admin@chemslife.in">admin@chemslife.in</a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-shopping-bag"></i></div>
+      <div class="contact-info">
+        <strong>Chemscart</strong>
+        <span>+91 88702 44418</span>
+        <a href="mailto:admin@chemscart.in">admin@chemscart.in</a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-truck"></i></div>
+      <div class="contact-info">
+        <strong>Dispatch</strong>
+        <span>+91 88700 36018</span>
+        <a href="mailto:dispatch@chemslife.in">dispatch@chemslife.in</a>
+      </div>
+    </div>
   </div>
+
   <hr class="footer-divider"/>
-  <div class="footer-bottom"><p>&copy; 2025 <span>Chemslife Groups</span>. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div><div class="footer-motto">Everything is Science &#9670; Science for Nation</div></div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 <span>Chemslife Groups</span>. All rights reserved. | Founded by Mr. Sivasankar Karthikeyan.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Sitemap</a>
+    </div>
+    <div class="footer-motto">Everything is Science &nbsp;&#9670;&nbsp; Science for Nation</div>
+  </div>
 </footer>
+
 <button class="back-top" id="backTopBtn" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<!---chatbot-->
+<div class="wa-chat-widget" id="waChatWidget">
+  <div class="wa-chat-box" id="waChatBox">
+    <div class="wa-box-header">
+      <div class="wa-avatar">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.685 4.61 1.873 6.492L4 29l7.724-1.849A11.94 11.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="white" fill-opacity="0.9"/>
+          <path d="M21.8 18.6c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.78-1.68-2.08-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.07.15.2 2.1 3.2 5.09 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.28.17-1.41-.07-.12-.27-.2-.57-.34z" fill="#25d366"/>
+        </svg>
+      </div>
+      <div class="wa-header-text">
+        <strong>Chemslife Groups</strong>
+        <span><span class="wa-online-dot"></span> Typically replies instantly</span>
+      </div>
+    </div>
+    <div class="wa-chat-body">
+      <div class="wa-bubble-wrap">
+        <div class="wa-bubble-avatar">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.685 4.61 1.873 6.492L4 29l7.724-1.849A11.94 11.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="white" fill-opacity="0.9"/>
+          </svg>
+        </div>
+        <div>
+          <div class="wa-bubble">
+            👋 Hi there! Welcome to <strong>Chemslife Groups</strong>. How can we help you today?
+            <div class="wa-bubble-time" id="waBubbleTime"></div>
+          </div>
+          <div class="wa-bubble-second">
+            Ask us about our scientific, industrial, or healthcare solutions!
+            <div class="wa-bubble-time" id="waBubbleTime2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wa-chat-footer">
+      <div class="wa-input-row">
+        <input class="wa-input" id="waInput" type="text" placeholder="Type a message..." maxlength="300" autocomplete="off"/>
+        <button class="wa-send-btn" id="waSendBtn" aria-label="Send on WhatsApp">
+          <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="wa-footer-note">
+        <svg viewBox="0 0 24 24" width="10" height="10" fill="#25d366" style="vertical-align:middle;margin-right:3px"><path d="M16 18l6-6-6-6-1.41 1.41L18.17 11H2v2h16.17l-3.58 3.59L16 18z"/></svg>
+        Opens in WhatsApp &nbsp;·&nbsp; +91 88702 44418
+      </div>
+    </div>
+  </div>
+ 
+  <button class="wa-chat-fab" id="waChatFab" aria-label="Chat on WhatsApp">
+    <div class="wa-notif-dot"></div>
+    <!-- WhatsApp Icon -->
+    <svg class="icon-wa" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.685 4.61 1.873 6.492L4 29l7.724-1.849A11.94 11.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="white"/>
+      <path d="M21.8 18.6c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.78-1.68-2.08-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.07.15.2 2.1 3.2 5.09 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.28.17-1.41-.07-.12-.27-.2-.57-.34z" fill="#25d366"/>
+    </svg>
+    <!-- Close Icon -->
+    <svg class="icon-close" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+    </svg>
+  </button>
+</div>
+ 
 
 <script>
 // ─── DATA ───
@@ -635,32 +920,26 @@ const HOMECARE_PRODUCTS = [
 
 const PH_CLASSES = ['ph-1','ph-2','ph-3','ph-4','ph-5','ph-6','ph-7','ph-8','ph-9','ph-10'];
 
-function buildCard(item, idx, total, catLabel, cat) {
+function buildCard(item, idx, catLabel, cat) {
   const ph = PH_CLASSES[idx % PH_CLASSES.length];
   const num = String(idx+1).padStart(2,'0');
-  const imgName = item.name.replace(/[^a-zA-Z0-9]/g,'_').toUpperCase() + '_IMAGE.jpg';
   return `<div class="pc" data-name="${item.name.toLowerCase()}" data-cat="${cat}">
     <div class="pc-img">
-      <img src="${imgName}" alt="${item.name}" onerror="this.style.display='none'"/>
       <div class="pc-ph ${ph}"><i class="${item.icon} ph-icon"></i><span class="ph-lbl">Add Image</span></div>
       <div class="pc-cat">${catLabel}</div><span class="pc-num">${num}</span>
     </div>
     <div class="pc-body">
       <div class="pc-icon-row"><div class="pc-icon"><i class="${item.icon}"></i></div><h3 class="pc-name">${item.name}</h3></div>
       <p class="pc-desc">${item.desc}</p>
-      <div class="pc-cta"><a href="contact-us.html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div>
+      <div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div>
     </div>
   </div>`;
 }
 
-// Populate grids
-document.getElementById('grid-lab').innerHTML = LAB_PRODUCTS.map((p,i) => buildCard(p,i,18,'Lab Products','lab')).join('');
-document.getElementById('grid-chemicals').innerHTML = CHEMICAL_PRODUCTS.map((p,i) => {
-  p.desc = CHEM_DESCS[i];
-  return buildCard(p,i,34,'Chemicals','chemicals');
-}).join('');
-document.getElementById('grid-water').innerHTML = WATER_PRODUCTS.map((p,i) => buildCard(p,i,8,'Water Treatment','water')).join('');
-document.getElementById('grid-homecare').innerHTML = HOMECARE_PRODUCTS.map((p,i) => buildCard(p,i,9,'Homecare','homecare')).join('');
+document.getElementById('grid-lab').innerHTML = LAB_PRODUCTS.map((p,i) => buildCard(p,i,'Lab Products','lab')).join('');
+document.getElementById('grid-chemicals').innerHTML = CHEMICAL_PRODUCTS.map((p,i) => { p.desc = CHEM_DESCS[i]; return buildCard(p,i,'Chemicals','chemicals'); }).join('');
+document.getElementById('grid-water').innerHTML = WATER_PRODUCTS.map((p,i) => buildCard(p,i,'Water Treatment','water')).join('');
+document.getElementById('grid-homecare').innerHTML = HOMECARE_PRODUCTS.map((p,i) => buildCard(p,i,'Homecare','homecare')).join('');
 
 // ─── Hamburger
 const hamburger = document.getElementById('hamburger');
@@ -671,6 +950,7 @@ const dd = document.getElementById('productsDropdown');
 const pt = document.getElementById('productsToggle');
 if (pt) pt.addEventListener('click', e => { if (window.innerWidth <= 768) { e.preventDefault(); dd.classList.toggle('open'); } });
 
+
 // ─── Scroll Progress
 window.addEventListener('scroll', () => {
   document.getElementById('scrollProg').style.width = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100 + '%';
@@ -680,7 +960,6 @@ window.addEventListener('scroll', () => {
 const btn = document.getElementById('backTopBtn');
 window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 400));
 btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-document.getElementById('footerBackTop').addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
 // ─── Reveal
 const revels = document.querySelectorAll('.reveal');
@@ -750,6 +1029,57 @@ const sortSel = document.getElementById('sortSel');
     c.appendChild(p);
   }
 })();
+/*chat bot */
+ (function() {
+    var WA_NUMBER = '918870244418'; // 91 = India country code + your number
+    var widget = document.getElementById('waChatWidget');
+    var fab    = document.getElementById('waChatFab');
+    var input  = document.getElementById('waInput');
+    var sendBtn = document.getElementById('waSendBtn');
+ 
+    // Set current time on chat bubbles
+    function getTime() {
+      var now = new Date();
+      return ('0'+now.getHours()).slice(-2) + ':' + ('0'+now.getMinutes()).slice(-2);
+    }
+    var t1 = document.getElementById('waBubbleTime');
+    var t2 = document.getElementById('waBubbleTime2');
+    if (t1) t1.textContent = getTime();
+    if (t2) t2.textContent = getTime();
+ 
+    // Toggle open / close
+    fab.addEventListener('click', function(e) {
+      e.stopPropagation();
+      widget.classList.toggle('open');
+      if (widget.classList.contains('open')) {
+        setTimeout(function(){ input && input.focus(); }, 300);
+      }
+    });
+ 
+    // Send — redirect to WhatsApp
+    function sendToWhatsApp() {
+      var msg = input.value.trim();
+      var text = msg || 'Hello! I am interested in your products and services.';
+      var url = 'https://api.whatsapp.com/send/?phone=' + WA_NUMBER
+              + '&text=' + encodeURIComponent(text)
+              + '&type=phone_number&app_absent=0';
+      window.open(url, '_blank');
+      input.value = '';
+    }
+ 
+    sendBtn.addEventListener('click', sendToWhatsApp);
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') sendToWhatsApp();
+    });
+ 
+    // Close when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!widget.contains(e.target)) {
+        widget.classList.remove('open');
+      }
+    });
+  })();
+
 </script>
 </body>
 </html>

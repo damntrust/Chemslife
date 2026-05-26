@@ -15,7 +15,7 @@
 }
 html{scroll-behavior:smooth}
 body{font-family:'Open Sans',sans-serif;background:var(--bg);color:var(--navy);overflow-x:hidden}
-
+ 
 /* ═══ TOP BAR ═══ */
 .top-bar{background:var(--navy);color:#fff;padding:8px 0}
 .top-bar-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
@@ -29,7 +29,7 @@ body{font-family:'Open Sans',sans-serif;background:var(--bg);color:var(--navy);o
 .social-links a.li{background:#0a66c2;color:#fff}.social-links a.tw{background:#000;color:#fff}
 .social-links a.yt{background:red;color:#fff}.social-links a.wa{background:#25d366;color:#fff}
 .social-links a.tg{background:#0088cc;color:#fff}.social-links a.pt{background:#e60023;color:#fff}
-
+ 
 /* ═══ MARQUEE ═══ */
 .marquee-wrap{background:linear-gradient(90deg,var(--green-dark),var(--green),var(--green-dark));padding:9px 0;overflow:hidden;position:relative}
 .marquee-wrap::before,.marquee-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
@@ -41,7 +41,7 @@ body{font-family:'Open Sans',sans-serif;background:var(--bg);color:var(--navy);o
 .marquee-text{font-family:'Montserrat',sans-serif;font-size:13.5px;font-weight:700;letter-spacing:3.5px;color:rgba(255,255,255,.95);text-transform:uppercase;padding:0 48px}
 .marquee-sep{color:rgba(255,255,255,.5);font-size:16px;padding:0 8px}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-
+ 
 /* ═══ HEADER ═══ */
 .main-header{background:#fff;border-bottom:2px solid var(--green-light);box-shadow:0 2px 12px rgba(46,158,79,.08);position:sticky;top:0;z-index:200}
 .main-header-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:80px;gap:24px}
@@ -61,12 +61,22 @@ nav a.active{color:var(--green-dark);background:var(--green-light)}
 nav a.btn-contact{background:var(--navy);color:#fff;border-radius:6px;padding:9px 20px;margin-left:8px;transition:background .2s,transform .15s}
 nav a.btn-contact::after{display:none}
 nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(-1px)}
+ 
+/* DROPDOWN — with extended hover delay */
 .nav-dropdown{position:relative}
 .nav-dropdown>a{display:flex;align-items:center;gap:5px}
 .nav-dropdown>a .dd-arrow{font-size:10px;transition:transform .25s ease}
-.nav-dropdown:hover>a .dd-arrow{transform:rotate(180deg)}
-.dropdown-menu{position:absolute;top:calc(100% + 8px);left:0;background:#fff;border:1.5px solid var(--border);border-radius:12px;box-shadow:0 16px 48px rgba(13,43,78,.14);min-width:300px;padding:8px;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(10px);transition:opacity .22s ease,transform .22s ease,visibility .22s;z-index:200}
-.nav-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;pointer-events:all;transform:translateY(0)}
+.nav-dropdown.hovered>a .dd-arrow{transform:rotate(180deg)}
+.dropdown-menu{
+  position:absolute;top:calc(100% + 8px);left:0;background:#fff;
+  border:1.5px solid var(--border);border-radius:12px;
+  box-shadow:0 16px 48px rgba(13,43,78,.14);min-width:300px;padding:8px;
+  opacity:0;visibility:hidden;pointer-events:none;
+  transform:translateY(10px);
+  transition:opacity .22s ease,transform .22s ease,visibility .22s;
+  z-index:200
+}
+.nav-dropdown.hovered .dropdown-menu{opacity:1;visibility:visible;pointer-events:all;transform:translateY(0)}
 .dropdown-menu a{display:flex;align-items:center;gap:12px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--navy);text-decoration:none;padding:11px 14px;border-radius:8px;transition:background .18s,color .18s,padding-left .18s}
 .dropdown-menu a::after{display:none!important}
 .dropdown-menu a:hover{background:var(--green-light);color:var(--green-dark);padding-left:18px}
@@ -79,7 +89,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .dropdown-divider{border:none;border-top:1px solid var(--border);margin:6px 8px}
 .hamburger{display:none;background:none;border:1.5px solid var(--border);border-radius:6px;padding:7px 9px;cursor:pointer;flex-direction:column;gap:4px}
 .hamburger span{display:block;width:20px;height:2px;background:var(--navy);border-radius:2px}
-
+ 
 /* ═══ HERO ═══ */
 .about-hero{position:relative;min-height:480px;display:flex;align-items:center;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 55%,#0a3d20 100%);overflow:hidden}
 .ah-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,43,78,.88) 0%,rgba(13,43,78,.5) 55%,rgba(10,61,32,.72) 100%);z-index:1}
@@ -124,7 +134,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .hv-float-card:nth-child(3){bottom:20px;left:20px;animation-delay:3s}
 .hv-float-card:nth-child(4){top:50%;left:-30px;transform:translateY(-80%);animation-delay:.8s}
 @keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-
+ 
 /* BREADCRUMB */
 .breadcrumb{background:#fff;border-bottom:1px solid var(--border);padding:14px 0}
 .breadcrumb-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:8px;font-size:13.5px}
@@ -132,7 +142,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .breadcrumb-inner a:hover{color:var(--green)}
 .breadcrumb-inner i{color:var(--text-muted);font-size:11px}
 .breadcrumb-inner span{color:var(--text-muted)}
-
+ 
 /* ═══ SHARED ═══ */
 .section-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--green);margin-bottom:14px}
 .section-eyebrow::before,.section-eyebrow::after{content:'';display:block;width:28px;height:2.5px;background:var(--green);border-radius:2px}
@@ -144,16 +154,17 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .reveal.from-right{transform:translateX(44px)}
 .reveal.from-scale{transform:scale(.92)}
 .reveal.visible{opacity:1;transform:none}
-
+ 
 /* ═══ WELCOME ═══ */
 .welcome-section{background:#fff;padding:100px 0;position:relative;overflow:hidden}
 .welcome-section::before{content:'CHEMSLIFE';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Montserrat',sans-serif;font-size:clamp(60px,11vw,150px);font-weight:900;letter-spacing:16px;color:rgba(46,158,79,.04);white-space:nowrap;pointer-events:none;user-select:none;z-index:0}
 .welcome-wrap{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:1;display:grid;grid-template-columns:1.05fr 1fr;gap:80px;align-items:center}
 .wl-img-side{position:relative;padding-bottom:60px}
 .wl-img-main{position:relative;border-radius:24px 24px 0 24px;overflow:hidden;box-shadow:0 40px 90px rgba(13,43,78,.2);aspect-ratio:4/5;max-height:540px}
-.wl-img-main img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease}
+.wl-img-main img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease;position:relative;z-index:1}
 .wl-img-main:hover img{transform:scale(1.04)}
-.wl-img-main .img-ph{position:absolute;inset:0;background:linear-gradient(160deg,#ddf2e5 0%,#b8e8c8 45%,#0d2b4e 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px}
+.wl-img-main .img-ph{position:absolute;inset:0;background:linear-gradient(160deg,#ddf2e5 0%,#b8e8c8 45%,#0d2b4e 100%);display:none;flex-direction:column;align-items:center;justify-content:center;gap:18px;z-index:0}
+.wl-img-main .img-ph.show{display:flex}
 .wl-img-main .img-ph i{font-size:88px;color:var(--green);opacity:.35}
 .wl-img-main .img-ph span{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:var(--green-dark);letter-spacing:2px;text-transform:uppercase;opacity:.6}
 .wl-img-main::after{content:'';position:absolute;left:0;right:0;bottom:0;height:45%;background:linear-gradient(to top,rgba(13,43,78,.75) 0%,transparent 100%);pointer-events:none;z-index:2}
@@ -199,7 +210,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .btn-primary:hover{background:var(--green-dark);transform:translateY(-3px);box-shadow:0 12px 30px rgba(46,158,79,.45)}
 .btn-outline{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--navy);font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;padding:15px 28px;border-radius:10px;text-decoration:none;border:2px solid var(--navy);transition:background .22s,color .22s,transform .18s}
 .btn-outline:hover{background:var(--navy);color:#fff;transform:translateY(-3px)}
-
+ 
 /* ═══ STORY ═══ */
 .story-section{background:var(--bg);padding:96px 0;position:relative;overflow:hidden}
 .story-section::before{content:'STORY';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Montserrat',sans-serif;font-size:clamp(80px,16vw,200px);font-weight:900;letter-spacing:20px;color:rgba(46,158,79,.04);white-space:nowrap;pointer-events:none;user-select:none}
@@ -210,16 +221,18 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .story-img-stack{position:relative;height:480px}
 .story-img-a{position:absolute;width:75%;aspect-ratio:4/3;border-radius:20px;overflow:hidden;box-shadow:0 28px 72px rgba(13,43,78,.2);top:0;left:0;z-index:3;transition:transform .5s ease}
 .story-img-a:hover{transform:scale(1.02) rotate(-1deg)}
-.story-img-a .img-ph{width:100%;height:100%;background:linear-gradient(135deg,#0d2b4e,#163e6f);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-height:260px}
+.story-img-a .img-ph{width:100%;height:100%;background:linear-gradient(135deg,#0d2b4e,#163e6f);display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-height:260px}
+.story-img-a .img-ph.show{display:flex}
 .story-img-a .img-ph i{font-size:60px;color:rgba(95,217,138,.3)}
 .story-img-a .img-ph span{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(95,217,138,.4)}
-.story-img-a img{width:100%;height:100%;object-fit:cover;display:block}
+.story-img-a img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1}
 .story-img-b{position:absolute;width:58%;aspect-ratio:1;border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(13,43,78,.22);bottom:0;right:0;z-index:4;border:5px solid #fff;transition:transform .5s ease}
 .story-img-b:hover{transform:scale(1.03) rotate(1deg)}
-.story-img-b .img-ph{width:100%;height:100%;background:linear-gradient(135deg,#1e7a3a,#2e9e4f);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:200px}
+.story-img-b .img-ph{width:100%;height:100%;background:linear-gradient(135deg,#1e7a3a,#2e9e4f);display:none;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:200px}
+.story-img-b .img-ph.show{display:flex}
 .story-img-b .img-ph i{font-size:50px;color:rgba(255,255,255,.3)}
 .story-img-b .img-ph span{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4)}
-.story-img-b img{width:100%;height:100%;object-fit:cover;display:block}
+.story-img-b img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1}
 .story-quote{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);z-index:6;background:#fff;border-radius:14px;padding:16px 22px;box-shadow:0 12px 36px rgba(13,43,78,.18);border-left:4px solid var(--green);width:270px;text-align:left}
 .story-quote p{font-size:13px;font-style:italic;color:var(--text-muted);line-height:1.6;margin-bottom:8px}
 .story-quote cite{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:var(--green-dark)}
@@ -232,7 +245,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .story-pills{display:flex;flex-wrap:wrap;gap:8px}
 .story-pill{font-family:'Montserrat',sans-serif;font-size:12.5px;font-weight:600;color:var(--green-dark);background:var(--green-light);border:1.5px solid rgba(46,158,79,.2);padding:7px 14px;border-radius:20px;transition:background .2s,color .2s,transform .2s}
 .story-pill:hover{background:var(--green);color:#fff;transform:translateY(-2px)}
-
+ 
 /* ═══ VISION / MISSION ═══ */
 .vm-section{background:#fff;padding:96px 0;position:relative;overflow:hidden}
 .vm-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(46,158,79,.07) 1.5px,transparent 1.5px);background-size:32px 32px;pointer-events:none}
@@ -252,7 +265,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .vm-title{font-family:'Montserrat',sans-serif;font-size:34px;font-weight:900;color:#fff;margin-bottom:22px;line-height:1.15}
 .vm-text{font-size:16px;color:rgba(255,255,255,.75);line-height:1.85}
 .vm-deco-word{position:absolute;bottom:20px;right:20px;font-family:'Montserrat',sans-serif;font-size:80px;font-weight:900;color:rgba(255,255,255,.04);letter-spacing:4px;user-select:none;pointer-events:none;line-height:1}
-
+ 
 /* ═══ CORE VALUES ═══ */
 .values-section{background:var(--bg);padding:96px 0;position:relative;overflow:hidden}
 .values-inner{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
@@ -275,16 +288,17 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .val-name{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;color:var(--navy);margin-bottom:12px;transition:color .25s}
 .val-card:hover .val-name{color:var(--green-dark)}
 .val-desc{font-size:15px;color:var(--text-muted);line-height:1.75}
-
+ 
 /* ═══ WHY CHOOSE US ═══ */
 .why-section{background:#fff;padding:96px 0;position:relative;overflow:hidden}
 .why-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .why-img-side{position:relative}
 .why-img-main{border-radius:24px;overflow:hidden;box-shadow:0 32px 80px rgba(13,43,78,.18);aspect-ratio:4/3}
-.why-img-main .img-ph{width:100%;height:100%;background:linear-gradient(135deg,#ddf2e5,#8fd4a8);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;min-height:320px}
+.why-img-main .img-ph{width:100%;height:100%;background:linear-gradient(135deg,#ddf2e5,#8fd4a8);display:none;flex-direction:column;align-items:center;justify-content:center;gap:18px;min-height:320px}
+.why-img-main .img-ph.show{display:flex}
 .why-img-main .img-ph i{font-size:72px;color:var(--green);opacity:.4}
 .why-img-main .img-ph span{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green-dark);opacity:.6}
-.why-img-main img{width:100%;height:100%;object-fit:cover;display:block}
+.why-img-main img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1}
 .why-float-stat{position:absolute;bottom:-22px;left:-22px;background:var(--navy);border-radius:16px;padding:18px 24px;border:4px solid #fff;box-shadow:0 12px 36px rgba(13,43,78,.3);z-index:5}
 .why-float-stat .fs-num{font-family:'Montserrat',sans-serif;font-size:36px;font-weight:900;color:var(--green-mid);line-height:1}
 .why-float-stat .fs-label{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:4px}
@@ -301,7 +315,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .why-point-icon i{color:var(--green-dark);font-size:18px}
 .why-point-text strong{display:block;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:3px}
 .why-point-text span{font-size:14px;color:var(--text-muted);line-height:1.55}
-
+ 
 /* ═══ QUALITY & SAFETY ═══ */
 .qs-section{background:var(--bg);padding:96px 0;position:relative;overflow:hidden}
 .qs-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(46,158,79,.07) 1.5px,transparent 1.5px);background-size:36px 36px;pointer-events:none}
@@ -324,7 +338,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .qs-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:26px}
 .qs-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:#3a5070;line-height:1.6}
 .qs-list li::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:6px}
-
+ 
 /* ═══ TIMELINE ═══ */
 .timeline-section{background:#fff;padding:96px 0;position:relative;overflow:hidden}
 .timeline-section::before{content:'GROWTH';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Montserrat',sans-serif;font-size:clamp(60px,12vw,160px);font-weight:900;letter-spacing:16px;color:rgba(46,158,79,.04);white-space:nowrap;pointer-events:none;user-select:none}
@@ -342,7 +356,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .tl-content{flex:1}
 .tl-title{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:800;color:var(--navy);margin-bottom:5px}
 .tl-desc{font-size:14px;color:var(--text-muted);line-height:1.6}
-
+ 
 /* ═══ PORTFOLIO / DIVISIONS ═══ */
 .divisions-section{background:#fff;padding:100px 0;position:relative;overflow:hidden}
 .divisions-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(46,158,79,.065) 1.5px,transparent 1.5px);background-size:34px 34px;pointer-events:none;z-index:0}
@@ -356,15 +370,16 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .div-card.dc{opacity:1;transform:none}
 .div-card:hover{transform:translateY(-8px);box-shadow:0 30px 70px rgba(13,43,78,.14)}
 .div-img{position:relative;height:260px;overflow:hidden}
-.div-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s ease}
+.div-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s ease;position:relative;z-index:1}
 .div-card:hover .div-img img{transform:scale(1.06)}
-.div-img .dip{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px}
+.div-img .dip{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;gap:14px;z-index:0}
+.div-img .dip.show{display:flex}
 .sci-dip{background:linear-gradient(160deg,#0d2b4e 0%,#163e6f 55%,#1e7a3a 100%)}
 .health-dip{background:linear-gradient(160deg,#0a2e20 0%,#1e7a3a 55%,#2e9e4f 100%)}
 .svc-dip{background:linear-gradient(160deg,#0d2b4e 0%,#0a2e20 55%,#163e6f 100%)}
 .dip i{font-size:64px;color:rgba(255,255,255,.22)}
 .dip span{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35)}
-.div-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(13,43,78,.65) 0%,rgba(13,43,78,.08) 50%,transparent 100%);pointer-events:none}
+.div-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(13,43,78,.65) 0%,rgba(13,43,78,.08) 50%,transparent 100%);pointer-events:none;z-index:2}
 .div-img-tab{position:absolute;bottom:20px;left:24px;z-index:3;display:flex;align-items:center;gap:10px}
 .div-img-tab .tab-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
 .sci-tab .tab-icon{background:rgba(46,158,79,.9);color:#fff}
@@ -391,7 +406,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .svc-items-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px}
 .svc-items-grid .div-item{border-bottom:1px solid var(--border)}
 .div-count-badge{position:absolute;top:18px;right:18px;z-index:3;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:5px 14px;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:#fff;letter-spacing:.5px}
-
+ 
 /* ═══ CTA ═══ */
 .cta-section{background:linear-gradient(135deg,var(--navy),var(--navy-mid) 50%,#0a3d20 100%);padding:96px 0;position:relative;overflow:hidden}
 .cta-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(95,217,138,.07) 1.5px,transparent 1.5px);background-size:36px 36px;pointer-events:none}
@@ -408,54 +423,84 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .cta-deco-ring{position:absolute;border-radius:50%;border:1px solid rgba(95,217,138,.08);pointer-events:none}
 .cta-deco-ring:nth-child(1){width:600px;height:600px;top:50%;left:50%;transform:translate(-50%,-50%)}
 .cta-deco-ring:nth-child(2){width:900px;height:900px;top:50%;left:50%;transform:translate(-50%,-50%)}
-
-/* ═══ FOOTER ═══ */
-.footer{background:#0a1f38;color:#cdd8e8;font-size:14px;line-height:1.7}
+ 
+/* ═══════════════ FOOTER — matching index page exactly ═══════════════ */
+.footer{background:#07192d;color:#cdd8e8;font-size:14px;line-height:1.7}
+ 
 .footer-top-band{background:linear-gradient(90deg,var(--green-dark),#1ca64b,var(--green-dark));padding:22px 24px;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
 .footer-top-band p{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:#fff}
 .footer-top-band p span{color:#b8f5cf}
 .footer-cta-btn{background:#fff;color:var(--green-dark);font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;padding:10px 26px;border-radius:6px;text-decoration:none;transition:background .2s,color .2s,transform .15s;white-space:nowrap}
 .footer-cta-btn:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
-.footer-main{max-width:1200px;margin:0 auto;padding:60px 24px 40px;display:grid;grid-template-columns:280px 1fr 1fr 1fr;gap:40px}
-.footer-logo-wrap{display:flex;align-items:center;gap:10px;margin-bottom:18px}
-.footer-logo-icon{width:50px;height:50px;border-radius:10px;background:rgba(46,158,79,.15);border:1.5px solid rgba(46,158,79,.3);display:flex;align-items:center;justify-content:center}
-.footer-logo-icon svg{width:28px;height:28px}
-.footer-logo-name{font-family:'Montserrat',sans-serif;font-size:19px;font-weight:800;color:#fff}
+ 
+/* Main footer grid: logo | scientific | healthcare | quick links */
+.footer-main{max-width:1200px;margin:0 auto;padding:60px 24px 40px;display:grid;grid-template-columns:260px 1fr 1fr 180px;gap:40px}
+ 
+/* Logo column 
+.footer-logo-col{} */
+.footer-logo-wrap{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.footer-logo-icon{width:54px;height:54px;border-radius:10px;background:rgba(46,158,79,.15);border:1.5px solid rgba(46,158,79,.3);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+.footer-logo-icon img{width:100%;height:100%;object-fit:contain}
+.footer-logo-icon svg{width:30px;height:30px}
+.footer-logo-name{font-family:'Montserrat',sans-serif;font-size:21px;font-weight:800;color:#fff;line-height:1.1}
 .footer-logo-name span{color:var(--green)}
-.footer-logo-sub{font-size:10px;color:#7a9bb5;letter-spacing:1.8px;text-transform:uppercase}
-.footer-about p{color:#8aacca;font-size:13.5px;line-height:1.75;margin-bottom:20px}
-.footer-tagline{display:inline-block;background:rgba(46,158,79,.12);border-left:3px solid var(--green);color:#a8d8b5;font-size:12px;font-style:italic;padding:8px 14px;border-radius:0 6px 6px 0;margin-bottom:22px}
+.footer-logo-sub{font-size:11px;color:#7a9bb5;letter-spacing:1.8px;text-transform:uppercase}
+.footer-about-text{color:#8aacca;font-size:14px;line-height:1.8;margin-bottom:18px}
+.footer-tagline{display:inline-block;background:rgba(46,158,79,.12);border-left:3px solid var(--green);color:#a8d8b5;font-size:13px;font-style:italic;padding:9px 14px;border-radius:0 6px 6px 0;margin-bottom:22px}
 .footer-socials{display:flex;gap:8px;flex-wrap:wrap}
-.footer-socials a{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;text-decoration:none;transition:transform .2s,filter .2s}
+.footer-socials a{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;text-decoration:none;transition:transform .2s,filter .2s}
 .footer-socials a:hover{transform:translateY(-3px) scale(1.1);filter:brightness(1.2)}
-.footer-socials a.fb{background:#1877f2;color:#fff}.footer-socials a.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285aeb 90%);color:#fff}
-.footer-socials a.li{background:#0a66c2;color:#fff}.footer-socials a.tw{background:#000;color:#fff}
-.footer-socials a.yt{background:red;color:#fff}.footer-socials a.wa{background:#25d366;color:#fff}
-.footer-socials a.tg{background:#0088cc;color:#fff}.footer-socials a.pt{background:#e60023;color:#fff}
-.footer-col h4{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:#fff;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid rgba(46,158,79,.35);display:flex;align-items:center;gap:8px}
-.footer-col h4 i{color:var(--green);font-size:13px}
-.footer-col h5{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#5fd98a;letter-spacing:1.5px;text-transform:uppercase;margin:16px 0 8px}
+.footer-socials a.fb{background:#1877f2;color:#fff}
+.footer-socials a.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%);color:#fff}
+.footer-socials a.li{background:#0a66c2;color:#fff}
+.footer-socials a.tw{background:#000;color:#fff}
+.footer-socials a.yt{background:#ff0000;color:#fff}
+.footer-socials a.wa{background:#25d366;color:#fff}
+.footer-socials a.tg{background:#0088cc;color:#fff}
+.footer-socials a.pt{background:#e60023;color:#fff}
+ 
+/* Footer columns */
+.footer-col h4{font-family:'Montserrat',sans-serif;font-size:13.5px;font-weight:700;color:#fff;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid rgba(46,158,79,.35);display:flex;align-items:center;gap:8px}
+.footer-col h4 i{color:var(--green);font-size:14px}
+.footer-col h5{font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;color:#5fd98a;letter-spacing:1.5px;text-transform:uppercase;margin:18px 0 8px;padding-bottom:5px;border-bottom:1px solid rgba(46,158,79,.15)}
 .footer-links{list-style:none}
-.footer-links li a{color:#8aacca;text-decoration:none;font-size:13px;display:flex;align-items:flex-start;gap:7px;padding:3px 0;transition:color .2s,padding-left .2s;line-height:1.5}
-.footer-links li a::before{content:'›';color:var(--green);font-size:15px;line-height:1.3;flex-shrink:0;font-weight:700}
-.footer-links li a:hover{color:#5fd98a;padding-left:4px}
-.footer-contact-grid{max-width:1200px;margin:0 auto;padding:0 24px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.contact-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start;transition:border-color .2s,background .2s}
-.contact-card:hover{border-color:rgba(46,158,79,.35);background:rgba(46,158,79,.06)}
-.contact-icon{width:38px;height:38px;border-radius:8px;background:rgba(46,158,79,.15);border:1px solid rgba(46,158,79,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.contact-icon i{color:var(--green);font-size:15px}
-.contact-info strong{display:block;color:#fff;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
-.contact-info span,.contact-info a{display:block;color:#8aacca;font-size:12.5px;text-decoration:none;word-break:break-word}
+.footer-links li a{color:#8aacca;text-decoration:none;font-size:14px;display:flex;align-items:flex-start;gap:7px;padding:3.5px 0;transition:color .2s,padding-left .2s;line-height:1.5}
+.footer-links li a::before{content:'›';color:var(--green);font-size:16px;line-height:1.3;flex-shrink:0;font-weight:700}
+.footer-links li a:hover{color:#5fd98a;padding-left:5px}
+ 
+/* Contact cards grid */
+.footer-contact-grid{max-width:1200px;margin:0 auto;padding:0 24px 44px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.contact-card{
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;padding:20px 22px;display:flex;gap:14px;align-items:flex-start;
+  position:relative;overflow:hidden;
+  cursor:default;
+  transition:border-color .3s,box-shadow .3s,transform .3s
+}
+.contact-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(46,158,79,.18),rgba(30,122,58,.12));
+  opacity:0;transition:opacity .35s ease;z-index:0
+}
+.contact-card:hover{border-color:rgba(46,158,79,.45);box-shadow:0 10px 30px rgba(46,158,79,.15);transform:translateY(-4px)}
+.contact-card:hover::before{opacity:1}
+.contact-icon{width:42px;height:42px;border-radius:10px;background:rgba(46,158,79,.15);border:1px solid rgba(46,158,79,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;z-index:1;transition:background .3s}
+.contact-card:hover .contact-icon{background:rgba(46,158,79,.3)}
+.contact-icon i{color:var(--green);font-size:16px}
+.contact-info{flex:1;min-width:0;position:relative;z-index:1}
+.contact-info strong{display:block;color:#fff;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:5px}
+.contact-info span,.contact-info a{display:block;color:#8aacca;font-size:13px;text-decoration:none;word-break:break-word;line-height:1.6}
 .contact-info a:hover{color:#5fd98a}
+ 
 .footer-divider{border:none;border-top:1px solid rgba(255,255,255,.07);margin:0 24px}
 .footer-bottom{max-width:1200px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.footer-bottom p{font-size:12.5px;color:#4a6a88}
+.footer-bottom p{font-size:13px;color:#4a6a88}
 .footer-bottom p span{color:var(--green)}
 .footer-bottom-links{display:flex;gap:20px}
-.footer-bottom-links a{font-size:12px;color:#4a6a88;text-decoration:none;transition:color .2s}
+.footer-bottom-links a{font-size:13px;color:#4a6a88;text-decoration:none;transition:color .2s}
 .footer-bottom-links a:hover{color:#5fd98a}
 .footer-motto{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:rgba(46,158,79,.55);letter-spacing:2px;text-transform:uppercase}
-
+ 
 /* ═══ RESPONSIVE ═══ */
 @media(max-width:1100px){
   .div-top-row{grid-template-columns:1fr}
@@ -464,7 +509,8 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
   .hero-right-vis{display:none}
   .story-grid,.vm-cards,.qs-grid{grid-template-columns:1fr}
   .values-grid{grid-template-columns:repeat(2,1fr)}
-  .footer-main{grid-template-columns:1fr 1fr}
+  .footer-main{grid-template-columns:1fr 1fr;gap:36px}
+  .footer-contact-grid{grid-template-columns:repeat(2,1fr)}
   .hero-title,.section-title{font-size:38px}
   .welcome-wrap{grid-template-columns:1fr;gap:48px}
   .wl-stat-a,.wl-stat-b{display:none}
@@ -489,6 +535,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
   .vm-cards{grid-template-columns:1fr}
   .cta-title{font-size:30px}
   .footer-main{grid-template-columns:1fr;gap:28px}
+  .footer-contact-grid{grid-template-columns:1fr}
   .footer-bottom{flex-direction:column;text-align:center}
   .footer-top-band{flex-direction:column;text-align:center;gap:14px}
   .wl-stats-row{grid-template-columns:repeat(3,1fr)}
@@ -500,10 +547,51 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
   .vm-card-inner{padding:36px 28px}
   .wl-stats-row{grid-template-columns:1fr 1fr}
 }
+/*chatbot*/
+  .wa-chat-widget { position: fixed; bottom: 28px; right: 28px; z-index: 9999; font-family: 'Open Sans', sans-serif; }
+  .wa-chat-fab { width: 60px; height: 60px; border-radius: 50%; background: #25d366; box-shadow: 0 6px 24px rgba(37,211,102,0.5); display: flex; align-items: center; justify-content: center; cursor: pointer; border: none; transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.25s ease; position: relative; z-index: 2; }
+  .wa-chat-fab:hover { transform: scale(1.12); box-shadow: 0 10px 32px rgba(37,211,102,0.65); }
+  .wa-chat-fab svg { width: 32px; height: 32px; transition: opacity 0.2s, transform 0.2s; }
+  .wa-chat-fab .icon-close { position: absolute; opacity: 0; transform: rotate(-90deg) scale(0.6); }
+  .wa-chat-widget.open .wa-chat-fab .icon-wa { opacity: 0; transform: rotate(90deg) scale(0.6); }
+  .wa-chat-widget.open .wa-chat-fab .icon-close { opacity: 1; transform: rotate(0deg) scale(1); }
+  .wa-notif-dot { position: absolute; top: 4px; right: 4px; width: 14px; height: 14px; background: #ff3b3b; border-radius: 50%; border: 2px solid #fff; animation: wa-pulse 2s infinite; }
+  @keyframes wa-pulse { 0%,100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,59,59,0.5); } 60% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(255,59,59,0); } }
+  .wa-chat-widget.open .wa-notif-dot { display: none; }
+  .wa-chat-box { position: absolute; bottom: 74px; right: 0; width: 320px; background: #fff; border-radius: 18px; box-shadow: 0 20px 60px rgba(0,0,0,0.18); overflow: hidden; opacity: 0; transform: scale(0.85) translateY(20px); transform-origin: bottom right; transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.34,1.56,0.64,1); pointer-events: none; }
+  .wa-chat-widget.open .wa-chat-box { opacity: 1; transform: scale(1) translateY(0); pointer-events: all; }
+  .wa-box-header { background: #075e54; padding: 18px 18px 16px; display: flex; align-items: center; gap: 12px; }
+  .wa-avatar { width: 46px; height: 46px; border-radius: 50%; background: #25d366; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 2px solid rgba(255,255,255,0.25); }
+  .wa-avatar svg { width: 26px; height: 26px; }
+  .wa-header-text { flex: 1; }
+  .wa-header-text strong { display: block; color: #fff; font-size: 14px; font-weight: 700; font-family: 'Montserrat', sans-serif; }
+  .wa-header-text span { font-size: 12px; color: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 5px; margin-top: 2px; }
+  .wa-online-dot { width: 7px; height: 7px; background: #25d366; border-radius: 50%; display: inline-block; animation: wa-blink 2.5s infinite; }
+  @keyframes wa-blink { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+  .wa-chat-body { padding: 16px 14px 12px; background: #e5ddd5; min-height: 110px; }
+  .wa-bubble-wrap { display: flex; align-items: flex-start; gap: 8px; }
+  .wa-bubble-avatar { width: 30px; height: 30px; border-radius: 50%; background: #25d366; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .wa-bubble-avatar svg { width: 16px; height: 16px; }
+  .wa-bubble { background: #fff; border-radius: 0 10px 10px 10px; padding: 10px 13px; box-shadow: 0 1px 3px rgba(0,0,0,0.12); max-width: 220px; font-size: 13.5px; color: #333; line-height: 1.55; position: relative; }
+  .wa-bubble::before { content: ''; position: absolute; left: -7px; top: 0; border-width: 0 8px 8px 0; border-style: solid; border-color: transparent #fff transparent transparent; }
+  .wa-bubble-time { font-size: 10.5px; color: #999; text-align: right; margin-top: 5px; }
+  .wa-bubble-second { background: #dcf8c6; border-radius: 10px 10px 10px 0; padding: 10px 13px; box-shadow: 0 1px 3px rgba(0,0,0,0.12); max-width: 220px; font-size: 12.5px; color: #555; line-height: 1.55; margin-top: 8px; }
+  .wa-chat-footer { padding: 10px 12px; background: #f0f0f0; border-top: 1px solid #e0e0e0; }
+  .wa-input-row { display: flex; align-items: center; gap: 8px; background: #fff; border-radius: 24px; padding: 8px 8px 8px 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+  .wa-input { flex: 1; border: none; outline: none; font-size: 13.5px; color: #333; font-family: 'Open Sans', sans-serif; background: transparent; }
+  .wa-input::placeholder { color: #aaa; }
+  .wa-send-btn { width: 36px; height: 36px; border-radius: 50%; background: #25d366; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s, transform 0.15s; }
+  .wa-send-btn:hover { background: #128c7e; transform: scale(1.08); }
+  .wa-send-btn svg { width: 18px; height: 18px; }
+  .wa-footer-note { text-align: center; font-size: 11px; color: #aaa; margin-top: 8px; }
+  @media (max-width: 400px) {
+    .wa-chat-box { width: 290px; right: -4px; }
+    .wa-chat-widget { bottom: 20px; right: 16px; }
+  }
 </style>
 </head>
 <body>
-
+ 
 <!-- TOP BAR -->
 <div class="top-bar">
   <div class="top-bar-inner">
@@ -513,18 +601,18 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
       <span><i class="fas fa-envelope"></i> chemslifegroups@gmail.com</span>
     </div>
     <div class="social-links">
-      <a href="https://www.facebook.com/Chemslifegroups" class="fb" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/chemslife_groups/" class="ig" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/chemslifegroups278a10213/" class="li" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://twitter.com/ChemslifeGroups" class="tw" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://www.youtube.com/c/ChemslifeGroupss" class="yt" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
-      <a href="https://wa.me/918870496918" class="wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://t.me/ChemslifeGroups" class="tg" target="_blank" rel="noopener"><i class="fab fa-telegram-plane"></i></a>
-      <a href="#" class="pt"><i class="fab fa-pinterest-p"></i></a>
+      <a href="https://www.facebook.com/Chemslifegroups" class="fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/chemslifegroups" class="ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/chemslife-groups-278a10213/" class="li" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://twitter.com/Chemslifegroups" class="tw" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.youtube.com/c/ChemslifeGroupss" class="yt" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://wa.me/1234567890" class="wa" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://t.me/ChemslifeGroups" class="tg" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+      <a href="https://www.pinterest.com/chemslifegroups" class="pt" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
     </div>
   </div>
 </div>
-
+ 
 <!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee-track">
@@ -546,8 +634,8 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </div>
-
-<!-- HEADER — nav dropdown CORRECTED to match scientific-industrial-solutions page -->
+ 
+<!-- HEADER -->
 <header class="main-header">
   <div class="main-header-inner">
     <a href="index.html" class="logo-wrap">
@@ -579,7 +667,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
             </div>
           </a>
           <div class="dropdown-divider"></div>
-          <a href="#">
+          <a href="integrated health care .html">
             <div class="dd-icon"><i class="fas fa-heartbeat"></i></div>
             <div class="dd-label">
               <strong>Integrated Healthcare Solutions</strong>
@@ -593,7 +681,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </div>
 </header>
-
+ 
 <!-- HERO -->
 <section class="about-hero">
   <div class="ah-overlay"></div>
@@ -630,7 +718,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </section>
-
+ 
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
   <div class="breadcrumb-inner">
@@ -639,14 +727,15 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     <span>About Us</span>
   </div>
 </div>
-
+ 
 <!-- WELCOME -->
 <section class="welcome-section" id="welcome">
   <div class="welcome-wrap">
     <div class="wl-img-side reveal from-left">
       <div class="wl-left-bar"></div>
       <div class="wl-img-main">
-        <img src="all dummy images/image7.jpeg" alt="Chemslife Groups — Who We Are" onerror="this.style.display='none'"/>
+        <img src="all dummy images/image7.jpeg" alt="Chemslife Groups — Who We Are"
+          onerror="this.style.display='none';var ph=this.parentElement.querySelector('.img-ph');if(ph){ph.classList.add('show');}"/>
         <div class="img-ph"><i class="fas fa-building"></i><span>Company Photo</span></div>
         <div class="wl-img-caption"><h3>Chemslife Groups</h3><p>Hosur, Tamil Nadu &nbsp;·&nbsp; Est. 2018</p></div>
       </div>
@@ -679,13 +768,13 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
         <span class="wl-div-pill"><i class="fas fa-calculator"></i> Tax &amp; Financial</span>
       </div>
       <div class="wl-ctas">
-        <a href="contact-us.html" class="btn-primary"><i class="fas fa-paper-plane"></i> Get In Touch</a>
-        <a href="#story" class="btn-outline">Our Story <i class="fas fa-arrow-down"></i></a>
+        <a href="contact us .html" class="btn-primary"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+        <a href="About us.html" class="btn-outline">Our Story <i class="fas fa-arrow-down"></i></a>
       </div>
     </div>
   </div>
 </section>
-
+ 
 <!-- OUR STORY -->
 <section class="story-section" id="story">
   <div class="story-inner">
@@ -698,11 +787,13 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
       <div class="story-img-col reveal from-left">
         <div class="story-img-stack">
           <div class="story-img-a">
-            <img src="all dummy images/image7.jpeg" alt="Our Story" onerror="this.style.display='none'"/>
+            <img src="all dummy images/image7.jpeg" alt="Our Story"
+              onerror="this.style.display='none';var ph=this.parentElement.querySelector('.img-ph');if(ph){ph.classList.add('show');}"/>
             <div class="img-ph"><i class="fas fa-history"></i><span>Our Story</span></div>
           </div>
           <div class="story-img-b">
-            <img src="all dummy images/image4.png" alt="Founder" onerror="this.style.display='none'"/>
+            <img src="all dummy images/image4.png" alt="Founder"
+              onerror="this.style.display='none';var ph=this.parentElement.querySelector('.img-ph');if(ph){ph.classList.add('show');}"/>
             <div class="img-ph"><i class="fas fa-user-tie"></i><span>Founder</span></div>
           </div>
           <div class="story-quote">
@@ -719,7 +810,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </section>
-
+ 
 <!-- DIVISIONS / PORTFOLIO -->
 <section class="divisions-section" id="portfolio">
   <div class="divisions-inner">
@@ -731,8 +822,9 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     <div class="div-top-row">
       <div class="div-card">
         <div class="div-img">
-          <img src="Real photos/Scientific.jpg.jpeg" alt="Scientific &amp; Industrial Solutions" onerror="this.style.display='none'"/>
-          <div class="dip sci-dip"><i class="fas fa-flask"></i><span>Add Your Image</span></div>
+          <img src="Real photos/Scientific.jpg.jpeg" alt="Scientific &amp; Industrial Solutions"
+            onerror="this.style.display='none';var ph=this.parentElement.querySelector('.dip');if(ph){ph.classList.add('show');}"/>
+          <div class="dip sci-dip"><i class="fas fa-flask"></i><span>Scientific &amp; Industrial</span></div>
           <div class="div-count-badge">4 Product Lines</div>
           <div class="div-img-tab sci-tab">
             <div class="tab-icon"><i class="fas fa-flask"></i></div>
@@ -750,8 +842,9 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
       </div>
       <div class="div-card">
         <div class="div-img">
-          <img src="Real photos/Healthcare.png" alt="Integrated Healthcare Solutions" onerror="this.style.display='none'"/>
-          <div class="dip health-dip"><i class="fas fa-heartbeat"></i><span>Add Your Image</span></div>
+          <img src="Real photos/Healthcare.png" alt="Integrated Healthcare Solutions"
+            onerror="this.style.display='none';var ph=this.parentElement.querySelector('.dip');if(ph){ph.classList.add('show');}"/>
+          <div class="dip health-dip"><i class="fas fa-heartbeat"></i><span>Healthcare Solutions</span></div>
           <div class="div-count-badge">4 Product Lines</div>
           <div class="div-img-tab health-tab">
             <div class="tab-icon"><i class="fas fa-heartbeat"></i></div>
@@ -771,8 +864,9 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     <div class="div-bottom-row">
       <div class="div-card svc-card">
         <div class="div-img" style="height:220px">
-          <img src="Real photos/Industry.jpg.jpeg" alt="Service Verticals" onerror="this.style.display='none'"/>
-          <div class="dip svc-dip"><i class="fas fa-cogs"></i><span>Add Your Image</span></div>
+          <img src="Real photos/Industry.jpg.jpeg" alt="Service Verticals"
+            onerror="this.style.display='none';var ph=this.parentElement.querySelector('.dip');if(ph){ph.classList.add('show');}"/>
+          <div class="dip svc-dip"><i class="fas fa-cogs"></i><span>Service Verticals</span></div>
           <div class="div-count-badge">3 Service Verticals</div>
           <div class="div-img-tab svc-tab">
             <div class="tab-icon"><i class="fas fa-cogs"></i></div>
@@ -790,7 +884,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </section>
-
+ 
 <!-- VISION & MISSION -->
 <section class="vm-section" id="vision-mission">
   <div class="vm-inner">
@@ -821,7 +915,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </section>
-
+ 
 <!-- CORE VALUES -->
 <section class="values-section" id="values">
   <div class="values-inner">
@@ -840,13 +934,14 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </section>
-
+ 
 <!-- WHY CHOOSE US -->
 <section class="why-section" id="why-us">
   <div class="why-inner">
     <div class="why-img-side reveal from-left">
       <div class="why-img-main">
-        <img src="all dummy images/image8.jpeg" alt="Why Chemslife" onerror="this.style.display='none'"/>
+        <img src="all dummy images/image8.jpeg" alt="Why Chemslife"
+          onerror="this.style.display='none';var ph=this.parentElement.querySelector('.img-ph');if(ph){ph.classList.add('show');}"/>
         <div class="img-ph"><i class="fas fa-award"></i><span>Excellence Photo</span></div>
       </div>
       <div class="why-float-stat"><div class="fs-num">500+</div><div class="fs-label">Clients Served</div></div>
@@ -867,7 +962,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </section>
-
+ 
 <!-- QUALITY & SAFETY -->
 <section class="qs-section" id="quality-safety">
   <div class="qs-inner">
@@ -906,7 +1001,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </section>
-
+ 
 <!-- TIMELINE -->
 <section class="timeline-section" id="journey">
   <div class="timeline-inner">
@@ -928,7 +1023,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </section>
-
+ 
 <!-- CTA -->
 <section class="cta-section" id="join-us">
   <div class="cta-deco-ring"></div>
@@ -938,109 +1033,347 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     <h2 class="cta-title">Join Our <span>Journey</span></h2>
     <p class="cta-sub">We invite you to partner with us as we continue to grow and innovate. Explore our offerings and discover how Chemslife Groups can support your business with reliable, high-quality solutions.</p>
     <div class="cta-btns">
-      <a href="contact-us.html" class="cta-btn-primary"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+      <a href="contact us .html" class="cta-btn-primary"><i class="fas fa-paper-plane"></i> Get In Touch</a>
       <a href="index.html" class="cta-btn-outline"><i class="fas fa-flask"></i> Explore Products</a>
     </div>
   </div>
 </section>
-
-<!-- FOOTER -->
+ 
+<!-- ═══════════════ FOOTER — same as index page ═══════════════ -->
 <footer class="footer">
   <div class="footer-top-band">
     <p>Ready to partner with us? <span>Explore our full range of scientific, industrial &amp; healthcare solutions.</span></p>
-    <a href="#" class="footer-cta-btn" id="backToTop"><i class="fas fa-arrow-up" style="margin-right:7px"></i>Back to Top</a>
+    <a href="#contact-form" class="footer-cta-btn"><i class="fas fa-paper-plane" style="margin-right:7px"></i>Get in Touch</a>
   </div>
+ 
   <div class="footer-main">
-    <div class="footer-about">
+ 
+    <!-- Logo & About -->
+    <div class="footer-logo-col">
       <div class="footer-logo-wrap">
         <div class="footer-logo-icon">
-          <svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4 Z" fill="#2e9e4f" opacity="0.2" stroke="#2e9e4f" stroke-width="2.5" stroke-linejoin="round"/><path d="M23 38 Q30 32 38 40 L42 52 Q44 57 40 59 L20 59 Q16 57 18 52 Z" fill="#2e9e4f" opacity="0.8"/><rect x="21" y="0" width="18" height="6" rx="3" fill="#cdd8e8"/><path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4" fill="none" stroke="#cdd8e8" stroke-width="2.5" stroke-linejoin="round"/></svg>
+          <img src="all dummy images/logo1.jpeg" alt="Chemslife Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+          <svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg" style="display:none">
+            <path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4 Z" fill="#2e9e4f" opacity="0.2" stroke="#2e9e4f" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M23 38 Q30 32 38 40 L42 52 Q44 57 40 59 L20 59 Q16 57 18 52 Z" fill="#2e9e4f" opacity="0.8"/>
+            <rect x="21" y="0" width="18" height="6" rx="3" fill="#cdd8e8"/>
+            <path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4" fill="none" stroke="#cdd8e8" stroke-width="2.5" stroke-linejoin="round"/>
+          </svg>
         </div>
-        <div><div class="footer-logo-name">CHEMS<span>LIFE</span></div><div class="footer-logo-sub">Groups</div></div>
+        <div>
+          <div class="footer-logo-name">CHEMS<span>LIFE</span></div>
+          <div class="footer-logo-sub">Groups</div>
+        </div>
       </div>
-      <p>A multi-sector organization delivering reliable scientific, industrial, and healthcare solutions since 2018. Founded by Mr. Sivasankar Karthikeyan.</p>
+      <p class="footer-about-text">A multi-sector organization delivering reliable scientific, industrial, and healthcare solutions since 2018. Founded by Mr. Sivasankar Karthikeyan.</p>
       <div class="footer-tagline">"Building Chemistry for a Better Tomorrow"</div>
       <div class="footer-socials">
-        <a href="https://www.facebook.com/Chemslifegroups" class="fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/chemslife_groups/" class="ig" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/chemslifegroups278a10213/" class="li" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://twitter.com/ChemslifeGroups" class="tw" target="_blank"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://www.youtube.com/c/ChemslifeGroupss" class="yt" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://wa.me/918870496918" class="wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://t.me/ChemslifeGroups" class="tg" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-        <a href="#" class="pt"><i class="fab fa-pinterest-p"></i></a>
+        <a href="https://www.facebook.com/Chemslifegroups" class="fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/Chemslifegroups" class="ig" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/chemslife-groups-278a10213/" class="li" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/Chemslifegroups" class="tw" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.youtube.com/Chemslifegroupss" class="yt" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919876543210" class="wa" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://t.me/Chemslifegroups" class="tg" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+        <a href="https://www.pinterest.com/Chemslifegroups" class="pt" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
       </div>
     </div>
+ 
+    <!-- Scientific & Industrial Solutions -->
     <div class="footer-col">
-      <h4><i class="fas fa-flask"></i> Scientific &amp; Industrial</h4>
+      <h4><i class="fas fa-flask"></i> Scientific &amp; Industrial Solutions</h4>
+ 
       <h5>Laboratory Products</h5>
-      <ul class="footer-links"><li><a href="#">Laboratory Chemicals</a></li><li><a href="#">Laboratory Instruments</a></li><li><a href="#">Laboratory Equipment</a></li><li><a href="#">Glassware &amp; Plasticware</a></li><li><a href="#">Lab Furniture &amp; Safety Kits</a></li></ul>
-      <h5>Chemical Products</h5>
-      <ul class="footer-links"><li><a href="#">Acids &amp; Solvents</a></li><li><a href="#">Agro &amp; Bio Chemicals</a></li><li><a href="#">Boiler &amp; Cooling Tower Chemicals</a></li><li><a href="#">Speciality &amp; USP Grade</a></li></ul>
-      <h5>Water Treatment</h5>
-      <ul class="footer-links"><li><a href="#">Filtration &amp; Membrane Systems</a></li><li><a href="#">Ion Exchange Resins</a></li><li><a href="#">Wastewater Treatment</a></li></ul>
+      <ul class="footer-links">
+        <li><a href="scientific .html">Laboratory Chemicals</a></li>
+        <li><a href="scientific .html">Laboratory Instruments</a></li>
+        <li><a href="scientific .html">Laboratory Equipment</a></li>
+        <li><a href="scientific .html">Glassware &amp; Plasticware</a></li>
+        <li><a href="scientific .html">Lab Furniture &amp; Safety Kits</a></li>
+        <li><a href="scientific .html">Lab Test Kits &amp; Filtration</a></li>
+      </ul>
+ 
+      <h5>Water Treatment Products</h5>
+      <ul class="footer-links">
+        <li><a href="scientific .html">Filtration &amp; Membrane Systems</a></li>
+        <li><a href="scientific .html">Ion Exchange Resins</a></li>
+        <li><a href="scientific .html">Monitoring &amp; Testing Products</a></li>
+        <li><a href="scientific .html">Wastewater Treatment</a></li>
+      </ul>
+ 
+      <h5>Homecare &amp; Cleaning Products</h5>
+      <ul class="footer-links">
+        <li><a href="scientific .html">Cleaning &amp; Disinfection Agents</a></li>
+        <li><a href="scientific .html">Detergents &amp; Laundry</a></li>
+        <li><a href="scientific .html">Pest Control Products</a></li>
+        <li><a href="scientific .html">Housekeeping Tools</a></li>
+      </ul>
     </div>
+ 
+    <!-- Integrated Healthcare Solutions -->
     <div class="footer-col">
-      <h4><i class="fas fa-heartbeat"></i> Healthcare Solutions</h4>
-      <h5>Pharmaceutical</h5>
-      <ul class="footer-links"><li><a href="#">Analgesics &amp; Antipyretics</a></li><li><a href="#">Antibiotics &amp; Antimicrobials</a></li><li><a href="#">Cardiovascular Drugs</a></li><li><a href="#">Vitamins &amp; Supplements</a></li></ul>
-      <h5>Surgical &amp; Diagnostic</h5>
-      <ul class="footer-links"><li><a href="#">Surgical Instruments</a></li><li><a href="#">Specialty Surgical Sets</a></li><li><a href="#">Hematology Products</a></li><li><a href="#">Molecular Diagnostics</a></li></ul>
-      <h5>Safety &amp; Disposables</h5>
-      <ul class="footer-links"><li><a href="#">PPE</a></li><li><a href="#">Medical Disposables</a></li><li><a href="#">Waste Management</a></li></ul>
+      <h4><i class="fas fa-heartbeat"></i> Integrated Healthcare Solutions</h4>
+ 
+      <h5>Pharmaceutical Products</h5>
+      <ul class="footer-links">
+        <li><a href="integrated health care .html">Analgesics &amp; Antipyretics</a></li>
+        <li><a href="integrated health care .html">Antibiotics &amp; Antimicrobials</a></li>
+        <li><a href="integrated health care .html">Cardiovascular Drugs</a></li>
+        <li><a href="integrated health care .html">Vitamins &amp; Supplements</a></li>
+      </ul>
+ 
+      <h5>Surgical Supplies</h5>
+      <ul class="footer-links">
+        <li><a href="integrated health care .html">Surgical Instruments</a></li>
+        <li><a href="integrated health care .html">Specialty Surgical Sets</a></li>
+        <li><a href="integrated health care .html">Suturing &amp; Stapling</a></li>
+      </ul>
+ 
+      <h5>Hospital Consumables &amp; Medical Devices</h5>
+      <ul class="footer-links">
+        <li><a href="integrated health care .html">Hospital Consumables</a></li>
+        <li><a href="integrated health care .html">Medical Devices in Hospitals</a></li>
+      </ul>
+ 
+      <h5>Diagnostic Products &amp; Instruments</h5>
+      <ul class="footer-links">
+        <li><a href="integrated health care .html">Diagnostic Instruments &amp; Consumables</a></li>
+        <li><a href="integrated health care .html">Hematology &amp; Immunology</a></li>
+        <li><a href="integrated health care .html">Molecular &amp; POC Diagnostics</a></li>
+      </ul>
+ 
+      <h5>Disposables &amp; Safety Products</h5>
+      <ul class="footer-links">
+        <li><a href="integrated health care .html">Disposables Products</a></li>
+        <li><a href="integrated health care .html">Safety Products &amp; PPE</a></li>
+        <li><a href="integrated health care .html">Waste Management Disposables</a></li>
+      </ul>
     </div>
+ 
+    <!-- Quick Links -->
     <div class="footer-col">
       <h4><i class="fas fa-link"></i> Quick Links</h4>
-      <ul class="footer-links"><li><a href="#">Home</a></li><li><a href="#">About Us</a></li><li><a href="#">Products</a></li><li><a href="#">Contact Us</a></li><li><a href="#">E-Commerce Store (Chemscart)</a></li></ul>
-      <h5>About</h5>
-      <ul class="footer-links"><li><a href="#welcome">Welcome</a></li><li><a href="#story">Our Story</a></li><li><a href="#vision-mission">Vision &amp; Mission</a></li><li><a href="#values">Core Values</a></li><li><a href="#quality-safety">Quality &amp; Safety</a></li><li><a href="#journey">Growth Journey</a></li><li><a href="#portfolio">Our Portfolio</a></li></ul>
-      <h5>Our Locations</h5>
-      <ul class="footer-links"><li><a href="#">Corporate Office – Hosur, TN</a></li><li><a href="#">Healthcare Division – Hosur, TN</a></li><li><a href="#">Scientific Division – Krishnagiri, TN</a></li></ul>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="Scientific .html">Scientific &amp; Industrial</a></li>
+        <li><a href="integrated health care .html">Healthcare Solutions</a></li>
+        <li><a href="contact us .html">Contact Us</a></li>
+      </ul>
+    </div>
+ 
+  </div>
+ 
+  <!-- Contact Cards -->
+  <div class="footer-contact-grid">
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+      <div class="contact-info">
+        <strong>Sales</strong>
+        <span>+91 88704 96918</span>
+        <a href="mailto:sales@chemslife.in">sales@chemslife.in</a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-headset"></i></div>
+      <div class="contact-info">
+        <strong>Admin</strong>
+        <span>+91 88702 44418</span>
+        <a href="mailto:admin@chemslife.in">admin@chemslife.in</a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-shopping-bag"></i></div>
+      <div class="contact-info">
+        <strong>Chemscart</strong>
+        <span>+91 88702 44418</span>
+        <a href="mailto:admin@chemscart.in">admin@chemscart.in</a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-truck"></i></div>
+      <div class="contact-info">
+        <strong>Dispatch</strong>
+        <span>+91 88700 36018</span>
+        <a href="mailto:dispatch@chemslife.in">dispatch@chemslife.in</a>
+      </div>
     </div>
   </div>
-  <div class="footer-contact-grid">
-    <div class="contact-card"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><div class="contact-info"><strong>Sales</strong><span>+91 88704 96918</span><a href="mailto:sales@chemslife.in">sales@chemslife.in</a></div></div>
-    <div class="contact-card"><div class="contact-icon"><i class="fas fa-headset"></i></div><div class="contact-info"><strong>Admin</strong><span>+91 88702 44418 / 88702 66618</span><a href="mailto:admin@chemslife.in">admin@chemslife.in</a></div></div>
-    <div class="contact-card"><div class="contact-icon"><i class="fas fa-shopping-bag"></i></div><div class="contact-info"><strong>Chemscart</strong><span>+91 88702 44418</span><a href="mailto:admin@chemscart.in">admin@chemscart.in</a></div></div>
-    <div class="contact-card"><div class="contact-icon"><i class="fas fa-truck"></i></div><div class="contact-info"><strong>Dispatch</strong><span>+91 88700 36018</span><a href="mailto:dispatch@chemslife.in">dispatch@chemslife.in</a></div></div>
-  </div>
+ 
   <hr class="footer-divider"/>
   <div class="footer-bottom">
     <p>&copy; 2025 <span>Chemslife Groups</span>. All rights reserved. | Founded by Mr. Sivasankar Karthikeyan.</p>
-    <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Sitemap</a></div>
+    <div class="footer-bottom-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-use.html">Terms of Use</a>
+      <a href="contact us .html">Sitemap</a>
+    </div>
     <div class="footer-motto">Everything is Science &nbsp;&#9670;&nbsp; Science for Nation</div>
   </div>
 </footer>
-
+<!---chatbot-->
+<div class="wa-chat-widget" id="waChatWidget">
+  <div class="wa-chat-box" id="waChatBox">
+    <div class="wa-box-header">
+      <div class="wa-avatar">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.685 4.61 1.873 6.492L4 29l7.724-1.849A11.94 11.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="white" fill-opacity="0.9"/>
+          <path d="M21.8 18.6c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.78-1.68-2.08-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.07.15.2 2.1 3.2 5.09 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.28.17-1.41-.07-.12-.27-.2-.57-.34z" fill="#25d366"/>
+        </svg>
+      </div>
+      <div class="wa-header-text">
+        <strong>Chemslife Groups</strong>
+        <span><span class="wa-online-dot"></span> Typically replies instantly</span>
+      </div>
+    </div>
+    <div class="wa-chat-body">
+      <div class="wa-bubble-wrap">
+        <div class="wa-bubble-avatar">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.685 4.61 1.873 6.492L4 29l7.724-1.849A11.94 11.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="white" fill-opacity="0.9"/>
+          </svg>
+        </div>
+        <div>
+          <div class="wa-bubble">
+            👋 Hi there! Welcome to <strong>Chemslife Groups</strong>. How can we help you today?
+            <div class="wa-bubble-time" id="waBubbleTime"></div>
+          </div>
+          <div class="wa-bubble-second">
+            Ask us about our scientific, industrial, or healthcare solutions!
+            <div class="wa-bubble-time" id="waBubbleTime2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wa-chat-footer">
+      <div class="wa-input-row">
+        <input class="wa-input" id="waInput" type="text" placeholder="Type a message..." maxlength="300" autocomplete="off"/>
+        <button class="wa-send-btn" id="waSendBtn" aria-label="Send on WhatsApp">
+          <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="wa-footer-note">
+        <svg viewBox="0 0 24 24" width="10" height="10" fill="#25d366" style="vertical-align:middle;margin-right:3px"><path d="M16 18l6-6-6-6-1.41 1.41L18.17 11H2v2h16.17l-3.58 3.59L16 18z"/></svg>
+        Opens in WhatsApp &nbsp;·&nbsp; +91 88702 44418
+      </div>
+    </div>
+  </div>
+ 
+  <button class="wa-chat-fab" id="waChatFab" aria-label="Chat on WhatsApp">
+    <div class="wa-notif-dot"></div>
+    <!-- WhatsApp Icon -->
+    <svg class="icon-wa" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.685 4.61 1.873 6.492L4 29l7.724-1.849A11.94 11.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="white"/>
+      <path d="M21.8 18.6c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.78-1.68-2.08-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.07.15.2 2.1 3.2 5.09 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.28.17-1.41-.07-.12-.27-.2-.57-.34z" fill="#25d366"/>
+    </svg>
+    <!-- Close Icon -->
+    <svg class="icon-close" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+    </svg>
+  </button>
+</div>
+ 
+ 
 <script>
+// ─── Image fallback: hide placeholder by default; show only on load failure
+// This runs on DOMContentLoaded and also handles already-cached images
+function initImageFallbacks() {
+  // Select every content image that has a sibling placeholder
+  var imgs = document.querySelectorAll(
+    '.wl-img-main img, .story-img-a img, .story-img-b img, .why-img-main img, .div-img img'
+  );
+  imgs.forEach(function(img) {
+    // If already broken (cached 404 or bad path)
+    if (img.complete && img.naturalWidth === 0) {
+      img.style.display = 'none';
+      var ph = img.parentElement.querySelector('.img-ph, .dip');
+      if (ph) ph.classList.add('show');
+    }
+    // Also attach runtime handler in case it breaks after this runs
+    img.addEventListener('error', function() {
+      this.style.display = 'none';
+      var ph = this.parentElement.querySelector('.img-ph, .dip');
+      if (ph) ph.classList.add('show');
+    });
+    // If image loads successfully, make sure placeholder stays hidden
+    img.addEventListener('load', function() {
+      var ph = this.parentElement.querySelector('.img-ph, .dip');
+      if (ph) ph.classList.remove('show');
+    });
+  });
+}
+// Run immediately (handles sync-loaded images)
+initImageFallbacks();
+// Also run after full page load (handles async/cached images)
+window.addEventListener('load', initImageFallbacks);
+ 
 // ─── Hamburger
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('main-nav');
 hamburger.addEventListener('click', () => nav.classList.toggle('open'));
-document.addEventListener('click', e => { if (!nav.contains(e.target) && !hamburger.contains(e.target)) nav.classList.remove('open'); });
-
-// ─── Mobile dropdown
+document.addEventListener('click', e => {
+  if (!nav.contains(e.target) && !hamburger.contains(e.target)) nav.classList.remove('open');
+});
+ 
+// ─── Products Dropdown — with delayed hide (400ms) so it doesn't disappear too fast
 const productsDropdown = document.getElementById('productsDropdown');
 const productsToggle = document.getElementById('productsToggle');
-if (productsToggle) productsToggle.addEventListener('click', e => { if (window.innerWidth <= 768) { e.preventDefault(); productsDropdown.classList.toggle('open'); } });
-
+let ddHideTimer = null;
+ 
+productsDropdown.addEventListener('mouseenter', () => {
+  clearTimeout(ddHideTimer);
+  productsDropdown.classList.add('hovered');
+});
+productsDropdown.addEventListener('mouseleave', () => {
+  ddHideTimer = setTimeout(() => {
+    productsDropdown.classList.remove('hovered');
+  }, 400); // 400ms delay before hiding
+});
+ 
+// Mobile dropdown toggle
+if (productsToggle) {
+  productsToggle.addEventListener('click', e => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      productsDropdown.classList.toggle('open');
+    }
+  });
+}
+ 
 // ─── Scroll Reveal
 const revealEls = document.querySelectorAll('.reveal');
-function checkReveal() { const wh = window.innerHeight; revealEls.forEach(el => { if (el.getBoundingClientRect().top < wh - 80) el.classList.add('visible'); }); }
+function checkReveal() {
+  const wh = window.innerHeight;
+  revealEls.forEach(el => { if (el.getBoundingClientRect().top < wh - 80) el.classList.add('visible'); });
+}
 let ticking = false;
-window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(() => { checkReveal(); ticking = false; }); ticking = true; } });
+window.addEventListener('scroll', () => {
+  if (!ticking) { requestAnimationFrame(() => { checkReveal(); ticking = false; }); ticking = true; }
+});
 checkReveal();
-
+ 
 // ─── Value Cards
 const valCards = document.querySelectorAll('.val-card');
-const valObs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vc'); valObs.unobserve(e.target); } }); }, { threshold: 0.1 });
-valCards.forEach((c, i) => { c.style.transition = `opacity .6s ease ${i * 0.08}s, transform .65s cubic-bezier(.22,1,.36,1) ${i * 0.08}s, box-shadow .35s ease, border-color .35s ease`; valObs.observe(c); });
-
+const valObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vc'); valObs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+valCards.forEach((c, i) => {
+  c.style.transition = `opacity .6s ease ${i * 0.08}s, transform .65s cubic-bezier(.22,1,.36,1) ${i * 0.08}s, box-shadow .35s ease, border-color .35s ease`;
+  valObs.observe(c);
+});
+ 
 // ─── Timeline
 const tlItems = document.querySelectorAll('.tl-item');
-const tlObs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('ti'); tlObs.unobserve(e.target); } }); }, { threshold: 0.15 });
-tlItems.forEach((item, i) => { item.style.transition = `opacity .55s ease ${i * 0.07}s, transform .55s cubic-bezier(.22,1,.36,1) ${i * 0.07}s`; tlObs.observe(item); });
-
+const tlObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('ti'); tlObs.unobserve(e.target); } });
+}, { threshold: 0.15 });
+tlItems.forEach((item, i) => {
+  item.style.transition = `opacity .55s ease ${i * 0.07}s, transform .55s cubic-bezier(.22,1,.36,1) ${i * 0.07}s`;
+  tlObs.observe(item);
+});
+ 
 // ─── Counters
 function animCounter(el, target) {
   let s = 0; const step = Math.ceil(target / (1400 / 16));
@@ -1063,13 +1396,13 @@ if (wsSection) {
     if (entries[0].isIntersecting && !wsRun) {
       wsRun = true;
       document.querySelectorAll('.wl-stat-box .sn').forEach(el => {
-        const target = parseInt(el.dataset['wsTarget'] || el.getAttribute('data-ws-target') || 0);
+        const target = parseInt(el.getAttribute('data-ws-target') || 0);
         animCounter(el, target);
       });
     }
   }, { threshold: 0.4 }).observe(wsSection);
 }
-
+ 
 // ─── Particles
 (function() {
   const c = document.getElementById('ahParticles'); if (!c) return;
@@ -1079,16 +1412,66 @@ if (wsSection) {
     c.appendChild(s);
   }
 })();
-
+ 
 // ─── Division Cards
 const divCards = document.querySelectorAll('.div-card');
 const divObs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('dc'); divObs.unobserve(e.target); } });
 }, { threshold: 0.08 });
-divCards.forEach((c, i) => { c.style.transition = `opacity .65s ease ${i * 0.18}s, transform .7s cubic-bezier(.22,1,.36,1) ${i * 0.18}s, box-shadow .4s ease`; divObs.observe(c); });
-
-// ─── Back to Top
-document.getElementById('backToTop').addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+divCards.forEach((c, i) => {
+  c.style.transition = `opacity .65s ease ${i * 0.18}s, transform .7s cubic-bezier(.22,1,.36,1) ${i * 0.18}s, box-shadow .4s ease`;
+  divObs.observe(c);
+});
+// ─── Chat Widget
+(function() {
+    var WA_NUMBER = '918870244418'; // 91 = India country code + your number
+    var widget = document.getElementById('waChatWidget');
+    var fab    = document.getElementById('waChatFab');
+    var input  = document.getElementById('waInput');
+    var sendBtn = document.getElementById('waSendBtn');
+ 
+    // Set current time on chat bubbles
+    function getTime() {
+      var now = new Date();
+      return ('0'+now.getHours()).slice(-2) + ':' + ('0'+now.getMinutes()).slice(-2);
+    }
+    var t1 = document.getElementById('waBubbleTime');
+    var t2 = document.getElementById('waBubbleTime2');
+    if (t1) t1.textContent = getTime();
+    if (t2) t2.textContent = getTime();
+ 
+    // Toggle open / close
+    fab.addEventListener('click', function(e) {
+      e.stopPropagation();
+      widget.classList.toggle('open');
+      if (widget.classList.contains('open')) {
+        setTimeout(function(){ input && input.focus(); }, 300);
+      }
+    });
+ 
+    // Send — redirect to WhatsApp
+    function sendToWhatsApp() {
+      var msg = input.value.trim();
+      var text = msg || 'Hello! I am interested in your products and services.';
+      var url = 'https://api.whatsapp.com/send/?phone=' + WA_NUMBER
+              + '&text=' + encodeURIComponent(text)
+              + '&type=phone_number&app_absent=0';
+      window.open(url, '_blank');
+      input.value = '';
+    }
+ 
+    sendBtn.addEventListener('click', sendToWhatsApp);
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') sendToWhatsApp();
+    });
+ 
+    // Close when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!widget.contains(e.target)) {
+        widget.classList.remove('open');
+      }
+    });
+  })();
 </script>
 </body>
 </html>

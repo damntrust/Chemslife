@@ -67,13 +67,21 @@
   nav a.btn-contact::after { display: none; }
   nav a.btn-contact:hover { background: var(--green); color: var(--white); transform: translateY(-1px); }
 
-  /* DROPDOWN */
+  /* DROPDOWN — JS-controlled with 400ms delay */
   .nav-dropdown { position: relative; }
   .nav-dropdown > a { display: flex; align-items: center; gap: 5px; }
   .nav-dropdown > a .dd-arrow { font-size: 10px; transition: transform 0.25s ease; }
-  .nav-dropdown:hover > a .dd-arrow { transform: rotate(180deg); }
-  .dropdown-menu { position: absolute; top: calc(100% + 8px); left: 0; background: #fff; border: 1.5px solid var(--border); border-radius: 12px; box-shadow: 0 16px 48px rgba(13,43,78,0.14); min-width: 300px; padding: 8px; opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(10px); transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s; z-index: 200; }
-  .nav-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; pointer-events: all; transform: translateY(0); }
+  .nav-dropdown.hovered > a .dd-arrow { transform: rotate(180deg); }
+  .dropdown-menu {
+    position: absolute; top: calc(100% + 8px); left: 0; background: #fff;
+    border: 1.5px solid var(--border); border-radius: 12px;
+    box-shadow: 0 16px 48px rgba(13,43,78,0.14); min-width: 300px; padding: 8px;
+    opacity: 0; visibility: hidden; pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+    z-index: 200;
+  }
+  .nav-dropdown.hovered .dropdown-menu { opacity: 1; visibility: visible; pointer-events: all; transform: translateY(0); }
   .dropdown-menu a { display: flex; align-items: center; gap: 12px; font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; color: var(--navy); text-decoration: none; padding: 11px 14px; border-radius: 8px; transition: background 0.18s, color 0.18s, padding-left 0.18s; }
   .dropdown-menu a::after { display: none !important; }
   .dropdown-menu a:hover { background: var(--green-light); color: var(--green-dark); padding-left: 18px; }
@@ -244,21 +252,8 @@
   .form-heading span { color: var(--green); }
   .form-subtext { font-size: 16px; color: var(--text-muted); line-height: 1.8; margin-bottom: 36px; }
   .form-info-cards { display: flex; flex-direction: column; gap: 14px; }
-
-  /* Interactive overlayed contact cards */
-  .form-info-card {
-    display: flex; align-items: flex-start; gap: 14px;
-    background: #f4f8f5; border: 1.5px solid var(--border);
-    border-radius: 14px; padding: 20px 22px;
-    position: relative; overflow: hidden;
-    cursor: pointer;
-    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
-  }
-  .form-info-card::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(135deg, var(--green-dark), var(--green));
-    opacity: 0; transition: opacity 0.35s ease; z-index: 0;
-  }
+  .form-info-card { display: flex; align-items: flex-start; gap: 14px; background: #f4f8f5; border: 1.5px solid var(--border); border-radius: 14px; padding: 20px 22px; position: relative; overflow: hidden; cursor: pointer; transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s; }
+  .form-info-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, var(--green-dark), var(--green)); opacity: 0; transition: opacity 0.35s ease; z-index: 0; }
   .form-info-card:hover { border-color: var(--green); box-shadow: 0 12px 32px rgba(46,158,79,0.22); transform: translateY(-3px); }
   .form-info-card:hover::before { opacity: 1; }
   .form-info-card:hover .form-info-icon { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.35); }
@@ -266,20 +261,12 @@
   .form-info-card:hover .form-info-text strong { color: #fff; }
   .form-info-card:hover .form-info-text span,
   .form-info-card:hover .form-info-text a { color: rgba(255,255,255,0.85); }
-  .form-info-icon {
-    width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
-    background: linear-gradient(135deg, var(--green-light), #c2e8ce);
-    border: 1.5px solid rgba(46,158,79,0.2);
-    display: flex; align-items: center; justify-content: center;
-    transition: background 0.3s, border-color 0.3s;
-    position: relative; z-index: 1;
-  }
+  .form-info-icon { width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0; background: linear-gradient(135deg, var(--green-light), #c2e8ce); border: 1.5px solid rgba(46,158,79,0.2); display: flex; align-items: center; justify-content: center; transition: background 0.3s, border-color 0.3s; position: relative; z-index: 1; }
   .form-info-icon i { color: var(--green-dark); font-size: 18px; transition: color 0.3s; }
   .form-info-text { position: relative; z-index: 1; }
   .form-info-text strong { display: block; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s; }
   .form-info-text span, .form-info-text a { font-size: 14px; color: var(--text-muted); text-decoration: none; line-height: 1.7; display: block; transition: color 0.3s; }
   .form-info-text a:hover { text-decoration: underline; }
-
   .form-right { background: #fff; border: 1.5px solid var(--border); border-radius: 22px; box-shadow: 0 12px 48px rgba(13,43,78,0.1); overflow: hidden; position: relative; }
   .form-right::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--green-dark), var(--green), var(--green-dark)); z-index: 1; }
   .form-frame-header { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); padding: 22px 28px; display: flex; align-items: center; gap: 14px; }
@@ -290,20 +277,14 @@
   .form-iframe-wrap { padding: 0; background: #fff; }
   .form-iframe-wrap iframe { display: block; width: 100%; height: 620px; border: none; }
 
-  /* ═══════════════ FOOTER ═══════════════ */
+  /* FOOTER */
   .footer { background: #07192d; color: #cdd8e8; font-size: 14px; line-height: 1.7; }
-
   .footer-top-band { background: linear-gradient(90deg, var(--green-dark), #1ca64b, var(--green-dark)); padding: 22px 24px; display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; }
   .footer-top-band p { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 700; color: #fff; }
   .footer-top-band p span { color: #b8f5cf; }
   .footer-cta-btn { background: #fff; color: var(--green-dark); font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; padding: 10px 26px; border-radius: 6px; text-decoration: none; transition: background 0.2s, color 0.2s, transform 0.15s; white-space: nowrap; }
   .footer-cta-btn:hover { background: var(--navy); color: #fff; transform: translateY(-2px); }
-
-  /* Main footer grid: logo | scientific | healthcare | quick links */
   .footer-main { max-width: 1200px; margin: 0 auto; padding: 60px 24px 40px; display: grid; grid-template-columns: 260px 1fr 1fr 180px; gap: 40px; }
-
-  /* Logo column */
- /* .footer-logo-col {}*/
   .footer-logo-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
   .footer-logo-icon { width: 54px; height: 54px; border-radius: 10px; background: rgba(46,158,79,0.15); border: 1.5px solid rgba(46,158,79,0.3); display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
   .footer-logo-icon img { width: 100%; height: 100%; object-fit: contain; }
@@ -324,8 +305,6 @@
   .footer-socials a.wa { background: #25d366; color: #fff; }
   .footer-socials a.tg { background: #0088cc; color: #fff; }
   .footer-socials a.pt { background: #e60023; color: #fff; }
-
-  /* Footer columns */
   .footer-col h4 { font-family: 'Montserrat', sans-serif; font-size: 13.5px; font-weight: 700; color: #fff; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid rgba(46,158,79,0.35); display: flex; align-items: center; gap: 8px; }
   .footer-col h4 i { color: var(--green); font-size: 14px; }
   .footer-col h5 { font-family: 'Montserrat', sans-serif; font-size: 11.5px; font-weight: 700; color: #5fd98a; letter-spacing: 1.5px; text-transform: uppercase; margin: 18px 0 8px; padding-bottom: 5px; border-bottom: 1px solid rgba(46,158,79,0.15); }
@@ -333,21 +312,9 @@
   .footer-links li a { color: #8aacca; text-decoration: none; font-size: 14px; display: flex; align-items: flex-start; gap: 7px; padding: 3.5px 0; transition: color 0.2s, padding-left 0.2s; line-height: 1.5; }
   .footer-links li a::before { content: '›'; color: var(--green); font-size: 16px; line-height: 1.3; flex-shrink: 0; font-weight: 700; }
   .footer-links li a:hover { color: #5fd98a; padding-left: 5px; }
-
-  /* Contact cards grid */
   .footer-contact-grid { max-width: 1200px; margin: 0 auto; padding: 0 24px 44px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-  .contact-card {
-    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 12px; padding: 20px 22px; display: flex; gap: 14px; align-items: flex-start;
-    position: relative; overflow: hidden;
-    cursor: default;
-    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
-  }
-  .contact-card::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(46,158,79,0.18), rgba(30,122,58,0.12));
-    opacity: 0; transition: opacity 0.35s ease; z-index: 0;
-  }
+  .contact-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 20px 22px; display: flex; gap: 14px; align-items: flex-start; position: relative; overflow: hidden; cursor: default; transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s; }
+  .contact-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(46,158,79,0.18), rgba(30,122,58,0.12)); opacity: 0; transition: opacity 0.35s ease; z-index: 0; }
   .contact-card:hover { border-color: rgba(46,158,79,0.45); box-shadow: 0 10px 30px rgba(46,158,79,0.15); transform: translateY(-4px); }
   .contact-card:hover::before { opacity: 1; }
   .contact-icon { width: 42px; height: 42px; border-radius: 10px; background: rgba(46,158,79,0.15); border: 1px solid rgba(46,158,79,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; z-index: 1; transition: background 0.3s; }
@@ -357,7 +324,6 @@
   .contact-info strong { display: block; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px; }
   .contact-info span, .contact-info a { display: block; color: #8aacca; font-size: 13px; text-decoration: none; word-break: break-word; line-height: 1.6; }
   .contact-info a:hover { color: #5fd98a; }
-
   .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.07); margin: 0 24px; }
   .footer-bottom { max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
   .footer-bottom p { font-size: 13px; color: #4a6a88; }
@@ -420,7 +386,6 @@
 </style>
 </head>
 <body>
-
 <!-- TOP BAR -->
 <div class="top-bar">
   <div class="top-bar-inner">
@@ -441,7 +406,6 @@
     </div>
   </div>
 </div>
-
 <!-- MARQUEE -->
 <div class="marquee-wrap" aria-label="Company announcement ticker">
   <div class="marquee-track">
@@ -463,7 +427,6 @@
     </div>
   </div>
 </div>
-
 <!-- MAIN HEADER -->
 <header class="main-header">
   <div class="main-header-inner">
@@ -486,7 +449,7 @@
       <a href="index.html" class="active">Home</a>
       <a href="About us.html">About Us</a>
       <div class="nav-dropdown" id="productsDropdown">
-        <a  id="productsToggle">Products <i class="fas fa-chevron-down dd-arrow"></i></a>
+        <a id="productsToggle">Products <i class="fas fa-chevron-down dd-arrow"></i></a>
         <div class="dropdown-menu">
           <a href="Scientific .html">
             <div class="dd-icon"><i class="fas fa-flask"></i></div>
@@ -813,16 +776,13 @@
   </div>
 </section>
 
-<!-- ═══════════════ FOOTER ═══════════════ -->
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-top-band">
     <p>Ready to partner with us? <span>Explore our full range of scientific, industrial &amp; healthcare solutions.</span></p>
     <a href="#contact-form" class="footer-cta-btn"><i class="fas fa-paper-plane" style="margin-right:7px"></i>Get in Touch</a>
   </div>
-
   <div class="footer-main">
-
-    <!-- Logo & About -->
     <div class="footer-logo-col">
       <div class="footer-logo-wrap">
         <div class="footer-logo-icon">
@@ -852,11 +812,8 @@
         <a href="https://www.pinterest.com/chemslifegroups" class="pt" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
       </div>
     </div>
-
-    <!-- Scientific & Industrial Solutions -->
     <div class="footer-col">
       <h4><i class="fas fa-flask"></i> Scientific &amp; Industrial Solutions</h4>
-
       <h5>Laboratory Products</h5>
       <ul class="footer-links">
         <li><a href="Scientific .html">Laboratory Chemicals</a></li>
@@ -866,15 +823,13 @@
         <li><a href="Scientific .html">Lab Furniture &amp; Safety Kits</a></li>
         <li><a href="Scientific .html">Lab Test Kits &amp; Filtration</a></li>
       </ul>
-
       <h5>Water Treatment Products</h5>
       <ul class="footer-links">
-        <li><a href="/Scientific .html">Filtration &amp; Membrane Systems</a></li>
+        <li><a href="Scientific .html">Filtration &amp; Membrane Systems</a></li>
         <li><a href="Scientific .html">Ion Exchange Resins</a></li>
         <li><a href="Scientific .html">Monitoring &amp; Testing Products</a></li>
         <li><a href="Scientific .html">Wastewater Treatment</a></li>
       </ul>
-
       <h5>Homecare &amp; Cleaning Products</h5>
       <ul class="footer-links">
         <li><a href="Scientific .html">Cleaning &amp; Disinfection Agents</a></li>
@@ -883,11 +838,8 @@
         <li><a href="Scientific .html">Housekeeping Tools</a></li>
       </ul>
     </div>
-
-    <!-- Integrated Healthcare Solutions -->
     <div class="footer-col">
       <h4><i class="fas fa-heartbeat"></i> Integrated Healthcare Solutions</h4>
-
       <h5>Pharmaceutical Products</h5>
       <ul class="footer-links">
         <li><a href="integrated health care .html">Analgesics &amp; Antipyretics</a></li>
@@ -895,27 +847,23 @@
         <li><a href="integrated health care .html">Cardiovascular Drugs</a></li>
         <li><a href="integrated health care .html">Vitamins &amp; Supplements</a></li>
       </ul>
-
       <h5>Surgical Supplies</h5>
       <ul class="footer-links">
         <li><a href="integrated health care .html">Surgical Instruments</a></li>
         <li><a href="integrated health care .html">Specialty Surgical Sets</a></li>
         <li><a href="integrated health care .html">Suturing &amp; Stapling</a></li>
       </ul>
-
       <h5>Hospital Consumables &amp; Medical Devices</h5>
       <ul class="footer-links">
         <li><a href="integrated health care .html">Hospital Consumables</a></li>
         <li><a href="integrated health care .html">Medical Devices in Hospitals</a></li>
       </ul>
-
       <h5>Diagnostic Products &amp; Instruments</h5>
       <ul class="footer-links">
         <li><a href="integrated health care .html">Diagnostic Instruments &amp; Consumables</a></li>
         <li><a href="integrated health care .html">Hematology &amp; Immunology</a></li>
         <li><a href="integrated health care .html">Molecular &amp; POC Diagnostics</a></li>
       </ul>
-
       <h5>Disposables &amp; Safety Products</h5>
       <ul class="footer-links">
         <li><a href="integrated health care .html">Disposables Products</a></li>
@@ -923,8 +871,6 @@
         <li><a href="integrated health care .html">Waste Management Disposables</a></li>
       </ul>
     </div>
-
-    <!-- Quick Links -->
     <div class="footer-col">
       <h4><i class="fas fa-link"></i> Quick Links</h4>
       <ul class="footer-links">
@@ -935,10 +881,7 @@
         <li><a href="contact us .html">Contact Us</a></li>
       </ul>
     </div>
-
   </div>
-
-  <!-- Contact Cards -->
   <div class="footer-contact-grid">
     <div class="contact-card">
       <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
@@ -973,7 +916,6 @@
       </div>
     </div>
   </div>
-
   <hr class="footer-divider"/>
   <div class="footer-bottom">
     <p>&copy; 2025 <span>Chemslife Groups</span>. All rights reserved. | Founded by Mr. Sivasankar Karthikeyan.</p>
@@ -992,11 +934,27 @@
   const nav = document.getElementById('main-nav');
   hamburger.addEventListener('click', () => nav.classList.toggle('open'));
 
-  // ── Mobile dropdown
+  // ── Products Dropdown — JS-controlled with 400ms delayed hide
   const productsDropdown = document.getElementById('productsDropdown');
   const productsToggle = document.getElementById('productsToggle');
+  let ddHideTimer = null;
+
+  productsDropdown.addEventListener('mouseenter', () => {
+    clearTimeout(ddHideTimer);
+    productsDropdown.classList.add('hovered');
+  });
+  productsDropdown.addEventListener('mouseleave', () => {
+    ddHideTimer = setTimeout(() => {
+      productsDropdown.classList.remove('hovered');
+    }, 400);
+  });
+
+  // Mobile dropdown toggle
   productsToggle.addEventListener('click', (e) => {
-    if (window.innerWidth <= 768) { e.preventDefault(); productsDropdown.classList.toggle('open'); }
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      productsDropdown.classList.toggle('open');
+    }
   });
 
   // ── Close nav outside click
@@ -1004,7 +962,7 @@
     if (!nav.contains(e.target) && !hamburger.contains(e.target)) nav.classList.remove('open');
   });
 
-  // ── IMAGE LOAD HANDLER: hide placeholder when real image loads
+  // ── IMAGE LOAD HANDLER
   document.querySelectorAll('.about-img-main img, .about-img-accent img, .ind-img-wrap img, .slide-img-wrap img').forEach(img => {
     function onLoad() {
       const ph = img.previousElementSibling;

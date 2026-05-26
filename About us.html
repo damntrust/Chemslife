@@ -15,7 +15,7 @@
 }
 html{scroll-behavior:smooth}
 body{font-family:'Open Sans',sans-serif;background:var(--bg);color:var(--navy);overflow-x:hidden}
-
+ 
 /* ═══ TOP BAR ═══ */
 .top-bar{background:var(--navy);color:#fff;padding:8px 0}
 .top-bar-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
@@ -29,7 +29,7 @@ body{font-family:'Open Sans',sans-serif;background:var(--bg);color:var(--navy);o
 .social-links a.li{background:#0a66c2;color:#fff}.social-links a.tw{background:#000;color:#fff}
 .social-links a.yt{background:red;color:#fff}.social-links a.wa{background:#25d366;color:#fff}
 .social-links a.tg{background:#0088cc;color:#fff}.social-links a.pt{background:#e60023;color:#fff}
-
+ 
 /* ═══ MARQUEE ═══ */
 .marquee-wrap{background:linear-gradient(90deg,var(--green-dark),var(--green),var(--green-dark));padding:9px 0;overflow:hidden;position:relative}
 .marquee-wrap::before,.marquee-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
@@ -41,7 +41,7 @@ body{font-family:'Open Sans',sans-serif;background:var(--bg);color:var(--navy);o
 .marquee-text{font-family:'Montserrat',sans-serif;font-size:13.5px;font-weight:700;letter-spacing:3.5px;color:rgba(255,255,255,.95);text-transform:uppercase;padding:0 48px}
 .marquee-sep{color:rgba(255,255,255,.5);font-size:16px;padding:0 8px}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-
+ 
 /* ═══ HEADER ═══ */
 .main-header{background:#fff;border-bottom:2px solid var(--green-light);box-shadow:0 2px 12px rgba(46,158,79,.08);position:sticky;top:0;z-index:200}
 .main-header-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:80px;gap:24px}
@@ -61,7 +61,7 @@ nav a.active{color:var(--green-dark);background:var(--green-light)}
 nav a.btn-contact{background:var(--navy);color:#fff;border-radius:6px;padding:9px 20px;margin-left:8px;transition:background .2s,transform .15s}
 nav a.btn-contact::after{display:none}
 nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(-1px)}
-
+ 
 /* DROPDOWN — with extended hover delay */
 .nav-dropdown{position:relative}
 .nav-dropdown>a{display:flex;align-items:center;gap:5px}
@@ -89,7 +89,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .dropdown-divider{border:none;border-top:1px solid var(--border);margin:6px 8px}
 .hamburger{display:none;background:none;border:1.5px solid var(--border);border-radius:6px;padding:7px 9px;cursor:pointer;flex-direction:column;gap:4px}
 .hamburger span{display:block;width:20px;height:2px;background:var(--navy);border-radius:2px}
-
+ 
 /* ═══ HERO ═══ */
 .about-hero{position:relative;min-height:480px;display:flex;align-items:center;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 55%,#0a3d20 100%);overflow:hidden}
 .ah-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,43,78,.88) 0%,rgba(13,43,78,.5) 55%,rgba(10,61,32,.72) 100%);z-index:1}
@@ -134,7 +134,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .hv-float-card:nth-child(3){bottom:20px;left:20px;animation-delay:3s}
 .hv-float-card:nth-child(4){top:50%;left:-30px;transform:translateY(-80%);animation-delay:.8s}
 @keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-
+ 
 /* BREADCRUMB */
 .breadcrumb{background:#fff;border-bottom:1px solid var(--border);padding:14px 0}
 .breadcrumb-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:8px;font-size:13.5px}
@@ -142,7 +142,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .breadcrumb-inner a:hover{color:var(--green)}
 .breadcrumb-inner i{color:var(--text-muted);font-size:11px}
 .breadcrumb-inner span{color:var(--text-muted)}
-
+ 
 /* ═══ SHARED ═══ */
 .section-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--green);margin-bottom:14px}
 .section-eyebrow::before,.section-eyebrow::after{content:'';display:block;width:28px;height:2.5px;background:var(--green);border-radius:2px}
@@ -154,16 +154,17 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .reveal.from-right{transform:translateX(44px)}
 .reveal.from-scale{transform:scale(.92)}
 .reveal.visible{opacity:1;transform:none}
-
+ 
 /* ═══ WELCOME ═══ */
 .welcome-section{background:#fff;padding:100px 0;position:relative;overflow:hidden}
 .welcome-section::before{content:'CHEMSLIFE';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Montserrat',sans-serif;font-size:clamp(60px,11vw,150px);font-weight:900;letter-spacing:16px;color:rgba(46,158,79,.04);white-space:nowrap;pointer-events:none;user-select:none;z-index:0}
 .welcome-wrap{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:1;display:grid;grid-template-columns:1.05fr 1fr;gap:80px;align-items:center}
 .wl-img-side{position:relative;padding-bottom:60px}
 .wl-img-main{position:relative;border-radius:24px 24px 0 24px;overflow:hidden;box-shadow:0 40px 90px rgba(13,43,78,.2);aspect-ratio:4/5;max-height:540px}
-.wl-img-main img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease}
+.wl-img-main img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease;position:relative;z-index:1}
 .wl-img-main:hover img{transform:scale(1.04)}
-.wl-img-main .img-ph{position:absolute;inset:0;background:linear-gradient(160deg,#ddf2e5 0%,#b8e8c8 45%,#0d2b4e 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px}
+.wl-img-main .img-ph{position:absolute;inset:0;background:linear-gradient(160deg,#ddf2e5 0%,#b8e8c8 45%,#0d2b4e 100%);display:none;flex-direction:column;align-items:center;justify-content:center;gap:18px;z-index:0}
+.wl-img-main .img-ph.show{display:flex}
 .wl-img-main .img-ph i{font-size:88px;color:var(--green);opacity:.35}
 .wl-img-main .img-ph span{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:var(--green-dark);letter-spacing:2px;text-transform:uppercase;opacity:.6}
 .wl-img-main::after{content:'';position:absolute;left:0;right:0;bottom:0;height:45%;background:linear-gradient(to top,rgba(13,43,78,.75) 0%,transparent 100%);pointer-events:none;z-index:2}
@@ -209,7 +210,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .btn-primary:hover{background:var(--green-dark);transform:translateY(-3px);box-shadow:0 12px 30px rgba(46,158,79,.45)}
 .btn-outline{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--navy);font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;padding:15px 28px;border-radius:10px;text-decoration:none;border:2px solid var(--navy);transition:background .22s,color .22s,transform .18s}
 .btn-outline:hover{background:var(--navy);color:#fff;transform:translateY(-3px)}
-
+ 
 /* ═══ STORY ═══ */
 .story-section{background:var(--bg);padding:96px 0;position:relative;overflow:hidden}
 .story-section::before{content:'STORY';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Montserrat',sans-serif;font-size:clamp(80px,16vw,200px);font-weight:900;letter-spacing:20px;color:rgba(46,158,79,.04);white-space:nowrap;pointer-events:none;user-select:none}
@@ -220,16 +221,18 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .story-img-stack{position:relative;height:480px}
 .story-img-a{position:absolute;width:75%;aspect-ratio:4/3;border-radius:20px;overflow:hidden;box-shadow:0 28px 72px rgba(13,43,78,.2);top:0;left:0;z-index:3;transition:transform .5s ease}
 .story-img-a:hover{transform:scale(1.02) rotate(-1deg)}
-.story-img-a .img-ph{width:100%;height:100%;background:linear-gradient(135deg,#0d2b4e,#163e6f);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-height:260px}
+.story-img-a .img-ph{width:100%;height:100%;background:linear-gradient(135deg,#0d2b4e,#163e6f);display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-height:260px}
+.story-img-a .img-ph.show{display:flex}
 .story-img-a .img-ph i{font-size:60px;color:rgba(95,217,138,.3)}
 .story-img-a .img-ph span{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(95,217,138,.4)}
-.story-img-a img{width:100%;height:100%;object-fit:cover;display:block}
+.story-img-a img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1}
 .story-img-b{position:absolute;width:58%;aspect-ratio:1;border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(13,43,78,.22);bottom:0;right:0;z-index:4;border:5px solid #fff;transition:transform .5s ease}
 .story-img-b:hover{transform:scale(1.03) rotate(1deg)}
-.story-img-b .img-ph{width:100%;height:100%;background:linear-gradient(135deg,#1e7a3a,#2e9e4f);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:200px}
+.story-img-b .img-ph{width:100%;height:100%;background:linear-gradient(135deg,#1e7a3a,#2e9e4f);display:none;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:200px}
+.story-img-b .img-ph.show{display:flex}
 .story-img-b .img-ph i{font-size:50px;color:rgba(255,255,255,.3)}
 .story-img-b .img-ph span{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4)}
-.story-img-b img{width:100%;height:100%;object-fit:cover;display:block}
+.story-img-b img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1}
 .story-quote{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);z-index:6;background:#fff;border-radius:14px;padding:16px 22px;box-shadow:0 12px 36px rgba(13,43,78,.18);border-left:4px solid var(--green);width:270px;text-align:left}
 .story-quote p{font-size:13px;font-style:italic;color:var(--text-muted);line-height:1.6;margin-bottom:8px}
 .story-quote cite{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:var(--green-dark)}
@@ -242,7 +245,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .story-pills{display:flex;flex-wrap:wrap;gap:8px}
 .story-pill{font-family:'Montserrat',sans-serif;font-size:12.5px;font-weight:600;color:var(--green-dark);background:var(--green-light);border:1.5px solid rgba(46,158,79,.2);padding:7px 14px;border-radius:20px;transition:background .2s,color .2s,transform .2s}
 .story-pill:hover{background:var(--green);color:#fff;transform:translateY(-2px)}
-
+ 
 /* ═══ VISION / MISSION ═══ */
 .vm-section{background:#fff;padding:96px 0;position:relative;overflow:hidden}
 .vm-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(46,158,79,.07) 1.5px,transparent 1.5px);background-size:32px 32px;pointer-events:none}
@@ -262,7 +265,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .vm-title{font-family:'Montserrat',sans-serif;font-size:34px;font-weight:900;color:#fff;margin-bottom:22px;line-height:1.15}
 .vm-text{font-size:16px;color:rgba(255,255,255,.75);line-height:1.85}
 .vm-deco-word{position:absolute;bottom:20px;right:20px;font-family:'Montserrat',sans-serif;font-size:80px;font-weight:900;color:rgba(255,255,255,.04);letter-spacing:4px;user-select:none;pointer-events:none;line-height:1}
-
+ 
 /* ═══ CORE VALUES ═══ */
 .values-section{background:var(--bg);padding:96px 0;position:relative;overflow:hidden}
 .values-inner{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
@@ -285,16 +288,17 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .val-name{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;color:var(--navy);margin-bottom:12px;transition:color .25s}
 .val-card:hover .val-name{color:var(--green-dark)}
 .val-desc{font-size:15px;color:var(--text-muted);line-height:1.75}
-
+ 
 /* ═══ WHY CHOOSE US ═══ */
 .why-section{background:#fff;padding:96px 0;position:relative;overflow:hidden}
 .why-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .why-img-side{position:relative}
 .why-img-main{border-radius:24px;overflow:hidden;box-shadow:0 32px 80px rgba(13,43,78,.18);aspect-ratio:4/3}
-.why-img-main .img-ph{width:100%;height:100%;background:linear-gradient(135deg,#ddf2e5,#8fd4a8);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;min-height:320px}
+.why-img-main .img-ph{width:100%;height:100%;background:linear-gradient(135deg,#ddf2e5,#8fd4a8);display:none;flex-direction:column;align-items:center;justify-content:center;gap:18px;min-height:320px}
+.why-img-main .img-ph.show{display:flex}
 .why-img-main .img-ph i{font-size:72px;color:var(--green);opacity:.4}
 .why-img-main .img-ph span{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green-dark);opacity:.6}
-.why-img-main img{width:100%;height:100%;object-fit:cover;display:block}
+.why-img-main img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1}
 .why-float-stat{position:absolute;bottom:-22px;left:-22px;background:var(--navy);border-radius:16px;padding:18px 24px;border:4px solid #fff;box-shadow:0 12px 36px rgba(13,43,78,.3);z-index:5}
 .why-float-stat .fs-num{font-family:'Montserrat',sans-serif;font-size:36px;font-weight:900;color:var(--green-mid);line-height:1}
 .why-float-stat .fs-label{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:4px}
@@ -311,7 +315,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .why-point-icon i{color:var(--green-dark);font-size:18px}
 .why-point-text strong{display:block;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:3px}
 .why-point-text span{font-size:14px;color:var(--text-muted);line-height:1.55}
-
+ 
 /* ═══ QUALITY & SAFETY ═══ */
 .qs-section{background:var(--bg);padding:96px 0;position:relative;overflow:hidden}
 .qs-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(46,158,79,.07) 1.5px,transparent 1.5px);background-size:36px 36px;pointer-events:none}
@@ -334,7 +338,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .qs-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:26px}
 .qs-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:#3a5070;line-height:1.6}
 .qs-list li::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:6px}
-
+ 
 /* ═══ TIMELINE ═══ */
 .timeline-section{background:#fff;padding:96px 0;position:relative;overflow:hidden}
 .timeline-section::before{content:'GROWTH';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Montserrat',sans-serif;font-size:clamp(60px,12vw,160px);font-weight:900;letter-spacing:16px;color:rgba(46,158,79,.04);white-space:nowrap;pointer-events:none;user-select:none}
@@ -352,7 +356,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .tl-content{flex:1}
 .tl-title{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:800;color:var(--navy);margin-bottom:5px}
 .tl-desc{font-size:14px;color:var(--text-muted);line-height:1.6}
-
+ 
 /* ═══ PORTFOLIO / DIVISIONS ═══ */
 .divisions-section{background:#fff;padding:100px 0;position:relative;overflow:hidden}
 .divisions-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(46,158,79,.065) 1.5px,transparent 1.5px);background-size:34px 34px;pointer-events:none;z-index:0}
@@ -366,15 +370,16 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .div-card.dc{opacity:1;transform:none}
 .div-card:hover{transform:translateY(-8px);box-shadow:0 30px 70px rgba(13,43,78,.14)}
 .div-img{position:relative;height:260px;overflow:hidden}
-.div-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s ease}
+.div-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s ease;position:relative;z-index:1}
 .div-card:hover .div-img img{transform:scale(1.06)}
-.div-img .dip{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px}
+.div-img .dip{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;gap:14px;z-index:0}
+.div-img .dip.show{display:flex}
 .sci-dip{background:linear-gradient(160deg,#0d2b4e 0%,#163e6f 55%,#1e7a3a 100%)}
 .health-dip{background:linear-gradient(160deg,#0a2e20 0%,#1e7a3a 55%,#2e9e4f 100%)}
 .svc-dip{background:linear-gradient(160deg,#0d2b4e 0%,#0a2e20 55%,#163e6f 100%)}
 .dip i{font-size:64px;color:rgba(255,255,255,.22)}
 .dip span{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35)}
-.div-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(13,43,78,.65) 0%,rgba(13,43,78,.08) 50%,transparent 100%);pointer-events:none}
+.div-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(13,43,78,.65) 0%,rgba(13,43,78,.08) 50%,transparent 100%);pointer-events:none;z-index:2}
 .div-img-tab{position:absolute;bottom:20px;left:24px;z-index:3;display:flex;align-items:center;gap:10px}
 .div-img-tab .tab-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
 .sci-tab .tab-icon{background:rgba(46,158,79,.9);color:#fff}
@@ -401,7 +406,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .svc-items-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px}
 .svc-items-grid .div-item{border-bottom:1px solid var(--border)}
 .div-count-badge{position:absolute;top:18px;right:18px;z-index:3;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:5px 14px;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:#fff;letter-spacing:.5px}
-
+ 
 /* ═══ CTA ═══ */
 .cta-section{background:linear-gradient(135deg,var(--navy),var(--navy-mid) 50%,#0a3d20 100%);padding:96px 0;position:relative;overflow:hidden}
 .cta-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(95,217,138,.07) 1.5px,transparent 1.5px);background-size:36px 36px;pointer-events:none}
@@ -418,21 +423,21 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .cta-deco-ring{position:absolute;border-radius:50%;border:1px solid rgba(95,217,138,.08);pointer-events:none}
 .cta-deco-ring:nth-child(1){width:600px;height:600px;top:50%;left:50%;transform:translate(-50%,-50%)}
 .cta-deco-ring:nth-child(2){width:900px;height:900px;top:50%;left:50%;transform:translate(-50%,-50%)}
-
+ 
 /* ═══════════════ FOOTER — matching index page exactly ═══════════════ */
 .footer{background:#07192d;color:#cdd8e8;font-size:14px;line-height:1.7}
-
+ 
 .footer-top-band{background:linear-gradient(90deg,var(--green-dark),#1ca64b,var(--green-dark));padding:22px 24px;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
 .footer-top-band p{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:#fff}
 .footer-top-band p span{color:#b8f5cf}
 .footer-cta-btn{background:#fff;color:var(--green-dark);font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;padding:10px 26px;border-radius:6px;text-decoration:none;transition:background .2s,color .2s,transform .15s;white-space:nowrap}
 .footer-cta-btn:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
-
+ 
 /* Main footer grid: logo | scientific | healthcare | quick links */
 .footer-main{max-width:1200px;margin:0 auto;padding:60px 24px 40px;display:grid;grid-template-columns:260px 1fr 1fr 180px;gap:40px}
-
-/* Logo column 
-.footer-logo-col{} */
+ 
+/* Logo column */
+.footer-logo-col{}
 .footer-logo-wrap{display:flex;align-items:center;gap:12px;margin-bottom:20px}
 .footer-logo-icon{width:54px;height:54px;border-radius:10px;background:rgba(46,158,79,.15);border:1.5px solid rgba(46,158,79,.3);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
 .footer-logo-icon img{width:100%;height:100%;object-fit:contain}
@@ -453,7 +458,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .footer-socials a.wa{background:#25d366;color:#fff}
 .footer-socials a.tg{background:#0088cc;color:#fff}
 .footer-socials a.pt{background:#e60023;color:#fff}
-
+ 
 /* Footer columns */
 .footer-col h4{font-family:'Montserrat',sans-serif;font-size:13.5px;font-weight:700;color:#fff;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid rgba(46,158,79,.35);display:flex;align-items:center;gap:8px}
 .footer-col h4 i{color:var(--green);font-size:14px}
@@ -462,7 +467,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .footer-links li a{color:#8aacca;text-decoration:none;font-size:14px;display:flex;align-items:flex-start;gap:7px;padding:3.5px 0;transition:color .2s,padding-left .2s;line-height:1.5}
 .footer-links li a::before{content:'›';color:var(--green);font-size:16px;line-height:1.3;flex-shrink:0;font-weight:700}
 .footer-links li a:hover{color:#5fd98a;padding-left:5px}
-
+ 
 /* Contact cards grid */
 .footer-contact-grid{max-width:1200px;margin:0 auto;padding:0 24px 44px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .contact-card{
@@ -486,7 +491,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .contact-info strong{display:block;color:#fff;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:5px}
 .contact-info span,.contact-info a{display:block;color:#8aacca;font-size:13px;text-decoration:none;word-break:break-word;line-height:1.6}
 .contact-info a:hover{color:#5fd98a}
-
+ 
 .footer-divider{border:none;border-top:1px solid rgba(255,255,255,.07);margin:0 24px}
 .footer-bottom{max-width:1200px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .footer-bottom p{font-size:13px;color:#4a6a88}
@@ -495,7 +500,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .footer-bottom-links a{font-size:13px;color:#4a6a88;text-decoration:none;transition:color .2s}
 .footer-bottom-links a:hover{color:#5fd98a}
 .footer-motto{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:rgba(46,158,79,.55);letter-spacing:2px;text-transform:uppercase}
-
+ 
 /* ═══ RESPONSIVE ═══ */
 @media(max-width:1100px){
   .div-top-row{grid-template-columns:1fr}
@@ -545,7 +550,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 </style>
 </head>
 <body>
-
+ 
 <!-- TOP BAR -->
 <div class="top-bar">
   <div class="top-bar-inner">
@@ -566,7 +571,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </div>
-
+ 
 <!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee-track">
@@ -588,7 +593,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </div>
-
+ 
 <!-- HEADER -->
 <header class="main-header">
   <div class="main-header-inner">
@@ -635,7 +640,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </div>
 </header>
-
+ 
 <!-- HERO -->
 <section class="about-hero">
   <div class="ah-overlay"></div>
@@ -672,7 +677,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </section>
-
+ 
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
   <div class="breadcrumb-inner">
@@ -681,14 +686,15 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     <span>About Us</span>
   </div>
 </div>
-
+ 
 <!-- WELCOME -->
 <section class="welcome-section" id="welcome">
   <div class="welcome-wrap">
     <div class="wl-img-side reveal from-left">
       <div class="wl-left-bar"></div>
       <div class="wl-img-main">
-        <img src="all dummy images/image7.jpeg" alt="Chemslife Groups — Who We Are" onerror="this.style.display='none'"/>
+        <img src="all dummy images/image7.jpeg" alt="Chemslife Groups — Who We Are"
+          onerror="this.style.display='none';var ph=this.parentElement.querySelector('.img-ph');if(ph){ph.classList.add('show');}"/>
         <div class="img-ph"><i class="fas fa-building"></i><span>Company Photo</span></div>
         <div class="wl-img-caption"><h3>Chemslife Groups</h3><p>Hosur, Tamil Nadu &nbsp;·&nbsp; Est. 2018</p></div>
       </div>
@@ -727,7 +733,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </section>
-
+ 
 <!-- OUR STORY -->
 <section class="story-section" id="story">
   <div class="story-inner">
@@ -740,11 +746,13 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
       <div class="story-img-col reveal from-left">
         <div class="story-img-stack">
           <div class="story-img-a">
-            <img src="all dummy images/image7.jpeg" alt="Our Story" onerror="this.style.display='none'"/>
+            <img src="all dummy images/image7.jpeg" alt="Our Story"
+              onerror="this.style.display='none';var ph=this.parentElement.querySelector('.img-ph');if(ph){ph.classList.add('show');}"/>
             <div class="img-ph"><i class="fas fa-history"></i><span>Our Story</span></div>
           </div>
           <div class="story-img-b">
-            <img src="all dummy images/image4.png" alt="Founder" onerror="this.style.display='none'"/>
+            <img src="all dummy images/image4.png" alt="Founder"
+              onerror="this.style.display='none';var ph=this.parentElement.querySelector('.img-ph');if(ph){ph.classList.add('show');}"/>
             <div class="img-ph"><i class="fas fa-user-tie"></i><span>Founder</span></div>
           </div>
           <div class="story-quote">
@@ -761,7 +769,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </section>
-
+ 
 <!-- DIVISIONS / PORTFOLIO -->
 <section class="divisions-section" id="portfolio">
   <div class="divisions-inner">
@@ -773,8 +781,9 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     <div class="div-top-row">
       <div class="div-card">
         <div class="div-img">
-          <img src="Real photos/Scientific.jpg.jpeg" alt="Scientific &amp; Industrial Solutions" onerror="this.style.display='none'"/>
-          <div class="dip sci-dip"><i class="fas fa-flask"></i><span>Add Your Image</span></div>
+          <img src="Real photos/Scientific.jpg.jpeg" alt="Scientific &amp; Industrial Solutions"
+            onerror="this.style.display='none';var ph=this.parentElement.querySelector('.dip');if(ph){ph.classList.add('show');}"/>
+          <div class="dip sci-dip"><i class="fas fa-flask"></i><span>Scientific &amp; Industrial</span></div>
           <div class="div-count-badge">4 Product Lines</div>
           <div class="div-img-tab sci-tab">
             <div class="tab-icon"><i class="fas fa-flask"></i></div>
@@ -792,8 +801,9 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
       </div>
       <div class="div-card">
         <div class="div-img">
-          <img src="Real photos/Healthcare.png" alt="Integrated Healthcare Solutions" onerror="this.style.display='none'"/>
-          <div class="dip health-dip"><i class="fas fa-heartbeat"></i><span>Add Your Image</span></div>
+          <img src="Real photos/Healthcare.png" alt="Integrated Healthcare Solutions"
+            onerror="this.style.display='none';var ph=this.parentElement.querySelector('.dip');if(ph){ph.classList.add('show');}"/>
+          <div class="dip health-dip"><i class="fas fa-heartbeat"></i><span>Healthcare Solutions</span></div>
           <div class="div-count-badge">4 Product Lines</div>
           <div class="div-img-tab health-tab">
             <div class="tab-icon"><i class="fas fa-heartbeat"></i></div>
@@ -813,8 +823,9 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     <div class="div-bottom-row">
       <div class="div-card svc-card">
         <div class="div-img" style="height:220px">
-          <img src="Real photos/Industry.jpg.jpeg" alt="Service Verticals" onerror="this.style.display='none'"/>
-          <div class="dip svc-dip"><i class="fas fa-cogs"></i><span>Add Your Image</span></div>
+          <img src="Real photos/Industry.jpg.jpeg" alt="Service Verticals"
+            onerror="this.style.display='none';var ph=this.parentElement.querySelector('.dip');if(ph){ph.classList.add('show');}"/>
+          <div class="dip svc-dip"><i class="fas fa-cogs"></i><span>Service Verticals</span></div>
           <div class="div-count-badge">3 Service Verticals</div>
           <div class="div-img-tab svc-tab">
             <div class="tab-icon"><i class="fas fa-cogs"></i></div>
@@ -832,7 +843,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </section>
-
+ 
 <!-- VISION & MISSION -->
 <section class="vm-section" id="vision-mission">
   <div class="vm-inner">
@@ -863,7 +874,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </section>
-
+ 
 <!-- CORE VALUES -->
 <section class="values-section" id="values">
   <div class="values-inner">
@@ -882,13 +893,14 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </section>
-
+ 
 <!-- WHY CHOOSE US -->
 <section class="why-section" id="why-us">
   <div class="why-inner">
     <div class="why-img-side reveal from-left">
       <div class="why-img-main">
-        <img src="all dummy images/image8.jpeg" alt="Why Chemslife" onerror="this.style.display='none'"/>
+        <img src="all dummy images/image8.jpeg" alt="Why Chemslife"
+          onerror="this.style.display='none';var ph=this.parentElement.querySelector('.img-ph');if(ph){ph.classList.add('show');}"/>
         <div class="img-ph"><i class="fas fa-award"></i><span>Excellence Photo</span></div>
       </div>
       <div class="why-float-stat"><div class="fs-num">500+</div><div class="fs-label">Clients Served</div></div>
@@ -909,7 +921,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </section>
-
+ 
 <!-- QUALITY & SAFETY -->
 <section class="qs-section" id="quality-safety">
   <div class="qs-inner">
@@ -948,7 +960,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </section>
-
+ 
 <!-- TIMELINE -->
 <section class="timeline-section" id="journey">
   <div class="timeline-inner">
@@ -970,7 +982,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </section>
-
+ 
 <!-- CTA -->
 <section class="cta-section" id="join-us">
   <div class="cta-deco-ring"></div>
@@ -985,16 +997,16 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     </div>
   </div>
 </section>
-
+ 
 <!-- ═══════════════ FOOTER — same as index page ═══════════════ -->
 <footer class="footer">
   <div class="footer-top-band">
     <p>Ready to partner with us? <span>Explore our full range of scientific, industrial &amp; healthcare solutions.</span></p>
     <a href="#contact-form" class="footer-cta-btn"><i class="fas fa-paper-plane" style="margin-right:7px"></i>Get in Touch</a>
   </div>
-
+ 
   <div class="footer-main">
-
+ 
     <!-- Logo & About -->
     <div class="footer-logo-col">
       <div class="footer-logo-wrap">
@@ -1025,11 +1037,11 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
         <a href="https://www.pinterest.com/Chemslifegroups" class="pt" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
       </div>
     </div>
-
+ 
     <!-- Scientific & Industrial Solutions -->
     <div class="footer-col">
       <h4><i class="fas fa-flask"></i> Scientific &amp; Industrial Solutions</h4>
-
+ 
       <h5>Laboratory Products</h5>
       <ul class="footer-links">
         <li><a href="scientific .html">Laboratory Chemicals</a></li>
@@ -1039,7 +1051,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
         <li><a href="scientific .html">Lab Furniture &amp; Safety Kits</a></li>
         <li><a href="scientific .html">Lab Test Kits &amp; Filtration</a></li>
       </ul>
-
+ 
       <h5>Water Treatment Products</h5>
       <ul class="footer-links">
         <li><a href="scientific .html">Filtration &amp; Membrane Systems</a></li>
@@ -1047,7 +1059,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
         <li><a href="scientific .html">Monitoring &amp; Testing Products</a></li>
         <li><a href="scientific .html">Wastewater Treatment</a></li>
       </ul>
-
+ 
       <h5>Homecare &amp; Cleaning Products</h5>
       <ul class="footer-links">
         <li><a href="scientific .html">Cleaning &amp; Disinfection Agents</a></li>
@@ -1056,11 +1068,11 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
         <li><a href="scientific .html">Housekeeping Tools</a></li>
       </ul>
     </div>
-
+ 
     <!-- Integrated Healthcare Solutions -->
     <div class="footer-col">
       <h4><i class="fas fa-heartbeat"></i> Integrated Healthcare Solutions</h4>
-
+ 
       <h5>Pharmaceutical Products</h5>
       <ul class="footer-links">
         <li><a href="integrated health care .html">Analgesics &amp; Antipyretics</a></li>
@@ -1068,27 +1080,27 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
         <li><a href="integrated health care .html">Cardiovascular Drugs</a></li>
         <li><a href="integrated health care .html">Vitamins &amp; Supplements</a></li>
       </ul>
-
+ 
       <h5>Surgical Supplies</h5>
       <ul class="footer-links">
         <li><a href="integrated health care .html">Surgical Instruments</a></li>
         <li><a href="integrated health care .html">Specialty Surgical Sets</a></li>
         <li><a href="integrated health care .html">Suturing &amp; Stapling</a></li>
       </ul>
-
+ 
       <h5>Hospital Consumables &amp; Medical Devices</h5>
       <ul class="footer-links">
         <li><a href="integrated health care .html">Hospital Consumables</a></li>
         <li><a href="integrated health care .html">Medical Devices in Hospitals</a></li>
       </ul>
-
+ 
       <h5>Diagnostic Products &amp; Instruments</h5>
       <ul class="footer-links">
         <li><a href="integrated health care .html">Diagnostic Instruments &amp; Consumables</a></li>
         <li><a href="integrated health care .html">Hematology &amp; Immunology</a></li>
         <li><a href="integrated health care .html">Molecular &amp; POC Diagnostics</a></li>
       </ul>
-
+ 
       <h5>Disposables &amp; Safety Products</h5>
       <ul class="footer-links">
         <li><a href="integrated health care .html">Disposables Products</a></li>
@@ -1096,7 +1108,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
         <li><a href="integrated health care .html">Waste Management Disposables</a></li>
       </ul>
     </div>
-
+ 
     <!-- Quick Links -->
     <div class="footer-col">
       <h4><i class="fas fa-link"></i> Quick Links</h4>
@@ -1108,9 +1120,9 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
         <li><a href="contact us .html">Contact Us</a></li>
       </ul>
     </div>
-
+ 
   </div>
-
+ 
   <!-- Contact Cards -->
   <div class="footer-contact-grid">
     <div class="contact-card">
@@ -1146,7 +1158,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
       </div>
     </div>
   </div>
-
+ 
   <hr class="footer-divider"/>
   <div class="footer-bottom">
     <p>&copy; 2025 <span>Chemslife Groups</span>. All rights reserved. | Founded by Mr. Sivasankar Karthikeyan.</p>
@@ -1158,8 +1170,40 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     <div class="footer-motto">Everything is Science &nbsp;&#9670;&nbsp; Science for Nation</div>
   </div>
 </footer>
-
+ 
 <script>
+// ─── Image fallback: hide placeholder by default; show only on load failure
+// This runs on DOMContentLoaded and also handles already-cached images
+function initImageFallbacks() {
+  // Select every content image that has a sibling placeholder
+  var imgs = document.querySelectorAll(
+    '.wl-img-main img, .story-img-a img, .story-img-b img, .why-img-main img, .div-img img'
+  );
+  imgs.forEach(function(img) {
+    // If already broken (cached 404 or bad path)
+    if (img.complete && img.naturalWidth === 0) {
+      img.style.display = 'none';
+      var ph = img.parentElement.querySelector('.img-ph, .dip');
+      if (ph) ph.classList.add('show');
+    }
+    // Also attach runtime handler in case it breaks after this runs
+    img.addEventListener('error', function() {
+      this.style.display = 'none';
+      var ph = this.parentElement.querySelector('.img-ph, .dip');
+      if (ph) ph.classList.add('show');
+    });
+    // If image loads successfully, make sure placeholder stays hidden
+    img.addEventListener('load', function() {
+      var ph = this.parentElement.querySelector('.img-ph, .dip');
+      if (ph) ph.classList.remove('show');
+    });
+  });
+}
+// Run immediately (handles sync-loaded images)
+initImageFallbacks();
+// Also run after full page load (handles async/cached images)
+window.addEventListener('load', initImageFallbacks);
+ 
 // ─── Hamburger
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('main-nav');
@@ -1167,12 +1211,12 @@ hamburger.addEventListener('click', () => nav.classList.toggle('open'));
 document.addEventListener('click', e => {
   if (!nav.contains(e.target) && !hamburger.contains(e.target)) nav.classList.remove('open');
 });
-
+ 
 // ─── Products Dropdown — with delayed hide (400ms) so it doesn't disappear too fast
 const productsDropdown = document.getElementById('productsDropdown');
 const productsToggle = document.getElementById('productsToggle');
 let ddHideTimer = null;
-
+ 
 productsDropdown.addEventListener('mouseenter', () => {
   clearTimeout(ddHideTimer);
   productsDropdown.classList.add('hovered');
@@ -1182,7 +1226,7 @@ productsDropdown.addEventListener('mouseleave', () => {
     productsDropdown.classList.remove('hovered');
   }, 400); // 400ms delay before hiding
 });
-
+ 
 // Mobile dropdown toggle
 if (productsToggle) {
   productsToggle.addEventListener('click', e => {
@@ -1192,7 +1236,7 @@ if (productsToggle) {
     }
   });
 }
-
+ 
 // ─── Scroll Reveal
 const revealEls = document.querySelectorAll('.reveal');
 function checkReveal() {
@@ -1204,7 +1248,7 @@ window.addEventListener('scroll', () => {
   if (!ticking) { requestAnimationFrame(() => { checkReveal(); ticking = false; }); ticking = true; }
 });
 checkReveal();
-
+ 
 // ─── Value Cards
 const valCards = document.querySelectorAll('.val-card');
 const valObs = new IntersectionObserver(entries => {
@@ -1214,7 +1258,7 @@ valCards.forEach((c, i) => {
   c.style.transition = `opacity .6s ease ${i * 0.08}s, transform .65s cubic-bezier(.22,1,.36,1) ${i * 0.08}s, box-shadow .35s ease, border-color .35s ease`;
   valObs.observe(c);
 });
-
+ 
 // ─── Timeline
 const tlItems = document.querySelectorAll('.tl-item');
 const tlObs = new IntersectionObserver(entries => {
@@ -1224,7 +1268,7 @@ tlItems.forEach((item, i) => {
   item.style.transition = `opacity .55s ease ${i * 0.07}s, transform .55s cubic-bezier(.22,1,.36,1) ${i * 0.07}s`;
   tlObs.observe(item);
 });
-
+ 
 // ─── Counters
 function animCounter(el, target) {
   let s = 0; const step = Math.ceil(target / (1400 / 16));
@@ -1253,7 +1297,7 @@ if (wsSection) {
     }
   }, { threshold: 0.4 }).observe(wsSection);
 }
-
+ 
 // ─── Particles
 (function() {
   const c = document.getElementById('ahParticles'); if (!c) return;
@@ -1263,7 +1307,7 @@ if (wsSection) {
     c.appendChild(s);
   }
 })();
-
+ 
 // ─── Division Cards
 const divCards = document.querySelectorAll('.div-card');
 const divObs = new IntersectionObserver(entries => {

@@ -60,12 +60,11 @@ nav a.btn-contact{background:var(--navy);color:#fff;border-radius:6px;padding:9p
 nav a.btn-contact::after{display:none}
 nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(-1px)}
 
-/* DROPDOWN — fixed with padding bridge so hover doesn't break */
+/* DROPDOWN */
 .nav-dropdown{position:relative}
 .nav-dropdown>a{display:flex;align-items:center;gap:5px}
 .nav-dropdown>a .dd-arrow{font-size:10px;transition:transform .25s ease}
 .nav-dropdown:hover>a .dd-arrow{transform:rotate(180deg)}
-/* invisible bridge fills the gap between nav link and menu */
 .nav-dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:12px;z-index:199}
 .dropdown-menu{position:absolute;top:calc(100% + 12px);left:0;background:#fff;border:1.5px solid var(--border);border-radius:12px;box-shadow:0 16px 48px rgba(13,43,78,.14);min-width:300px;padding:8px;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(6px);transition:opacity .22s ease,transform .22s ease,visibility .22s;z-index:200}
 .nav-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;pointer-events:all;transform:translateY(0)}
@@ -155,8 +154,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .filter-label{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);flex-shrink:0}
 .filter-pills{display:flex;gap:8px;flex-wrap:wrap;flex:1}
 .fp{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;color:var(--text-muted);background:var(--bg);border:1.5px solid var(--border);padding:8px 14px;border-radius:20px;cursor:pointer;transition:all .2s;white-space:nowrap;user-select:none}
-.fp:hover{border-color:rgba(46,
-  158,79,.4);color:var(--green-dark);background:var(--green-light)}
+.fp:hover{border-color:rgba(46,158,79,.4);color:var(--green-dark);background:var(--green-light)}
 .fp.active{background:var(--green);color:#fff;border-color:var(--green);box-shadow:0 4px 14px rgba(46,158,79,.35)}
 .search-wrap{position:relative;flex-shrink:0}
 .search-wrap input{font-family:'Open Sans',sans-serif;font-size:14px;color:var(--navy);background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:10px 16px 10px 40px;width:220px;outline:none;transition:border-color .2s,box-shadow .2s}
@@ -234,18 +232,13 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .cta-btn-p{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:#fff;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;padding:16px 34px;border-radius:10px;text-decoration:none;transition:background .22s,transform .18s;box-shadow:0 6px 22px rgba(46,158,79,.4)}.cta-btn-p:hover{background:var(--green-dark);transform:translateY(-3px)}
 .cta-btn-o{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);color:#fff;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;padding:15px 30px;border-radius:10px;text-decoration:none;border:2px solid rgba(255,255,255,.2);transition:background .22s,transform .18s}.cta-btn-o:hover{background:rgba(255,255,255,.15);transform:translateY(-3px)}
 
-/* ═══════════════ FOOTER (matching page 1 exactly) ═══════════════ */
+/* ═══════════════ FOOTER ═══════════════ */
 .footer{background:#07192d;color:#cdd8e8;font-size:14px;line-height:1.7}
-
 .footer-top-band{background:linear-gradient(90deg,var(--green-dark),#1ca64b,var(--green-dark));padding:22px 24px;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
 .footer-top-band p{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:#fff}.footer-top-band p span{color:#b8f5cf}
 .footer-cta-btn{background:#fff;color:var(--green-dark);font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;padding:10px 26px;border-radius:6px;text-decoration:none;transition:background .2s,color .2s,transform .15s;white-space:nowrap}.footer-cta-btn:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
-
-/* Main footer grid: logo | scientific | healthcare | quick links */
 .footer-main{max-width:1200px;margin:0 auto;padding:60px 24px 40px;display:grid;grid-template-columns:260px 1fr 1fr 180px;gap:40px}
-
-/* Logo column 
-.footer-logo-col{}*/
+.footer-logo-col{}
 .footer-logo-wrap{display:flex;align-items:center;gap:12px;margin-bottom:20px}
 .footer-logo-icon{width:54px;height:54px;border-radius:10px;background:rgba(46,158,79,.15);border:1.5px solid rgba(46,158,79,.3);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
 .footer-logo-icon img{width:100%;height:100%;object-fit:contain}
@@ -262,8 +255,6 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .footer-socials a.li{background:#0a66c2;color:#fff}.footer-socials a.tw{background:#000;color:#fff}
 .footer-socials a.yt{background:#ff0000;color:#fff}.footer-socials a.wa{background:#25d366;color:#fff}
 .footer-socials a.tg{background:#0088cc;color:#fff}.footer-socials a.pt{background:#e60023;color:#fff}
-
-/* Footer columns */
 .footer-col h4{font-family:'Montserrat',sans-serif;font-size:13.5px;font-weight:700;color:#fff;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid rgba(46,158,79,.35);display:flex;align-items:center;gap:8px}
 .footer-col h4 i{color:var(--green);font-size:14px}
 .footer-col h5{font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;color:#5fd98a;letter-spacing:1.5px;text-transform:uppercase;margin:18px 0 8px;padding-bottom:5px;border-bottom:1px solid rgba(46,158,79,.15)}
@@ -271,8 +262,6 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .footer-links li a{color:#8aacca;text-decoration:none;font-size:14px;display:flex;align-items:flex-start;gap:7px;padding:3.5px 0;transition:color .2s,padding-left .2s;line-height:1.5}
 .footer-links li a::before{content:'›';color:var(--green);font-size:16px;line-height:1.3;flex-shrink:0;font-weight:700}
 .footer-links li a:hover{color:#5fd98a;padding-left:5px}
-
-/* Contact cards grid */
 .footer-contact-grid{max-width:1200px;margin:0 auto;padding:0 24px 44px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .contact-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px 22px;display:flex;gap:14px;align-items:flex-start;position:relative;overflow:hidden;cursor:default;transition:border-color .3s,box-shadow .3s,transform .3s}
 .contact-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(46,158,79,.18),rgba(30,122,58,.12));opacity:0;transition:opacity .35s ease;z-index:0}
@@ -285,7 +274,6 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .contact-info strong{display:block;color:#fff;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:5px}
 .contact-info span,.contact-info a{display:block;color:#8aacca;font-size:13px;text-decoration:none;word-break:break-word;line-height:1.6}
 .contact-info a:hover{color:#5fd98a}
-
 .footer-divider{border:none;border-top:1px solid rgba(255,255,255,.07);margin:0 24px}
 .footer-bottom{max-width:1200px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .footer-bottom p{font-size:13px;color:#4a6a88}.footer-bottom p span{color:var(--green)}
@@ -293,7 +281,6 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .footer-bottom-links a{font-size:13px;color:#4a6a88;text-decoration:none;transition:color .2s}
 .footer-bottom-links a:hover{color:#5fd98a}
 .footer-motto{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:rgba(46,158,79,.55);letter-spacing:2px;text-transform:uppercase}
-
 .back-top{position:fixed;bottom:32px;right:32px;width:50px;height:50px;border-radius:14px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;border:none;box-shadow:0 8px 24px rgba(46,158,79,.4);transition:background .2s,transform .2s,opacity .3s;opacity:0;pointer-events:none;z-index:500}
 .back-top.show{opacity:1;pointer-events:all}.back-top:hover{background:var(--green-dark);transform:translateY(-3px)}
 .reveal{opacity:0;transform:translateY(36px);transition:opacity .75s ease,transform .75s ease}.reveal.visible{opacity:1;transform:none}
@@ -314,50 +301,44 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 }
 @media(max-width:500px){.prod-grid,.prod-grid.g3{grid-template-columns:1fr}}
 
-
-
-
-/*chatbot*/
-  .wa-chat-widget { position: fixed; bottom: 28px; right: 28px; z-index: 9999; font-family: 'Open Sans', sans-serif; }
-  .wa-chat-fab { width: 60px; height: 60px; border-radius: 50%; background: #25d366; box-shadow: 0 6px 24px rgba(37,211,102,0.5); display: flex; align-items: center; justify-content: center; cursor: pointer; border: none; transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.25s ease; position: relative; z-index: 2; }
-  .wa-chat-fab:hover { transform: scale(1.12); box-shadow: 0 10px 32px rgba(37,211,102,0.65); }
-  .wa-chat-fab svg { width: 32px; height: 32px; transition: opacity 0.2s, transform 0.2s; }
-  .wa-chat-fab .icon-close { position: absolute; opacity: 0; transform: rotate(-90deg) scale(0.6); }
-  .wa-chat-widget.open .wa-chat-fab .icon-wa { opacity: 0; transform: rotate(90deg) scale(0.6); }
-  .wa-chat-widget.open .wa-chat-fab .icon-close { opacity: 1; transform: rotate(0deg) scale(1); }
-  .wa-notif-dot { position: absolute; top: 4px; right: 4px; width: 14px; height: 14px; background: #ff3b3b; border-radius: 50%; border: 2px solid #fff; animation: wa-pulse 2s infinite; }
-  @keyframes wa-pulse { 0%,100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,59,59,0.5); } 60% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(255,59,59,0); } }
-  .wa-chat-widget.open .wa-notif-dot { display: none; }
-  .wa-chat-box { position: absolute; bottom: 74px; right: 0; width: 320px; background: #fff; border-radius: 18px; box-shadow: 0 20px 60px rgba(0,0,0,0.18); overflow: hidden; opacity: 0; transform: scale(0.85) translateY(20px); transform-origin: bottom right; transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.34,1.56,0.64,1); pointer-events: none; }
-  .wa-chat-widget.open .wa-chat-box { opacity: 1; transform: scale(1) translateY(0); pointer-events: all; }
-  .wa-box-header { background: #075e54; padding: 18px 18px 16px; display: flex; align-items: center; gap: 12px; }
-  .wa-avatar { width: 46px; height: 46px; border-radius: 50%; background: #25d366; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 2px solid rgba(255,255,255,0.25); }
-  .wa-avatar svg { width: 26px; height: 26px; }
-  .wa-header-text { flex: 1; }
-  .wa-header-text strong { display: block; color: #fff; font-size: 14px; font-weight: 700; font-family: 'Montserrat', sans-serif; }
-  .wa-header-text span { font-size: 12px; color: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 5px; margin-top: 2px; }
-  .wa-online-dot { width: 7px; height: 7px; background: #25d366; border-radius: 50%; display: inline-block; animation: wa-blink 2.5s infinite; }
-  @keyframes wa-blink { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
-  .wa-chat-body { padding: 16px 14px 12px; background: #e5ddd5; min-height: 110px; }
-  .wa-bubble-wrap { display: flex; align-items: flex-start; gap: 8px; }
-  .wa-bubble-avatar { width: 30px; height: 30px; border-radius: 50%; background: #25d366; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
-  .wa-bubble-avatar svg { width: 16px; height: 16px; }
-  .wa-bubble { background: #fff; border-radius: 0 10px 10px 10px; padding: 10px 13px; box-shadow: 0 1px 3px rgba(0,0,0,0.12); max-width: 220px; font-size: 13.5px; color: #333; line-height: 1.55; position: relative; }
-  .wa-bubble::before { content: ''; position: absolute; left: -7px; top: 0; border-width: 0 8px 8px 0; border-style: solid; border-color: transparent #fff transparent transparent; }
-  .wa-bubble-time { font-size: 10.5px; color: #999; text-align: right; margin-top: 5px; }
-  .wa-bubble-second { background: #dcf8c6; border-radius: 10px 10px 10px 0; padding: 10px 13px; box-shadow: 0 1px 3px rgba(0,0,0,0.12); max-width: 220px; font-size: 12.5px; color: #555; line-height: 1.55; margin-top: 8px; }
-  .wa-chat-footer { padding: 10px 12px; background: #f0f0f0; border-top: 1px solid #e0e0e0; }
-  .wa-input-row { display: flex; align-items: center; gap: 8px; background: #fff; border-radius: 24px; padding: 8px 8px 8px 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
-  .wa-input { flex: 1; border: none; outline: none; font-size: 13.5px; color: #333; font-family: 'Open Sans', sans-serif; background: transparent; }
-  .wa-input::placeholder { color: #aaa; }
-  .wa-send-btn { width: 36px; height: 36px; border-radius: 50%; background: #25d366; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s, transform 0.15s; }
-  .wa-send-btn:hover { background: #128c7e; transform: scale(1.08); }
-  .wa-send-btn svg { width: 18px; height: 18px; }
-  .wa-footer-note { text-align: center; font-size: 11px; color: #aaa; margin-top: 8px; }
-  @media (max-width: 400px) {
-    .wa-chat-box { width: 290px; right: -4px; }
-    .wa-chat-widget { bottom: 20px; right: 16px; }
-  }
+/* chatbot */
+.wa-chat-widget{position:fixed;bottom:28px;right:28px;z-index:9999;font-family:'Open Sans',sans-serif}
+.wa-chat-fab{width:60px;height:60px;border-radius:50%;background:#25d366;box-shadow:0 6px 24px rgba(37,211,102,0.5);display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;transition:transform 0.25s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.25s ease;position:relative;z-index:2}
+.wa-chat-fab:hover{transform:scale(1.12);box-shadow:0 10px 32px rgba(37,211,102,0.65)}
+.wa-chat-fab svg{width:32px;height:32px;transition:opacity 0.2s,transform 0.2s}
+.wa-chat-fab .icon-close{position:absolute;opacity:0;transform:rotate(-90deg) scale(0.6)}
+.wa-chat-widget.open .wa-chat-fab .icon-wa{opacity:0;transform:rotate(90deg) scale(0.6)}
+.wa-chat-widget.open .wa-chat-fab .icon-close{opacity:1;transform:rotate(0deg) scale(1)}
+.wa-notif-dot{position:absolute;top:4px;right:4px;width:14px;height:14px;background:#ff3b3b;border-radius:50%;border:2px solid #fff;animation:wa-pulse 2s infinite}
+@keyframes wa-pulse{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,59,59,0.5)}60%{transform:scale(1.1);box-shadow:0 0 0 6px rgba(255,59,59,0)}}
+.wa-chat-widget.open .wa-notif-dot{display:none}
+.wa-chat-box{position:absolute;bottom:74px;right:0;width:320px;background:#fff;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,0.18);overflow:hidden;opacity:0;transform:scale(0.85) translateY(20px);transform-origin:bottom right;transition:opacity 0.28s ease,transform 0.28s cubic-bezier(0.34,1.56,0.64,1);pointer-events:none}
+.wa-chat-widget.open .wa-chat-box{opacity:1;transform:scale(1) translateY(0);pointer-events:all}
+.wa-box-header{background:#075e54;padding:18px 18px 16px;display:flex;align-items:center;gap:12px}
+.wa-avatar{width:46px;height:46px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:2px solid rgba(255,255,255,0.25)}
+.wa-avatar svg{width:26px;height:26px}
+.wa-header-text{flex:1}
+.wa-header-text strong{display:block;color:#fff;font-size:14px;font-weight:700;font-family:'Montserrat',sans-serif}
+.wa-header-text span{font-size:12px;color:rgba(255,255,255,0.7);display:flex;align-items:center;gap:5px;margin-top:2px}
+.wa-online-dot{width:7px;height:7px;background:#25d366;border-radius:50%;display:inline-block;animation:wa-blink 2.5s infinite}
+@keyframes wa-blink{0%,100%{opacity:1}50%{opacity:0.4}}
+.wa-chat-body{padding:16px 14px 12px;background:#e5ddd5;min-height:110px}
+.wa-bubble-wrap{display:flex;align-items:flex-start;gap:8px}
+.wa-bubble-avatar{width:30px;height:30px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.wa-bubble-avatar svg{width:16px;height:16px}
+.wa-bubble{background:#fff;border-radius:0 10px 10px 10px;padding:10px 13px;box-shadow:0 1px 3px rgba(0,0,0,0.12);max-width:220px;font-size:13.5px;color:#333;line-height:1.55;position:relative}
+.wa-bubble::before{content:'';position:absolute;left:-7px;top:0;border-width:0 8px 8px 0;border-style:solid;border-color:transparent #fff transparent transparent}
+.wa-bubble-time{font-size:10.5px;color:#999;text-align:right;margin-top:5px}
+.wa-bubble-second{background:#dcf8c6;border-radius:10px 10px 10px 0;padding:10px 13px;box-shadow:0 1px 3px rgba(0,0,0,0.12);max-width:220px;font-size:12.5px;color:#555;line-height:1.55;margin-top:8px}
+.wa-chat-footer{padding:10px 12px;background:#f0f0f0;border-top:1px solid #e0e0e0}
+.wa-input-row{display:flex;align-items:center;gap:8px;background:#fff;border-radius:24px;padding:8px 8px 8px 14px;box-shadow:0 1px 4px rgba(0,0,0,0.1)}
+.wa-input{flex:1;border:none;outline:none;font-size:13.5px;color:#333;font-family:'Open Sans',sans-serif;background:transparent}
+.wa-input::placeholder{color:#aaa}
+.wa-send-btn{width:36px;height:36px;border-radius:50%;background:#25d366;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.2s,transform 0.15s}
+.wa-send-btn:hover{background:#128c7e;transform:scale(1.08)}
+.wa-send-btn svg{width:18px;height:18px}
+.wa-footer-note{text-align:center;font-size:11px;color:#aaa;margin-top:8px}
+@media(max-width:400px){.wa-chat-box{width:290px;right:-4px}.wa-chat-widget{bottom:20px;right:16px}}
 </style>
 </head>
 <body>
@@ -370,18 +351,17 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     <span><i class="fas fa-phone"></i> +91 88704 96918</span>
     <span><i class="fas fa-envelope"></i> chemslifegroups@gmail.com</span>
   </div>
-    <div class="social-links">
-      <a href="https://www.facebook.com/Chemslifegroups" class="fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/chemslifegroups" class="ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/chemslife-groups-278a10213/" class="li" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://twitter.com/Chemslifegroups" class="tw" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://www.youtube.com/c/ChemslifeGroupss" class="yt" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://wa.me/1234567890" class="wa" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://t.me/ChemslifeGroups" class="tg" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
-      <a href="https://www.pinterest.com/chemslifegroups" class="pt" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-    </div>
+  <div class="social-links">
+    <a href="https://www.facebook.com/Chemslifegroups" class="fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/chemslifegroups" class="ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/chemslife-groups-278a10213/" class="li" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://twitter.com/Chemslifegroups" class="tw" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://www.youtube.com/c/ChemslifeGroupss" class="yt" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="https://wa.me/1234567890" class="wa" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://t.me/ChemslifeGroups" class="tg" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+    <a href="https://www.pinterest.com/chemslifegroups" class="pt" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
   </div>
-</div>
+</div></div>
 
 <!-- MARQUEE -->
 <div class="marquee-wrap" aria-label="Company announcement ticker"><div class="marquee-track">
@@ -508,16 +488,13 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
   </div>
 </section>
 
-<!-- ═══════════════ FOOTER ═══════════════ -->
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-top-band">
     <p>Ready to partner with us? <span>Explore our full range of scientific, industrial &amp; healthcare solutions.</span></p>
     <a href="#" class="footer-cta-btn"><i class="fas fa-paper-plane" style="margin-right:7px"></i>Get in Touch</a>
   </div>
-
   <div class="footer-main">
-
-    <!-- Logo & About -->
     <div class="footer-logo-col">
       <div class="footer-logo-wrap">
         <div class="footer-logo-icon">
@@ -531,7 +508,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
       </div>
       <p class="footer-about-text">A multi-sector organization delivering reliable scientific, industrial, and healthcare solutions since 2018. Founded by Mr. Sivasankar Karthikeyan.</p>
       <div class="footer-tagline">"Building Chemistry for a Better Tomorrow"</div>
-        <div class="footer-socials">
+      <div class="footer-socials">
         <a href="https://www.facebook.com/Chemslifegroups" class="fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/chemslifegroups" class="ig" title="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/in/chemslife-groups-278a10213/" class="li" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -542,11 +519,8 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
         <a href="https://www.pinterest.com/chemslifegroups" class="pt" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
       </div>
     </div>
-
-    <!-- Scientific & Industrial Solutions -->
     <div class="footer-col">
       <h4><i class="fas fa-flask"></i> Scientific &amp; Industrial Solutions</h4>
-
       <h5>Laboratory Products</h5>
       <ul class="footer-links">
         <li><a href="Scientific .html">Laboratory Chemicals</a></li>
@@ -556,7 +530,6 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
         <li><a href="Scientific .html">Lab Furniture &amp; Safety Kits</a></li>
         <li><a href="Scientific .html">Lab Test Kits &amp; Filtration</a></li>
       </ul>
-
       <h5>Water Treatment Products</h5>
       <ul class="footer-links">
         <li><a href="Scientific .html">Filtration &amp; Membrane Systems</a></li>
@@ -564,7 +537,6 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
         <li><a href="Scientific .html">Monitoring &amp; Testing Products</a></li>
         <li><a href="Scientific .html">Wastewater Treatment</a></li>
       </ul>
-
       <h5>Homecare &amp; Cleaning Products</h5>
       <ul class="footer-links">
         <li><a href="Scientific .html">Cleaning &amp; Disinfection Agents</a></li>
@@ -573,11 +545,8 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
         <li><a href="Scientific .html">Housekeeping Tools</a></li>
       </ul>
     </div>
-
-    <!-- Integrated Healthcare Solutions -->
     <div class="footer-col">
       <h4><i class="fas fa-heartbeat"></i> Integrated Healthcare Solutions</h4>
-
       <h5>Pharmaceutical Products</h5>
       <ul class="footer-links">
         <li><a href="integrated health care .html">Analgesics &amp; Antipyretics</a></li>
@@ -585,27 +554,23 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
         <li><a href="integrated health care .html">Cardiovascular Drugs</a></li>
         <li><a href="integrated health care .html">Vitamins &amp; Supplements</a></li>
       </ul>
-
       <h5>Surgical Supplies</h5>
       <ul class="footer-links">
         <li><a href="integrated health care .html">Surgical Instruments</a></li>
         <li><a href="integrated health care .html">Specialty Surgical Sets</a></li>
         <li><a href="integrated health care .html">Suturing &amp; Stapling</a></li>
       </ul>
-
       <h5>Hospital Consumables &amp; Medical Devices</h5>
       <ul class="footer-links">
         <li><a href="integrated health care .html">Hospital Consumables</a></li>
         <li><a href="integrated health care .html">Medical Devices in Hospitals</a></li>
       </ul>
-
       <h5>Diagnostic Products &amp; Instruments</h5>
       <ul class="footer-links">
         <li><a href="integrated health care .html">Diagnostic Instruments &amp; Consumables</a></li>
         <li><a href="integrated health care .html">Hematology &amp; Immunology</a></li>
         <li><a href="integrated health care .html">Molecular &amp; POC Diagnostics</a></li>
       </ul>
-
       <h5>Disposables &amp; Safety Products</h5>
       <ul class="footer-links">
         <li><a href="integrated health care .html">Disposables Products</a></li>
@@ -613,8 +578,6 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
         <li><a href="integrated health care .html">Waste Management Disposables</a></li>
       </ul>
     </div>
-
-    <!-- Quick Links -->
     <div class="footer-col">
       <h4><i class="fas fa-link"></i> Quick Links</h4>
       <ul class="footer-links">
@@ -625,10 +588,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
         <li><a href="contact us .html">Contact Us</a></li>
       </ul>
     </div>
-
   </div>
-
-  <!-- Contact Cards -->
   <div class="footer-contact-grid">
     <div class="contact-card">
       <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
@@ -647,7 +607,6 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
       <div class="contact-info"><strong>Dispatch</strong><span>+91 88700 36018</span><a href="mailto:dispatch@chemslife.in">dispatch@chemslife.in</a></div>
     </div>
   </div>
-
   <hr class="footer-divider"/>
   <div class="footer-bottom">
     <p>&copy; 2025 <span>Chemslife Groups</span>. All rights reserved. | Founded by Mr. Sivasankar Karthikeyan.</p>
@@ -661,7 +620,8 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 </footer>
 
 <button class="back-top" id="backTopBtn" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
-<!---chatbot-->
+
+<!-- CHATBOT -->
 <div class="wa-chat-widget" id="waChatWidget">
   <div class="wa-chat-box" id="waChatBox">
     <div class="wa-box-header">
@@ -710,116 +670,113 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
       </div>
     </div>
   </div>
- 
   <button class="wa-chat-fab" id="waChatFab" aria-label="Chat on WhatsApp">
     <div class="wa-notif-dot"></div>
-    <!-- WhatsApp Icon -->
     <svg class="icon-wa" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.685 4.61 1.873 6.492L4 29l7.724-1.849A11.94 11.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="white"/>
       <path d="M21.8 18.6c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.78-1.68-2.08-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.07.15.2 2.1 3.2 5.09 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.28.17-1.41-.07-.12-.27-.2-.57-.34z" fill="#25d366"/>
     </svg>
-    <!-- Close Icon -->
     <svg class="icon-close" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
       <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
     </svg>
   </button>
 </div>
- 
 
 <script>
-// ─── PRODUCT DATA ───
+// ─── PRODUCT DATA — each item has its own unique img path ───
 const SECTIONS = [
   {id:'pharma',gridId:'grid-pharma',cat:'Pharmaceutical',items:[
-    {name:'Analgesics & Antipyretics',icon:'fas fa-tablets',desc:'Pain relievers and fever reducers including NSAIDs, opioids, and combination formulations for acute and chronic conditions.'},
-    {name:'Antibiotics & Antimicrobials',icon:'fas fa-shield-virus',desc:'Broad and narrow-spectrum antibacterials, antifungals, and antimicrobial agents for infection management.'},
-    {name:'Antivirals & Antifungals',icon:'fas fa-virus',desc:'Antiviral medications and systemic antifungal agents for viral infections and fungal disease treatment.'},
-    {name:'Cardiovascular Drugs',icon:'fas fa-heartbeat',desc:'Antihypertensives, anticoagulants, statins, vasodilators, and cardiac rhythm management drugs.'},
-    {name:'Endocrine & Metabolic Drugs',icon:'fas fa-dna',desc:'Insulin, thyroid medications, corticosteroids, and metabolic disorder treatments.'},
-    {name:'Respiratory Drugs',icon:'fas fa-lungs',desc:'Bronchodilators, corticosteroid inhalers, mucolytics, and respiratory support medications.'},
-    {name:'Gastrointestinal Drugs',icon:'fas fa-stomach',desc:'Antacids, proton pump inhibitors, antiemetics, laxatives, and GI motility agents.'},
-    {name:'Neurological & Psychiatric Drugs',icon:'fas fa-brain',desc:'Antidepressants, anxiolytics, anticonvulsants, antipsychotics, and neuroprotective agents.'},
-    {name:'Oncology Drugs',icon:'fas fa-ribbon',desc:'Chemotherapy agents, targeted therapies, immunotherapies, and supportive oncology medications.'},
-    {name:'Vitamins & Nutritional Supplements',icon:'fas fa-capsules',desc:'Multivitamins, minerals, amino acids, omega fatty acids, and clinical nutrition products.'},
-    {name:'Dermatological Products',icon:'fas fa-hand-holding-medical',desc:'Topical steroids, antifungals, antibiotics, emollients, and dermatological treatment creams.'},
-    {name:'Vaccines',icon:'fas fa-syringe',desc:'Prophylactic and therapeutic vaccines for immunization programs and disease prevention.'}
+    {name:'Analgesics & Antipyretics',img:'all dummy images/image8.jpeg',icon:'fas fa-tablets',desc:'Pain relievers and fever reducers including NSAIDs, opioids, and combination formulations for acute and chronic conditions.'},
+    {name:'Antibiotics & Antimicrobials',img:'all dummy images/image8.jpeg',icon:'fas fa-shield-virus',desc:'Broad and narrow-spectrum antibacterials, antifungals, and antimicrobial agents for infection management.'},
+    {name:'Antivirals & Antifungals',img:'all dummy images/image8.jpeg',icon:'fas fa-virus',desc:'Antiviral medications and systemic antifungal agents for viral infections and fungal disease treatment.'},
+    {name:'Cardiovascular Drugs',img:'all dummy images/image8.jpeg',icon:'fas fa-heartbeat',desc:'Antihypertensives, anticoagulants, statins, vasodilators, and cardiac rhythm management drugs.'},
+    {name:'Endocrine & Metabolic Drugs',img:'all dummy images/image8.jpeg',icon:'fas fa-dna',desc:'Insulin, thyroid medications, corticosteroids, and metabolic disorder treatments.'},
+    {name:'Respiratory Drugs',img:'all dummy images/image8.jpeg',icon:'fas fa-lungs',desc:'Bronchodilators, corticosteroid inhalers, mucolytics, and respiratory support medications.'},
+    {name:'Gastrointestinal Drugs',img:'all dummy images/image8.jpeg',icon:'fas fa-stomach',desc:'Antacids, proton pump inhibitors, antiemetics, laxatives, and GI motility agents.'},
+    {name:'Neurological & Psychiatric Drugs',img:'all dummy images/image8.jpeg',icon:'fas fa-brain',desc:'Antidepressants, anxiolytics, anticonvulsants, antipsychotics, and neuroprotective agents.'},
+    {name:'Oncology Drugs',img:'all dummy images/image8.jpeg',icon:'fas fa-ribbon',desc:'Chemotherapy agents, targeted therapies, immunotherapies, and supportive oncology medications.'},
+    {name:'Vitamins & Nutritional Supplements',img:'all dummy images/image8.jpeg',icon:'fas fa-capsules',desc:'Multivitamins, minerals, amino acids, omega fatty acids, and clinical nutrition products.'},
+    {name:'Dermatological Products',img:'all dummy images/image8.jpeg',icon:'fas fa-hand-holding-medical',desc:'Topical steroids, antifungals, antibiotics, emollients, and dermatological treatment creams.'},
+    {name:'Vaccines',img:'all dummy images/image8.jpeg',icon:'fas fa-syringe',desc:'Prophylactic and therapeutic vaccines for immunization programs and disease prevention.'}
   ]},
   {id:'surgical',gridId:'grid-surgical',cat:'Surgical',items:[
-    {name:'Cutting & Dissecting Instruments',icon:'fas fa-cut',desc:'Scalpels, scissors, osteotomes, bone cutters, and electrosurgical cutting devices.'},
-    {name:'Grasping & Holding Instruments',icon:'fas fa-hand-rock',desc:'Forceps, clamps, needle holders, and tissue grasping instruments for surgical procedures.'},
-    {name:'Retracting Instruments',icon:'fas fa-expand-arrows-alt',desc:'Hand-held and self-retaining retractors for optimal surgical field exposure.'},
-    {name:'Clamping & Occluding Instruments',icon:'fas fa-compress-alt',desc:'Hemostatic clamps, vascular clamps, and bowel clamps for tissue occlusion.'},
-    {name:'Suturing & Stapling Instruments',icon:'fas fa-link',desc:'Needle holders, suture materials, surgical staplers, and wound closure systems.'},
-    {name:'Dilating & Probing Instruments',icon:'fas fa-search-plus',desc:'Probes, dilators, sounds, and bougies for anatomical exploration and dilation.'},
-    {name:'Suction & Aspirating Instruments',icon:'fas fa-wind',desc:'Surgical suction devices, aspirators, and cannulas for fluid removal.'},
-    {name:'Specialty Surgical Sets',icon:'fas fa-briefcase-medical',desc:'Pre-configured instrument sets for ENT, ophthalmic, orthopedic, and general surgery.'}
+    {name:'Cutting & Dissecting Instruments',img:'all dummy images/image8.jpeg',icon:'fas fa-cut',desc:'Scalpels, scissors, osteotomes, bone cutters, and electrosurgical cutting devices.'},
+    {name:'Grasping & Holding Instruments',img:'all dummy images/image8.jpeg',icon:'fas fa-hand-rock',desc:'Forceps, clamps, needle holders, and tissue grasping instruments for surgical procedures.'},
+    {name:'Retracting Instruments',img:'all dummy images/image8.jpeg',icon:'fas fa-expand-arrows-alt',desc:'Hand-held and self-retaining retractors for optimal surgical field exposure.'},
+    {name:'Clamping & Occluding Instruments',img:'all dummy images/image8.jpeg',icon:'fas fa-compress-alt',desc:'Hemostatic clamps, vascular clamps, and bowel clamps for tissue occlusion.'},
+    {name:'Suturing & Stapling Instruments',img:'all dummy images/image8.jpeg',icon:'fas fa-link',desc:'Needle holders, suture materials, surgical staplers, and wound closure systems.'},
+    {name:'Dilating & Probing Instruments',img:'all dummy images/image8.jpeg',icon:'fas fa-search-plus',desc:'Probes, dilators, sounds, and bougies for anatomical exploration and dilation.'},
+    {name:'Suction & Aspirating Instruments',img:'all dummy images/image8.jpeg',icon:'fas fa-wind',desc:'Surgical suction devices, aspirators, and cannulas for fluid removal.'},
+    {name:'Specialty Surgical Sets',img:'all dummy images/image8.jpeg',icon:'fas fa-briefcase-medical',desc:'Pre-configured instrument sets for ENT, ophthalmic, orthopedic, and general surgery.'}
   ]},
   {id:'consumables',gridId:'grid-consumables',cat:'Hospital Consumables',items:[
-    {name:'General Medical Consumables',icon:'fas fa-band-aid',desc:'Bandages, gauze, cotton, adhesive tapes, and everyday medical supply items.'},
-    {name:'Surgical Consumables',icon:'fas fa-procedures',desc:'Surgical drapes, gowns, gloves, sutures, and single-use procedural items.'},
-    {name:'Diagnostic Consumables',icon:'fas fa-vials',desc:'Sample collection tubes, swabs, slides, reagent cartridges, and testing strips.'},
-    {name:'Laboratory Consumables',icon:'fas fa-flask',desc:'Pipette tips, cuvettes, culture media, petri dishes, and lab-grade consumables.'},
-    {name:'Patient Care Consumables',icon:'fas fa-user-nurse',desc:'IV sets, catheters, feeding tubes, ostomy supplies, and patient comfort items.'},
-    {name:'Safety & Hygiene Consumables',icon:'fas fa-hand-sparkles',desc:'Hand sanitizers, disinfectant wipes, face masks, and hygiene maintenance products.'}
+    {name:'General Medical Consumables',img:'all dummy images/image8.jpeg',icon:'fas fa-band-aid',desc:'Bandages, gauze, cotton, adhesive tapes, and everyday medical supply items.'},
+    {name:'Surgical Consumables',img:'all dummy images/image8.jpeg',icon:'fas fa-procedures',desc:'Surgical drapes, gowns, gloves, sutures, and single-use procedural items.'},
+    {name:'Diagnostic Consumables',img:'all dummy images/image8.jpeg',icon:'fas fa-vials',desc:'Sample collection tubes, swabs, slides, reagent cartridges, and testing strips.'},
+    {name:'Laboratory Consumables',img:'all dummy images/image8.jpeg',icon:'fas fa-flask',desc:'Pipette tips, cuvettes, culture media, petri dishes, and lab-grade consumables.'},
+    {name:'Patient Care Consumables',img:'all dummy images/image8.jpeg',icon:'fas fa-user-nurse',desc:'IV sets, catheters, feeding tubes, ostomy supplies, and patient comfort items.'},
+    {name:'Safety & Hygiene Consumables',img:'all dummy images/image8.jpeg',icon:'fas fa-hand-sparkles',desc:'Hand sanitizers, disinfectant wipes, face masks, and hygiene maintenance products.'}
   ]},
   {id:'devices',gridId:'grid-devices',cat:'Medical Devices',items:[
-    {name:'Diagnostic & Imaging Devices',icon:'fas fa-x-ray',desc:'X-ray systems, ultrasound machines, CT scanners, MRI equipment, and endoscopes.'},
-    {name:'Monitoring Devices',icon:'fas fa-heartbeat',desc:'Patient monitors, pulse oximeters, ECG machines, and blood pressure monitors.'},
-    {name:'Therapeutic & Life Support Devices',icon:'fas fa-lungs',desc:'Ventilators, dialysis machines, infusion pumps, defibrillators, and anesthesia systems.'},
-    {name:'Surgical & Procedural Devices',icon:'fas fa-scalpel',desc:'Electrosurgical units, laparoscopic systems, surgical robots, and laser devices.'},
-    {name:'Laboratory & Diagnostic Equipment',icon:'fas fa-microscope',desc:'Analyzers, centrifuges, incubators, autoclaves, and clinical lab equipment.'},
-    {name:'Rehabilitation & Patient Care Devices',icon:'fas fa-wheelchair',desc:'Wheelchairs, walkers, physiotherapy equipment, and mobility assistance devices.'},
-    {name:'Sterilization & Safety Devices',icon:'fas fa-shield-alt',desc:'Autoclaves, UV sterilizers, fumigation chambers, and hospital safety systems.'}
+    {name:'Diagnostic & Imaging Devices',img:'all dummy images/image8.jpeg',icon:'fas fa-x-ray',desc:'X-ray systems, ultrasound machines, CT scanners, MRI equipment, and endoscopes.'},
+    {name:'Monitoring Devices',img:'all dummy images/image8.jpeg',icon:'fas fa-heartbeat',desc:'Patient monitors, pulse oximeters, ECG machines, and blood pressure monitors.'},
+    {name:'Therapeutic & Life Support Devices',img:'all dummy images/image8.jpeg',icon:'fas fa-lungs',desc:'Ventilators, dialysis machines, infusion pumps, defibrillators, and anesthesia systems.'},
+    {name:'Surgical & Procedural Devices',img:'all dummy images/image8.jpeg',icon:'fas fa-scalpel',desc:'Electrosurgical units, laparoscopic systems, surgical robots, and laser devices.'},
+    {name:'Laboratory & Diagnostic Equipment',img:'all dummy images/image8.jpeg',icon:'fas fa-microscope',desc:'Analyzers, centrifuges, incubators, autoclaves, and clinical lab equipment.'},
+    {name:'Rehabilitation & Patient Care Devices',img:'all dummy images/image8.jpeg',icon:'fas fa-wheelchair',desc:'Wheelchairs, walkers, physiotherapy equipment, and mobility assistance devices.'},
+    {name:'Sterilization & Safety Devices',img:'all dummy images/image8.jpeg',icon:'fas fa-shield-alt',desc:'Autoclaves, UV sterilizers, fumigation chambers, and hospital safety systems.'}
   ]},
   {id:'diagnostic',gridId:'grid-diagnostic',cat:'Diagnostic Products',items:[
-    {name:'Clinical Chemistry Products',icon:'fas fa-flask',desc:'Reagent kits, calibrators, and controls for blood glucose, lipids, liver, and kidney function tests.'},
-    {name:'Hematology Products',icon:'fas fa-tint',desc:'CBC reagents, coagulation testing products, blood typing kits, and hemoglobin analyzers.'},
-    {name:'Immunology & Serology Products',icon:'fas fa-shield-virus',desc:'ELISA kits, rapid test cassettes, autoimmune panels, and allergy testing products.'},
-    {name:'Microbiology Products',icon:'fas fa-bacteria',desc:'Culture media, sensitivity discs, identification systems, and staining reagents.'},
-    {name:'Molecular Diagnostics Products',icon:'fas fa-dna',desc:'PCR kits, extraction reagents, sequencing products, and gene expression assays.'},
-    {name:'Oncology Diagnostic Products',icon:'fas fa-ribbon',desc:'Tumor markers, IHC reagents, FISH probes, and liquid biopsy kits for cancer screening.'},
-    {name:'Cardiac Diagnostic Products',icon:'fas fa-heartbeat',desc:'Troponin assays, BNP kits, lipid panels, and cardiac risk assessment products.'},
-    {name:'Urinalysis & Routine Screening',icon:'fas fa-vial',desc:'Urine test strips, dipsticks, automated analyzers, and drug screening panels.'},
-    {name:'Point-of-Care (POC) Diagnostics',icon:'fas fa-stopwatch',desc:'Rapid glucose meters, lateral flow tests, portable blood gas analyzers, and bedside diagnostics.'}
+    {name:'Clinical Chemistry Products',img:'all dummy images/image8.jpeg',icon:'fas fa-flask',desc:'Reagent kits, calibrators, and controls for blood glucose, lipids, liver, and kidney function tests.'},
+    {name:'Hematology Products',img:'all dummy images/image8.jpeg',icon:'fas fa-tint',desc:'CBC reagents, coagulation testing products, blood typing kits, and hemoglobin analyzers.'},
+    {name:'Immunology & Serology Products',img:'all dummy images/image8.jpeg',icon:'fas fa-shield-virus',desc:'ELISA kits, rapid test cassettes, autoimmune panels, and allergy testing products.'},
+    {name:'Microbiology Products',img:'all dummy images/image8.jpeg',icon:'fas fa-bacteria',desc:'Culture media, sensitivity discs, identification systems, and staining reagents.'},
+    {name:'Molecular Diagnostics Products',img:'all dummy images/image8.jpeg',icon:'fas fa-dna',desc:'PCR kits, extraction reagents, sequencing products, and gene expression assays.'},
+    {name:'Oncology Diagnostic Products',img:'all dummy images/image8.jpeg',icon:'fas fa-ribbon',desc:'Tumor markers, IHC reagents, FISH probes, and liquid biopsy kits for cancer screening.'},
+    {name:'Cardiac Diagnostic Products',img:'all dummy images/image8.jpeg',icon:'fas fa-heartbeat',desc:'Troponin assays, BNP kits, lipid panels, and cardiac risk assessment products.'},
+    {name:'Urinalysis & Routine Screening',img:'all dummy images/image8.jpeg',icon:'fas fa-vial',desc:'Urine test strips, dipsticks, automated analyzers, and drug screening panels.'},
+    {name:'Point-of-Care (POC) Diagnostics',img:'all dummy images/image8.jpeg',icon:'fas fa-stopwatch',desc:'Rapid glucose meters, lateral flow tests, portable blood gas analyzers, and bedside diagnostics.'}
   ]},
   {id:'instruments',gridId:'grid-instruments',cat:'Diagnostic Instruments',items:[
-    {name:'Clinical Chemistry Instruments',icon:'fas fa-cogs',desc:'Fully automated chemistry analyzers, semi-auto analyzers, and electrolyte analyzers.'},
-    {name:'Hematology Instruments',icon:'fas fa-tint',desc:'3-part and 5-part differential analyzers, coagulation analyzers, and ESR systems.'},
-    {name:'Immunology & Serology Instruments',icon:'fas fa-shield-virus',desc:'ELISA readers, chemiluminescence analyzers, and nephelometry systems.'},
-    {name:'Microbiology Instruments',icon:'fas fa-bacteria',desc:'Automated ID/AST systems, blood culture analyzers, and colony counters.'},
-    {name:'Molecular Diagnostics Instruments',icon:'fas fa-dna',desc:'Real-time PCR systems, thermal cyclers, sequencers, and extraction platforms.'},
-    {name:'Oncology Diagnostic Instruments',icon:'fas fa-ribbon',desc:'Flow cytometers, digital pathology scanners, and tissue processing equipment.'},
-    {name:'Cardiac Diagnostic Instruments',icon:'fas fa-heartbeat',desc:'ECG machines, Holter monitors, stress testing systems, and cardiac catheterization labs.'},
-    {name:'Urinalysis Instruments',icon:'fas fa-vial',desc:'Automated urine analyzers, microscopy systems, and urine chemistry readers.'},
-    {name:'Point-of-Care (POC) Instruments',icon:'fas fa-stopwatch',desc:'Handheld glucose meters, portable coagulation analyzers, and bedside blood gas systems.'}
+    {name:'Clinical Chemistry Instruments',img:'all dummy images/image8.jpeg',icon:'fas fa-cogs',desc:'Fully automated chemistry analyzers, semi-auto analyzers, and electrolyte analyzers.'},
+    {name:'Hematology Instruments',img:'all dummy images/image8.jpeg',icon:'fas fa-tint',desc:'3-part and 5-part differential analyzers, coagulation analyzers, and ESR systems.'},
+    {name:'Immunology & Serology Instruments',img:'all dummy images/image8.jpeg',icon:'fas fa-shield-virus',desc:'ELISA readers, chemiluminescence analyzers, and nephelometry systems.'},
+    {name:'Microbiology Instruments',img:'all dummy images/image8.jpeg',icon:'fas fa-bacteria',desc:'Automated ID/AST systems, blood culture analyzers, and colony counters.'},
+    {name:'Molecular Diagnostics Instruments',img:'all dummy images/image8.jpeg',icon:'fas fa-dna',desc:'Real-time PCR systems, thermal cyclers, sequencers, and extraction platforms.'},
+    {name:'Oncology Diagnostic Instruments',img:'all dummy images/image8.jpeg',icon:'fas fa-ribbon',desc:'Flow cytometers, digital pathology scanners, and tissue processing equipment.'},
+    {name:'Cardiac Diagnostic Instruments',img:'all dummy images/image8.jpeg',icon:'fas fa-heartbeat',desc:'ECG machines, Holter monitors, stress testing systems, and cardiac catheterization labs.'},
+    {name:'Urinalysis Instruments',img:'all dummy images/image8.jpeg',icon:'fas fa-vial',desc:'Automated urine analyzers, microscopy systems, and urine chemistry readers.'},
+    {name:'Point-of-Care (POC) Instruments',img:'all dummy images/image8.jpeg',icon:'fas fa-stopwatch',desc:'Handheld glucose meters, portable coagulation analyzers, and bedside blood gas systems.'}
   ]},
   {id:'disposables',gridId:'grid-disposables',cat:'Disposables',items:[
-    {name:'Plasticware Disposables',icon:'fas fa-box-open',desc:'Disposable pipettes, petri dishes, centrifuge tubes, sample cups, and plastic labware.'},
-    {name:'Glassware Disposables',icon:'fas fa-wine-glass',desc:'Single-use glass slides, coverslips, capillary tubes, and glass vials.'},
-    {name:'Filtration Disposables',icon:'fas fa-filter',desc:'Syringe filters, membrane filters, filter papers, and single-use filtration units.'},
-    {name:'Safety & Hygiene Disposables',icon:'fas fa-hand-sparkles',desc:'Disposable gloves, face masks, shoe covers, caps, and hygiene barrier products.'},
-    {name:'Medical & Biological Disposables',icon:'fas fa-procedures',desc:'Syringes, blood collection tubes, IV cannulas, catheters, and specimen containers.'},
-    {name:'Waste Management Disposables',icon:'fas fa-trash-alt',desc:'Biohazard bags, sharps containers, autoclave bags, and color-coded waste bins.'}
+    {name:'Plasticware Disposables',img:'all dummy images/image8.jpeg',icon:'fas fa-box-open',desc:'Disposable pipettes, petri dishes, centrifuge tubes, sample cups, and plastic labware.'},
+    {name:'Glassware Disposables',img:'all dummy images/image8.jpeg',icon:'fas fa-wine-glass',desc:'Single-use glass slides, coverslips, capillary tubes, and glass vials.'},
+    {name:'Filtration Disposables',img:'all dummy images/image8.jpeg',icon:'fas fa-filter',desc:'Syringe filters, membrane filters, filter papers, and single-use filtration units.'},
+    {name:'Safety & Hygiene Disposables',img:'all dummy images/image8.jpeg',icon:'fas fa-hand-sparkles',desc:'Disposable gloves, face masks, shoe covers, caps, and hygiene barrier products.'},
+    {name:'Medical & Biological Disposables',img:'all dummy images/image8.jpeg',icon:'fas fa-procedures',desc:'Syringes, blood collection tubes, IV cannulas, catheters, and specimen containers.'},
+    {name:'Waste Management Disposables',img:'all dummy images/image8.jpeg',icon:'fas fa-trash-alt',desc:'Biohazard bags, sharps containers, autoclave bags, and color-coded waste bins.'}
   ]},
   {id:'safety',gridId:'grid-safety',cat:'Safety Products',items:[
-    {name:'Personal Protective Equipment (PPE)',icon:'fas fa-vest-patches',desc:'Safety helmets, protective clothing, gloves, goggles, and full-body protection suits.'},
-    {name:'Respiratory Protection',icon:'fas fa-head-side-mask',desc:'N95 respirators, PAPR systems, gas masks, and dust filtering facepieces.'},
-    {name:'Hearing Protection',icon:'fas fa-deaf',desc:'Earplugs, earmuffs, electronic hearing protectors, and custom-molded devices.'},
-    {name:'Fall Protection',icon:'fas fa-parachute-box',desc:'Safety harnesses, lanyards, anchor points, guardrails, and fall arrest systems.'},
-    {name:'Fire Safety Products',icon:'fas fa-fire-extinguisher',desc:'Fire extinguishers, fire blankets, smoke detectors, sprinkler systems, and alarms.'},
-    {name:'Emergency & First Aid Products',icon:'fas fa-first-aid',desc:'First aid kits, emergency stretchers, AED defibrillators, and trauma supplies.'},
-    {name:'Chemical Safety Products',icon:'fas fa-biohazard',desc:'Spill kits, chemical storage cabinets, safety showers, and eyewash stations.'},
-    {name:'Electrical Safety Products',icon:'fas fa-bolt',desc:'Insulated tools, lockout/tagout kits, voltage detectors, and arc flash protection.'},
-    {name:'Radiation Safety Products',icon:'fas fa-radiation',desc:'Lead aprons, thyroid shields, dosimeters, radiation barriers, and monitoring badges.'}
+    {name:'Personal Protective Equipment (PPE)',img:'all dummy images/image8.jpeg',icon:'fas fa-vest-patches',desc:'Safety helmets, protective clothing, gloves, goggles, and full-body protection suits.'},
+    {name:'Respiratory Protection',img:'all dummy images/image8.jpeg',icon:'fas fa-head-side-mask',desc:'N95 respirators, PAPR systems, gas masks, and dust filtering facepieces.'},
+    {name:'Hearing Protection',img:'all dummy images/image8.jpeg',icon:'fas fa-deaf',desc:'Earplugs, earmuffs, electronic hearing protectors, and custom-molded devices.'},
+    {name:'Fall Protection',img:'all dummy images/image8.jpeg',icon:'fas fa-parachute-box',desc:'Safety harnesses, lanyards, anchor points, guardrails, and fall arrest systems.'},
+    {name:'Fire Safety Products',img:'all dummy images/image8.jpeg',icon:'fas fa-fire-extinguisher',desc:'Fire extinguishers, fire blankets, smoke detectors, sprinkler systems, and alarms.'},
+    {name:'Emergency & First Aid Products',img:'all dummy images/image8.jpeg',icon:'fas fa-first-aid',desc:'First aid kits, emergency stretchers, AED defibrillators, and trauma supplies.'},
+    {name:'Chemical Safety Products',img:'all dummy images/image8.jpeg',icon:'fas fa-biohazard',desc:'Spill kits, chemical storage cabinets, safety showers, and eyewash stations.'},
+    {name:'Electrical Safety Products',img:'all dummy images/image8.jpeg',icon:'fas fa-bolt',desc:'Insulated tools, lockout/tagout kits, voltage detectors, and arc flash protection.'},
+    {name:'Radiation Safety Products',img:'all dummy images/image8.jpeg',icon:'fas fa-radiation',desc:'Lead aprons, thyroid shields, dosimeters, radiation barriers, and monitoring badges.'}
   ]}
 ];
 
 const PH = ['ph-1','ph-2','ph-3','ph-4','ph-5','ph-6','ph-7','ph-8','ph-9','ph-10'];
 
+// ── buildCard now uses item.img for each product's unique image path ──
 function buildCard(item, idx, catLabel, catKey) {
   const ph = PH[idx % PH.length];
   const num = String(idx+1).padStart(2,'0');
   return `<div class="pc" data-name="${item.name.toLowerCase()}" data-cat="${catKey}">
-    <div class="pc-img"><div class="pc-ph ${ph}"><i class="${item.icon} ph-icon"></i><span class="ph-lbl">Add Image</span></div><div class="pc-cat">${catLabel}</div><span class="pc-num">${num}</span></div>
+    <div class="pc-img"><img src="${item.img}" alt="${item.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="pc-ph ${ph}" style="display:none"><i class="${item.icon} ph-icon"></i><span class="ph-lbl">Add Image</span></div><div class="pc-cat">${catLabel}</div><span class="pc-num">${num}</span></div>
     <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="${item.icon}"></i></div><h3 class="pc-name">${item.name}</h3></div><p class="pc-desc">${item.desc}</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
   </div>`;
 }
@@ -908,55 +865,53 @@ SECTIONS.forEach(s => {
     c.appendChild(p);
   }
 })();
+
+// ─── WhatsApp Chat Widget
 (function() {
-    var WA_NUMBER = '918870244418'; // 91 = India country code + your number
-    var widget = document.getElementById('waChatWidget');
-    var fab    = document.getElementById('waChatFab');
-    var input  = document.getElementById('waInput');
-    var sendBtn = document.getElementById('waSendBtn');
- 
-    // Set current time on chat bubbles
-    function getTime() {
-      var now = new Date();
-      return ('0'+now.getHours()).slice(-2) + ':' + ('0'+now.getMinutes()).slice(-2);
+  var WA_NUMBER = '918870244418';
+  var widget = document.getElementById('waChatWidget');
+  var fab    = document.getElementById('waChatFab');
+  var input  = document.getElementById('waInput');
+  var sendBtn = document.getElementById('waSendBtn');
+
+  function getTime() {
+    var now = new Date();
+    return ('0'+now.getHours()).slice(-2) + ':' + ('0'+now.getMinutes()).slice(-2);
+  }
+  var t1 = document.getElementById('waBubbleTime');
+  var t2 = document.getElementById('waBubbleTime2');
+  if (t1) t1.textContent = getTime();
+  if (t2) t2.textContent = getTime();
+
+  fab.addEventListener('click', function(e) {
+    e.stopPropagation();
+    widget.classList.toggle('open');
+    if (widget.classList.contains('open')) {
+      setTimeout(function(){ input && input.focus(); }, 300);
     }
-    var t1 = document.getElementById('waBubbleTime');
-    var t2 = document.getElementById('waBubbleTime2');
-    if (t1) t1.textContent = getTime();
-    if (t2) t2.textContent = getTime();
- 
-    // Toggle open / close
-    fab.addEventListener('click', function(e) {
-      e.stopPropagation();
-      widget.classList.toggle('open');
-      if (widget.classList.contains('open')) {
-        setTimeout(function(){ input && input.focus(); }, 300);
-      }
-    });
- 
-    // Send — redirect to WhatsApp
-    function sendToWhatsApp() {
-      var msg = input.value.trim();
-      var text = msg || 'Hello! I am interested in your products and services.';
-      var url = 'https://api.whatsapp.com/send/?phone=' + WA_NUMBER
-              + '&text=' + encodeURIComponent(text)
-              + '&type=phone_number&app_absent=0';
-      window.open(url, '_blank');
-      input.value = '';
+  });
+
+  function sendToWhatsApp() {
+    var msg = input.value.trim();
+    var text = msg || 'Hello! I am interested in your products and services.';
+    var url = 'https://api.whatsapp.com/send/?phone=' + WA_NUMBER
+            + '&text=' + encodeURIComponent(text)
+            + '&type=phone_number&app_absent=0';
+    window.open(url, '_blank');
+    input.value = '';
+  }
+
+  sendBtn.addEventListener('click', sendToWhatsApp);
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') sendToWhatsApp();
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!widget.contains(e.target)) {
+      widget.classList.remove('open');
     }
- 
-    sendBtn.addEventListener('click', sendToWhatsApp);
-    input.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') sendToWhatsApp();
-    });
- 
-    // Close when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!widget.contains(e.target)) {
-        widget.classList.remove('open');
-      }
-    });
-  })();
+  });
+})();
 </script>
 </body>
 </html>

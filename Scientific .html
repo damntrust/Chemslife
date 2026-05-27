@@ -15,11 +15,7 @@
 }
 html{scroll-behavior:smooth}
 body{font-family:'Open Sans',sans-serif;background:var(--bg);color:var(--navy);overflow-x:hidden}
-
-/* SCROLL PROGRESS */
 .scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-dark),var(--green-mid));z-index:9999;width:0%;transition:width .08s linear;pointer-events:none}
-
-/* TOP BAR */
 .top-bar{background:var(--navy);color:#fff;padding:8px 0}
 .top-bar-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
 .top-bar-address{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
@@ -32,8 +28,6 @@ body{font-family:'Open Sans',sans-serif;background:var(--bg);color:var(--navy);o
 .social-links a.li{background:#0a66c2;color:#fff}.social-links a.tw{background:#000;color:#fff}
 .social-links a.yt{background:red;color:#fff}.social-links a.wa{background:#25d366;color:#fff}
 .social-links a.tg{background:#0088cc;color:#fff}.social-links a.pt{background:#e60023;color:#fff}
-
-/* MARQUEE */
 .marquee-wrap{background:linear-gradient(90deg,var(--green-dark),var(--green),var(--green-dark));padding:9px 0;overflow:hidden;position:relative}
 .marquee-wrap::before,.marquee-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
 .marquee-wrap::before{left:0;background:linear-gradient(to right,var(--green-dark),transparent)}
@@ -44,8 +38,6 @@ body{font-family:'Open Sans',sans-serif;background:var(--bg);color:var(--navy);o
 .marquee-text{font-family:'Montserrat',sans-serif;font-size:13.5px;font-weight:700;letter-spacing:3.5px;color:rgba(255,255,255,.95);text-transform:uppercase;padding:0 48px}
 .marquee-sep{color:rgba(255,255,255,.5);font-size:16px;padding:0 8px}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-
-/* HEADER */
 .main-header{background:#fff;border-bottom:2px solid var(--green-light);box-shadow:0 2px 12px rgba(46,158,79,.08);position:sticky;top:0;z-index:200}
 .main-header-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:80px;gap:24px}
 .logo-wrap{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}
@@ -81,8 +73,6 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .dropdown-divider{border:none;border-top:1px solid var(--border);margin:6px 8px}
 .hamburger{display:none;background:none;border:1.5px solid var(--border);border-radius:6px;padding:7px 9px;cursor:pointer;flex-direction:column;gap:4px}
 .hamburger span{display:block;width:20px;height:2px;background:var(--navy);border-radius:2px}
-
-/* HERO */
 .sci-hero{position:relative;min-height:520px;display:flex;align-items:center;background:var(--navy);overflow:hidden}
 .sh-dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(95,217,138,.12) 1.5px,transparent 1.5px);background-size:36px 36px;animation:dotsShift 30s linear infinite;pointer-events:none;z-index:0}
 @keyframes dotsShift{0%{background-position:0 0}100%{background-position:36px 36px}}
@@ -132,15 +122,11 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .vis-stat{position:absolute;bottom:16px;right:16px;background:rgba(46,158,79,.9);border-radius:12px;padding:12px 18px;text-align:center;z-index:4;border:1.5px solid rgba(95,217,138,.3);animation:floatBob 5s ease-in-out infinite}
 .vis-stat strong{display:block;font-family:'Montserrat',sans-serif;font-size:28px;font-weight:900;color:#fff;line-height:1}
 .vis-stat span{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,.8);letter-spacing:1.5px;text-transform:uppercase}
-
-/* BREADCRUMB */
 .breadcrumb{background:#fff;border-bottom:1px solid var(--border);padding:13px 0}
 .breadcrumb-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:8px;font-size:13px;flex-wrap:wrap}
 .breadcrumb-inner a{color:var(--green-dark);text-decoration:none;font-weight:600;display:flex;align-items:center;gap:5px}
 .breadcrumb-inner .sep{color:var(--text-muted);font-size:11px}
 .breadcrumb-inner span{color:var(--text-muted);font-weight:600}
-
-/* STATS BAND */
 .stats-band{background:var(--navy);padding:32px 0;position:relative;overflow:hidden}
 .stats-band::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(95,217,138,.06) 1.5px,transparent 1.5px);background-size:28px 28px;pointer-events:none}
 .stats-band-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(4,1fr);position:relative;z-index:1}
@@ -148,8 +134,6 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .sbi+.sbi::before{content:'';position:absolute;left:0;top:15%;bottom:15%;width:1px;background:rgba(255,255,255,.1)}
 .sbi-num{font-family:'Montserrat',sans-serif;font-size:44px;font-weight:900;color:var(--green-mid);line-height:1;margin-bottom:6px}
 .sbi-label{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:rgba(255,255,255,.45);letter-spacing:2px;text-transform:uppercase}
-
-/* FILTER BAR */
 .filter-bar{background:#fff;padding:20px 0;border-bottom:2px solid var(--border);position:sticky;top:80px;z-index:100;box-shadow:0 4px 20px rgba(13,43,78,.06)}
 .filter-bar-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .filter-label{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);flex-shrink:0}
@@ -162,8 +146,6 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .search-wrap input:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(46,158,79,.12)}
 .search-wrap input::placeholder{color:#a0b4c4}
 .search-wrap i{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--text-muted);font-size:14px}
-
-/* MAIN SECTION */
 .products-section{padding:80px 0 60px;position:relative;overflow:hidden}
 .products-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(46,158,79,.055) 1.5px,transparent 1.5px);background-size:34px 34px;pointer-events:none;z-index:0}
 .prod-inner{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
@@ -177,8 +159,6 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .res-count{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:var(--text-muted)}
 .res-count span{color:var(--green)}
 .sort-wrap select{font-family:'Open Sans',sans-serif;font-size:13px;color:var(--navy);background:#fff;border:1.5px solid var(--border);border-radius:8px;padding:9px 14px;outline:none;cursor:pointer}
-
-/* SECTION GROUP */
 .section-group{margin-bottom:72px}
 .sec-group-header{display:flex;align-items:center;gap:18px;margin-bottom:36px;padding-bottom:18px;border-bottom:2px solid var(--border);flex-wrap:wrap}
 .sec-group-icon{width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,var(--green-dark),var(--green));display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 8px 24px rgba(46,158,79,.3)}
@@ -186,24 +166,26 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .sec-group-title{font-family:'Montserrat',sans-serif;font-size:26px;font-weight:900;color:var(--navy);letter-spacing:-.5px}
 .sec-group-title span{color:var(--green)}
 .sec-group-count{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:var(--text-muted);background:var(--bg);border:1.5px solid var(--border);padding:5px 14px;border-radius:20px;margin-left:auto;white-space:nowrap}
-
-/* CARD GRID */
 .prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 .prod-grid.g3{grid-template-columns:repeat(3,1fr)}
 
-/* PRODUCT CARD */
+/* ── PRODUCT CARD ── */
 .pc{background:#fff;border-radius:18px;overflow:hidden;border:1.5px solid var(--border);box-shadow:0 4px 18px rgba(13,43,78,.06);transition:transform .38s cubic-bezier(.22,1,.36,1),box-shadow .38s ease,border-color .3s;opacity:0;transform:translateY(36px) scale(.97);display:flex;flex-direction:column;position:relative;cursor:default}
 .pc.pc-vis{opacity:1;transform:none}
 .pc:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 28px 60px rgba(13,43,78,.12);border-color:rgba(46,158,79,.38)}
 .pc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green-dark),var(--green),var(--green-mid));border-radius:18px 18px 0 0;transform:scaleX(0);transform-origin:left;transition:transform .3s ease;z-index:3}
 .pc:hover::before{transform:scaleX(1)}
+
+/* image area — placeholder behind, img on top */
 .pc-img{position:relative;height:170px;overflow:hidden;flex-shrink:0}
-.pc-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.pc-ph{position:absolute;inset:0;z-index:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+.pc-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1;transition:transform .6s ease}
 .pc:hover .pc-img img{transform:scale(1.1)}
-.pc-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(13,43,78,.55) 0%,transparent 55%);pointer-events:none;z-index:1}
-.pc-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+/* gradient overlay sits above image */
+.pc-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(13,43,78,.55) 0%,transparent 55%);pointer-events:none;z-index:2}
 .pc-cat{position:absolute;top:10px;left:10px;z-index:4;font-family:'Montserrat',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;background:rgba(46,158,79,.88);color:#fff;padding:4px 10px;border-radius:20px;backdrop-filter:blur(6px)}
 .pc-num{position:absolute;top:10px;right:10px;z-index:4;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:800;color:rgba(255,255,255,.7);background:rgba(0,0,0,.28);backdrop-filter:blur(6px);border-radius:6px;padding:3px 8px}
+
 .pc-body{padding:16px 16px 14px;display:flex;flex-direction:column;flex:1}
 .pc-icon-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 .pc-icon{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--green-light),#c2e8ce);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .3s,background .3s}
@@ -226,8 +208,6 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .g3 .pc-icon{width:44px;height:44px}
 .g3 .pc-icon i{font-size:18px}
 .g3 .pc-btn{font-size:12.5px;padding:9px 16px}
-
-/* placeholder gradients */
 .ph-1{background:linear-gradient(160deg,#0d2b4e,#163e6f,#1e4d82)}
 .ph-2{background:linear-gradient(160deg,#0a2e20,#1e7a3a,#2e9e4f)}
 .ph-3{background:linear-gradient(160deg,#1a1a3e,#0d2b4e,#163e6f)}
@@ -240,13 +220,9 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .ph-10{background:linear-gradient(160deg,#0a2518,#145025,#1e7838)}
 .ph-icon{font-size:42px;color:rgba(255,255,255,.2)}
 .ph-lbl{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.28)}
-
-/* NO RESULTS */
 .no-results{display:none;text-align:center;padding:60px 24px;grid-column:1/-1}
 .no-results i{font-size:48px;color:var(--border);display:block;margin-bottom:14px}
 .no-results p{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;color:var(--text-muted)}
-
-/* CTA */
 .cta-section{background:linear-gradient(135deg,var(--navy),var(--navy-mid) 45%,#0a3d20);padding:90px 0;position:relative;overflow:hidden}
 .cta-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(95,217,138,.07) 1.5px,transparent 1.5px);background-size:36px 36px;pointer-events:none}
 .cta-rings .cr{position:absolute;border-radius:50%;border:1px solid rgba(95,217,138,.07);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
@@ -262,169 +238,104 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
 .cta-btn-p:hover{background:var(--green-dark);transform:translateY(-3px)}
 .cta-btn-o{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);color:#fff;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;padding:15px 30px;border-radius:10px;text-decoration:none;border:2px solid rgba(255,255,255,.2);transition:background .22s,transform .18s}
 .cta-btn-o:hover{background:rgba(255,255,255,.15);transform:translateY(-3px)}
-
-/* ═══════════════ FOOTER (from index) ═══════════════ */
-.footer { background: #07192d; color: #cdd8e8; font-size: 14px; line-height: 1.7; }
-
-.footer-top-band { background: linear-gradient(90deg, var(--green-dark), #1ca64b, var(--green-dark)); padding: 22px 24px; display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; }
-.footer-top-band p { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 700; color: #fff; }
-.footer-top-band p span { color: #b8f5cf; }
-.footer-cta-btn { background: #fff; color: var(--green-dark); font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; padding: 10px 26px; border-radius: 6px; text-decoration: none; transition: background 0.2s, color 0.2s, transform 0.15s; white-space: nowrap; }
-.footer-cta-btn:hover { background: var(--navy); color: #fff; transform: translateY(-2px); }
-
-.footer-main { max-width: 1200px; margin: 0 auto; padding: 60px 24px 40px; display: grid; grid-template-columns: 260px 1fr 1fr 180px; gap: 40px; }
-
-/*.footer-logo-col {} */
-.footer-logo-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
-.footer-logo-icon { width: 54px; height: 54px; border-radius: 10px; background: rgba(46,158,79,0.15); border: 1.5px solid rgba(46,158,79,0.3); display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
-.footer-logo-icon img { width: 100%; height: 100%; object-fit: contain; }
-.footer-logo-icon svg { width: 30px; height: 30px; }
-.footer-logo-name { font-family: 'Montserrat', sans-serif; font-size: 21px; font-weight: 800; color: #fff; line-height: 1.1; }
-.footer-logo-name span { color: var(--green); }
-.footer-logo-sub { font-size: 11px; color: #7a9bb5; letter-spacing: 1.8px; text-transform: uppercase; }
-.footer-about-text { color: #8aacca; font-size: 14px; line-height: 1.8; margin-bottom: 18px; }
-.footer-tagline { display: inline-block; background: rgba(46,158,79,0.12); border-left: 3px solid var(--green); color: #a8d8b5; font-size: 13px; font-style: italic; padding: 9px 14px; border-radius: 0 6px 6px 0; margin-bottom: 22px; }
-.footer-socials { display: flex; gap: 8px; flex-wrap: wrap; }
-.footer-socials a { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; text-decoration: none; transition: transform 0.2s, filter 0.2s; }
-.footer-socials a:hover { transform: translateY(-3px) scale(1.1); filter: brightness(1.2); }
-.footer-socials a.fb { background: #1877f2; color: #fff; }
-.footer-socials a.ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%); color: #fff; }
-.footer-socials a.li { background: #0a66c2; color: #fff; }
-.footer-socials a.tw { background: #000; color: #fff; }
-.footer-socials a.yt { background: #ff0000; color: #fff; }
-.footer-socials a.wa { background: #25d366; color: #fff; }
-.footer-socials a.tg { background: #0088cc; color: #fff; }
-.footer-socials a.pt { background: #e60023; color: #fff; }
-
-.footer-col h4 { font-family: 'Montserrat', sans-serif; font-size: 13.5px; font-weight: 700; color: #fff; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid rgba(46,158,79,0.35); display: flex; align-items: center; gap: 8px; }
-.footer-col h4 i { color: var(--green); font-size: 14px; }
-.footer-col h5 { font-family: 'Montserrat', sans-serif; font-size: 11.5px; font-weight: 700; color: #5fd98a; letter-spacing: 1.5px; text-transform: uppercase; margin: 18px 0 8px; padding-bottom: 5px; border-bottom: 1px solid rgba(46,158,79,0.15); }
-.footer-links { list-style: none; }
-.footer-links li a { color: #8aacca; text-decoration: none; font-size: 14px; display: flex; align-items: flex-start; gap: 7px; padding: 3.5px 0; transition: color 0.2s, padding-left 0.2s; line-height: 1.5; }
-.footer-links li a::before { content: '›'; color: var(--green); font-size: 16px; line-height: 1.3; flex-shrink: 0; font-weight: 700; }
-.footer-links li a:hover { color: #5fd98a; padding-left: 5px; }
-
-.footer-contact-grid { max-width: 1200px; margin: 0 auto; padding: 0 24px 44px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-.contact-card {
-  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px; padding: 20px 22px; display: flex; gap: 14px; align-items: flex-start;
-  position: relative; overflow: hidden; cursor: default;
-  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
-}
-.contact-card::before {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(46,158,79,0.18), rgba(30,122,58,0.12));
-  opacity: 0; transition: opacity 0.35s ease; z-index: 0;
-}
-.contact-card:hover { border-color: rgba(46,158,79,0.45); box-shadow: 0 10px 30px rgba(46,158,79,0.15); transform: translateY(-4px); }
-.contact-card:hover::before { opacity: 1; }
-.contact-icon { width: 42px; height: 42px; border-radius: 10px; background: rgba(46,158,79,0.15); border: 1px solid rgba(46,158,79,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; z-index: 1; transition: background 0.3s; }
-.contact-card:hover .contact-icon { background: rgba(46,158,79,0.3); }
-.contact-icon i { color: var(--green); font-size: 16px; }
-.contact-info { flex: 1; min-width: 0; position: relative; z-index: 1; }
-.contact-info strong { display: block; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px; }
-.contact-info span, .contact-info a { display: block; color: #8aacca; font-size: 13px; text-decoration: none; word-break: break-word; line-height: 1.6; }
-.contact-info a:hover { color: #5fd98a; }
-
-.footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.07); margin: 0 24px; }
-.footer-bottom { max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-.footer-bottom p { font-size: 13px; color: #4a6a88; }
-.footer-bottom p span { color: var(--green); }
-.footer-bottom-links { display: flex; gap: 20px; }
-.footer-bottom-links a { font-size: 13px; color: #4a6a88; text-decoration: none; transition: color 0.2s; }
-.footer-bottom-links a:hover { color: #5fd98a; }
-.footer-motto { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; color: rgba(46,158,79,0.55); letter-spacing: 2px; text-transform: uppercase; }
-
-/* BACK TO TOP */
+.footer{background:#07192d;color:#cdd8e8;font-size:14px;line-height:1.7}
+.footer-top-band{background:linear-gradient(90deg,var(--green-dark),#1ca64b,var(--green-dark));padding:22px 24px;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
+.footer-top-band p{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:#fff}
+.footer-top-band p span{color:#b8f5cf}
+.footer-cta-btn{background:#fff;color:var(--green-dark);font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;padding:10px 26px;border-radius:6px;text-decoration:none;transition:background .2s,color .2s,transform .15s;white-space:nowrap}
+.footer-cta-btn:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
+.footer-main{max-width:1200px;margin:0 auto;padding:60px 24px 40px;display:grid;grid-template-columns:260px 1fr 1fr 180px;gap:40px}
+.footer-logo-wrap{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.footer-logo-icon{width:54px;height:54px;border-radius:10px;background:rgba(46,158,79,.15);border:1.5px solid rgba(46,158,79,.3);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+.footer-logo-icon img{width:100%;height:100%;object-fit:contain}
+.footer-logo-icon svg{width:30px;height:30px}
+.footer-logo-name{font-family:'Montserrat',sans-serif;font-size:21px;font-weight:800;color:#fff;line-height:1.1}
+.footer-logo-name span{color:var(--green)}
+.footer-logo-sub{font-size:11px;color:#7a9bb5;letter-spacing:1.8px;text-transform:uppercase}
+.footer-about-text{color:#8aacca;font-size:14px;line-height:1.8;margin-bottom:18px}
+.footer-tagline{display:inline-block;background:rgba(46,158,79,.12);border-left:3px solid var(--green);color:#a8d8b5;font-size:13px;font-style:italic;padding:9px 14px;border-radius:0 6px 6px 0;margin-bottom:22px}
+.footer-socials{display:flex;gap:8px;flex-wrap:wrap}
+.footer-socials a{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;text-decoration:none;transition:transform .2s,filter .2s}
+.footer-socials a:hover{transform:translateY(-3px) scale(1.1);filter:brightness(1.2)}
+.footer-socials a.fb{background:#1877f2;color:#fff}.footer-socials a.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%);color:#fff}
+.footer-socials a.li{background:#0a66c2;color:#fff}.footer-socials a.tw{background:#000;color:#fff}
+.footer-socials a.yt{background:#ff0000;color:#fff}.footer-socials a.wa{background:#25d366;color:#fff}
+.footer-socials a.tg{background:#0088cc;color:#fff}.footer-socials a.pt{background:#e60023;color:#fff}
+.footer-col h4{font-family:'Montserrat',sans-serif;font-size:13.5px;font-weight:700;color:#fff;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid rgba(46,158,79,.35);display:flex;align-items:center;gap:8px}
+.footer-col h4 i{color:var(--green);font-size:14px}
+.footer-col h5{font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;color:#5fd98a;letter-spacing:1.5px;text-transform:uppercase;margin:18px 0 8px;padding-bottom:5px;border-bottom:1px solid rgba(46,158,79,.15)}
+.footer-links{list-style:none}
+.footer-links li a{color:#8aacca;text-decoration:none;font-size:14px;display:flex;align-items:flex-start;gap:7px;padding:3.5px 0;transition:color .2s,padding-left .2s;line-height:1.5}
+.footer-links li a::before{content:'›';color:var(--green);font-size:16px;line-height:1.3;flex-shrink:0;font-weight:700}
+.footer-links li a:hover{color:#5fd98a;padding-left:5px}
+.footer-contact-grid{max-width:1200px;margin:0 auto;padding:0 24px 44px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.contact-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px 22px;display:flex;gap:14px;align-items:flex-start;position:relative;overflow:hidden;cursor:default;transition:border-color .3s,box-shadow .3s,transform .3s}
+.contact-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(46,158,79,.18),rgba(30,122,58,.12));opacity:0;transition:opacity .35s ease;z-index:0}
+.contact-card:hover{border-color:rgba(46,158,79,.45);box-shadow:0 10px 30px rgba(46,158,79,.15);transform:translateY(-4px)}
+.contact-card:hover::before{opacity:1}
+.contact-icon{width:42px;height:42px;border-radius:10px;background:rgba(46,158,79,.15);border:1px solid rgba(46,158,79,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;z-index:1;transition:background .3s}
+.contact-card:hover .contact-icon{background:rgba(46,158,79,.3)}
+.contact-icon i{color:var(--green);font-size:16px}
+.contact-info{flex:1;min-width:0;position:relative;z-index:1}
+.contact-info strong{display:block;color:#fff;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:5px}
+.contact-info span,.contact-info a{display:block;color:#8aacca;font-size:13px;text-decoration:none;word-break:break-word;line-height:1.6}
+.contact-info a:hover{color:#5fd98a}
+.footer-divider{border:none;border-top:1px solid rgba(255,255,255,.07);margin:0 24px}
+.footer-bottom{max-width:1200px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-bottom p{font-size:13px;color:#4a6a88}
+.footer-bottom p span{color:var(--green)}
+.footer-bottom-links{display:flex;gap:20px}
+.footer-bottom-links a{font-size:13px;color:#4a6a88;text-decoration:none;transition:color .2s}
+.footer-bottom-links a:hover{color:#5fd98a}
+.footer-motto{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:rgba(46,158,79,.55);letter-spacing:2px;text-transform:uppercase}
 .back-top{position:fixed;bottom:32px;right:32px;width:50px;height:50px;border-radius:14px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;border:none;box-shadow:0 8px 24px rgba(46,158,79,.4);transition:background .2s,transform .2s,opacity .3s;opacity:0;pointer-events:none;z-index:500}
 .back-top.show{opacity:1;pointer-events:all}
 .back-top:hover{background:var(--green-dark);transform:translateY(-3px)}
 .reveal{opacity:0;transform:translateY(36px);transition:opacity .75s ease,transform .75s ease}
 .reveal.visible{opacity:1;transform:none}
-
-/* RESPONSIVE */
+/* WhatsApp Chatbot */
+.wa-chat-widget{position:fixed;bottom:28px;right:28px;z-index:9999;font-family:'Open Sans',sans-serif}
+.wa-chat-fab{width:60px;height:60px;border-radius:50%;background:#25d366;box-shadow:0 6px 24px rgba(37,211,102,.5);display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s ease;position:relative;z-index:2}
+.wa-chat-fab:hover{transform:scale(1.12);box-shadow:0 10px 32px rgba(37,211,102,.65)}
+.wa-chat-fab svg{width:32px;height:32px;transition:opacity .2s,transform .2s}
+.wa-chat-fab .icon-close{position:absolute;opacity:0;transform:rotate(-90deg) scale(.6)}
+.wa-chat-widget.open .wa-chat-fab .icon-wa{opacity:0;transform:rotate(90deg) scale(.6)}
+.wa-chat-widget.open .wa-chat-fab .icon-close{opacity:1;transform:rotate(0deg) scale(1)}
+.wa-notif-dot{position:absolute;top:4px;right:4px;width:14px;height:14px;background:#ff3b3b;border-radius:50%;border:2px solid #fff;animation:wa-pulse 2s infinite}
+@keyframes wa-pulse{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,59,59,.5)}60%{transform:scale(1.1);box-shadow:0 0 0 6px rgba(255,59,59,0)}}
+.wa-chat-widget.open .wa-notif-dot{display:none}
+.wa-chat-box{position:absolute;bottom:74px;right:0;width:320px;background:#fff;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.18);overflow:hidden;opacity:0;transform:scale(.85) translateY(20px);transform-origin:bottom right;transition:opacity .28s ease,transform .28s cubic-bezier(.34,1.56,.64,1);pointer-events:none}
+.wa-chat-widget.open .wa-chat-box{opacity:1;transform:scale(1) translateY(0);pointer-events:all}
+.wa-box-header{background:#075e54;padding:18px 18px 16px;display:flex;align-items:center;gap:12px}
+.wa-avatar{width:46px;height:46px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:2px solid rgba(255,255,255,.25)}
+.wa-avatar svg{width:26px;height:26px}
+.wa-header-text{flex:1}
+.wa-header-text strong{display:block;color:#fff;font-size:14px;font-weight:700;font-family:'Montserrat',sans-serif}
+.wa-header-text span{font-size:12px;color:rgba(255,255,255,.7);display:flex;align-items:center;gap:5px;margin-top:2px}
+.wa-online-dot{width:7px;height:7px;background:#25d366;border-radius:50%;display:inline-block;animation:wa-blink 2.5s infinite}
+@keyframes wa-blink{0%,100%{opacity:1}50%{opacity:.4}}
+.wa-chat-body{padding:16px 14px 12px;background:#e5ddd5;min-height:110px}
+.wa-bubble-wrap{display:flex;align-items:flex-start;gap:8px}
+.wa-bubble-avatar{width:30px;height:30px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.wa-bubble-avatar svg{width:16px;height:16px}
+.wa-bubble{background:#fff;border-radius:0 10px 10px 10px;padding:10px 13px;box-shadow:0 1px 3px rgba(0,0,0,.12);max-width:220px;font-size:13.5px;color:#333;line-height:1.55;position:relative}
+.wa-bubble::before{content:'';position:absolute;left:-7px;top:0;border-width:0 8px 8px 0;border-style:solid;border-color:transparent #fff transparent transparent}
+.wa-bubble-time{font-size:10.5px;color:#999;text-align:right;margin-top:5px}
+.wa-bubble-second{background:#dcf8c6;border-radius:10px 10px 10px 0;padding:10px 13px;box-shadow:0 1px 3px rgba(0,0,0,.12);max-width:220px;font-size:12.5px;color:#555;line-height:1.55;margin-top:8px}
+.wa-chat-footer{padding:10px 12px;background:#f0f0f0;border-top:1px solid #e0e0e0}
+.wa-input-row{display:flex;align-items:center;gap:8px;background:#fff;border-radius:24px;padding:8px 8px 8px 14px;box-shadow:0 1px 4px rgba(0,0,0,.1)}
+.wa-input{flex:1;border:none;outline:none;font-size:13.5px;color:#333;font-family:'Open Sans',sans-serif;background:transparent}
+.wa-input::placeholder{color:#aaa}
+.wa-send-btn{width:36px;height:36px;border-radius:50%;background:#25d366;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s,transform .15s}
+.wa-send-btn:hover{background:#128c7e;transform:scale(1.08)}
+.wa-send-btn svg{width:18px;height:18px}
+.wa-footer-note{text-align:center;font-size:11px;color:#aaa;margin-top:8px}
+@media(max-width:400px){.wa-chat-box{width:290px;right:-4px}.wa-chat-widget{bottom:20px;right:16px}}
 @media(max-width:1200px){.prod-grid{grid-template-columns:repeat(3,1fr)}.prod-grid.g3{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:1100px){
-  .footer-main { grid-template-columns: 1fr 1fr; gap: 36px; }
-  .footer-contact-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media(max-width:1000px){
-  .prod-grid,.prod-grid.g3{grid-template-columns:repeat(2,1fr)}
-  .stats-band-inner{grid-template-columns:repeat(2,1fr);gap:28px}
-  .sbi:nth-child(3)::before{display:none}
-  .sh-inner{grid-template-columns:1fr}
-  .sh-visual-wrap{display:none}
-  .sh-title{font-size:44px}
-}
-@media(max-width:768px){
-  .top-bar-address{display:none}
-  .hamburger{display:flex}
-  nav{display:none}
-  nav.open{display:flex;flex-direction:column;align-items:stretch;position:absolute;top:80px;left:0;right:0;background:#fff;border-bottom:2px solid var(--green-light);padding:12px;box-shadow:0 8px 24px rgba(0,0,0,.1);z-index:200}
-  nav.open a{padding:12px 16px;border-radius:8px}
-  nav a.btn-contact{margin-left:0;margin-top:4px;text-align:center}
-  .main-header{position:relative}
-  .dropdown-menu{position:static;opacity:1;visibility:visible;pointer-events:all;transform:none;box-shadow:none;border:none;background:var(--green-light);padding:4px 8px;display:none;min-width:unset}
-  .nav-dropdown.open .dropdown-menu{display:block}
-  .prod-grid,.prod-grid.g3{grid-template-columns:1fr 1fr}
-  .filter-bar{position:static}
-  .filter-bar-inner{flex-direction:column;align-items:stretch}
-  .search-wrap,.search-wrap input{width:100%}
-  .sh-title{font-size:30px;letter-spacing:-1px}
-  .sh-inner{padding:56px 24px}
-  .sec-title{font-size:28px}
-  .footer-main { grid-template-columns: 1fr; gap: 28px; }
-  .footer-contact-grid { grid-template-columns: 1fr; }
-  .footer-bottom { flex-direction: column; text-align: center; }
-  .footer-top-band { flex-direction: column; text-align: center; gap: 14px; }
-  .cta-title{font-size:32px}
-  .stats-band-inner{grid-template-columns:1fr 1fr}
-  .back-top{bottom:20px;right:20px}
-  .results-row{flex-direction:column;align-items:flex-start}
-  .sec-group-header{gap:12px}.sec-group-count{margin-left:0}
-}
+@media(max-width:1100px){.footer-main{grid-template-columns:1fr 1fr;gap:36px}.footer-contact-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1000px){.prod-grid,.prod-grid.g3{grid-template-columns:repeat(2,1fr)}.stats-band-inner{grid-template-columns:repeat(2,1fr);gap:28px}.sbi:nth-child(3)::before{display:none}.sh-inner{grid-template-columns:1fr}.sh-visual-wrap{display:none}.sh-title{font-size:44px}}
+@media(max-width:768px){.top-bar-address{display:none}.hamburger{display:flex}nav{display:none}nav.open{display:flex;flex-direction:column;align-items:stretch;position:absolute;top:80px;left:0;right:0;background:#fff;border-bottom:2px solid var(--green-light);padding:12px;box-shadow:0 8px 24px rgba(0,0,0,.1);z-index:200}nav.open a{padding:12px 16px;border-radius:8px}nav a.btn-contact{margin-left:0;margin-top:4px;text-align:center}.main-header{position:relative}.dropdown-menu{position:static;opacity:1;visibility:visible;pointer-events:all;transform:none;box-shadow:none;border:none;background:var(--green-light);padding:4px 8px;display:none;min-width:unset}.nav-dropdown.open .dropdown-menu{display:block}.prod-grid,.prod-grid.g3{grid-template-columns:1fr 1fr}.filter-bar{position:static}.filter-bar-inner{flex-direction:column;align-items:stretch}.search-wrap,.search-wrap input{width:100%}.sh-title{font-size:30px;letter-spacing:-1px}.sh-inner{padding:56px 24px}.sec-title{font-size:28px}.footer-main{grid-template-columns:1fr;gap:28px}.footer-contact-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;text-align:center}.footer-top-band{flex-direction:column;text-align:center;gap:14px}.cta-title{font-size:32px}.stats-band-inner{grid-template-columns:1fr 1fr}.back-top{bottom:20px;right:20px}.results-row{flex-direction:column;align-items:flex-start}.sec-group-header{gap:12px}.sec-group-count{margin-left:0}}
 @media(max-width:500px){.prod-grid,.prod-grid.g3{grid-template-columns:1fr}}
-/*chat bot */
- .wa-chat-widget { position: fixed; bottom: 28px; right: 28px; z-index: 9999; font-family: 'Open Sans', sans-serif; }
-  .wa-chat-fab { width: 60px; height: 60px; border-radius: 50%; background: #25d366; box-shadow: 0 6px 24px rgba(37,211,102,0.5); display: flex; align-items: center; justify-content: center; cursor: pointer; border: none; transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.25s ease; position: relative; z-index: 2; }
-  .wa-chat-fab:hover { transform: scale(1.12); box-shadow: 0 10px 32px rgba(37,211,102,0.65); }
-  .wa-chat-fab svg { width: 32px; height: 32px; transition: opacity 0.2s, transform 0.2s; }
-  .wa-chat-fab .icon-close { position: absolute; opacity: 0; transform: rotate(-90deg) scale(0.6); }
-  .wa-chat-widget.open .wa-chat-fab .icon-wa { opacity: 0; transform: rotate(90deg) scale(0.6); }
-  .wa-chat-widget.open .wa-chat-fab .icon-close { opacity: 1; transform: rotate(0deg) scale(1); }
-  .wa-notif-dot { position: absolute; top: 4px; right: 4px; width: 14px; height: 14px; background: #ff3b3b; border-radius: 50%; border: 2px solid #fff; animation: wa-pulse 2s infinite; }
-  @keyframes wa-pulse { 0%,100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,59,59,0.5); } 60% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(255,59,59,0); } }
-  .wa-chat-widget.open .wa-notif-dot { display: none; }
-  .wa-chat-box { position: absolute; bottom: 74px; right: 0; width: 320px; background: #fff; border-radius: 18px; box-shadow: 0 20px 60px rgba(0,0,0,0.18); overflow: hidden; opacity: 0; transform: scale(0.85) translateY(20px); transform-origin: bottom right; transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.34,1.56,0.64,1); pointer-events: none; }
-  .wa-chat-widget.open .wa-chat-box { opacity: 1; transform: scale(1) translateY(0); pointer-events: all; }
-  .wa-box-header { background: #075e54; padding: 18px 18px 16px; display: flex; align-items: center; gap: 12px; }
-  .wa-avatar { width: 46px; height: 46px; border-radius: 50%; background: #25d366; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 2px solid rgba(255,255,255,0.25); }
-  .wa-avatar svg { width: 26px; height: 26px; }
-  .wa-header-text { flex: 1; }
-  .wa-header-text strong { display: block; color: #fff; font-size: 14px; font-weight: 700; font-family: 'Montserrat', sans-serif; }
-  .wa-header-text span { font-size: 12px; color: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 5px; margin-top: 2px; }
-  .wa-online-dot { width: 7px; height: 7px; background: #25d366; border-radius: 50%; display: inline-block; animation: wa-blink 2.5s infinite; }
-  @keyframes wa-blink { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
-  .wa-chat-body { padding: 16px 14px 12px; background: #e5ddd5; min-height: 110px; }
-  .wa-bubble-wrap { display: flex; align-items: flex-start; gap: 8px; }
-  .wa-bubble-avatar { width: 30px; height: 30px; border-radius: 50%; background: #25d366; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
-  .wa-bubble-avatar svg { width: 16px; height: 16px; }
-  .wa-bubble { background: #fff; border-radius: 0 10px 10px 10px; padding: 10px 13px; box-shadow: 0 1px 3px rgba(0,0,0,0.12); max-width: 220px; font-size: 13.5px; color: #333; line-height: 1.55; position: relative; }
-  .wa-bubble::before { content: ''; position: absolute; left: -7px; top: 0; border-width: 0 8px 8px 0; border-style: solid; border-color: transparent #fff transparent transparent; }
-  .wa-bubble-time { font-size: 10.5px; color: #999; text-align: right; margin-top: 5px; }
-  .wa-bubble-second { background: #dcf8c6; border-radius: 10px 10px 10px 0; padding: 10px 13px; box-shadow: 0 1px 3px rgba(0,0,0,0.12); max-width: 220px; font-size: 12.5px; color: #555; line-height: 1.55; margin-top: 8px; }
-  .wa-chat-footer { padding: 10px 12px; background: #f0f0f0; border-top: 1px solid #e0e0e0; }
-  .wa-input-row { display: flex; align-items: center; gap: 8px; background: #fff; border-radius: 24px; padding: 8px 8px 8px 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
-  .wa-input { flex: 1; border: none; outline: none; font-size: 13.5px; color: #333; font-family: 'Open Sans', sans-serif; background: transparent; }
-  .wa-input::placeholder { color: #aaa; }
-  .wa-send-btn { width: 36px; height: 36px; border-radius: 50%; background: #25d366; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s, transform 0.15s; }
-  .wa-send-btn:hover { background: #128c7e; transform: scale(1.08); }
-  .wa-send-btn svg { width: 18px; height: 18px; }
-  .wa-footer-note { text-align: center; font-size: 11px; color: #aaa; margin-top: 8px; }
-  @media (max-width: 400px) {
-    .wa-chat-box { width: 290px; right: -4px; }
-    .wa-chat-widget { bottom: 20px; right: 16px; }
-  }
 </style>
 </head>
 <body>
@@ -437,18 +348,16 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     <span><i class="fas fa-phone"></i> +91 88704 96918</span>
     <span><i class="fas fa-envelope"></i> chemslifegroups@gmail.com</span>
   </div>
-      <div class="social-links">
-      <a href="https://www.facebook.com/Chemslifegroups" class="fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/chemslifegroups" class="ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/chemslife-groups-278a10213/" class="li" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://twitter.com/Chemslifegroups" class="tw" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://www.youtube.com/c/ChemslifeGroupss" class="yt" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://wa.me/1234567890" class="wa" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://t.me/ChemslifeGroups" class="tg" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
-      <a href="https://www.pinterest.com/chemslifegroups" class="pt" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-    </div>
+  <div class="social-links">
+    <a href="https://www.facebook.com/Chemslifegroups" class="fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/chemslifegroups" class="ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/chemslife-groups-278a10213/" class="li" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://twitter.com/Chemslifegroups" class="tw" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://www.youtube.com/c/ChemslifeGroupss" class="yt" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="https://wa.me/918870244418" class="wa" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://t.me/ChemslifeGroups" class="tg" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+    <a href="https://www.pinterest.com/chemslifegroups" class="pt" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
   </div>
-</div>
 </div></div>
 
 <!-- MARQUEE -->
@@ -472,7 +381,7 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     <div class="nav-dropdown" id="productsDropdown">
       <a href="#" id="productsToggle" class="active">Products <i class="fas fa-chevron-down dd-arrow"></i></a>
       <div class="dropdown-menu">
-        <a href="scientific-industrial-solutions.html">
+        <a href="Scientific .html">
           <div class="dd-icon"><i class="fas fa-flask"></i></div>
           <div class="dd-label"><strong>Scientific &amp; Industrial Solutions</strong><span>Lab, chemical, water treatment &amp; homecare</span></div>
         </a>
@@ -551,24 +460,300 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
     <div class="sort-wrap"><select id="sortSel"><option value="default">Sort: Default</option><option value="az">Name: A → Z</option><option value="za">Name: Z → A</option></select></div>
   </div>
 
+  <!-- ═══ LAB PRODUCTS (18) ═══ -->
   <div class="section-group" id="sg-lab">
     <div class="sec-group-header reveal"><div class="sec-group-icon"><i class="fas fa-microscope"></i></div><div><div class="sec-group-title">Laboratory <span>Products</span></div></div><div class="sec-group-count">18 Products</div></div>
-    <div class="prod-grid g3" id="grid-lab"></div>
+    <div class="prod-grid g3" id="grid-lab">
+
+      <div class="pc" data-name="laboratory chemicals" data-cat="lab">
+        <div class="pc-img">
+          <div class="pc-ph ph-1"><i class="fas fa-flask ph-icon"></i><span class="ph-lbl">Add Image</span></div>
+          <img src="all dummy images/image 2.jpeg" alt="Laboratory Chemicals" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="pc-cat">Lab Products</div><span class="pc-num">01</span>
+        </div>
+        <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-flask"></i></div><h3 class="pc-name">Laboratory Chemicals</h3></div><p class="pc-desc">High-purity reagents, solvents, acids, bases, and specialty chemicals for analytical and research applications.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
+      </div>
+
+      <div class="pc" data-name="laboratory instruments" data-cat="lab">
+        <div class="pc-img">
+          <div class="pc-ph ph-2"><i class="fas fa-microscope ph-icon"></i><span class="ph-lbl">Add Image</span></div>
+          <img src="all dummy images/image 2.jpeg" alt="Laboratory Instruments" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="pc-cat">Lab Products</div><span class="pc-num">02</span>
+        </div>
+        <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-microscope"></i></div><h3 class="pc-name">Laboratory Instruments</h3></div><p class="pc-desc">pH meters, spectrophotometers, balances, centrifuges, and analytical instruments for precise measurements.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
+      </div>
+
+      <div class="pc" data-name="laboratory equipment" data-cat="lab">
+        <div class="pc-img">
+          <div class="pc-ph ph-3"><i class="fas fa-cogs ph-icon"></i><span class="ph-lbl">Add Image</span></div>
+          <img src="all dummy images/image 2.jpeg" alt="Laboratory Equipment" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="pc-cat">Lab Products</div><span class="pc-num">03</span>
+        </div>
+        <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-cogs"></i></div><h3 class="pc-name">Laboratory Equipment</h3></div><p class="pc-desc">Autoclaves, ovens, incubators, hot plates, stirrers, and essential benchtop processing tools.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
+      </div>
+
+      <div class="pc" data-name="laboratory glassware" data-cat="lab">
+        <div class="pc-img">
+          <div class="pc-ph ph-4"><i class="fas fa-wine-glass ph-icon"></i><span class="ph-lbl">Add Image</span></div>
+          <img src="all dummy images/image 2.jpeg" alt="Laboratory Glassware" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="pc-cat">Lab Products</div><span class="pc-num">04</span>
+        </div>
+        <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-wine-glass"></i></div><h3 class="pc-name">Laboratory Glassware</h3></div><p class="pc-desc">Borosilicate beakers, flasks, test tubes, burettes, pipettes, condensers, and volumetric items.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
+      </div>
+
+      <div class="pc" data-name="laboratory plasticware" data-cat="lab">
+        <div class="pc-img">
+          <div class="pc-ph ph-5"><i class="fas fa-box-open ph-icon"></i><span class="ph-lbl">Add Image</span></div>
+          <img src="all dummy images/image 2.jpeg" alt="Laboratory Plasticware" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="pc-cat">Lab Products</div><span class="pc-num">05</span>
+        </div>
+        <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-box-open"></i></div><h3 class="pc-name">Laboratory Plasticware</h3></div><p class="pc-desc">PP, HDPE, and PVC bottles, trays, funnels, centrifuge tubes, petri dishes, and pipette tips.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
+      </div>
+
+      <div class="pc" data-name="laboratory silicaware" data-cat="lab">
+        <div class="pc-img">
+          <div class="pc-ph ph-6"><i class="fas fa-circle-notch ph-icon"></i><span class="ph-lbl">Add Image</span></div>
+          <img src="all dummy images/image 2.jpeg" alt="Laboratory Silicaware" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="pc-cat">Lab Products</div><span class="pc-num">06</span>
+        </div>
+        <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-circle-notch"></i></div><h3 class="pc-name">Laboratory Silicaware</h3></div><p class="pc-desc">High-performance silicone tubing, stoppers, mats, gaskets, and flexible connectors.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
+      </div>
+
+      <div class="pc" data-name="laboratory metalware" data-cat="lab">
+        <div class="pc-img">
+          <div class="pc-ph ph-7"><i class="fas fa-tools ph-icon"></i><span class="ph-lbl">Add Image</span></div>
+          <img src="all dummy images/image 2.jpeg" alt="Laboratory Metalware" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="pc-cat">Lab Products</div><span class="pc-num">07</span>
+        </div>
+        <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-tools"></i></div><h3 class="pc-name">Laboratory Metalware</h3></div><p class="pc-desc">Stainless steel stands, clamps, retort rings, spatulas, forceps, and metallic accessories.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
+      </div>
+
+      <div class="pc" data-name="laboratory aluminaware" data-cat="lab">
+        <div class="pc-img">
+          <div class="pc-ph ph-8"><i class="fas fa-layer-group ph-icon"></i><span class="ph-lbl">Add Image</span></div>
+          <img src="all dummy images/image 2.jpeg" alt="Laboratory Aluminaware" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="pc-cat">Lab Products</div><span class="pc-num">08</span>
+        </div>
+        <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-layer-group"></i></div><h3 class="pc-name">Laboratory Aluminaware</h3></div><p class="pc-desc">Lightweight aluminium trays, pans, sample containers, desiccators, and storage units.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
+      </div>
+
+      <div class="pc" data-name="laboratory woodenware" data-cat="lab">
+        <div class="pc-img">
+          <div class="pc-ph ph-9"><i class="fas fa-grip-lines ph-icon"></i><span class="ph-lbl">Add Image</span></div>
+          <img src="all dummy images/image 2.jpeg" alt="Laboratory Woodenware" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="pc-cat">Lab Products</div><span class="pc-num">09</span>
+        </div>
+        <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-grip-lines"></i></div><h3 class="pc-name">Laboratory Woodenware</h3></div><p class="pc-desc">Test tube racks, drying boards, slide boxes, dissection boards, and bench accessories.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
+      </div>
+
+      <div class="pc" data-name="laboratory porcelainware" data-cat="lab">
+        <div class="pc-img">
+          <div class="pc-ph ph-10"><i class="fas fa-mortar-pestle ph-icon"></i><span class="ph-lbl">Add Image</span></div>
+          <img src="all dummy images/image 2.jpeg" alt="Laboratory Porcelainware" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="pc-cat">Lab Products</div><span class="pc-num">10</span>
+        </div>
+        <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-mortar-pestle"></i></div><h3 class="pc-name">Laboratory Porcelainware</h3></div><p class="pc-desc">Mortars and pestles, evaporating basins, crucibles, and spot plates for chemical analysis.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
+      </div>
+
+      <div class="pc" data-name="laboratory quartzware" data-cat="lab">
+        <div class="pc-img">
+          <div class="pc-ph ph-1"><i class="fas fa-gem ph-icon"></i><span class="ph-lbl">Add Image</span></div>
+          <img src="all dummy images/image 2.jpeg" alt="Laboratory Quartzware" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="pc-cat">Lab Products</div><span class="pc-num">11</span>
+        </div>
+        <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-gem"></i></div><h3 class="pc-name">Laboratory Quartzware</h3></div><p class="pc-desc">Ultra-pure quartz tubes, boats, crucibles, and cuvettes for high-temperature applications.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
+      </div>
+
+      <div class="pc" data-name="laboratory rubberware" data-cat="lab">
+        <div class="pc-img">
+          <div class="pc-ph ph-2"><i class="fas fa-ring ph-icon"></i><span class="ph-lbl">Add Image</span></div>
+          <img src="all dummy images/image 2.jpeg" alt="Laboratory Rubberware" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="pc-cat">Lab Products</div><span class="pc-num">12</span>
+        </div>
+        <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-ring"></i></div><h3 class="pc-name">Laboratory Rubberware</h3></div><p class="pc-desc">Stoppers, tubing, bulbs, suction devices, and flexible connectors for sealing and transfer.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
+      </div>
+
+      <div class="pc" data-name="laboratory nickelware" data-cat="lab">
+        <div class="pc-img">
+          <div class="pc-ph ph-3"><i class="fas fa-cubes ph-icon"></i><span class="ph-lbl">Add Image</span></div>
+          <img src="all dummy images/image 2.jpeg" alt="Laboratory Nickelware" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="pc-cat">Lab Products</div><span class="pc-num">13</span>
+        </div>
+        <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-cubes"></i></div><h3 class="pc-name">Laboratory Nickelware</h3></div><p class="pc-desc">High-purity nickel crucibles, spatulas, and electrodes for analytical chemistry.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
+      </div>
+
+      <div class="pc" data-name="lab cooler" data-cat="lab">
+        <div class="pc-img">
+          <div class="pc-ph ph-4"><i class="fas fa-snowflake ph-icon"></i><span class="ph-lbl">Add Image</span></div>
+          <img src="all dummy images/image 2.jpeg" alt="Lab Cooler" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="pc-cat">Lab Products</div><span class="pc-num">14</span>
+        </div>
+        <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-snowflake"></i></div><h3 class="pc-name">Lab Cooler</h3></div><p class="pc-desc">Portable and bench-top coolers for sample preservation and temperature-sensitive control.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
+      </div>
+
+      <div class="pc" data-name="laboratory test kits" data-cat="lab">
+        <div class="pc-img">
+          <div class="pc-ph ph-5"><i class="fas fa-vials ph-icon"></i><span class="ph-lbl">Add Image</span></div>
+          <img src="all dummy images/image 2.jpeg" alt="Laboratory Test Kits" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="pc-cat">Lab Products</div><span class="pc-num">15</span>
+        </div>
+        <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-vials"></i></div><h3 class="pc-name">Laboratory Test Kits</h3></div><p class="pc-desc">Ready-to-use kits for water quality, chemical detection, microbiology, and field testing.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
+      </div>
+
+      <div class="pc" data-name="laboratory filtration products" data-cat="lab">
+        <div class="pc-img">
+          <div class="pc-ph ph-6"><i class="fas fa-filter ph-icon"></i><span class="ph-lbl">Add Image</span></div>
+          <img src="all dummy images/image 2.jpeg" alt="Laboratory Filtration Products" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="pc-cat">Lab Products</div><span class="pc-num">16</span>
+        </div>
+        <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-filter"></i></div><h3 class="pc-name">Laboratory Filtration Products</h3></div><p class="pc-desc">Filter papers, membrane filters, vacuum assemblies, syringe filters, and ultrafiltration devices.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
+      </div>
+
+      <div class="pc" data-name="laboratory furniture" data-cat="lab">
+        <div class="pc-img">
+          <div class="pc-ph ph-7"><i class="fas fa-chair ph-icon"></i><span class="ph-lbl">Add Image</span></div>
+          <img src="all dummy images/image 2.jpeg" alt="Laboratory Furniture" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="pc-cat">Lab Products</div><span class="pc-num">17</span>
+        </div>
+        <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-chair"></i></div><h3 class="pc-name">Laboratory Furniture</h3></div><p class="pc-desc">Chemical-resistant workbenches, fume hoods, storage cupboards, trolleys, and lab seating.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
+      </div>
+
+      <div class="pc" data-name="laboratory safety kits" data-cat="lab">
+        <div class="pc-img">
+          <div class="pc-ph ph-8"><i class="fas fa-hard-hat ph-icon"></i><span class="ph-lbl">Add Image</span></div>
+          <img src="all dummy images/image 2.jpeg" alt="Laboratory Safety Kits" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="pc-cat">Lab Products</div><span class="pc-num">18</span>
+        </div>
+        <div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-hard-hat"></i></div><h3 class="pc-name">Laboratory Safety Kits</h3></div><p class="pc-desc">Gloves, goggles, lab coats, first-aid kits, spill containment, and PPE solutions.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div>
+      </div>
+
+    </div>
   </div>
 
+  <!-- ═══ CHEMICAL PRODUCTS (34) ═══ -->
   <div class="section-group" id="sg-chemicals">
     <div class="sec-group-header reveal"><div class="sec-group-icon"><i class="fas fa-flask"></i></div><div><div class="sec-group-title">Chemical <span>Products</span></div></div><div class="sec-group-count">34 Products</div></div>
-    <div class="prod-grid" id="grid-chemicals"></div>
+    <div class="prod-grid" id="grid-chemicals">
+
+      <div class="pc" data-name="acids" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-1"><i class="fas fa-flask ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 5.jpeg" alt="Acids" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">01</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-flask"></i></div><h3 class="pc-name">Acids</h3></div><p class="pc-desc">Sulfuric, hydrochloric, nitric, acetic, and phosphoric acids for industrial and analytical use.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="agro chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-2"><i class="fas fa-seedling ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Agro Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">02</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-seedling"></i></div><h3 class="pc-name">Agro Chemicals</h3></div><p class="pc-desc">Fertilizers, pesticides, fungicides, herbicides, and growth regulators for agriculture.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="additive chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-3"><i class="fas fa-plus-circle ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Additive Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">03</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-plus-circle"></i></div><h3 class="pc-name">Additive Chemicals</h3></div><p class="pc-desc">Performance-enhancing additives for fuels, plastics, rubber, and industrial processes.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="adhesive chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-4"><i class="fas fa-object-group ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Adhesive Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">04</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-object-group"></i></div><h3 class="pc-name">Adhesive Chemicals</h3></div><p class="pc-desc">Industrial adhesives, bonding agents, sealants, and surface-preparation chemicals.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="analytic reagent chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-5"><i class="fas fa-microscope ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Analytic Reagent Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">05</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-microscope"></i></div><h3 class="pc-name">Analytic Reagent Chemicals</h3></div><p class="pc-desc">AR-grade high-purity reagents for volumetric, gravimetric, and instrumental analysis.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="alloy chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-6"><i class="fas fa-cogs ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Alloy Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">06</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-cogs"></i></div><h3 class="pc-name">Alloy Chemicals</h3></div><p class="pc-desc">Chemicals for alloy production, treatment, and surface finishing in metallurgy.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="bio chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-7"><i class="fas fa-dna ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Bio Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">07</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-dna"></i></div><h3 class="pc-name">Bio Chemicals</h3></div><p class="pc-desc">Biochemical reagents, enzymes, buffers, substrates, and biological compounds.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="boiler chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-8"><i class="fas fa-fire ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Boiler Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">08</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-fire"></i></div><h3 class="pc-name">Boiler Chemicals</h3></div><p class="pc-desc">Scale inhibitors, corrosion inhibitors, oxygen scavengers, and pH conditioners.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="ceramic chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-9"><i class="fas fa-cube ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Ceramic Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">09</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-cube"></i></div><h3 class="pc-name">Ceramic Chemicals</h3></div><p class="pc-desc">Binders, glazing compounds, colorants, and processing aids for ceramic manufacturing.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="construction chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-10"><i class="fas fa-building ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Construction Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">10</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-building"></i></div><h3 class="pc-name">Construction Chemicals</h3></div><p class="pc-desc">Admixtures, waterproofing agents, bonding agents, and grouts for construction.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="cooling tower chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-1"><i class="fas fa-snowflake ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Cooling Tower Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">11</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-snowflake"></i></div><h3 class="pc-name">Cooling Tower Chemicals</h3></div><p class="pc-desc">Scale inhibitors, biocides, dispersants, and algaecides for cooling tower systems.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="dyes & pigments" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-2"><i class="fas fa-palette ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Dyes & Pigments" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">12</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-palette"></i></div><h3 class="pc-name">Dyes &amp; Pigments</h3></div><p class="pc-desc">Reactive, disperse, vat, acid, and direct dyes along with pigments for textiles and coatings.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="flavour & fragrances" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-3"><i class="fas fa-wind ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Flavour & Fragrances" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">13</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-wind"></i></div><h3 class="pc-name">Flavour &amp; Fragrances</h3></div><p class="pc-desc">Aromatic compounds, essential oils, terpenes, and fragrance molecules.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="housekeeping chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-4"><i class="fas fa-broom ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Housekeeping Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">14</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-broom"></i></div><h3 class="pc-name">Housekeeping Chemicals</h3></div><p class="pc-desc">Professional cleaning, degreasing, and sanitation chemicals for facilities.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="hplc grade chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-5"><i class="fas fa-chart-line ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="HPLC Grade Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">15</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-chart-line"></i></div><h3 class="pc-name">HPLC Grade Chemicals</h3></div><p class="pc-desc">Ultra-pure HPLC/LC-MS grade solvents for high-performance chromatography.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="intermediates" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-6"><i class="fas fa-exchange-alt ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Intermediates" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">16</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-exchange-alt"></i></div><h3 class="pc-name">Intermediates</h3></div><p class="pc-desc">Chemical intermediates for pharmaceutical, agrochemical, and dye synthesis.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="lubricants" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-7"><i class="fas fa-oil-can ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Lubricants" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">17</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-oil-can"></i></div><h3 class="pc-name">Lubricants</h3></div><p class="pc-desc">Industrial oils, greases, cutting fluids, and specialty lubricants for machinery.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="labgrade chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-8"><i class="fas fa-vial ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Labgrade Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">18</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-vial"></i></div><h3 class="pc-name">Labgrade Chemicals</h3></div><p class="pc-desc">LR, CP, and technical grade chemicals for routine lab work and QC testing.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="metals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-9"><i class="fas fa-cubes ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Metals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">19</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-cubes"></i></div><h3 class="pc-name">Metals</h3></div><p class="pc-desc">Metal salts, powders, oxides, and organometallic compounds for catalysis.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="mining chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-10"><i class="fas fa-mountain ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Mining Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">20</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-mountain"></i></div><h3 class="pc-name">Mining Chemicals</h3></div><p class="pc-desc">Flotation reagents, leaching agents, flocculants for mineral processing.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="oil & refining chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-1"><i class="fas fa-industry ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Oil & Refining Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">21</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-industry"></i></div><h3 class="pc-name">Oil &amp; Refining Chemicals</h3></div><p class="pc-desc">Demulsifiers, corrosion inhibitors, and antioxidants for petroleum refining.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="paints & coating chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-2"><i class="fas fa-paint-roller ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Paints & Coating Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">22</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-paint-roller"></i></div><h3 class="pc-name">Paints &amp; Coating Chemicals</h3></div><p class="pc-desc">Resins, binders, dispersants, defoamers for paint and coating formulations.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="paper & pulp chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-3"><i class="fas fa-file-alt ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Paper & Pulp Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">23</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-file-alt"></i></div><h3 class="pc-name">Paper &amp; Pulp Chemicals</h3></div><p class="pc-desc">Bleaching agents, retention aids, sizing agents for pulp and paper manufacturing.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="glycols" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-4"><i class="fas fa-tint ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Glycols" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">24</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-tint"></i></div><h3 class="pc-name">Glycols</h3></div><p class="pc-desc">Ethylene glycol, propylene glycol, diethylene glycol for antifreeze and polyester.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="horticulture chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-5"><i class="fas fa-leaf ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Horticulture Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">25</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-leaf"></i></div><h3 class="pc-name">Horticulture Chemicals</h3></div><p class="pc-desc">Plant growth regulators, micronutrients, soil conditioners for horticulture.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="sericulture chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-6"><i class="fas fa-bug ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Sericulture Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">26</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-bug"></i></div><h3 class="pc-name">Sericulture Chemicals</h3></div><p class="pc-desc">Disinfectants and disease control agents for silkworm rearing.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="aqua culture chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-7"><i class="fas fa-fish ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Aqua Culture Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">27</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-fish"></i></div><h3 class="pc-name">Aqua Culture Chemicals</h3></div><p class="pc-desc">Water quality enhancers, pond treatments, and probiotics for aquaculture.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="petro chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-8"><i class="fas fa-gas-pump ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Petro Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">28</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-gas-pump"></i></div><h3 class="pc-name">Petro Chemicals</h3></div><p class="pc-desc">Aromatics, olefins, paraffins for plastics, fertilizers, and synthetic fibers.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="pharma chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-9"><i class="fas fa-capsules ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Pharma Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">29</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-capsules"></i></div><h3 class="pc-name">Pharma Chemicals</h3></div><p class="pc-desc">API intermediates, excipients, solvents meeting pharmacopoeial standards.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="polymer chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-10"><i class="fas fa-project-diagram ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Polymer Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">30</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-project-diagram"></i></div><h3 class="pc-name">Polymer Chemicals</h3></div><p class="pc-desc">Monomers, initiators, catalysts, stabilizers for polymer production.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="solvents" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-1"><i class="fas fa-flask ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Solvents" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">31</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-flask"></i></div><h3 class="pc-name">Solvents</h3></div><p class="pc-desc">Ketones, alcohols, esters, chlorinated and aromatic solvents.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="speciality chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-2"><i class="fas fa-star ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Speciality Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">32</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-star"></i></div><h3 class="pc-name">Speciality Chemicals</h3></div><p class="pc-desc">High-value specialty chemicals for niche industrial and advanced applications.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="usp grade chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-3"><i class="fas fa-medal ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="USP Grade Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">33</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-medal"></i></div><h3 class="pc-name">USP Grade Chemicals</h3></div><p class="pc-desc">USP grade reagents of highest purity for pharmaceutical validation and QC.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="water treatment chemicals" data-cat="chemicals"><div class="pc-img"><div class="pc-ph ph-4"><i class="fas fa-water ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Water Treatment Chemicals" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Chemicals</div><span class="pc-num">34</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-water"></i></div><h3 class="pc-name">Water Treatment Chemicals</h3></div><p class="pc-desc">Coagulants, flocculants, chlorine compounds, anti-scalants for water treatment.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+    </div>
   </div>
 
+  <!-- ═══ WATER TREATMENT (8) ═══ -->
   <div class="section-group" id="sg-water">
     <div class="sec-group-header reveal"><div class="sec-group-icon"><i class="fas fa-tint"></i></div><div><div class="sec-group-title">Water Treatment <span>Products</span></div></div><div class="sec-group-count">8 Products</div></div>
-    <div class="prod-grid g3" id="grid-water"></div>
+    <div class="prod-grid g3" id="grid-water">
+
+      <div class="pc" data-name="filtration products" data-cat="water"><div class="pc-img"><div class="pc-ph ph-1"><i class="fas fa-filter ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Filtration Products" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Water Treatment</div><span class="pc-num">01</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-filter"></i></div><h3 class="pc-name">Filtration Products</h3></div><p class="pc-desc">Sand filters, carbon filters, multimedia systems, and cartridge filtration for water purification.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="membrane systems" data-cat="water"><div class="pc-img"><div class="pc-ph ph-2"><i class="fas fa-layer-group ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Membrane Systems" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Water Treatment</div><span class="pc-num">02</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-layer-group"></i></div><h3 class="pc-name">Membrane Systems</h3></div><p class="pc-desc">RO, UF, NF, and MF membrane modules for desalination and ultrapure water generation.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="chemical treatment products" data-cat="water"><div class="pc-img"><div class="pc-ph ph-3"><i class="fas fa-flask ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Chemical Treatment Products" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Water Treatment</div><span class="pc-num">03</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-flask"></i></div><h3 class="pc-name">Chemical Treatment Products</h3></div><p class="pc-desc">Coagulants, flocculants, biocides, scale inhibitors for water quality management.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="ion exchange resins" data-cat="water"><div class="pc-img"><div class="pc-ph ph-4"><i class="fas fa-atom ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Ion Exchange Resins" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Water Treatment</div><span class="pc-num">04</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-atom"></i></div><h3 class="pc-name">Ion Exchange Resins</h3></div><p class="pc-desc">Cation, anion, and mixed-bed resins for water softening and demineralization.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="biological treatment products" data-cat="water"><div class="pc-img"><div class="pc-ph ph-5"><i class="fas fa-dna ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Biological Treatment Products" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Water Treatment</div><span class="pc-num">05</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-dna"></i></div><h3 class="pc-name">Biological Treatment Products</h3></div><p class="pc-desc">Microbial consortia, enzymes, and bioaugmentation for biological wastewater treatment.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="specialty treatment products" data-cat="water"><div class="pc-img"><div class="pc-ph ph-6"><i class="fas fa-star ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Specialty Treatment Products" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Water Treatment</div><span class="pc-num">06</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-star"></i></div><h3 class="pc-name">Specialty Treatment Products</h3></div><p class="pc-desc">UV disinfection, ozonation, electrocoagulation, and advanced oxidation equipment.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="monitoring & testing products" data-cat="water"><div class="pc-img"><div class="pc-ph ph-7"><i class="fas fa-chart-bar ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Monitoring & Testing Products" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Water Treatment</div><span class="pc-num">07</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-chart-bar"></i></div><h3 class="pc-name">Monitoring &amp; Testing Products</h3></div><p class="pc-desc">Online sensors, portable analyzers, test kits for water quality monitoring and compliance.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="wastewater treatment products" data-cat="water"><div class="pc-img"><div class="pc-ph ph-8"><i class="fas fa-recycle ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Wastewater Treatment Products" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Water Treatment</div><span class="pc-num">08</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-recycle"></i></div><h3 class="pc-name">Wastewater Treatment Products</h3></div><p class="pc-desc">Effluent treatment chemicals, sludge dewatering, odour control, and ZLD solutions.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+    </div>
   </div>
 
+  <!-- ═══ HOMECARE (9) ═══ -->
   <div class="section-group" id="sg-homecare">
     <div class="sec-group-header reveal"><div class="sec-group-icon"><i class="fas fa-spray-can"></i></div><div><div class="sec-group-title">Homecare &amp; Cleaning <span>Products</span></div></div><div class="sec-group-count">9 Products</div></div>
-    <div class="prod-grid g3" id="grid-homecare"></div>
+    <div class="prod-grid g3" id="grid-homecare">
+
+      <div class="pc" data-name="cleaning agents" data-cat="homecare"><div class="pc-img"><div class="pc-ph ph-1"><i class="fas fa-soap ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Cleaning Agents" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Homecare</div><span class="pc-num">01</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-soap"></i></div><h3 class="pc-name">Cleaning Agents</h3></div><p class="pc-desc">Multipurpose cleaners, degreasers, surface sprays for residential and commercial use.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="detergents & laundry products" data-cat="homecare"><div class="pc-img"><div class="pc-ph ph-2"><i class="fas fa-tshirt ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Detergents & Laundry Products" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Homecare</div><span class="pc-num">02</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-tshirt"></i></div><h3 class="pc-name">Detergents &amp; Laundry Products</h3></div><p class="pc-desc">Liquid and powder detergents, fabric conditioners, and stain removers.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="disinfectants & sanitizers" data-cat="homecare"><div class="pc-img"><div class="pc-ph ph-3"><i class="fas fa-hand-sparkles ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Disinfectants & Sanitizers" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Homecare</div><span class="pc-num">03</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-hand-sparkles"></i></div><h3 class="pc-name">Disinfectants &amp; Sanitizers</h3></div><p class="pc-desc">Broad-spectrum disinfectants, hand sanitizers, and surface sterilants.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="air fresheners & deodorizers" data-cat="homecare"><div class="pc-img"><div class="pc-ph ph-4"><i class="fas fa-wind ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Air Fresheners & Deodorizers" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Homecare</div><span class="pc-num">04</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-wind"></i></div><h3 class="pc-name">Air Fresheners &amp; Deodorizers</h3></div><p class="pc-desc">Aerosol sprays, gel blocks, plug-in diffusers, and commercial odour eliminators.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="polishes & specialty cleaners" data-cat="homecare"><div class="pc-img"><div class="pc-ph ph-5"><i class="fas fa-star ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Polishes & Specialty Cleaners" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Homecare</div><span class="pc-num">05</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-star"></i></div><h3 class="pc-name">Polishes &amp; Specialty Cleaners</h3></div><p class="pc-desc">Furniture polishes, metal brighteners, bathroom descalers, and oven cleaners.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="waste management products" data-cat="homecare"><div class="pc-img"><div class="pc-ph ph-6"><i class="fas fa-trash-alt ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Waste Management Products" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Homecare</div><span class="pc-num">06</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-trash-alt"></i></div><h3 class="pc-name">Waste Management Products</h3></div><p class="pc-desc">Waste bags, bins, color-coded containers, and bio-degradable liners.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="housekeeping tools & accessories" data-cat="homecare"><div class="pc-img"><div class="pc-ph ph-7"><i class="fas fa-broom ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Housekeeping Tools & Accessories" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Homecare</div><span class="pc-num">07</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-broom"></i></div><h3 class="pc-name">Housekeeping Tools &amp; Accessories</h3></div><p class="pc-desc">Mops, brushes, squeegees, microfiber cloths, and cleaning equipment.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="personal hygiene products" data-cat="homecare"><div class="pc-img"><div class="pc-ph ph-8"><i class="fas fa-user-shield ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Personal Hygiene Products" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Homecare</div><span class="pc-num">08</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-user-shield"></i></div><h3 class="pc-name">Personal Hygiene Products</h3></div><p class="pc-desc">Liquid soaps, hand washes, body wash, and oral hygiene products.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+      <div class="pc" data-name="pest control products" data-cat="homecare"><div class="pc-img"><div class="pc-ph ph-9"><i class="fas fa-bug ph-icon"></i><span class="ph-lbl">Add Image</span></div><img src="all dummy images/image 2.jpeg" alt="Pest Control Products" loading="lazy" onerror="this.style.display='none'"/><div class="pc-cat">Homecare</div><span class="pc-num">09</span></div><div class="pc-body"><div class="pc-icon-row"><div class="pc-icon"><i class="fas fa-bug"></i></div><h3 class="pc-name">Pest Control Products</h3></div><p class="pc-desc">Insecticides, rodenticides, repellents, and fumigation chemicals.</p><div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div></div></div>
+
+    </div>
   </div>
 
   <div class="no-results" id="noResults"><i class="fas fa-search"></i><p>No products found. Try a different search or filter.</p></div>
@@ -585,362 +770,109 @@ nav a.btn-contact:hover{background:var(--green);color:#fff;transform:translateY(
   </div>
 </section>
 
-<!-- ═══════════════ FOOTER (exact from index) ═══════════════ -->
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-top-band">
     <p>Ready to partner with us? <span>Explore our full range of scientific, industrial &amp; healthcare solutions.</span></p>
     <a href="#" class="footer-cta-btn"><i class="fas fa-paper-plane" style="margin-right:7px"></i>Get in Touch</a>
   </div>
-
   <div class="footer-main">
-
-    <!-- Logo & About -->
     <div class="footer-logo-col">
       <div class="footer-logo-wrap">
         <div class="footer-logo-icon">
           <img src="all dummy images/logo1.jpeg" alt="Chemslife Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-          <svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg" style="display:none">
-            <path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4 Z" fill="#2e9e4f" opacity="0.2" stroke="#2e9e4f" stroke-width="2.5" stroke-linejoin="round"/>
-            <path d="M23 38 Q30 32 38 40 L42 52 Q44 57 40 59 L20 59 Q16 57 18 52 Z" fill="#2e9e4f" opacity="0.8"/>
-            <rect x="21" y="0" width="18" height="6" rx="3" fill="#cdd8e8"/>
-            <path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4" fill="none" stroke="#cdd8e8" stroke-width="2.5" stroke-linejoin="round"/>
-          </svg>
+          <svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg" style="display:none"><path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4 Z" fill="#2e9e4f" opacity="0.2" stroke="#2e9e4f" stroke-width="2.5" stroke-linejoin="round"/><path d="M23 38 Q30 32 38 40 L42 52 Q44 57 40 59 L20 59 Q16 57 18 52 Z" fill="#2e9e4f" opacity="0.8"/><rect x="21" y="0" width="18" height="6" rx="3" fill="#cdd8e8"/><path d="M22 4 L22 28 L8 52 Q5 58 12 62 L48 62 Q55 62 52 52 L38 28 L38 4" fill="none" stroke="#cdd8e8" stroke-width="2.5" stroke-linejoin="round"/></svg>
         </div>
-        <div>
-          <div class="footer-logo-name">CHEMS<span>LIFE</span></div>
-          <div class="footer-logo-sub">Groups</div>
-        </div>
+        <div><div class="footer-logo-name">CHEMS<span>LIFE</span></div><div class="footer-logo-sub">Groups</div></div>
       </div>
       <p class="footer-about-text">A multi-sector organization delivering reliable scientific, industrial, and healthcare solutions since 2018. Founded by Mr. Sivasankar Karthikeyan.</p>
       <div class="footer-tagline">"Building Chemistry for a Better Tomorrow"</div>
-         <div class="footer-socials">
-        <a href="https://www.facebook.com/Chemslifegroups" class="fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/chemslifegroups" class="ig" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/chemslife-groups-278a10213/" class="li" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://twitter.com/Chemslifegroups" class="tw" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://www.youtube.com/c/ChemslifeGroupss" class="yt" title="YouTube"><i class="fab fa-youtube"></i></a>
-        <a href="https://wa.me/1234567890" class="wa" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://t.me/Chemslifegroups" class="tg" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
-        <a href="https://www.pinterest.com/chemslifegroups" class="pt" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/Chemslifegroups" class="fb"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/chemslifegroups" class="ig"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/chemslife-groups-278a10213/" class="li"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/Chemslifegroups" class="tw"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.youtube.com/c/ChemslifeGroupss" class="yt"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/918870244418" class="wa"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://t.me/Chemslifegroups" class="tg"><i class="fab fa-telegram-plane"></i></a>
+        <a href="https://www.pinterest.com/chemslifegroups" class="pt"><i class="fab fa-pinterest-p"></i></a>
       </div>
     </div>
-
-    <!-- Scientific & Industrial Solutions -->
     <div class="footer-col">
       <h4><i class="fas fa-flask"></i> Scientific &amp; Industrial Solutions</h4>
-
       <h5>Laboratory Products</h5>
-      <ul class="footer-links">
-        <li><a href="Scientific .html">Laboratory Chemicals</a></li>
-        <li><a href="Scientific .html">Laboratory Instruments</a></li>
-        <li><a href="Scientific .html">Laboratory Equipment</a></li>
-        <li><a href="Scientific .html">Glassware &amp; Plasticware</a></li>
-        <li><a href="Scientific .html">Lab Furniture &amp; Safety Kits</a></li>
-        <li><a href="Scientific .html">Lab Test Kits &amp; Filtration</a></li>
-      </ul>
-
+      <ul class="footer-links"><li><a href="Scientific .html">Laboratory Chemicals</a></li><li><a href="Scientific .html">Laboratory Instruments</a></li><li><a href="Scientific .html">Laboratory Equipment</a></li><li><a href="Scientific .html">Glassware &amp; Plasticware</a></li><li><a href="Scientific .html">Lab Furniture &amp; Safety Kits</a></li><li><a href="Scientific .html">Lab Test Kits &amp; Filtration</a></li></ul>
       <h5>Water Treatment Products</h5>
-      <ul class="footer-links">
-        <li><a href="Scientific .html">Filtration &amp; Membrane Systems</a></li>
-        <li><a href="Scientific .html">Ion Exchange Resins</a></li>
-        <li><a href="Scientific .html">Monitoring &amp; Testing Products</a></li>
-        <li><a href="Scientific .html">Wastewater Treatment</a></li>
-      </ul>
-
+      <ul class="footer-links"><li><a href="Scientific .html">Filtration &amp; Membrane Systems</a></li><li><a href="Scientific .html">Ion Exchange Resins</a></li><li><a href="Scientific .html">Monitoring &amp; Testing Products</a></li><li><a href="Scientific .html">Wastewater Treatment</a></li></ul>
       <h5>Homecare &amp; Cleaning Products</h5>
-      <ul class="footer-links">
-        <li><a href="Scientific .html">Cleaning &amp; Disinfection Agents</a></li>
-        <li><a href="Scientific .html">Detergents &amp; Laundry</a></li>
-        <li><a href="Scientific .html">Pest Control Products</a></li>
-        <li><a href="Scientific .html">Housekeeping Tools</a></li>
-      </ul>
+      <ul class="footer-links"><li><a href="Scientific .html">Cleaning &amp; Disinfection Agents</a></li><li><a href="Scientific .html">Detergents &amp; Laundry</a></li><li><a href="Scientific .html">Pest Control Products</a></li><li><a href="Scientific .html">Housekeeping Tools</a></li></ul>
     </div>
-
-    <!-- Integrated Healthcare Solutions -->
     <div class="footer-col">
       <h4><i class="fas fa-heartbeat"></i> Integrated Healthcare Solutions</h4>
-
       <h5>Pharmaceutical Products</h5>
-      <ul class="footer-links">
-        <li><a href="integrated health care .html">Analgesics &amp; Antipyretics</a></li>
-        <li><a href="integrated health care .html">Antibiotics &amp; Antimicrobials</a></li>
-        <li><a href="integrated health care .html">Cardiovascular Drugs</a></li>
-        <li><a href="integrated health care .html">Vitamins &amp; Supplements</a></li>
-      </ul>
-
+      <ul class="footer-links"><li><a href="integrated health care .html">Analgesics &amp; Antipyretics</a></li><li><a href="integrated health care .html">Antibiotics &amp; Antimicrobials</a></li><li><a href="integrated health care .html">Cardiovascular Drugs</a></li><li><a href="integrated health care .html">Vitamins &amp; Supplements</a></li></ul>
       <h5>Surgical Supplies</h5>
-      <ul class="footer-links">
-        <li><a href="integrated health care .html">Surgical Instruments</a></li>
-        <li><a href="integrated health care .html">Specialty Surgical Sets</a></li>
-        <li><a href="integrated health care .html">Suturing &amp; Stapling</a></li>
-      </ul>
-
+      <ul class="footer-links"><li><a href="integrated health care .html">Surgical Instruments</a></li><li><a href="integrated health care .html">Specialty Surgical Sets</a></li><li><a href="integrated health care .html">Suturing &amp; Stapling</a></li></ul>
       <h5>Hospital Consumables &amp; Medical Devices</h5>
-      <ul class="footer-links">
-        <li><a href="integrated health care .html">Hospital Consumables</a></li>
-        <li><a href="integrated health care .html">Medical Devices in Hospitals</a></li>
-      </ul>
-
+      <ul class="footer-links"><li><a href="integrated health care .html">Hospital Consumables</a></li><li><a href="integrated health care .html">Medical Devices in Hospitals</a></li></ul>
       <h5>Diagnostic Products &amp; Instruments</h5>
-      <ul class="footer-links">
-        <li><a href="integrated health care .html">Diagnostic Instruments &amp; Consumables</a></li>
-        <li><a href="integrated health care .html">Hematology &amp; Immunology</a></li>
-        <li><a href="integrated health care .html">Molecular &amp; POC Diagnostics</a></li>
-      </ul>
-
+      <ul class="footer-links"><li><a href="integrated health care .html">Diagnostic Instruments &amp; Consumables</a></li><li><a href="integrated health care .html">Hematology &amp; Immunology</a></li><li><a href="integrated health care .html">Molecular &amp; POC Diagnostics</a></li></ul>
       <h5>Disposables &amp; Safety Products</h5>
-      <ul class="footer-links">
-        <li><a href="integrated health care .html">Disposables Products</a></li>
-        <li><a href="integrated health care .html">Safety Products &amp; PPE</a></li>
-        <li><a href="integrated health care .html">Waste Management Disposables</a></li>
-      </ul>
+      <ul class="footer-links"><li><a href="integrated health care .html">Disposables Products</a></li><li><a href="integrated health care .html">Safety Products &amp; PPE</a></li><li><a href="integrated health care .html">Waste Management Disposables</a></li></ul>
     </div>
-
-    <!-- Quick Links -->
     <div class="footer-col">
       <h4><i class="fas fa-link"></i> Quick Links</h4>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="About us.html">About Us</a></li>
-        <li><a href="Scientific .html">Scientific &amp; Industrial</a></li>
-        <li><a href="integrated health care .html">Healthcare Solutions</a></li>
-        <li><a href="contact us .html">Contact Us</a></li>
-      </ul>
+      <ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="About us.html">About Us</a></li><li><a href="Scientific .html">Scientific &amp; Industrial</a></li><li><a href="integrated health care .html">Healthcare Solutions</a></li><li><a href="contact us .html">Contact Us</a></li></ul>
     </div>
-
   </div>
-
-  <!-- Contact Cards -->
   <div class="footer-contact-grid">
-    <div class="contact-card">
-      <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-      <div class="contact-info">
-        <strong>Sales</strong>
-        <span>+91 88704 96918</span>
-        <a href="mailto:sales@chemslife.in">sales@chemslife.in</a>
-      </div>
-    </div>
-    <div class="contact-card">
-      <div class="contact-icon"><i class="fas fa-headset"></i></div>
-      <div class="contact-info">
-        <strong>Admin</strong>
-        <span>+91 88702 44418</span>
-        <a href="mailto:admin@chemslife.in">admin@chemslife.in</a>
-      </div>
-    </div>
-    <div class="contact-card">
-      <div class="contact-icon"><i class="fas fa-shopping-bag"></i></div>
-      <div class="contact-info">
-        <strong>Chemscart</strong>
-        <span>+91 88702 44418</span>
-        <a href="mailto:admin@chemscart.in">admin@chemscart.in</a>
-      </div>
-    </div>
-    <div class="contact-card">
-      <div class="contact-icon"><i class="fas fa-truck"></i></div>
-      <div class="contact-info">
-        <strong>Dispatch</strong>
-        <span>+91 88700 36018</span>
-        <a href="mailto:dispatch@chemslife.in">dispatch@chemslife.in</a>
-      </div>
-    </div>
+    <div class="contact-card"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><div class="contact-info"><strong>Sales</strong><span>+91 88704 96918</span><a href="mailto:sales@chemslife.in">sales@chemslife.in</a></div></div>
+    <div class="contact-card"><div class="contact-icon"><i class="fas fa-headset"></i></div><div class="contact-info"><strong>Admin</strong><span>+91 88702 44418</span><a href="mailto:admin@chemslife.in">admin@chemslife.in</a></div></div>
+    <div class="contact-card"><div class="contact-icon"><i class="fas fa-shopping-bag"></i></div><div class="contact-info"><strong>Chemscart</strong><span>+91 88702 44418</span><a href="mailto:admin@chemscart.in">admin@chemscart.in</a></div></div>
+    <div class="contact-card"><div class="contact-icon"><i class="fas fa-truck"></i></div><div class="contact-info"><strong>Dispatch</strong><span>+91 88700 36018</span><a href="mailto:dispatch@chemslife.in">dispatch@chemslife.in</a></div></div>
   </div>
-
   <hr class="footer-divider"/>
   <div class="footer-bottom">
     <p>&copy; 2025 <span>Chemslife Groups</span>. All rights reserved. | Founded by Mr. Sivasankar Karthikeyan.</p>
-    <div class="footer-bottom-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Use</a>
-      <a href="#">Sitemap</a>
-    </div>
+    <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Sitemap</a></div>
     <div class="footer-motto">Everything is Science &nbsp;&#9670;&nbsp; Science for Nation</div>
   </div>
 </footer>
 
 <button class="back-top" id="backTopBtn" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
-<!---chatbot-->
+
+<!-- WHATSAPP CHATBOT -->
 <div class="wa-chat-widget" id="waChatWidget">
-  <div class="wa-chat-box" id="waChatBox">
+  <div class="wa-chat-box">
     <div class="wa-box-header">
-      <div class="wa-avatar">
-        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.685 4.61 1.873 6.492L4 29l7.724-1.849A11.94 11.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="white" fill-opacity="0.9"/>
-          <path d="M21.8 18.6c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.78-1.68-2.08-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.07.15.2 2.1 3.2 5.09 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.28.17-1.41-.07-.12-.27-.2-.57-.34z" fill="#25d366"/>
-        </svg>
-      </div>
-      <div class="wa-header-text">
-        <strong>Chemslife Groups</strong>
-        <span><span class="wa-online-dot"></span> Typically replies instantly</span>
-      </div>
+      <div class="wa-avatar"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.685 4.61 1.873 6.492L4 29l7.724-1.849A11.94 11.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="white" fill-opacity="0.9"/><path d="M21.8 18.6c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.78-1.68-2.08-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.07.15.2 2.1 3.2 5.09 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.28.17-1.41-.07-.12-.27-.2-.57-.34z" fill="#25d366"/></svg></div>
+      <div class="wa-header-text"><strong>Chemslife Groups</strong><span><span class="wa-online-dot"></span> Typically replies instantly</span></div>
     </div>
     <div class="wa-chat-body">
       <div class="wa-bubble-wrap">
-        <div class="wa-bubble-avatar">
-          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.685 4.61 1.873 6.492L4 29l7.724-1.849A11.94 11.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="white" fill-opacity="0.9"/>
-          </svg>
-        </div>
+        <div class="wa-bubble-avatar"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.685 4.61 1.873 6.492L4 29l7.724-1.849A11.94 11.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="white" fill-opacity="0.9"/></svg></div>
         <div>
-          <div class="wa-bubble">
-            👋 Hi there! Welcome to <strong>Chemslife Groups</strong>. How can we help you today?
-            <div class="wa-bubble-time" id="waBubbleTime"></div>
-          </div>
-          <div class="wa-bubble-second">
-            Ask us about our scientific, industrial, or healthcare solutions!
-            <div class="wa-bubble-time" id="waBubbleTime2"></div>
-          </div>
+          <div class="wa-bubble">👋 Hi there! Welcome to <strong>Chemslife Groups</strong>. How can we help you today?<div class="wa-bubble-time" id="waBubbleTime"></div></div>
+          <div class="wa-bubble-second">Ask us about our scientific, industrial, or healthcare solutions!<div class="wa-bubble-time" id="waBubbleTime2"></div></div>
         </div>
       </div>
     </div>
     <div class="wa-chat-footer">
       <div class="wa-input-row">
         <input class="wa-input" id="waInput" type="text" placeholder="Type a message..." maxlength="300" autocomplete="off"/>
-        <button class="wa-send-btn" id="waSendBtn" aria-label="Send on WhatsApp">
-          <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-          </svg>
-        </button>
+        <button class="wa-send-btn" id="waSendBtn" aria-label="Send on WhatsApp"><svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
       </div>
-      <div class="wa-footer-note">
-        <svg viewBox="0 0 24 24" width="10" height="10" fill="#25d366" style="vertical-align:middle;margin-right:3px"><path d="M16 18l6-6-6-6-1.41 1.41L18.17 11H2v2h16.17l-3.58 3.59L16 18z"/></svg>
-        Opens in WhatsApp &nbsp;·&nbsp; +91 88702 44418
-      </div>
+      <div class="wa-footer-note">Opens in WhatsApp &nbsp;·&nbsp; +91 88702 44418</div>
     </div>
   </div>
- 
   <button class="wa-chat-fab" id="waChatFab" aria-label="Chat on WhatsApp">
     <div class="wa-notif-dot"></div>
-    <!-- WhatsApp Icon -->
-    <svg class="icon-wa" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.685 4.61 1.873 6.492L4 29l7.724-1.849A11.94 11.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="white"/>
-      <path d="M21.8 18.6c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.78-1.68-2.08-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.07.15.2 2.1 3.2 5.09 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.28.17-1.41-.07-.12-.27-.2-.57-.34z" fill="#25d366"/>
-    </svg>
-    <!-- Close Icon -->
-    <svg class="icon-close" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-    </svg>
+    <svg class="icon-wa" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.685 4.61 1.873 6.492L4 29l7.724-1.849A11.94 11.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="white"/><path d="M21.8 18.6c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.78-1.68-2.08-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.07.15.2 2.1 3.2 5.09 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.28.17-1.41-.07-.12-.27-.2-.57-.34z" fill="#25d366"/></svg>
+    <svg class="icon-close" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
   </button>
 </div>
- 
 
 <script>
-// ─── DATA ───
-const LAB_PRODUCTS = [
-  {name:'Laboratory Chemicals',icon:'fas fa-flask',desc:'High-purity reagents, solvents, acids, bases, and specialty chemicals for analytical and research applications.'},
-  {name:'Laboratory Instruments',icon:'fas fa-microscope',desc:'pH meters, spectrophotometers, balances, centrifuges, and analytical instruments for precise measurements.'},
-  {name:'Laboratory Equipment',icon:'fas fa-cogs',desc:'Autoclaves, ovens, incubators, hot plates, stirrers, and essential benchtop processing tools.'},
-  {name:'Laboratory Glassware',icon:'fas fa-wine-glass',desc:'Borosilicate beakers, flasks, test tubes, burettes, pipettes, condensers, and volumetric items.'},
-  {name:'Laboratory Plasticware',icon:'fas fa-box-open',desc:'PP, HDPE, and PVC bottles, trays, funnels, centrifuge tubes, petri dishes, and pipette tips.'},
-  {name:'Laboratory Silicaware',icon:'fas fa-circle-notch',desc:'High-performance silicone tubing, stoppers, mats, gaskets, and flexible connectors.'},
-  {name:'Laboratory Metalware',icon:'fas fa-tools',desc:'Stainless steel stands, clamps, retort rings, spatulas, forceps, and metallic accessories.'},
-  {name:'Laboratory Aluminaware',icon:'fas fa-layer-group',desc:'Lightweight aluminium trays, pans, sample containers, desiccators, and storage units.'},
-  {name:'Laboratory Woodenware',icon:'fas fa-grip-lines',desc:'Test tube racks, drying boards, slide boxes, dissection boards, and bench accessories.'},
-  {name:'Laboratory Porcelainware',icon:'fas fa-mortar-pestle',desc:'Mortars and pestles, evaporating basins, crucibles, and spot plates for chemical analysis.'},
-  {name:'Laboratory Quartzware',icon:'fas fa-gem',desc:'Ultra-pure quartz tubes, boats, crucibles, and cuvettes for high-temperature applications.'},
-  {name:'Laboratory Rubberware',icon:'fas fa-ring',desc:'Stoppers, tubing, bulbs, suction devices, and flexible connectors for sealing and transfer.'},
-  {name:'Laboratory Nickelware',icon:'fas fa-cubes',desc:'High-purity nickel crucibles, spatulas, and electrodes for analytical chemistry.'},
-  {name:'Lab Cooler',icon:'fas fa-snowflake',desc:'Portable and bench-top coolers for sample preservation and temperature-sensitive control.'},
-  {name:'Laboratory Test Kits',icon:'fas fa-vials',desc:'Ready-to-use kits for water quality, chemical detection, microbiology, and field testing.'},
-  {name:'Laboratory Filtration Products',icon:'fas fa-filter',desc:'Filter papers, membrane filters, vacuum assemblies, syringe filters, and ultrafiltration devices.'},
-  {name:'Laboratory Furniture',icon:'fas fa-chair',desc:'Chemical-resistant workbenches, fume hoods, storage cupboards, trolleys, and lab seating.'},
-  {name:'Laboratory Safety Kits',icon:'fas fa-hard-hat',desc:'Gloves, goggles, lab coats, first-aid kits, spill containment, and PPE solutions.'}
-];
-
-const CHEMICAL_PRODUCTS = [
-  {name:'Acids',icon:'fas fa-flask'},{name:'Agro Chemicals',icon:'fas fa-seedling'},{name:'Additive Chemicals',icon:'fas fa-plus-circle'},{name:'Adhesive Chemicals',icon:'fas fa-object-group'},
-  {name:'Analytic Reagent Chemicals',icon:'fas fa-microscope'},{name:'Alloy Chemicals',icon:'fas fa-cogs'},{name:'Bio Chemicals',icon:'fas fa-dna'},{name:'Boiler Chemicals',icon:'fas fa-fire'},
-  {name:'Ceramic Chemicals',icon:'fas fa-cube'},{name:'Construction Chemicals',icon:'fas fa-building'},{name:'Cooling Tower Chemicals',icon:'fas fa-snowflake'},{name:'Dyes & Pigments',icon:'fas fa-palette'},
-  {name:'Flavour & Fragrances',icon:'fas fa-wind'},{name:'Housekeeping Chemicals',icon:'fas fa-broom'},{name:'HPLC Grade Chemicals',icon:'fas fa-chart-line'},{name:'Intermediates',icon:'fas fa-exchange-alt'},
-  {name:'Lubricants',icon:'fas fa-oil-can'},{name:'Labgrade Chemicals',icon:'fas fa-vial'},{name:'Metals',icon:'fas fa-cubes'},{name:'Mining Chemicals',icon:'fas fa-mountain'},
-  {name:'Oil & Refining Chemicals',icon:'fas fa-industry'},{name:'Paints & Coating Chemicals',icon:'fas fa-paint-roller'},{name:'Paper & Pulp Chemicals',icon:'fas fa-file-alt'},{name:'Glycols',icon:'fas fa-tint'},
-  {name:'Horticulture Chemicals',icon:'fas fa-leaf'},{name:'Sericulture Chemicals',icon:'fas fa-bug'},{name:'Aqua Culture Chemicals',icon:'fas fa-fish'},{name:'Petro Chemicals',icon:'fas fa-gas-pump'},
-  {name:'Pharma Chemicals',icon:'fas fa-capsules'},{name:'Polymer Chemicals',icon:'fas fa-project-diagram'},{name:'Solvents',icon:'fas fa-flask'},{name:'Speciality Chemicals',icon:'fas fa-star'},
-  {name:'USP Grade Chemicals',icon:'fas fa-medal'},{name:'Water Treatment Chemicals',icon:'fas fa-water'}
-];
-const CHEM_DESCS = [
-  'Sulfuric, hydrochloric, nitric, acetic, and phosphoric acids for industrial and analytical use.',
-  'Fertilizers, pesticides, fungicides, herbicides, and growth regulators for agriculture.',
-  'Performance-enhancing additives for fuels, plastics, rubber, and industrial processes.',
-  'Industrial adhesives, bonding agents, sealants, and surface-preparation chemicals.',
-  'AR-grade high-purity reagents for volumetric, gravimetric, and instrumental analysis.',
-  'Chemicals for alloy production, treatment, and surface finishing in metallurgy.',
-  'Biochemical reagents, enzymes, buffers, substrates, and biological compounds.',
-  'Scale inhibitors, corrosion inhibitors, oxygen scavengers, and pH conditioners.',
-  'Binders, glazing compounds, colorants, and processing aids for ceramic manufacturing.',
-  'Admixtures, waterproofing agents, bonding agents, and grouts for construction.',
-  'Scale inhibitors, biocides, dispersants, and algaecides for cooling tower systems.',
-  'Reactive, disperse, vat, acid, and direct dyes along with pigments for textiles and coatings.',
-  'Aromatic compounds, essential oils, terpenes, and fragrance molecules.',
-  'Professional cleaning, degreasing, and sanitation chemicals for facilities.',
-  'Ultra-pure HPLC/LC-MS grade solvents for high-performance chromatography.',
-  'Chemical intermediates for pharmaceutical, agrochemical, and dye synthesis.',
-  'Industrial oils, greases, cutting fluids, and specialty lubricants for machinery.',
-  'LR, CP, and technical grade chemicals for routine lab work and QC testing.',
-  'Metal salts, powders, oxides, and organometallic compounds for catalysis.',
-  'Flotation reagents, leaching agents, flocculants for mineral processing.',
-  'Demulsifiers, corrosion inhibitors, and antioxidants for petroleum refining.',
-  'Resins, binders, dispersants, defoamers for paint and coating formulations.',
-  'Bleaching agents, retention aids, sizing agents for pulp and paper manufacturing.',
-  'Ethylene glycol, propylene glycol, diethylene glycol for antifreeze and polyester.',
-  'Plant growth regulators, micronutrients, soil conditioners for horticulture.',
-  'Disinfectants and disease control agents for silkworm rearing.',
-  'Water quality enhancers, pond treatments, and probiotics for aquaculture.',
-  'Aromatics, olefins, paraffins for plastics, fertilizers, and synthetic fibers.',
-  'API intermediates, excipients, solvents meeting pharmacopoeial standards.',
-  'Monomers, initiators, catalysts, stabilizers for polymer production.',
-  'Ketones, alcohols, esters, chlorinated and aromatic solvents.',
-  'High-value specialty chemicals for niche industrial and advanced applications.',
-  'USP grade reagents of highest purity for pharmaceutical validation and QC.',
-  'Coagulants, flocculants, chlorine compounds, anti-scalants for water treatment.'
-];
-
-const WATER_PRODUCTS = [
-  {name:'Filtration Products',icon:'fas fa-filter',desc:'Sand filters, carbon filters, multimedia systems, and cartridge filtration for water purification.'},
-  {name:'Membrane Systems',icon:'fas fa-layer-group',desc:'RO, UF, NF, and MF membrane modules for desalination and ultrapure water generation.'},
-  {name:'Chemical Treatment Products',icon:'fas fa-flask',desc:'Coagulants, flocculants, biocides, scale inhibitors for water quality management.'},
-  {name:'Ion Exchange Resins',icon:'fas fa-atom',desc:'Cation, anion, and mixed-bed resins for water softening and demineralization.'},
-  {name:'Biological Treatment Products',icon:'fas fa-dna',desc:'Microbial consortia, enzymes, and bioaugmentation for biological wastewater treatment.'},
-  {name:'Specialty Treatment Products',icon:'fas fa-star',desc:'UV disinfection, ozonation, electrocoagulation, and advanced oxidation equipment.'},
-  {name:'Monitoring & Testing Products',icon:'fas fa-chart-bar',desc:'Online sensors, portable analyzers, test kits for water quality monitoring and compliance.'},
-  {name:'Wastewater Treatment Products',icon:'fas fa-recycle',desc:'Effluent treatment chemicals, sludge dewatering, odour control, and ZLD solutions.'}
-];
-
-const HOMECARE_PRODUCTS = [
-  {name:'Cleaning Agents',icon:'fas fa-soap',desc:'Multipurpose cleaners, degreasers, surface sprays for residential and commercial use.'},
-  {name:'Detergents & Laundry Products',icon:'fas fa-tshirt',desc:'Liquid and powder detergents, fabric conditioners, and stain removers.'},
-  {name:'Disinfectants & Sanitizers',icon:'fas fa-hand-sparkles',desc:'Broad-spectrum disinfectants, hand sanitizers, and surface sterilants.'},
-  {name:'Air Fresheners & Deodorizers',icon:'fas fa-wind',desc:'Aerosol sprays, gel blocks, plug-in diffusers, and commercial odour eliminators.'},
-  {name:'Polishes & Specialty Cleaners',icon:'fas fa-star',desc:'Furniture polishes, metal brighteners, bathroom descalers, and oven cleaners.'},
-  {name:'Waste Management Products',icon:'fas fa-trash-alt',desc:'Waste bags, bins, color-coded containers, and bio-degradable liners.'},
-  {name:'Housekeeping Tools & Accessories',icon:'fas fa-broom',desc:'Mops, brushes, squeegees, microfiber cloths, and cleaning equipment.'},
-  {name:'Personal Hygiene Products',icon:'fas fa-user-shield',desc:'Liquid soaps, hand washes, body wash, and oral hygiene products.'},
-  {name:'Pest Control Products',icon:'fas fa-bug',desc:'Insecticides, rodenticides, repellents, and fumigation chemicals.'}
-];
-
-const PH_CLASSES = ['ph-1','ph-2','ph-3','ph-4','ph-5','ph-6','ph-7','ph-8','ph-9','ph-10'];
-
-function buildCard(item, idx, catLabel, cat) {
-  const ph = PH_CLASSES[idx % PH_CLASSES.length];
-  const num = String(idx+1).padStart(2,'0');
-  return `<div class="pc" data-name="${item.name.toLowerCase()}" data-cat="${cat}">
-    <div class="pc-img">
-      <div class="pc-ph ${ph}"><i class="${item.icon} ph-icon"></i><span class="ph-lbl">Add Image</span></div>
-      <div class="pc-cat">${catLabel}</div><span class="pc-num">${num}</span>
-    </div>
-    <div class="pc-body">
-      <div class="pc-icon-row"><div class="pc-icon"><i class="${item.icon}"></i></div><h3 class="pc-name">${item.name}</h3></div>
-      <p class="pc-desc">${item.desc}</p>
-      <div class="pc-cta"><a href="contact us .html" class="pc-btn">Enquire <i class="fas fa-arrow-right"></i></a><a href="tel:+918870496918" class="pc-call"><i class="fas fa-phone-alt"></i> Call</a></div>
-    </div>
-  </div>`;
-}
-
-document.getElementById('grid-lab').innerHTML = LAB_PRODUCTS.map((p,i) => buildCard(p,i,'Lab Products','lab')).join('');
-document.getElementById('grid-chemicals').innerHTML = CHEMICAL_PRODUCTS.map((p,i) => { p.desc = CHEM_DESCS[i]; return buildCard(p,i,'Chemicals','chemicals'); }).join('');
-document.getElementById('grid-water').innerHTML = WATER_PRODUCTS.map((p,i) => buildCard(p,i,'Water Treatment','water')).join('');
-document.getElementById('grid-homecare').innerHTML = HOMECARE_PRODUCTS.map((p,i) => buildCard(p,i,'Homecare','homecare')).join('');
-
 // ─── Hamburger
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('main-nav');
@@ -949,7 +881,6 @@ document.addEventListener('click', e => { if (!nav.contains(e.target) && !hambur
 const dd = document.getElementById('productsDropdown');
 const pt = document.getElementById('productsToggle');
 if (pt) pt.addEventListener('click', e => { if (window.innerWidth <= 768) { e.preventDefault(); dd.classList.toggle('open'); } });
-
 
 // ─── Scroll Progress
 window.addEventListener('scroll', () => {
@@ -990,7 +921,6 @@ const vcEl = document.getElementById('visCount');
 const noRes = document.getElementById('noResults');
 const sgs = { lab: document.getElementById('sg-lab'), chemicals: document.getElementById('sg-chemicals'), water: document.getElementById('sg-water'), homecare: document.getElementById('sg-homecare') };
 let activeCat = 'all', query = '';
-
 function applyFilters() {
   let vis = 0;
   Object.entries(sgs).forEach(([key, el]) => { el.style.display = (activeCat === 'all' || activeCat === key) ? '' : 'none'; });
@@ -1009,8 +939,8 @@ searchEl.addEventListener('input', () => { query = searchEl.value; applyFilters(
 
 // ─── Sort
 const sortSel = document.getElementById('sortSel');
-['grid-lab','grid-chemicals','grid-water','grid-homecare'].forEach(gid => {
-  const g = document.getElementById(gid);
+['sg-lab','sg-chemicals','sg-water','sg-homecare'].forEach(gid => {
+  const g = document.getElementById(gid).querySelector('.prod-grid');
   sortSel.addEventListener('change', () => {
     const items = [...g.querySelectorAll('.pc')];
     if (sortSel.value === 'az') items.sort((a,b) => a.dataset.name.localeCompare(b.dataset.name));
@@ -1029,57 +959,28 @@ const sortSel = document.getElementById('sortSel');
     c.appendChild(p);
   }
 })();
-/*chat bot */
- (function() {
-    var WA_NUMBER = '918870244418'; // 91 = India country code + your number
-    var widget = document.getElementById('waChatWidget');
-    var fab    = document.getElementById('waChatFab');
-    var input  = document.getElementById('waInput');
-    var sendBtn = document.getElementById('waSendBtn');
- 
-    // Set current time on chat bubbles
-    function getTime() {
-      var now = new Date();
-      return ('0'+now.getHours()).slice(-2) + ':' + ('0'+now.getMinutes()).slice(-2);
-    }
-    var t1 = document.getElementById('waBubbleTime');
-    var t2 = document.getElementById('waBubbleTime2');
-    if (t1) t1.textContent = getTime();
-    if (t2) t2.textContent = getTime();
- 
-    // Toggle open / close
-    fab.addEventListener('click', function(e) {
-      e.stopPropagation();
-      widget.classList.toggle('open');
-      if (widget.classList.contains('open')) {
-        setTimeout(function(){ input && input.focus(); }, 300);
-      }
-    });
- 
-    // Send — redirect to WhatsApp
-    function sendToWhatsApp() {
-      var msg = input.value.trim();
-      var text = msg || 'Hello! I am interested in your products and services.';
-      var url = 'https://api.whatsapp.com/send/?phone=' + WA_NUMBER
-              + '&text=' + encodeURIComponent(text)
-              + '&type=phone_number&app_absent=0';
-      window.open(url, '_blank');
-      input.value = '';
-    }
- 
-    sendBtn.addEventListener('click', sendToWhatsApp);
-    input.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') sendToWhatsApp();
-    });
- 
-    // Close when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!widget.contains(e.target)) {
-        widget.classList.remove('open');
-      }
-    });
-  })();
 
+// ─── WhatsApp Chatbot
+(function() {
+  var WA_NUMBER = '918870244418';
+  var widget = document.getElementById('waChatWidget');
+  var fab = document.getElementById('waChatFab');
+  var input = document.getElementById('waInput');
+  var sendBtn = document.getElementById('waSendBtn');
+  function getTime() { var now = new Date(); return ('0'+now.getHours()).slice(-2)+':'+('0'+now.getMinutes()).slice(-2); }
+  var t1 = document.getElementById('waBubbleTime'); var t2 = document.getElementById('waBubbleTime2');
+  if (t1) t1.textContent = getTime(); if (t2) t2.textContent = getTime();
+  fab.addEventListener('click', function(e) { e.stopPropagation(); widget.classList.toggle('open'); if (widget.classList.contains('open')) { setTimeout(function(){ input && input.focus(); }, 300); } });
+  function sendToWhatsApp() {
+    var msg = input.value.trim();
+    var text = msg || 'Hello! I am interested in your products and services.';
+    window.open('https://api.whatsapp.com/send/?phone='+WA_NUMBER+'&text='+encodeURIComponent(text)+'&type=phone_number&app_absent=0','_blank');
+    input.value = '';
+  }
+  sendBtn.addEventListener('click', sendToWhatsApp);
+  input.addEventListener('keydown', function(e) { if (e.key === 'Enter') sendToWhatsApp(); });
+  document.addEventListener('click', function(e) { if (!widget.contains(e.target)) widget.classList.remove('open'); });
+})();
 </script>
 </body>
 </html>
